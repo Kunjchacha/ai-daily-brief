@@ -6,7 +6,7 @@ This file is the handover. Everything needed to run, move or stop the newsletter
 | Piece | What it is | Cost | Can be swapped for |
 |---|---|---|---|
 | Code, drafts, archive | This repo on GitHub (public) | £0 | Any Git host, or just a folder |
-| Daily scheduler | GitHub Actions cron (`.github/workflows/daily.yml`) | £0 (public repos) | Any cron (see section 6) |
+| Daily scheduler (14:00 IST) | GitHub Actions cron (`.github/workflows/daily.yml`) | £0 (public repos) | Any cron (see section 6) |
 | Website and RSS | GitHub Pages from the `site/` folder | £0 | Any static host |
 | News sources | Public RSS/Atom feeds and the Hacker News API | £0 | Edit `config/sources.json` |
 | AI writer and checker | Free tiers: **Groq writes, Gemini fact-checks** (a different AI gives a genuine second opinion), each standing in for the other if it fails. Both pick a current model themselves if a name is retired, and remember the last one that worked (`data/llm_state.json`) | £0 | Change `llm.provider`, `fallback_provider`, `checker_provider` in `config/settings.json`, or set `provider` to `none` |

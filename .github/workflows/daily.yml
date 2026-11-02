@@ -1,10 +1,10 @@
 name: Daily draft
 
-# Builds the day's draft at 06:00 IST (00:30 UTC) so it is ready well before you post.
+# Builds the day's draft at 14:00 IST (08:30 UTC) so it is ready for you to review and post in the evening.
 # It only ever writes DRAFTS. Nothing is posted anywhere. A failed run emails the repo owner (GitHub default).
 on:
   schedule:
-    - cron: "30 0 * * *"
+    - cron: "30 8 * * *"
   workflow_dispatch:
     inputs:
       force:
