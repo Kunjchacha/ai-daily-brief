@@ -51,6 +51,24 @@ class GeminiFallbackTests(unittest.TestCase):
             llm.gemini("hi", "old-model", ["good-fallback"])
         self.assertEqual(llm._GEMINI_CHOSEN["m"], "good-fallback")
 
+    def test_overloaded_model_503_moves_to_the_next_model(self):
+        def post(url, body, headers, **kw):
+            if "/models/busy-model:" in url:
+                raise llm.LLMError("request failed (HTTP 503)")
+            return REPLY
+        with mock.patch.object(llm, "_post", side_effect=post), \
+             mock.patch.object(llm, "gemini_models", side_effect=AssertionError("should not discover")):
+            llm.gemini("hi", "busy-model", ["calm-model"])
+        self.assertEqual(llm._GEMINI_CHOSEN["m"], "calm-model")
+
+    def test_everything_overloaded_gives_one_clear_error(self):
+        with mock.patch.object(llm, "_post", side_effect=llm.LLMError("request failed (HTTP 503)")), \
+             mock.patch.object(llm, "gemini_models", return_value=["gemini-9-flash"]):
+            with self.assertRaises(llm.LLMError) as cm:
+                llm.gemini("hi", "a", ["b"])
+        self.assertIn("no usable Gemini model", str(cm.exception))
+        self.assertIn("503", str(cm.exception))
+
     def test_non_404_errors_are_not_masked(self):
         with mock.patch.object(llm, "_post", side_effect=llm.LLMError("request failed (HTTP 403)")):
             with self.assertRaises(llm.LLMError) as cm:
@@ -63,6 +81,29 @@ class GeminiFallbackTests(unittest.TestCase):
             with self.assertRaises(llm.LLMError) as cm:
                 llm.gemini("hi", "old-model", [])
         self.assertIn("no usable Gemini model", str(cm.exception))
+
+
+class ProviderChainTests(unittest.TestCase):
+    CFG = {"provider": "gemini", "fallback_provider": "groq", "gemini_model": "m", "groq_model": "g"}
+
+    def test_fallback_provider_answers_when_primary_fails(self):
+        with mock.patch.object(llm, "gemini", side_effect=llm.LLMError("request failed (HTTP 503)")), \
+             mock.patch.object(llm, "groq", return_value="from-groq"):
+            self.assertEqual(llm.get_provider(self.CFG)("hi"), "from-groq")
+
+    def test_both_failing_reports_both_reasons(self):
+        with mock.patch.object(llm, "gemini", side_effect=llm.LLMError("gemini down")), \
+             mock.patch.object(llm, "groq", side_effect=llm.LLMError("GROQ_API_KEY not set")):
+            with self.assertRaises(llm.LLMError) as cm:
+                llm.get_provider(self.CFG)("hi")
+        self.assertIn("gemini: gemini down", str(cm.exception))
+        self.assertIn("groq: GROQ_API_KEY not set", str(cm.exception))
+
+    def test_no_fallback_configured_uses_primary_only(self):
+        cfg = dict(self.CFG, fallback_provider="")
+        with mock.patch.object(llm, "gemini", return_value="from-gemini"), \
+             mock.patch.object(llm, "groq", side_effect=AssertionError("must not be called")):
+            self.assertEqual(llm.get_provider(cfg)("hi"), "from-gemini")
 
 
 class KeyHandlingTests(unittest.TestCase):

@@ -48,16 +48,26 @@ def _get(url, headers, timeout=30):
         raise LLMError(f"request failed ({type(e).__name__})")
 
 
-def pick_flash(names):
-    """From a list of model names, choose the newest stable 'flash' text model (None if there is none)."""
+def rank_flash(names):
+    """Usable 'flash' text models, best first: stable before preview, newer before older, non-lite before lite."""
     skip = ("image", "tts", "live", "audio", "embedding", "robotics", "computer", "exp", "vision")
     cands = [n for n in names if "flash" in n and not any(s in n for s in skip)]
-    pool = [n for n in cands if "preview" not in n] or cands
 
     def version(n):
         m = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
         return float(m.group(1)) if m else 0.0
-    return sorted(pool, key=lambda n: (version(n), "lite" not in n), reverse=True)[0] if pool else None
+    return sorted(cands, key=lambda n: ("preview" not in n, version(n), "lite" not in n), reverse=True)
+
+
+def pick_flash(names):
+    """The single best flash model (None if there is none)."""
+    ranked = rank_flash(names)
+    return ranked[0] if ranked else None
+
+
+# Errors that mean "this model is unavailable right now": move on to the next model. Anything else
+# (400/401/403: bad key, no permission) is a real problem and is raised straight away.
+TRY_NEXT = ("HTTP 404", "HTTP 429", "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 504")
 
 
 def gemini_models(key):
@@ -82,25 +92,37 @@ def gemini(prompt, model, fallbacks=()):
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         raise LLMError("GEMINI_API_KEY not set")
-    tried = []
-    for name in ([_GEMINI_CHOSEN["m"]] if "m" in _GEMINI_CHOSEN else []) + [model, *fallbacks]:
-        if name in tried:
-            continue
+    tried, last = [], "none"
+
+    def attempt(name):
+        nonlocal last
         tried.append(name)
         try:
             out = _gemini_call(prompt, name, key)
             _GEMINI_CHOSEN["m"] = name
             return out
         except LLMError as exc:
-            if "HTTP 404" not in str(exc):
+            if not any(code in str(exc) for code in TRY_NEXT):
                 raise
-    found = pick_flash([n for n in gemini_models(key) if n not in tried])
-    if not found:
-        raise LLMError("no usable Gemini model found for this key (tried: " + ", ".join(tried) + ")")
-    out = _gemini_call(prompt, found, key)
-    _GEMINI_CHOSEN["m"] = found
-    print(f"[llm] configured Gemini model unavailable; using '{found}'. Update llm.gemini_model in settings.json.", flush=True)
-    return out
+            last = f"{name}: {exc}"
+            print(f"[llm] Gemini model '{name}' unavailable ({exc}); trying the next one", flush=True)
+            return None
+
+    for name in ([_GEMINI_CHOSEN["m"]] if "m" in _GEMINI_CHOSEN else []) + [model, *fallbacks]:
+        if name not in tried:
+            out = attempt(name)
+            if out is not None:
+                return out
+    try:
+        discovered = rank_flash([n for n in gemini_models(key) if n not in tried])[:3]
+    except LLMError as exc:
+        raise LLMError(f"no usable Gemini model (tried {', '.join(tried)}; model list failed: {exc})")
+    for name in discovered:
+        out = attempt(name)
+        if out is not None:
+            print(f"[llm] used discovered model '{name}'. Update llm.gemini_model in settings.json.", flush=True)
+            return out
+    raise LLMError(f"no usable Gemini model (tried {', '.join(tried)}; last error {last})")
 
 
 def groq(prompt, model):
@@ -116,13 +138,34 @@ def groq(prompt, model):
         raise LLMError("unexpected Groq response shape")
 
 
-def get_provider(cfg):
-    """Return a callable prompt -> text, or None when no AI should be used."""
-    name = (cfg.get("provider") or "none").lower()
-    if name == "none":
-        return None
+def _single(name, cfg):
     if name == "gemini":
         return lambda p: gemini(p, cfg["gemini_model"], cfg.get("gemini_fallback_models", []))
     if name == "groq":
         return lambda p: groq(p, cfg["groq_model"])
     raise LLMError(f"unknown provider: {name}")
+
+
+def get_provider(cfg):
+    """Return a callable prompt -> text, or None when no AI should be used.
+
+    "provider" is tried first; if it fails and "fallback_provider" is set (and its key exists), that is tried next.
+    """
+    primary = (cfg.get("provider") or "none").lower()
+    if primary == "none":
+        return None
+    names = [primary]
+    fb = (cfg.get("fallback_provider") or "").lower()
+    if fb and fb not in ("none", primary):
+        names.append(fb)
+    chain = [(n, _single(n, cfg)) for n in names]
+
+    def call(prompt):
+        errors = []
+        for name, fn in chain:
+            try:
+                return fn(prompt)
+            except LLMError as exc:
+                errors.append(f"{name}: {exc}")
+        raise LLMError("; ".join(errors))
+    return call
