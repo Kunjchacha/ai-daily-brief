@@ -1,0 +1,7 @@
+Sources:
+1. MIT Technology Review: https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/
+2. OpenAI: https://openai.com/index/helping-websites-express-ai-training-preferences
+3. OpenAI: https://openai.com/index/community-safety-report-and-new-protections-for-teens
+4. Simon Willison: https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/
+5. Simon Willison: https://simonwillison.net/2026/Oct/29/api-credits/
+6. The Verge: https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code
