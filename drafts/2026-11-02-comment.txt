@@ -2,6 +2,3 @@ Sources:
 1. OpenAI: https://openai.com/index/helping-websites-express-ai-training-preferences
 2. OpenAI: https://openai.com/index/community-safety-report-and-new-protections-for-teens
 3. Simon Willison: https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/
-4. The Verge: https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code
-5. TechCrunch: https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/
-6. The Verge: https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3
