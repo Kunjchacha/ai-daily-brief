@@ -16,7 +16,7 @@
    "source": "MIT Technology Review",
    "also": [],
    "published": "2026-11-02T09:35:19+00:00",
-   "score": 10.91
+   "score": 10.88
   },
   {
    "headline": "Making it easier for websites to express AI training preferences",
@@ -30,7 +30,7 @@
    "source": "OpenAI",
    "also": [],
    "published": "2026-10-30T09:30:00+00:00",
-   "score": 10.65
+   "score": 10.63
   },
   {
    "headline": "Community safety report and new protections for teens",
@@ -44,7 +44,7 @@
    "source": "OpenAI",
    "also": [],
    "published": "2026-10-30T09:00:00+00:00",
-   "score": 10.64
+   "score": 10.61
   },
   {
    "headline": "How We Took Over ChatGPT Accounts",
@@ -58,7 +58,7 @@
    "source": "Simon Willison",
    "also": [],
    "published": "2026-10-31T23:15:22+00:00",
-   "score": 9.83
+   "score": 9.81
   },
   {
    "headline": "API credits benefit for eligible ChatGPT subscriptions",
@@ -72,7 +72,7 @@
    "source": "Simon Willison",
    "also": [],
    "published": "2026-10-29T22:48:29+00:00",
-   "score": 8.32
+   "score": 8.29
   },
   {
    "headline": "I built an AI Tamagotchi before Meta could",
@@ -86,7 +86,7 @@
    "source": "The Verge",
    "also": [],
    "published": "2026-10-31T16:05:00+00:00",
-   "score": 7.61
+   "score": 7.58
   }
  ],
  "report": [
@@ -160,8 +160,7 @@
  ],
  "errors": [],
  "notes": [
-  "quiet news period: widened the window to 96 hours",
-  "AI writing failed (gemini: no usable Gemini model (tried gemini-3.6-flash, gemini-3.5-flash, gemini-3.7-flash, gemini-3.8-flash, gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemini-2.5-flash; last error gemini-2.5-flash: request failed (Timeout: AI time budget used up)); groq: GROQ_API_KEY not set); used the extractive fallback"
+  "quiet news period: widened the window to 96 hours"
  ],
- "created": "2026-11-02T12:32:28.564695+00:00"
+ "created": "2026-11-02T13:23:00.173361+00:00"
 }
