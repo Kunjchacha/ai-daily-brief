@@ -166,7 +166,7 @@
  ],
  "notes": [
   "quiet news period: widened the window to 96 hours",
-  "AI writing failed (request failed (HTTP 404)); used the extractive fallback"
+  "AI writing failed (request failed (HTTP 503)); used the extractive fallback"
  ],
- "created": "2026-11-02T11:48:45.939853+00:00"
+ "created": "2026-11-02T11:53:19.003776+00:00"
 }
