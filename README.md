@@ -14,7 +14,7 @@ python3 -m unittest discover -s tests  # 23 offline tests
 With a free API key in `.env` (copy `.env.example`), drop `--no-ai` and the AI writes the summaries and a second pass checks them.
 
 ## Pipeline
-`collect` (feeds) > `rank` (de-dupe, score, variety cap) > `write` (AI or extractive) > `verify` (numbers, names, quotes, links, hype) > `render` (drafts) > **you approve** > `publish` (archive).
+`collect` (feeds) > `rank` (de-dupe, score, variety cap) > `write` (AI or extractive) > `verify` (facts-only gate: kind, evidence quote, hedged wording; numbers, names, links, hype) > `render` (drafts and preview) > **you approve** (`issue.md` then Approve issue) > `publish` (archive).
 
 ## Layout
 - `config/` sources and settings (JSON, so nothing needs installing)

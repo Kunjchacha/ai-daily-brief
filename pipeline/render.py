@@ -39,10 +39,27 @@ def first_comment(issue):
     return "\n".join(lines)
 
 
+def age_text(published, ref):
+    """'7 hours old' / '3 days old', so stale stories are obvious."""
+    try:
+        hours = (ref - dt.datetime.fromisoformat(published)).total_seconds() / 3600
+    except (TypeError, ValueError):
+        return "age unknown"
+    return f"{hours / 24:.0f} days old" if hours >= 48 else f"{max(hours, 0):.0f} hours old"
+
+
 def review_notes(issue):
-    L = [f"# Review notes: {issue['date']}", "", f"- Status: **{issue['status']}**",
+    L = [f"# Review notes: {issue['date']}", "", f"- Status: **{issue['status']}** (nothing is posted until you approve it)",
          f"- Writing mode: {issue['mode']}",
-         f"- Items kept: {len(issue['items'])} | dropped: {sum(1 for r in issue['report'] if r['status'] == 'dropped')}", ""]
+         f"- Items kept: {len(issue['items'])} | dropped: {sum(1 for r in issue['report'] if r['status'] == 'dropped')}", "",
+         "## What each item rests on",
+         "Check that each is a CONFIRMED FACT (something that has happened or been officially announced), not a rumour or opinion.", ""]
+    ref = dt.datetime.fromisoformat(issue["created"]) if issue.get("created") else dt.datetime.now(dt.timezone.utc)
+    for n, it in enumerate(issue["items"], 1):
+        quote = it.get("evidence_quote") or "no exact quote (written without AI: check the source yourself)"
+        L.append(f"{n}. **{it['headline']}**: {it.get('kind') or 'unchecked'}; {it['source']}, {age_text(it.get('published'), ref)}")
+        L.append(f"   Source says: \"{quote}\"")
+    L.append("")
     need = [it for it in issue["items"] if it.get("needs_human_line")]
     if need:
         L += ["## Needs your line", "Replace `[ADD YOUR LINE]` in the post for:"] + [f"- {it['headline']}" for it in need] + [""]
@@ -56,9 +73,13 @@ def review_notes(issue):
         L += ["## Notes"] + [f"- {n}" for n in issue["notes"]] + [""]
     if issue.get("errors"):
         L += ["## Source errors"] + [f"- {e['source']}: {e['error']}" for e in issue["errors"]] + [""]
-    L += ["## Before you post", "1. Open each source link and skim it (accuracy is your job, not the script's).",
-          "2. Fix wording you don't like, fill any placeholder, then post to LinkedIn (or queue it in Buffer).",
-          "3. Put the contents of the comment file in the first comment.", ""]
+    day = issue["date"]
+    L += ["## Your approval step (nothing goes out without it)",
+          "1. Open each source link and read it. Accuracy and judgement are your job, not the script's.",
+          f"2. Open `drafts/{day}-issue.md`, edit anything you want, set `Include: no` on anything that is not a confirmed fact,",
+          "   replace any `[ADD YOUR LINE]`, then change `Status: DRAFT` to `Status: APPROVED` and save.",
+          "3. Run Actions > **Approve issue** with this date. It produces the final post and first comment from YOUR text.",
+          "4. Post the final text on LinkedIn (or queue it in Buffer), then run Actions > **Publish approved issue**.", ""]
     return "\n".join(L)
 
 
@@ -86,6 +107,22 @@ def issue_page(issue, brand, tagline, contact=""):
     parts.append(f"<footer>AI-assisted, human-reviewed. We summarise and link; the original authors own their work.{fix}"
                  f"</footer>")
     return _page(f"{brand}: {d}", "".join(parts))
+
+
+def preview_page(issue, brand, tagline, linkedin_text, contact=""):
+    """One self-contained page showing how the LinkedIn post will read and how the website page will look.
+    It is a draft preview only: nothing in it is published."""
+    site = html.escape(issue_page(issue, brand, tagline, contact), quote=True)
+    style = ("<style>.banner{background:#FEF3C7;border:1px solid #F59E0B;padding:.6rem .9rem;border-radius:8px}"
+             ".card{border:1px solid #CBD5E1;border-radius:10px;padding:1rem;background:#fff}"
+             ".card pre{white-space:pre-wrap;font:inherit;margin:.5rem 0 0}.who{color:#475569}"
+             "iframe{width:100%;height:760px;border:1px solid #CBD5E1;border-radius:10px;background:#fff}</style>")
+    body = (f"{style}<p class='banner'><b>PREVIEW ONLY.</b> Nothing here is posted or published. Status: "
+            f"{html.escape(issue['status'])}.</p><h1>1. LinkedIn post</h1>"
+            f"<div class='card'><div class='who'>Your profile &middot; just now &middot; {len(linkedin_text)} characters</div>"
+            f"<pre>{html.escape(linkedin_text)}</pre></div>"
+            f"<h1>2. Website archive page</h1><iframe srcdoc=\"{site}\" title='Website page preview'></iframe>")
+    return _page(f"Preview: {brand} {issue['date']}", body)
 
 
 def index_page(issues, brand, tagline):

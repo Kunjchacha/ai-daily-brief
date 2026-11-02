@@ -22,12 +22,15 @@ Free tiers change. Re-check the AI provider's current free model and limits ever
 5. Edit `config/settings.json`: set `site.base_url` to your Pages address (for example `https://YOURNAME.github.io/REPO`) and `site.contact` to a public address for corrections.
 6. Actions tab > "Daily draft" > Run workflow once to test.
 
-## 3. Daily routine (about 3 minutes)
-1. Open today's `drafts/YYYY-MM-DD-review.md` (also shown in the Actions run summary).
-2. Skim each source link. **Accuracy is your job; the script only reduces the risk.**
-3. Open `drafts/YYYY-MM-DD-linkedin.txt`, fix wording, replace any `[ADD YOUR LINE]`, and post it (or queue it in Buffer).
-4. Paste `drafts/YYYY-MM-DD-comment.txt` as the first comment (links in the comment, not the post, tend to reach further on LinkedIn).
-5. Actions > "Publish approved issue" > Run workflow with the date, to add it to the public archive.
+## 3. Daily routine (about 5 minutes). Nothing is posted until YOU approve it
+1. Open `drafts/YYYY-MM-DD-preview.html` to see how the LinkedIn post and the web page will look (download it from the repo and open it in a browser).
+2. Open `drafts/YYYY-MM-DD-issue.md`. Each item shows the exact sentence from the source it rests on, its kind (announced / reported) and its age. **Facts only: if it is a rumour, leak, prediction, plan or opinion, set `Include: no`.** Open the source link to confirm. Accuracy is your job; the script only reduces the risk.
+3. Edit any wording, replace any `[ADD YOUR LINE]`, then change `Status: DRAFT` to `Status: APPROVED` and commit the file on GitHub.
+4. Actions > "Approve issue" > Run workflow with the date. It refuses if the status is not APPROVED, a placeholder remains, or fewer than 3 items are left; otherwise it writes `-linkedin-final.txt` and `-comment-final.txt` from your text.
+5. Post `-linkedin-final.txt` (or queue it in Buffer, LinkedIn channel only), then paste `-comment-final.txt` as the first comment.
+6. Actions > "Publish approved issue" > Run workflow with the date, to add it to the public archive. It refuses unapproved issues.
+
+The facts-only gate (settings `facts_only`) already drops hedged or opinion-style stories and any item whose quoted evidence is not word-for-word in the source, but it is a filter, not a judge. Your approval is the real gate. A daily rebuild never overwrites an issue you have approved.
 
 Quiet news days: the status is `quiet_day` and no post is drafted. Skip posting, or write one yourself.
 

@@ -18,8 +18,17 @@ def build_prompt(clusters, brand):
         "- Do not add facts, numbers, names, dates or quotes that are not in that text.",
         '- If the text is too thin to summarise honestly, set "skip" to true.',
         "- No hype words (revolutionary, game-changing, groundbreaking, unprecedented).",
+        "- This brief reports CONFIRMED FACTS only. Classify each story in \"kind\":",
+        '    "announced" = an official statement, release, filing, published result or other event that has actually happened;',
+        '    "reported" = a news outlet reporting facts that have happened, with named evidence;',
+        '    "rumour" = unconfirmed, leaked, predicted, planned or expected, or anything hedged (may, could, reportedly);',
+        '    "opinion" = commentary, a personal project or account, a tutorial or a review.',
+        "  Never rewrite a rumour or opinion as if it were fact: just set its kind honestly.",
+        '- "evidence_quote" must be an EXACT sentence or phrase (max 25 words) copied word for word from the source text '
+        "that states the main fact. If you cannot find one, set kind to \"rumour\".",
         'Return JSON only: {"items":[{"id":1,"headline":"max 90 chars","summary":"1-2 sentences, max 280 chars",'
-        '"why_it_matters":"one sentence, max 160 chars, no new facts","skip":false}]}',
+        '"why_it_matters":"one sentence, max 160 chars, no new facts","kind":"announced",'
+        '"evidence_quote":"exact words from the source","skip":false}]}',
         "",
         "Stories:",
     ]
@@ -62,7 +71,7 @@ def extractive(cluster):
     if len(summary) > 280:
         summary = summary[:280].rsplit(" ", 1)[0].rstrip(",;:") + "..."
     return {"headline": lead["title"][:90], "summary": summary or lead["title"], "why_it_matters": "",
-            "mode": "extractive", "needs_human_line": True}
+            "mode": "extractive", "needs_human_line": True, "kind": "unchecked", "evidence_quote": ""}
 
 
 def write(clusters, provider, brand, fall_back=True):
@@ -85,7 +94,9 @@ def write(clusters, provider, brand, fall_back=True):
         if r and str(r.get("headline", "")).strip() and str(r.get("summary", "")).strip():
             item = {"headline": str(r["headline"]).strip(), "summary": str(r["summary"]).strip(),
                     "why_it_matters": str(r.get("why_it_matters", "")).strip(), "mode": "llm",
-                    "needs_human_line": not str(r.get("why_it_matters", "")).strip()}
+                    "needs_human_line": not str(r.get("why_it_matters", "")).strip(),
+                    "kind": str(r.get("kind", "")).strip().lower(),
+                    "evidence_quote": str(r.get("evidence_quote", "")).strip()}
         else:
             item = extractive(c)
             if mode == "llm":

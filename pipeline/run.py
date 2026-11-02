@@ -17,10 +17,11 @@ import traceback
 
 from adapters.llm import LLMError, get_provider
 
+from .approve import is_approved, render_issue_md
 from .collect import collect
 from .common import ROOT, UTC, load_env, load_json, log, settings, today_ist
 from .rank import rank
-from .render import first_comment, linkedin_post, review_notes
+from .render import first_comment, linkedin_post, preview_page, review_notes
 from .verify import verify
 from .write import write
 
@@ -55,6 +56,10 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
     ISSUES.mkdir(parents=True, exist_ok=True)
     LOGS.mkdir(parents=True, exist_ok=True)
     day = str(date)
+    if is_approved(day):
+        log(f"issue {day} is already APPROVED by a person: refusing to rebuild it and overwrite their text "
+            f"(delete drafts/{day}-issue.md first if you really want to start again)")
+        return 0
     if (DRAFTS / f"{day}-review.md").exists() and not force:
         log(f"draft for {day} already exists (use --force to rebuild)")
         return 0
@@ -63,10 +68,15 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
     kwargs = {} if fetcher is None else {"fetcher": fetcher}
     try:
         sources = load_json("config/sources.json")["sources"]
+        facts = s.get("facts_only", {})
+        # Facts-only: hedged or opinion-style titles never reach the writer (rumours, "could", "I built...").
+        title_deny = list(s.get("deny_title_patterns", [])) + (
+            facts.get("hedge_patterns", []) + facts.get("opinion_title_patterns", []) if facts.get("enabled") else [])
+
         def gather(hours):
             got, errs = collect(sources, hours, s["max_per_source"], now=now, **kwargs)
             ranked = rank(got, now, hours, s["history_days"], s["candidates_to_write"], date,
-                          min_text=s.get("min_text_chars", 0), deny=s.get("deny_title_patterns", []),
+                          min_text=s.get("min_text_chars", 0), deny=title_deny,
                           per_source=s.get("max_per_source_in_issue", 0))
             log(f"rank: {len(ranked)} candidate stories from {len(got)} items ({hours}h window)")
             return got, errs, ranked
@@ -99,7 +109,7 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
             calls += 1
         written, mode, notes = write(clusters, None if no_ai else provider, s["brand"], llm_cfg.get("fall_back_to_extractive", True))
         notes = run_notes + notes
-        vcfg = dict(s["verify"], check_links=s["verify"]["check_links"] and not offline)
+        vcfg = dict(s["verify"], check_links=s["verify"]["check_links"] and not offline, facts_only=facts)
         second = bool(provider) and mode == "llm" and llm_cfg.get("second_pass_check", True) and not no_ai
         if second:
             calls += 1
@@ -119,8 +129,12 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
         (DRAFTS / f"{day}-review.md").write_text(review_notes(issue), encoding="utf-8")
         if status == "ready_for_review":
             li = s["linkedin"]
-            (DRAFTS / f"{day}-linkedin.txt").write_text(linkedin_post(issue, s["brand"], li["hashtags"], li["max_chars"]), encoding="utf-8")
+            post_text = linkedin_post(issue, s["brand"], li["hashtags"], li["max_chars"])
+            (DRAFTS / f"{day}-linkedin.txt").write_text(post_text, encoding="utf-8")
             (DRAFTS / f"{day}-comment.txt").write_text(first_comment(issue), encoding="utf-8")
+            (DRAFTS / f"{day}-issue.md").write_text(render_issue_md(issue, s["brand"]), encoding="utf-8")  # the file you edit and approve
+            (DRAFTS / f"{day}-preview.html").write_text(
+                preview_page(issue, s["brand"], s["tagline"], post_text, s["site"].get("contact", "")), encoding="utf-8")
         log(f"done: status={status}, items={len(public)}, mode={mode}")
         (LOGS / f"{day}.json").write_text(json.dumps({"date": day, "status": status, "items": len(public), "mode": mode,
                                                       "source_errors": len(errors), "llm_calls": calls}, indent=1), encoding="utf-8")

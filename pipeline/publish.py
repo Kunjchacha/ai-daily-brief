@@ -33,11 +33,10 @@ def publish(day):
         log(f"no issue file for {day}")
         return 1
     issue = json.loads(f.read_text(encoding="utf-8"))
-    if issue["status"] not in ("ready_for_review", "published"):
-        log(f"issue {day} has status {issue['status']}; nothing to publish")
+    if issue["status"] not in ("approved", "published"):
+        log(f"issue {day} has status '{issue['status']}': it has not been approved by a person. "
+            "Edit drafts/{day}-issue.md, set 'Status: APPROVED', then run Actions > Approve issue first.".replace("{day}", day))
         return 1
-    if any(it.get("needs_human_line") for it in issue["items"]):
-        log("some items still need a human 'why it matters' line; publishing them without that line")
     issue["status"] = "published"
     f.write_text(json.dumps(issue, indent=1, ensure_ascii=False), encoding="utf-8")
     (SITE / "issues").mkdir(parents=True, exist_ok=True)

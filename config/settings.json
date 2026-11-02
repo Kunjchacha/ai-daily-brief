@@ -29,6 +29,19 @@
     "second_pass_check": true,
     "fall_back_to_extractive": true
   },
+  "facts_only": {
+    "enabled": true,
+    "allowed_kinds": ["announced", "reported"],
+    "require_quote": true,
+    "hedge_patterns": [
+      "\\breportedly\\b", "\\brumou?rs?\\b", "\\bleak(ed|s)?\\b", "\\ballegedly\\b", "\\bunconfirmed\\b",
+      "\\baccording to (sources|people)\\b", "\\bpeople familiar\\b", "\\bspeculat\\w*", "\\bin talks\\b",
+      "(?-i:\\bmay\\b)", "\\bmight\\b", "\\bcould\\b", "\\bexpected to\\b", "\\bsaid to\\b", "\\blikely to\\b",
+      "\\bpredict\\w*", "\\bwhat if\\b"
+    ],
+    "opinion_title_patterns": ["^i (built|tried|made|used|let|asked)\\b", "\\bmy take\\b", "\\bwhy i\\b", "\\bop-ed\\b",
+      "\\bopinion\\b", "\\bhot take\\b", "\\bwe have .* at home\\b"]
+  },
   "verify": {
     "check_links": true,
     "max_unsupported_names": 1
