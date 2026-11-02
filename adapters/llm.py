@@ -265,16 +265,23 @@ def _single(name, cfg):
     raise LLMError(f"unknown provider: {name}")
 
 
-def get_provider(cfg):
+def get_provider(cfg, role="writer"):
     """Return a callable prompt -> text, or None when no AI should be used.
 
-    "provider" is tried first; if it fails and "fallback_provider" is set (and its key exists), that is tried next.
+    role="writer" uses "provider" then "fallback_provider". role="checker" (the independent fact-check) uses
+    "checker_provider" then "checker_fallback_provider", defaulting to the writer's settings if those are absent.
+    The first is tried first; if it fails, the fallback is tried next. Using a different provider to check than
+    to write gives a genuine second opinion.
     """
-    primary = (cfg.get("provider") or "none").lower()
+    if role == "checker":
+        primary = (cfg.get("checker_provider") or cfg.get("provider") or "none").lower()
+        fb = (cfg.get("checker_fallback_provider") or cfg.get("fallback_provider") or "").lower()
+    else:
+        primary = (cfg.get("provider") or "none").lower()
+        fb = (cfg.get("fallback_provider") or "").lower()
     if primary == "none":
         return None
     names = [primary]
-    fb = (cfg.get("fallback_provider") or "").lower()
     if fb and fb not in ("none", primary):
         names.append(fb)
     chain = [(n, _single(n, cfg)) for n in names]

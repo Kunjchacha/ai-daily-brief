@@ -253,6 +253,33 @@ class GroqTests(unittest.TestCase):
         llm._BUDGET["deadline"] = None
 
 
+class CheckerRoleTests(unittest.TestCase):
+    CFG = {"provider": "groq", "fallback_provider": "gemini", "checker_provider": "gemini",
+           "checker_fallback_provider": "groq", "gemini_model": "g", "groq_model": "q"}
+
+    def test_writer_uses_groq_first_and_checker_uses_gemini_first(self):
+        order = []
+        with mock.patch.object(llm, "gemini", side_effect=lambda *a, **k: order.append("gemini") or "g"), \
+             mock.patch.object(llm, "groq", side_effect=lambda *a, **k: order.append("groq") or "q"):
+            llm.get_provider(self.CFG)("hi")
+            llm.get_provider(self.CFG, role="checker")("hi")
+        self.assertEqual(order, ["groq", "gemini"])
+
+    def test_checker_falls_back_to_the_other_provider(self):
+        with mock.patch.object(llm, "gemini", side_effect=llm.LLMError("request failed (HTTP 503)")), \
+             mock.patch.object(llm, "groq", return_value="from-groq"):
+            self.assertEqual(llm.get_provider(self.CFG, role="checker")("hi"), "from-groq")
+
+    def test_checker_defaults_to_writer_settings_when_not_configured(self):
+        cfg = {"provider": "groq", "fallback_provider": "gemini", "gemini_model": "g", "groq_model": "q"}
+        with mock.patch.object(llm, "groq", return_value="from-groq"), \
+             mock.patch.object(llm, "gemini", side_effect=AssertionError("should not be called")):
+            self.assertEqual(llm.get_provider(cfg, role="checker")("hi"), "from-groq")
+
+    def test_provider_none_means_no_checker_either(self):
+        self.assertIsNone(llm.get_provider({"provider": "none"}, role="checker"))
+
+
 class KeyHandlingTests(unittest.TestCase):
     def test_missing_key_gives_clear_error(self):
         with mock.patch.dict(os.environ, {}, clear=True):

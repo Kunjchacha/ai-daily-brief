@@ -9,7 +9,7 @@ This file is the handover. Everything needed to run, move or stop the newsletter
 | Daily scheduler | GitHub Actions cron (`.github/workflows/daily.yml`) | £0 (public repos) | Any cron (see section 6) |
 | Website and RSS | GitHub Pages from the `site/` folder | £0 | Any static host |
 | News sources | Public RSS/Atom feeds and the Hacker News API | £0 | Edit `config/sources.json` |
-| AI writer | Free-tier Gemini or Groq via `adapters/llm.py` | £0 | Change `llm.provider` in `config/settings.json`, or `none` |
+| AI writer and checker | Free tiers: **Groq writes, Gemini fact-checks** (a different AI gives a genuine second opinion), each standing in for the other if it fails. Both pick a current model themselves if a name is retired, and remember the last one that worked (`data/llm_state.json`) | £0 | Change `llm.provider`, `fallback_provider`, `checker_provider` in `config/settings.json`, or set `provider` to `none` |
 | LinkedIn posting | You, or Buffer's free plan | £0 | n/a |
 
 Free tiers change. Re-check the AI provider's current free model and limits every few months and update the model name in `config/settings.json`.
@@ -58,3 +58,10 @@ It is plain Python (standard library only, 3.9+) plus static files. To run anywh
 - **WhatsApp:** a WhatsApp Channel is free but broadcast-only and manual.
 - **Privacy and PII (Agilisys policy):** subscriber email addresses are personal data. Run this as your own venture, separate from Agilisys and Blenheim Chalcot systems, accounts, devices and data, and check your employment terms on outside business activity. Add a privacy notice, an unsubscribe route and a postal contact address before collecting anyone's email. UK GDPR/PECR, India's DPDP Act and CAN-SPAM may all apply depending on where readers are.
 - **Copyright:** summaries and links only; no republished articles.
+
+## 8. If the AI step fails
+Run **Actions > Check the AI provider > Run workflow**. It lists the models each key can use right now and times a tiny request
+to each, with the provider's own error text and no keys shown. Typical findings: `404` = the model name was retired (the pipeline
+now finds a current one itself), `503` or a timeout = the provider is busy (it moves to the next model, then the other provider),
+`403` = a bad key or a blocked request, `429` = a free-tier rate limit. If both providers fail, the draft still builds with the
+extractive fallback, so a post is never blocked by the AI.

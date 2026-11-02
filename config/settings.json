@@ -16,12 +16,15 @@
   "history_days": 14,
   "paused": false,
   "llm": {
-    "provider": "gemini",
-    "fallback_provider": "groq",
+    "provider": "groq",
+    "fallback_provider": "gemini",
+    "checker_provider": "gemini",
+    "checker_fallback_provider": "groq",
     "time_budget_seconds": 150,
     "gemini_model": "gemini-3.6-flash",
     "gemini_fallback_models": ["gemini-3.5-flash", "gemini-3.7-flash", "gemini-3.8-flash"],
-    "groq_model": "llama-3.3-70b-versatile",
+    "groq_model": "openai/gpt-oss-120b",
+    "groq_fallback_models": ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"],
     "max_llm_calls_per_day": 6,
     "second_pass_check": true,
     "fall_back_to_extractive": true

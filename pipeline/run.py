@@ -79,9 +79,11 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
             run_notes.append(f"quiet news period: widened the window to {wide} hours")
 
         llm_cfg = s["llm"]
+        checker = provider  # an injected provider (tests) is used for both roles
         if provider is None and not no_ai and _usage_get(day) < llm_cfg["max_llm_calls_per_day"]:
             try:
                 provider = get_provider(llm_cfg)
+                checker = get_provider(llm_cfg, role="checker") or provider  # a different AI gives a genuine second opinion
             except LLMError as exc:
                 log(f"AI provider unavailable: {exc}")
         elif not no_ai and provider is None:
@@ -96,7 +98,7 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
         if second:
             calls += 1
         vkw = {} if link_checker is None else {"link_checker": link_checker}
-        kept, report = verify(written, vcfg, provider=provider, second_pass=second, **vkw)
+        kept, report = verify(written, vcfg, provider=checker, second_pass=second, **vkw)
         if calls:
             _usage_add(day, calls)
 
