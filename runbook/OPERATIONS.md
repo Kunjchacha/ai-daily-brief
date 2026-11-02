@@ -30,6 +30,8 @@ Free tiers change. Re-check the AI provider's current free model and limits ever
 5. Post `-linkedin-final.txt` (or queue it in Buffer, LinkedIn channel only). There is no separate comment step.
 6. Actions > "Publish approved issue" > Run workflow with the date, to add it to the public archive. It refuses unapproved issues.
 
+**Review agent.** After drafting, `pipeline/review.py` reads each real article (or the publisher's feed text if the page blocks bots), audits every claim and scores the issue 0-100 from fixed checks. The issue score is its weakest item. 90 or more: recommend approving. 70-89: check the flagged items. Under 70: skip today. It is advice only and never approves or posts. The score appears at the top of `issue.md` and in the review notes. Until the score has been compared with your decisions for 14 days, approve every issue yourself whatever its score.
+
 The facts-only gate (settings `facts_only`) already drops hedged or opinion-style stories and any item whose quoted evidence is not word-for-word in the source, but it is a filter, not a judge. Your approval is the real gate. A daily rebuild never overwrites an issue you have approved.
 
 Quiet news days: the status is `quiet_day` and no post is drafted. Skip posting, or write one yourself.
