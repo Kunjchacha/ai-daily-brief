@@ -1,163 +1,167 @@
 {
  "date": "2026-11-02",
  "status": "ready_for_review",
- "mode": "llm",
+ "mode": "extractive",
  "brand": "AI Daily Brief",
  "items": [
   {
-   "headline": "OpenAI to honour shared robots.txt signal for training preferences",
-   "summary": "OpenAI will honour a shared robots.txt signal to assist website operators in communicating their AI training preferences to participating providers.",
-   "why_it_matters": "Website operators can use a standardised signal to specify training preferences to AI providers.",
-   "mode": "llm",
-   "needs_human_line": false,
+   "headline": "The agentic web is here",
+   "summary": "In 2001, a decade after he invented the World Wide Web, Tim Berners-Lee articulated a new vision. Together with two colleagues, he published an article in the magazine Scientific American in which he outlined what he called the “Semantic Web”: an internet designed to be...",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
+   "id": 1,
+   "url": "https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/",
+   "canonical": "https://technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here",
+   "source": "MIT Technology Review",
+   "also": [],
+   "published": "2026-11-02T09:35:19+00:00",
+   "score": 10.91
+  },
+  {
+   "headline": "Making it easier for websites to express AI training preferences",
+   "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
    "id": 2,
    "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
    "canonical": "https://openai.com/index/helping-websites-express-ai-training-preferences",
    "source": "OpenAI",
    "also": [],
    "published": "2026-10-30T09:30:00+00:00",
-   "score": 10.67
+   "score": 10.65
   },
   {
-   "headline": "OpenAI expands violence prevention safeguards in ChatGPT",
-   "summary": "OpenAI is strengthening violence prevention in ChatGPT through expanded safeguards, earlier interventions, and a commitment to public safety reporting.",
-   "why_it_matters": "The measures enhance safety interventions and public reporting around violent content.",
-   "mode": "llm",
-   "needs_human_line": false,
+   "headline": "Community safety report and new protections for teens",
+   "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
    "id": 3,
    "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
    "canonical": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
    "source": "OpenAI",
    "also": [],
    "published": "2026-10-30T09:00:00+00:00",
-   "score": 10.65
+   "score": 10.64
   },
   {
-   "headline": "Parameter Labs details security exploit in ChatGPT HTML previews",
-   "summary": "Parameter Labs discovered an exploit in ChatGPT's interactive HTML previews. The issue allowed untrusted code in a sandboxed frame to bypass restrictions by triggering MathLive library methods to insert custom HTML.",
-   "why_it_matters": "Flaws in sandboxed frames can allow untrusted code to interact with parent applications.",
-   "mode": "llm",
-   "needs_human_line": false,
+   "headline": "How We Took Over ChatGPT Accounts",
+   "summary": "Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe....",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
    "id": 4,
    "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
    "canonical": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
    "source": "Simon Willison",
    "also": [],
    "published": "2026-10-31T23:15:22+00:00",
-   "score": 9.85
+   "score": 9.83
   },
   {
-   "headline": "OpenAI introduces API credit benefit for top subscription tiers",
-   "summary": "OpenAI has introduced API credits for subscribers on its $100, $200, and $500 monthly plans. The move matches a similar benefit recently announced by Anthropic.",
-   "why_it_matters": "High-tier subscribers receive API credits equivalent to their monthly subscription fees.",
-   "mode": "llm",
-   "needs_human_line": false,
+   "headline": "API credits benefit for eligible ChatGPT subscriptions",
+   "summary": "Earlier this month Anthropic announced a generous new benefit for their Max and Team subscriptions: $100, $200, and $500 per month subscribers would get the equivalent quantity of (expiring) credits to use with the Anthropic API. OpenAI have now launched pretty much exactly the...",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
    "id": 5,
    "url": "https://simonwillison.net/2026/Oct/29/api-credits/",
    "canonical": "https://simonwillison.net/2026/Oct/29/api-credits",
    "source": "Simon Willison",
    "also": [],
    "published": "2026-10-29T22:48:29+00:00",
-   "score": 8.33
+   "score": 8.32
   },
   {
-   "headline": "Privacy-focused AI assistant Ollie announces closure",
-   "summary": "Ollie, an AI assistant designed to respect user privacy, is shutting down in a week as competition among AI assistants increases.",
-   "why_it_matters": "Increased market competition poses challenges for niche, privacy-orientated AI tools.",
-   "mode": "llm",
-   "needs_human_line": false,
-   "id": 8,
-   "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
-   "canonical": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down",
-   "source": "TechCrunch",
-   "also": [],
-   "published": "2026-10-30T22:56:13+00:00",
-   "score": 7.09
-  },
-  {
-   "headline": "Apple Intelligence to release in China with iOS 27.3",
-   "summary": "Apple has announced that Apple Intelligence will launch in China with iOS 27.3. Features will be available first in a beta on 4 November, followed by a full release in December.",
-   "why_it_matters": "Apple Intelligence features will become available to users in China via the upcoming software update.",
-   "mode": "llm",
-   "needs_human_line": false,
-   "id": 9,
-   "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
-   "canonical": "https://theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+   "headline": "I built an AI Tamagotchi before Meta could",
+   "summary": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home.",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
+   "id": 6,
+   "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+   "canonical": "https://theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
    "source": "The Verge",
    "also": [],
-   "published": "2026-10-30T22:32:53+00:00",
-   "score": 7.07
+   "published": "2026-10-31T16:05:00+00:00",
+   "score": 7.61
   }
  ],
  "report": [
   {
+   "id": 1,
+   "headline": "The agentic web is here",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
    "id": 2,
-   "headline": "OpenAI to honour shared robots.txt signal for training preferences",
+   "headline": "Making it easier for websites to express AI training preferences",
    "problems": [],
    "warnings": [
-    "link HTTP 403 (not verifiable, kept)",
-    "second pass unavailable (gemini: no usable Gemini model (tried gemini-3.6-flash, gemi)"
+    "link HTTP 403 (not verifiable, kept)"
    ],
    "status": "kept"
   },
   {
    "id": 3,
-   "headline": "OpenAI expands violence prevention safeguards in ChatGPT",
+   "headline": "Community safety report and new protections for teens",
    "problems": [],
    "warnings": [
-    "link HTTP 403 (not verifiable, kept)",
-    "second pass unavailable (gemini: no usable Gemini model (tried gemini-3.6-flash, gemi)"
+    "link HTTP 403 (not verifiable, kept)"
    ],
    "status": "kept"
   },
   {
    "id": 4,
-   "headline": "Parameter Labs details security exploit in ChatGPT HTML previews",
+   "headline": "How We Took Over ChatGPT Accounts",
    "problems": [],
-   "warnings": [
-    "second pass unavailable (gemini: no usable Gemini model (tried gemini-3.6-flash, gemi)"
-   ],
+   "warnings": [],
    "status": "kept"
   },
   {
    "id": 5,
-   "headline": "OpenAI introduces API credit benefit for top subscription tiers",
+   "headline": "API credits benefit for eligible ChatGPT subscriptions",
    "problems": [],
-   "warnings": [
-    "second pass unavailable (gemini: no usable Gemini model (tried gemini-3.6-flash, gemi)"
-   ],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "I built an AI Tamagotchi before Meta could",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+   "problems": [],
+   "warnings": [],
    "status": "kept"
   },
   {
    "id": 8,
-   "headline": "Privacy-focused AI assistant Ollie announces closure",
+   "headline": "Ollie, a privacy-focused AI assistant, is shutting down",
    "problems": [],
-   "warnings": [
-    "second pass unavailable (gemini: no usable Gemini model (tried gemini-3.6-flash, gemi)"
-   ],
+   "warnings": [],
    "status": "kept"
   },
   {
    "id": 9,
-   "headline": "Apple Intelligence to release in China with iOS 27.3",
+   "headline": "Apple Intelligence is finally coming to China with iOS 27.3",
    "problems": [],
-   "warnings": [
-    "second pass unavailable (gemini: no usable Gemini model (tried gemini-3.6-flash, gemi)"
-   ],
+   "warnings": [],
    "status": "kept"
   }
  ],
- "errors": [
-  {
-   "source": "importai",
-   "error": "HTTPError: HTTP Error 403: Forbidden"
-  }
- ],
+ "errors": [],
  "notes": [
   "quiet news period: widened the window to 96 hours",
-  "story 1 skipped by the writer: source text too thin",
-  "story 6 skipped by the writer: source text too thin",
-  "story 7 skipped by the writer: source text too thin"
+  "AI writing failed (gemini: no usable Gemini model (tried gemini-3.6-flash, gemini-3.5-flash, gemini-3.7-flash, gemini-3.8-flash, gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemini-2.5-flash; last error gemini-2.5-flash: request failed (Timeout: AI time budget used up)); groq: GROQ_API_KEY not set); used the extractive fallback"
  ],
- "created": "2026-11-02T12:10:20.977693+00:00"
+ "created": "2026-11-02T12:32:28.564695+00:00"
 }
