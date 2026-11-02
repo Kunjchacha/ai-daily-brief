@@ -52,9 +52,43 @@ def main():
             worked.append(name)
         except llm.LLMError as exc:
             print(f"  FAIL  {name:<34} {time.time() - started:5.1f}s  {exc}")
-    print("\nResult:", f"{len(worked)} model(s) answered: {', '.join(worked)}" if worked else
+    print("\nGemini result:", f"{len(worked)} model(s) answered: {', '.join(worked)}" if worked else
           "no model answered. Read the reasons above (404 = name retired, 403 = key/permission, 429 = quota, "
           "503 or timeout = Google is overloaded or throttling this network).")
+
+    print("\n== Groq ==")
+    gkey = os.environ.get("GROQ_API_KEY")
+    print(f"GROQ_API_KEY set: {bool(gkey)}")
+    if not gkey:
+        print("No Groq key in this environment; skipping.")
+        return 0
+    llm.start_budget(240)
+    try:
+        gnames = llm.groq_models(gkey)
+        granked = llm.rank_groq(gnames)
+        print(f"{len(gnames)} models; best candidates: {', '.join(granked[:6]) or 'none'}")
+    except llm.LLMError as exc:
+        granked = []
+        print(f"could not list models: {exc}")
+    gcands = []
+    for n in [cfg["groq_model"], *cfg.get("groq_fallback_models", []), *granked[:3]]:
+        if n not in gcands:
+            gcands.append(n)
+    print("\n-- Tiny test request per Groq model (30s limit, no retries):")
+    gworked = []
+    for name in gcands:
+        started = time.time()
+        try:
+            llm._post(f"{llm.GROQ_BASE}/chat/completions",
+                      {"model": name, "temperature": 0, "response_format": {"type": "json_object"},
+                       "messages": [{"role": "user", "content": PROMPT}]},
+                      {"Authorization": f"Bearer {gkey}"}, timeout=30, retries=0)
+            print(f"  OK    {name:<40} {time.time() - started:5.1f}s")
+            gworked.append(name)
+        except llm.LLMError as exc:
+            print(f"  FAIL  {name:<40} {time.time() - started:5.1f}s  {exc}")
+    print("\nGroq result:", f"{len(gworked)} model(s) answered: {', '.join(gworked)}" if gworked else
+          "no model answered. Read the reasons above (403 = blocked or bad key, 404 = model retired, 429 = rate limit).")
     return 0
 
 

@@ -68,24 +68,31 @@ def _load_state():
         return {}
 
 
-def _remember(name):
+def _remember(state_key, name):
     """Persist the model that just worked so the next run tries it first (models retire and overload often)."""
-    if _load_state().get("gemini_model") == name:
+    state = _load_state()
+    if state.get(state_key) == name:
         return
+    state[state_key] = name
     try:
         STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-        STATE_PATH.write_text(json.dumps({"gemini_model": name}, indent=1), encoding="utf-8")
+        STATE_PATH.write_text(json.dumps(state, indent=1), encoding="utf-8")
     except OSError:
         pass
 
 
-def _post(url, body, headers, timeout=40, retries=1):
+# Some providers (Groq sits behind Cloudflare) reject Python's default user agent with a 403, so identify ourselves.
+USER_AGENT = "ai-daily-brief/0.1 (+https://github.com/Kunjchacha/ai-daily-brief)"
+
+
+def _post(url, body, headers, timeout=100, retries=1):
     data = json.dumps(body).encode("utf-8")
     last = None
     for attempt in range(retries + 1):
         if _remaining() <= 1:
             raise LLMError("request failed (Timeout: AI time budget used up)")
-        req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json", **headers})
+        req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json",
+                                                              "User-Agent": USER_AGENT, **headers})
         started = time.time()
         try:
             with urllib.request.urlopen(req, timeout=max(2, min(timeout, _remaining()))) as r:
@@ -102,7 +109,7 @@ def _post(url, body, headers, timeout=40, retries=1):
 
 
 def _get(url, headers, timeout=30):
-    req = urllib.request.Request(url, headers=headers)
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, **headers})
     started = time.time()
     try:
         with urllib.request.urlopen(req, timeout=max(2, min(timeout, _remaining()))) as r:
@@ -140,10 +147,59 @@ def gemini_models(key):
             if "generateContent" in m.get("supportedGenerationMethods", [])]
 
 
+def _run_models(label, chosen, state_key, order, call, discover):
+    """Try models in order (last working one first). 'Unavailable' errors move on to the next model; when the
+    list runs out, ask the provider which models exist now and try the best few. Real errors raise at once."""
+    tried, last = [], "none"
+
+    def attempt(name):
+        nonlocal last
+        tried.append(name)
+        try:
+            out = call(name)
+            chosen["m"] = name
+            _remember(state_key, name)
+            return out
+        except LLMError as exc:
+            if not any(code in str(exc) for code in TRY_NEXT):
+                raise
+            last = f"{name}: {exc}"
+            print(f"[llm] {label} model '{name}' unavailable ({exc}); trying the next one", flush=True)
+            return None
+
+    remembered = chosen.get("m") or _load_state().get(state_key)
+    for name in ([remembered] if remembered else []) + list(order):
+        if name not in tried:
+            out = attempt(name)
+            if out is not None:
+                return out
+    try:
+        discovered = discover(tried)[:3]
+    except LLMError as exc:
+        raise LLMError(f"no usable {label} model (tried {', '.join(tried)}; model list failed: {exc})")
+    for name in discovered:
+        out = attempt(name)
+        if out is not None:
+            print(f"[llm] used discovered {label} model '{name}'. Update settings.json.", flush=True)
+            return out
+    raise LLMError(f"no usable {label} model (tried {', '.join(tried)}; last error {last})")
+
+
 def _gemini_call(prompt, model, key):
+    """One request. Hidden 'thinking' is switched off (summarising doesn't need it and it adds a lot of delay);
+    if a model rejects that setting with HTTP 400, the same request is sent once without it."""
     body = {"contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}}
-    res = _post(f"{GEMINI_BASE}/models/{model}:generateContent", body, {"x-goog-api-key": key})
+            "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json",
+                                 "thinkingConfig": {"thinkingBudget": 0}}}
+    url = f"{GEMINI_BASE}/models/{model}:generateContent"
+    try:
+        res = _post(url, body, {"x-goog-api-key": key})
+    except LLMError as exc:
+        if "HTTP 400" in str(exc) and "think" in str(exc).lower():
+            body["generationConfig"].pop("thinkingConfig")
+            res = _post(url, body, {"x-goog-api-key": key})
+        else:
+            raise
     try:
         return res["candidates"][0]["content"]["parts"][0]["text"]
     except (KeyError, IndexError, TypeError):
@@ -151,63 +207,61 @@ def _gemini_call(prompt, model, key):
 
 
 def gemini(prompt, model, fallbacks=()):
-    """Call Gemini. If a model name is retired (HTTP 404), try fallbacks, then discover a current one."""
+    """Call Gemini with model fallback and discovery (see _run_models)."""
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         raise LLMError("GEMINI_API_KEY not set")
-    tried, last = [], "none"
-
-    def attempt(name):
-        nonlocal last
-        tried.append(name)
-        try:
-            out = _gemini_call(prompt, name, key)
-            _GEMINI_CHOSEN["m"] = name
-            _remember(name)
-            return out
-        except LLMError as exc:
-            if not any(code in str(exc) for code in TRY_NEXT):
-                raise
-            last = f"{name}: {exc}"
-            print(f"[llm] Gemini model '{name}' unavailable ({exc}); trying the next one", flush=True)
-            return None
-
-    remembered = _GEMINI_CHOSEN.get("m") or _load_state().get("gemini_model")
-    for name in ([remembered] if remembered else []) + [model, *fallbacks]:
-        if name not in tried:
-            out = attempt(name)
-            if out is not None:
-                return out
-    try:
-        discovered = rank_flash([n for n in gemini_models(key) if n not in tried])[:3]
-    except LLMError as exc:
-        raise LLMError(f"no usable Gemini model (tried {', '.join(tried)}; model list failed: {exc})")
-    for name in discovered:
-        out = attempt(name)
-        if out is not None:
-            print(f"[llm] used discovered model '{name}'. Update llm.gemini_model in settings.json.", flush=True)
-            return out
-    raise LLMError(f"no usable Gemini model (tried {', '.join(tried)}; last error {last})")
+    return _run_models("Gemini", _GEMINI_CHOSEN, "gemini_model", [model, *fallbacks],
+                       lambda n: _gemini_call(prompt, n, key),
+                       lambda tried: rank_flash([n for n in gemini_models(key) if n not in tried]))
 
 
-def groq(prompt, model):
-    key = os.environ.get("GROQ_API_KEY")
-    if not key:
-        raise LLMError("GROQ_API_KEY not set")
+GROQ_BASE = "https://api.groq.com/openai/v1"
+_GROQ_CHOSEN = {}
+
+
+def rank_groq(ids):
+    """Chat-capable Groq models, best first: capable mid-to-large sizes before tiny or giant ones."""
+    skip = ("whisper", "guard", "tts", "playai", "embed", "orpheus", "safeguard", "moderation", "vision")
+    cands = [i for i in ids if not any(s in i.lower() for s in skip)]
+
+    def size(i):
+        m = re.search(r"(\d+)b", i.lower())
+        return int(m.group(1)) if m else 0
+    return sorted(cands, key=lambda i: (20 <= size(i) <= 130, size(i)), reverse=True)
+
+
+def groq_models(key):
+    """Ask Groq which models this key can use right now."""
+    res = _get(f"{GROQ_BASE}/models", {"Authorization": f"Bearer {key}"})
+    return [m["id"] for m in res.get("data", []) if m.get("active", True)]
+
+
+def _groq_call(prompt, model, key):
     body = {"model": model, "temperature": 0.2, "response_format": {"type": "json_object"},
             "messages": [{"role": "user", "content": prompt}]}
-    res = _post("https://api.groq.com/openai/v1/chat/completions", body, {"Authorization": f"Bearer {key}"})
+    res = _post(f"{GROQ_BASE}/chat/completions", body, {"Authorization": f"Bearer {key}"})
     try:
         return res["choices"][0]["message"]["content"]
     except (KeyError, IndexError, TypeError):
         raise LLMError("unexpected Groq response shape")
 
 
+def groq(prompt, model, fallbacks=()):
+    """Call Groq with model fallback and discovery (see _run_models)."""
+    key = os.environ.get("GROQ_API_KEY")
+    if not key:
+        raise LLMError("GROQ_API_KEY not set")
+    return _run_models("Groq", _GROQ_CHOSEN, "groq_model", [model, *fallbacks],
+                       lambda n: _groq_call(prompt, n, key),
+                       lambda tried: rank_groq([i for i in groq_models(key) if i not in tried]))
+
+
 def _single(name, cfg):
     if name == "gemini":
         return lambda p: gemini(p, cfg["gemini_model"], cfg.get("gemini_fallback_models", []))
     if name == "groq":
-        return lambda p: groq(p, cfg["groq_model"])
+        return lambda p: groq(p, cfg["groq_model"], cfg.get("groq_fallback_models", []))
     raise LLMError(f"unknown provider: {name}")
 
 
@@ -226,9 +280,9 @@ def get_provider(cfg):
     chain = [(n, _single(n, cfg)) for n in names]
 
     def call(prompt):
-        start_budget(cfg.get("time_budget_seconds", 100))
         errors = []
         for name, fn in chain:
+            start_budget(cfg.get("time_budget_seconds", 150))  # each provider gets its own time, so a slow one can't starve the next
             try:
                 return fn(prompt)
             except LLMError as exc:

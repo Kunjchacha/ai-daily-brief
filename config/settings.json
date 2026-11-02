@@ -18,7 +18,7 @@
   "llm": {
     "provider": "gemini",
     "fallback_provider": "groq",
-    "time_budget_seconds": 100,
+    "time_budget_seconds": 150,
     "gemini_model": "gemini-3.6-flash",
     "gemini_fallback_models": ["gemini-3.5-flash", "gemini-3.7-flash", "gemini-3.8-flash"],
     "groq_model": "llama-3.3-70b-versatile",
