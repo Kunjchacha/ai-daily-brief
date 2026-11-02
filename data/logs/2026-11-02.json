@@ -1,7 +1,7 @@
 {
  "date": "2026-11-02",
  "status": "ready_for_review",
- "items": 3,
+ "items": 5,
  "mode": "llm",
  "source_errors": 0,
  "llm_calls": 2
