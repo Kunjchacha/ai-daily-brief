@@ -2,29 +2,29 @@ AI Daily Brief: Monday 2 November 2026
 
 6 AI developments worth your time today:
 
-1. The agentic web is here
-In 2001, a decade after he invented the World Wide Web, Tim Berners-Lee articulated a new vision. Together with two colleagues, he published an article in the magazine Scientific American in which he outlined what he called the “Semantic Web”: an internet designed to be...
-Why it matters: [ADD YOUR LINE]
+1. OpenAI to honour shared robots.txt signal for training preferences
+OpenAI will honour a shared robots.txt signal to assist website operators in communicating their AI training preferences to participating providers.
+Why it matters: Website operators can use a standardised signal to specify training preferences to AI providers.
 
-2. Making it easier for websites to express AI training preferences
-OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.
-Why it matters: [ADD YOUR LINE]
+2. OpenAI expands violence prevention safeguards in ChatGPT
+OpenAI is strengthening violence prevention in ChatGPT through expanded safeguards, earlier interventions, and a commitment to public safety reporting.
+Why it matters: The measures enhance safety interventions and public reporting around violent content.
 
-3. Community safety report and new protections for teens
-OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.
-Why it matters: [ADD YOUR LINE]
+3. Parameter Labs details security exploit in ChatGPT HTML previews
+Parameter Labs discovered an exploit in ChatGPT's interactive HTML previews. The issue allowed untrusted code in a sandboxed frame to bypass restrictions by triggering MathLive library methods to insert custom HTML.
+Why it matters: Flaws in sandboxed frames can allow untrusted code to interact with parent applications.
 
-4. How We Took Over ChatGPT Accounts
-Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this "Canvas" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe....
-Why it matters: [ADD YOUR LINE]
+4. OpenAI introduces API credit benefit for top subscription tiers
+OpenAI has introduced API credits for subscribers on its $100, $200, and $500 monthly plans. The move matches a similar benefit recently announced by Anthropic.
+Why it matters: High-tier subscribers receive API credits equivalent to their monthly subscription fees.
 
-5. API credits benefit for eligible ChatGPT subscriptions
-Earlier this month Anthropic announced a generous new benefit for their Max and Team subscriptions: $100, $200, and $500 per month subscribers would get the equivalent quantity of (expiring) credits to use with the Anthropic API. OpenAI have now launched pretty much exactly the...
-Why it matters: [ADD YOUR LINE]
+5. Privacy-focused AI assistant Ollie announces closure
+Ollie, an AI assistant designed to respect user privacy, is shutting down in a week as competition among AI assistants increases.
+Why it matters: Increased market competition poses challenges for niche, privacy-orientated AI tools.
 
-6. I built an AI Tamagotchi before Meta could
-Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home.
-Why it matters: [ADD YOUR LINE]
+6. Apple Intelligence to release in China with iOS 27.3
+Apple has announced that Apple Intelligence will launch in China with iOS 27.3. Features will be available first in a beta on 4 November, followed by a full release in December.
+Why it matters: Apple Intelligence features will become available to users in China via the upcoming software update.
 
 Sources are in the first comment.
 Which of these matters most to you? Reply and I'll feature the best take.
