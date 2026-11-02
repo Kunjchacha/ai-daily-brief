@@ -1,0 +1,53 @@
+name: Publish approved issue
+
+# Run this by hand AFTER you have reviewed and posted an issue: Actions > Publish approved issue > Run workflow.
+# It promotes the draft to the public archive (web page, index, RSS) and deploys GitHub Pages.
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Issue date, YYYY-MM-DD"
+        required: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Promote the draft
+        env:
+          ISSUE_DATE: ${{ inputs.date }}
+        run: |
+          # Passed as an environment variable and format-checked, never pasted into the shell command.
+          [[ "$ISSUE_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "Date must look like 2026-11-03"; exit 1; }
+          python -m pipeline.publish --date "$ISSUE_DATE"
+      - name: Commit the archive
+        env:
+          ISSUE_DATE: ${{ inputs.date }}
+        run: |
+          git config user.name "newsletter-bot"
+          git config user.email "newsletter-bot@users.noreply.github.com"
+          git add site data
+          git diff --cached --quiet || git commit -m "Publish $ISSUE_DATE"
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

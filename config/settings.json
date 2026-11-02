@@ -1,0 +1,38 @@
+{
+  "brand": "AI Daily Brief",
+  "tagline": "The AI news worth your time, every day.",
+  "language": "en-GB",
+  "lookback_hours": 36,
+  "lookback_hours_max": 96,
+  "min_text_chars": 120,
+  "max_per_source_in_issue": 2,
+  "deny_title_patterns": ["^quoting\\b", "\\bpodcast\\b", "\\bsponsor", "\\bweekly (roundup|digest)\\b", "^import ai \\d+",
+    "\\bdays? left\\b", "\\bfounder summit\\b", "\\bearly[- ]bird\\b", "\\b(register now|tickets?)\\b", "\\bwebinar\\b",
+    "^[\\w.\\-]+ v?\\d+\\.\\d+(\\.\\d+)?([ab]|rc)?\\d*$", "^[\\w.\\-]+/[\\w.\\-]+$"],
+  "max_per_source": 15,
+  "candidates_to_write": 9,
+  "items_in_issue": 6,
+  "min_items": 3,
+  "history_days": 14,
+  "paused": false,
+  "llm": {
+    "provider": "gemini",
+    "gemini_model": "gemini-2.5-flash",
+    "groq_model": "llama-3.3-70b-versatile",
+    "max_llm_calls_per_day": 6,
+    "second_pass_check": true,
+    "fall_back_to_extractive": true
+  },
+  "verify": {
+    "check_links": true,
+    "max_unsupported_names": 1
+  },
+  "linkedin": {
+    "hashtags": ["#AI", "#ArtificialIntelligence", "#AINews"],
+    "max_chars": 2800
+  },
+  "site": {
+    "base_url": "https://kunjchacha.github.io/ai-daily-brief",
+    "contact": "https://www.linkedin.com/in/kunjchacha"
+  }
+}

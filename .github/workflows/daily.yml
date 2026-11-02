@@ -1,0 +1,43 @@
+name: Daily draft
+
+# Builds the day's draft at 06:00 IST (00:30 UTC) so it is ready well before you post.
+# It only ever writes DRAFTS. Nothing is posted anywhere. A failed run emails the repo owner (GitHub default).
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-draft
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run the tests (a broken change must never reach a live draft)
+        run: python -m unittest discover -s tests
+      - name: Build the draft
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python -m pipeline.run
+      - name: Show the review notes in the run summary
+        if: always()
+        run: |
+          for f in drafts/*-review.md; do [ -e "$f" ] && cat "$f" >> "$GITHUB_STEP_SUMMARY"; done; true
+      - name: Commit the draft
+        run: |
+          git config user.name "newsletter-bot"
+          git config user.email "newsletter-bot@users.noreply.github.com"
+          git add drafts data
+          git diff --cached --quiet || git commit -m "Draft for $(date -u +%F)"
+          git push

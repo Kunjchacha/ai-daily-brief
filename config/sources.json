@@ -1,0 +1,16 @@
+{
+  "notes": "authority 1-5 (5 = primary source). filter=true means keep only items that mention AI topics. Add or remove sources freely; a failing source never stops a run. Microsoft's AI feed returned HTTP 410 (gone) on 2 Nov 2026 so it is left out. Anthropic and Meta AI do not publish an official RSS feed, so add them here if that changes.",
+  "sources": [
+    {"id": "openai", "name": "OpenAI", "type": "rss", "url": "https://openai.com/news/rss.xml", "authority": 5, "filter": false},
+    {"id": "deepmind", "name": "Google DeepMind", "type": "rss", "url": "https://deepmind.google/blog/rss.xml", "authority": 5, "filter": false},
+    {"id": "google-research", "name": "Google Research", "type": "rss", "url": "https://research.google/blog/rss/", "authority": 4, "filter": true},
+    {"id": "huggingface", "name": "Hugging Face", "type": "rss", "url": "https://huggingface.co/blog/feed.xml", "authority": 4, "filter": false},
+    {"id": "nvidia", "name": "NVIDIA Blog", "type": "rss", "url": "https://blogs.nvidia.com/feed/", "authority": 3, "filter": true},
+    {"id": "willison", "name": "Simon Willison", "type": "atom", "url": "https://simonwillison.net/atom/everything/", "authority": 4, "filter": true},
+    {"id": "importai", "name": "Import AI", "type": "rss", "url": "https://importai.substack.com/feed", "authority": 3, "filter": false},
+    {"id": "mit-tr", "name": "MIT Technology Review", "type": "rss", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed", "authority": 4, "filter": false},
+    {"id": "techcrunch", "name": "TechCrunch", "type": "rss", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "authority": 3, "filter": false},
+    {"id": "verge", "name": "The Verge", "type": "atom", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "authority": 3, "filter": false},
+    {"id": "hn", "name": "Hacker News", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&query=LLM&numericFilters=points%3E40,created_at_i%3E{since}&hitsPerPage=30", "authority": 2, "filter": true}
+  ]
+}

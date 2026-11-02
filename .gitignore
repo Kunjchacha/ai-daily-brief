@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+# Subscriber data must NEVER be committed. Keep it in your email provider and a private encrypted backup.
+subscribers/
+*.subscribers.csv
+data/private/
+.DS_Store
