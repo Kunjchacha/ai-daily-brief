@@ -42,6 +42,19 @@ class FactsGateTests(unittest.TestCase):
         self.assertTrue(verify.check_facts(it(summary="The lab reportedly released Model X."), FACTS))
         self.assertTrue(verify.check_facts(it(headline="Lab could release Model X"), FACTS))
 
+    def test_extractive_story_is_dropped_when_the_ai_worked_on_the_others(self):
+        vcfg = {"max_unsupported_names": 9, "check_links": False, "facts_only": FACTS}
+        weak = it(id=2, mode="extractive", kind="unchecked", evidence_quote="")
+        kept, report = verify.verify([it(id=1), weak], vcfg)
+        self.assertEqual([k["id"] for k in kept], [1])
+        self.assertTrue(any("no AI fact check" in p for r in report for p in r["problems"]))
+
+    def test_all_extractive_run_is_kept_with_a_warning(self):
+        vcfg = {"max_unsupported_names": 9, "check_links": False, "facts_only": FACTS}
+        kept, report = verify.verify([it(id=1, mode="extractive", kind="unchecked", evidence_quote="")], vcfg)
+        self.assertEqual(len(kept), 1)
+        self.assertTrue(report[0]["warnings"])
+
     def test_disabled_gate_does_nothing(self):
         self.assertEqual(verify.check_facts(it(kind="rumour"), {"enabled": False}), [])
 

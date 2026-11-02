@@ -19,6 +19,7 @@ from .write import parse_results
 
 MAX_ARTICLE_BYTES = 1_500_000
 ARTICLE_CHARS = 6000
+MIN_FEED_TEXT = 80  # publishers' feed blurbs are short; the writer only saw this text, so it is a fair thing to audit against
 WEIGHTS = {"quote": 20, "claims": 35, "source": 20, "readable": 10, "fresh": 10, "hedge_free": 5}
 SOURCE_POINTS = {"A": 20, "B": 12, "C": 0}
 BANDS = ((90, "recommend approve"), (70, "review carefully"), (0, "skip today"))
@@ -159,7 +160,7 @@ def review(items, provider, ref, sources=None, fetcher=None):
     for it in items:
         text, note = fetch_article(it["url"], fetcher)
         feed_text = it.get("source_text") or ""
-        if text is None and len(feed_text) >= 300:
+        if text is None and len(feed_text) >= MIN_FEED_TEXT:
             # Some publishers (OpenAI today) block automated page reads. The feed text came from the publisher's own feed,
             # so audit against that. A claim beyond it is flagged unsupported, which errs on the safe side.
             text, note = feed_text, f"page blocked ({note}); audited against the publisher's own feed text"

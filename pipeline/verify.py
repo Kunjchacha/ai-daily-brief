@@ -132,9 +132,13 @@ def verify(items, vcfg, provider=None, second_pass=False, link_checker=check_lin
     """Return (kept_items, report). `report` lists every item with its outcome and reasons."""
     report, kept = [], []
     facts = vcfg.get("facts_only") or {}
+    ai_worked = any(i.get("mode") == "llm" for i in items)
     for it in items:
         problems = check_text(it, vcfg["max_unsupported_names"], facts)
         warnings = []
+        if facts.get("enabled") and ai_worked and it.get("mode") != "llm":
+            # In a run where the AI did work, a story it could not handle has no fact check at all: drop it, never pass it on.
+            problems.append("no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact")
         if facts.get("enabled") and it.get("mode") != "llm" and not problems:
             warnings.append("written without AI: nothing here confirms this is a fact and not a rumour, so check the source yourself")
         if not problems and vcfg.get("check_links", True):

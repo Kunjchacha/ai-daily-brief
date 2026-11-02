@@ -88,7 +88,7 @@ class ReviewTests(unittest.TestCase):
         def blocked(url):
             raise OSError("HTTP 403")
         reply = json.dumps({"items": [{"id": 1, "primary": True, "claims": [{"claim": "c", "verdict": "supported"}]}]})
-        out = review.review([item(source_text=ARTICLE)], lambda p: reply, REF, SOURCES, fetcher=blocked)
+        out = review.review([item(source_text=ARTICLE[:200])], lambda p: reply, REF, SOURCES, fetcher=blocked)
         self.assertEqual(out["items"][0]["score"], 100)
         self.assertIn("feed text", out["items"][0]["article_note"])
 
