@@ -6,6 +6,7 @@ import json
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -211,6 +212,43 @@ class RenderTests(unittest.TestCase):
         iss = self.issue(1)
         iss["items"][0]["headline"] = "<script>alert(1)</script>"
         self.assertNotIn("<script>", render.issue_page(iss, "B", "t"))
+
+
+class RunCapTests(unittest.TestCase):
+    """The daily AI call cap must be visible in the notes, and a manual force run must ignore it."""
+
+    def run_pipeline(self, usage_calls, force):
+        import tempfile
+        from pipeline import run as runmod
+        tmp = Path(tempfile.mkdtemp())
+        (tmp / "drafts").mkdir(); (tmp / "data" / "issues").mkdir(parents=True); (tmp / "data" / "logs").mkdir(parents=True)
+        (tmp / "data" / "usage.json").write_text(json.dumps({"2026-11-03": usage_calls}))
+        body = "The lab shipped a new model with longer context and better tools. " * 4
+        feed = ("<?xml version='1.0'?><rss version='2.0'><channel>" + "".join(
+            f"<item><title>Lab ships model number {w} for developers</title><link>https://e.com/{n}</link>"
+            f"<description>{body}</description><pubDate>Tue, 03 Nov 2026 03:00:00 GMT</pubDate></item>"
+            for n, w in enumerate(["alpha", "bravo", "charlie", "delta"]))
+            + "</channel></rss>").encode()
+        calls = []
+        provider = None
+        with mock.patch.object(runmod, "DRAFTS", tmp / "drafts"), mock.patch.object(runmod, "ISSUES", tmp / "data" / "issues"), \
+             mock.patch.object(runmod, "LOGS", tmp / "data" / "logs"), mock.patch.object(runmod, "USAGE", tmp / "data" / "usage.json"), \
+             mock.patch.object(runmod, "get_provider", side_effect=lambda *a, **k: calls.append("asked") or None), \
+             mock.patch.object(runmod, "load_json", side_effect=lambda rel: {"sources": [dict(SRC, id="s", type="rss", url="http://s")]}
+                               if "sources" in rel else __import__("json").load(open(Path(runmod.ROOT) / rel))):
+            runmod.run(dt.date(2026, 11, 3), force=force, no_ai=False, offline=True, fetcher=lambda u: feed, link_checker=lambda u: (True, "ok"))
+        issue = json.loads((tmp / "data" / "issues" / "2026-11-03.json").read_text())
+        return calls, issue
+
+    def test_cap_reached_is_stated_in_the_notes_and_ai_is_not_asked(self):
+        calls, issue = self.run_pipeline(usage_calls=6, force=False)
+        self.assertEqual(calls, [])
+        self.assertTrue(any("AI skipped" in n and "cap" in n for n in issue["notes"]))
+
+    def test_manual_force_run_ignores_the_cap(self):
+        calls, issue = self.run_pipeline(usage_calls=6, force=True)
+        self.assertEqual(calls[:1], ["asked"])
+        self.assertFalse(any("AI skipped" in n for n in issue["notes"]))
 
 
 if __name__ == "__main__":

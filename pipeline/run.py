@@ -80,14 +80,20 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
 
         llm_cfg = s["llm"]
         checker = provider  # an injected provider (tests) is used for both roles
-        if provider is None and not no_ai and _usage_get(day) < llm_cfg["max_llm_calls_per_day"]:
+        cap = llm_cfg["max_llm_calls_per_day"]
+        # The cap guards free-tier limits against runaway loops. A manual --force run is a deliberate rebuild
+        # by the owner, so it is exempt (its calls are still counted).
+        if provider is None and not no_ai and (force or _usage_get(day) < cap):
             try:
                 provider = get_provider(llm_cfg)
                 checker = get_provider(llm_cfg, role="checker") or provider  # a different AI gives a genuine second opinion
             except LLMError as exc:
                 log(f"AI provider unavailable: {exc}")
+                run_notes.append(f"AI provider unavailable ({exc}); used the extractive fallback")
         elif not no_ai and provider is None:
             log("daily AI call cap reached; using extractive fallback")
+            run_notes.append(f"AI skipped: today's AI call cap ({cap}, llm.max_llm_calls_per_day) was already used up; "
+                             "used the extractive fallback. A manual 'force' run ignores the cap.")
         calls = 0
         if provider and clusters:
             calls += 1
