@@ -21,6 +21,7 @@ from .approve import is_approved, render_issue_md
 from .collect import collect
 from .common import ROOT, UTC, load_env, load_json, log, settings, today_ist
 from .rank import rank
+from .review import review as review_agent
 from .render import linkedin_post, preview_page, review_notes
 from .verify import verify
 from .write import write
@@ -120,10 +121,17 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
 
         kept.sort(key=lambda i: -i["score"])
         kept = kept[: s["items_in_issue"]]
+        # Review agent: reads the real articles and scores how safe the issue is to approve. Advice only.
+        agent = None
+        if kept and not offline and s.get("review_agent", {}).get("enabled", True):
+            agent = review_agent(kept, checker if mode == "llm" and not no_ai else None, now, sources=sources)
+            if checker and mode == "llm" and not no_ai:
+                _usage_add(day, 1)
+            log(f"review agent: score {agent['score']} ({agent['verdict']})")
         status = "ready_for_review" if len(kept) >= s["min_items"] else "quiet_day"
         public = [{k: v for k, v in it.items() if k != "source_text"} for it in kept]  # never store source text
         issue = {"date": day, "status": status, "mode": mode, "brand": s["brand"], "items": public,
-                 "report": report, "errors": errors, "notes": notes,
+                 "report": report, "errors": errors, "notes": notes, "agent": agent,
                  "created": now.isoformat()}
         (ISSUES / f"{day}.json").write_text(json.dumps(issue, indent=1, ensure_ascii=False), encoding="utf-8")
         (DRAFTS / f"{day}-review.md").write_text(review_notes(issue), encoding="utf-8")

@@ -39,8 +39,21 @@ def age_text(published, ref):
     return f"{hours / 24:.0f} days old" if hours >= 48 else f"{max(hours, 0):.0f} hours old"
 
 
+def agent_lines(issue):
+    """The review agent's advice: the issue score, its verdict and a per-item scorecard (empty when the agent did not run)."""
+    a = issue.get("agent")
+    if not a:
+        return ["- Review agent: did not run (offline or disabled): check every source yourself"]
+    out = [f"- Review agent score: **{a['score']}%, {a['verdict']}** (the weakest item sets the score; advice only)"]
+    for r in a["items"]:
+        why = "; ".join(r["reasons"]) or "all checks passed"
+        out.append(f"  - {r['score']}% grade {r['grade']}: {r['headline']} ({why})")
+    return out
+
+
 def review_notes(issue):
     L = [f"# Review notes: {issue['date']}", "", f"- Status: **{issue['status']}** (nothing is posted until you approve it)",
+         *agent_lines(issue),
          f"- Writing mode: {issue['mode']}",
          f"- Items kept: {len(issue['items'])} | dropped: {sum(1 for r in issue['report'] if r['status'] == 'dropped')}", "",
          "## What each item rests on",

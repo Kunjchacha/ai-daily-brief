@@ -25,10 +25,11 @@
     "gemini_fallback_models": ["gemini-3.5-flash", "gemini-3.7-flash", "gemini-3.8-flash"],
     "groq_model": "openai/gpt-oss-120b",
     "groq_fallback_models": ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"],
-    "max_llm_calls_per_day": 6,
+    "max_llm_calls_per_day": 10,
     "second_pass_check": true,
     "fall_back_to_extractive": true
   },
+  "review_agent": {"enabled": true, "recommend_at": 90, "review_at": 70},
   "facts_only": {
     "enabled": true,
     "allowed_kinds": ["announced", "reported"],

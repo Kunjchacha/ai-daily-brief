@@ -241,12 +241,12 @@ class RunCapTests(unittest.TestCase):
         return calls, issue
 
     def test_cap_reached_is_stated_in_the_notes_and_ai_is_not_asked(self):
-        calls, issue = self.run_pipeline(usage_calls=6, force=False)
+        calls, issue = self.run_pipeline(usage_calls=10, force=False)
         self.assertEqual(calls, [])
         self.assertTrue(any("AI skipped" in n and "cap" in n for n in issue["notes"]))
 
     def test_manual_force_run_ignores_the_cap(self):
-        calls, issue = self.run_pipeline(usage_calls=6, force=True)
+        calls, issue = self.run_pipeline(usage_calls=10, force=True)
         self.assertEqual(calls[:1], ["asked"])
         self.assertFalse(any("AI skipped" in n for n in issue["notes"]))
 
