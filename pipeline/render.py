@@ -22,8 +22,7 @@ def linkedin_post(issue, brand, hashtags, max_chars):
             why = it["why_it_matters"] or PLACEHOLDER
             lines.append(f"Why it matters: {why}")
             lines.append("")
-        lines += ["Sources are in the first comment.",
-                  "Which of these matters most to you? Reply and I'll feature the best take.", "",
+        lines += ["Sources are in the first comment.", "",
                   "AI-assisted, human-reviewed.", "", " ".join(hashtags)]
         text = "\n".join(lines)
         if len(text) <= max_chars or len(items) <= 1:

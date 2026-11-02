@@ -4,7 +4,7 @@ AI Daily Brief: Monday 2 November 2026
 
 1. OpenAI to honour shared robots.txt signals for AI training preferences
 OpenAI has announced it will respect a shared robots.txt signal. This allows website operators to express their AI training preferences to participating providers.
-Why it matters: Website operators gain a standardized method to opt out of or manage how their content is used for AI training.
+Why it matters: Website operators gain a standardised method to opt out of or manage how their content is used for AI training.
 
 2. OpenAI expands violence prevention and teen safeguards in ChatGPT
 OpenAI is strengthening its violence prevention measures in ChatGPT through expanded safeguards and earlier interventions. The company has also committed to public safety reporting.
@@ -15,7 +15,6 @@ Parameter Labs discovered an exploit chain in ChatGPT's HTML preview feature inv
 Why it matters: Highlighting this attack chain shows security risks when rendering custom sandboxed HTML inside complex web applications.
 
 Sources are in the first comment.
-Which of these matters most to you? Reply and I'll feature the best take.
 
 AI-assisted, human-reviewed.
 
