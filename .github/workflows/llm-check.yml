@@ -1,0 +1,24 @@
+name: Check the AI provider
+
+# Run by hand: Actions > Check the AI provider > Run workflow. It tests each candidate AI model with a tiny
+# request and prints status, speed and the provider's error text. It never prints a key and never commits anything.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test the AI models
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python -m adapters.llm_check | tee "$GITHUB_STEP_SUMMARY"

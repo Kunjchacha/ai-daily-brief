@@ -7,45 +7,88 @@ Free-tier model names and limits change; check the provider's current free model
 import json
 import os
 import re
+import socket
 import time
 import urllib.error
 import urllib.request
 
 GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta"
 _GEMINI_CHOSEN = {}  # remembers the model that worked during this run
+_BUDGET = {"deadline": None}  # hard cap on total AI time per call, so a flaky provider can't stall the run
 
 
 class LLMError(Exception):
     pass
 
 
-def _post(url, body, headers, timeout=90, retries=2):
+def start_budget(seconds):
+    _BUDGET["deadline"] = time.time() + seconds
+
+
+def _remaining():
+    d = _BUDGET["deadline"]
+    return 1e9 if d is None else d - time.time()
+
+
+def _redact(text):
+    for name in ("GEMINI_API_KEY", "GROQ_API_KEY"):
+        secret = os.environ.get(name)
+        if secret and len(secret) > 6:
+            text = text.replace(secret, "***")
+    return text
+
+
+def _err_text(e):
+    """A short, key-redacted reason from an HTTP error body (e.g. 'The model is overloaded')."""
+    try:
+        raw = e.read(400).decode("utf-8", "replace")
+        m = re.search(r'"message"\s*:\s*"([^"]{1,140})', raw)
+        return _redact((m.group(1) if m else raw[:140]).replace("\n", " ")).strip()
+    except Exception:  # noqa: BLE001
+        return ""
+
+
+def _fail_text(e, started):
+    """Describe a failed request in a short, consistent way."""
+    if isinstance(e, urllib.error.HTTPError):
+        detail = _err_text(e)
+        return f"HTTP {e.code}" + (f": {detail}" if detail else "")
+    reason = getattr(e, "reason", e)
+    if isinstance(e, (TimeoutError, socket.timeout)) or isinstance(reason, (TimeoutError, socket.timeout)):
+        return f"Timeout after {time.time() - started:.0f}s"
+    return _redact(f"{type(e).__name__}: {reason}")[:100]
+
+
+def _post(url, body, headers, timeout=45, retries=1):
     data = json.dumps(body).encode("utf-8")
     last = None
     for attempt in range(retries + 1):
+        if _remaining() <= 1:
+            raise LLMError("request failed (Timeout: AI time budget used up)")
         req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json", **headers})
+        started = time.time()
         try:
-            with urllib.request.urlopen(req, timeout=timeout) as r:
+            with urllib.request.urlopen(req, timeout=max(2, min(timeout, _remaining()))) as r:
                 return json.loads(r.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
-            last = f"HTTP {e.code}"
+            last = _fail_text(e, started)
             if e.code not in (429, 500, 502, 503, 504):
                 break
         except Exception as e:  # noqa: BLE001
-            last = type(e).__name__
-        time.sleep(2 ** attempt * 2)
+            last = _fail_text(e, started)
+        if attempt < retries:
+            time.sleep(2 ** attempt * 2)
     raise LLMError(f"request failed ({last})")
 
 
 def _get(url, headers, timeout=30):
     req = urllib.request.Request(url, headers=headers)
+    started = time.time()
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
+        with urllib.request.urlopen(req, timeout=max(2, min(timeout, _remaining()))) as r:
             return json.loads(r.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        raise LLMError(f"request failed (HTTP {e.code})")
     except Exception as e:  # noqa: BLE001
-        raise LLMError(f"request failed ({type(e).__name__})")
+        raise LLMError(f"request failed ({_fail_text(e, started)})")
 
 
 def rank_flash(names):
@@ -67,7 +110,7 @@ def pick_flash(names):
 
 # Errors that mean "this model is unavailable right now": move on to the next model. Anything else
 # (400/401/403: bad key, no permission) is a real problem and is raised straight away.
-TRY_NEXT = ("HTTP 404", "HTTP 429", "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 504")
+TRY_NEXT = ("HTTP 404", "HTTP 429", "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 504", "Timeout")
 
 
 def gemini_models(key):
@@ -161,6 +204,7 @@ def get_provider(cfg):
     chain = [(n, _single(n, cfg)) for n in names]
 
     def call(prompt):
+        start_budget(cfg.get("time_budget_seconds", 100))
         errors = []
         for name, fn in chain:
             try:

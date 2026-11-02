@@ -69,6 +69,15 @@ class GeminiFallbackTests(unittest.TestCase):
         self.assertIn("no usable Gemini model", str(cm.exception))
         self.assertIn("503", str(cm.exception))
 
+    def test_timeout_moves_to_the_next_model(self):
+        def post(url, body, headers, **kw):
+            if "/models/slow-model:" in url:
+                raise llm.LLMError("request failed (Timeout after 45s)")
+            return REPLY
+        with mock.patch.object(llm, "_post", side_effect=post):
+            llm.gemini("hi", "slow-model", ["fast-model"])
+        self.assertEqual(llm._GEMINI_CHOSEN["m"], "fast-model")
+
     def test_non_404_errors_are_not_masked(self):
         with mock.patch.object(llm, "_post", side_effect=llm.LLMError("request failed (HTTP 403)")):
             with self.assertRaises(llm.LLMError) as cm:
@@ -104,6 +113,29 @@ class ProviderChainTests(unittest.TestCase):
         with mock.patch.object(llm, "gemini", return_value="from-gemini"), \
              mock.patch.object(llm, "groq", side_effect=AssertionError("must not be called")):
             self.assertEqual(llm.get_provider(cfg)("hi"), "from-gemini")
+
+
+class BudgetAndRedactionTests(unittest.TestCase):
+    def tearDown(self):
+        llm._BUDGET["deadline"] = None
+
+    def test_exhausted_budget_stops_requests_immediately(self):
+        llm.start_budget(-5)
+        with mock.patch("urllib.request.urlopen", side_effect=AssertionError("must not call the network")):
+            with self.assertRaises(llm.LLMError) as cm:
+                llm._post("http://x", {}, {})
+        self.assertIn("budget", str(cm.exception))
+
+    def test_keys_are_redacted_from_error_text(self):
+        with mock.patch.dict(os.environ, {"GEMINI_API_KEY": "SECRETKEY123456"}):
+            self.assertEqual(llm._redact("bad key SECRETKEY123456 here"), "bad key *** here")
+
+    def test_http_error_body_message_is_surfaced(self):
+        import io
+        import urllib.error
+        err = urllib.error.HTTPError("http://x", 503, "Service Unavailable", {},
+                                     io.BytesIO(b'{"error": {"code": 503, "message": "The model is overloaded."}}'))
+        self.assertEqual(llm._fail_text(err, 0), "HTTP 503: The model is overloaded.")
 
 
 class KeyHandlingTests(unittest.TestCase):
