@@ -30,7 +30,7 @@
    "source": "OpenAI",
    "also": [],
    "published": "2026-10-30T09:30:00+00:00",
-   "score": 10.68
+   "score": 10.67
   },
   {
    "headline": "Community safety report and new protections for teens",
@@ -58,7 +58,7 @@
    "source": "Simon Willison",
    "also": [],
    "published": "2026-10-31T23:15:22+00:00",
-   "score": 9.86
+   "score": 9.85
   },
   {
    "headline": "API credits benefit for eligible ChatGPT subscriptions",
@@ -166,7 +166,7 @@
  ],
  "notes": [
   "quiet news period: widened the window to 96 hours",
-  "AI writing failed (request failed (HTTP 503)); used the extractive fallback"
+  "AI writing failed (gemini: request failed (TimeoutError); groq: GROQ_API_KEY not set); used the extractive fallback"
  ],
- "created": "2026-11-02T11:53:19.003776+00:00"
+ "created": "2026-11-02T11:57:47.173786+00:00"
 }
