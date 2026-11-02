@@ -6,9 +6,13 @@ Free-tier model names and limits change; check the provider's current free model
 """
 import json
 import os
+import re
 import time
 import urllib.error
 import urllib.request
+
+GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta"
+_GEMINI_CHOSEN = {}  # remembers the model that worked during this run
 
 
 class LLMError(Exception):
@@ -33,18 +37,70 @@ def _post(url, body, headers, timeout=90, retries=2):
     raise LLMError(f"request failed ({last})")
 
 
-def gemini(prompt, model):
-    key = os.environ.get("GEMINI_API_KEY")
-    if not key:
-        raise LLMError("GEMINI_API_KEY not set")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+def _get(url, headers, timeout=30):
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        raise LLMError(f"request failed (HTTP {e.code})")
+    except Exception as e:  # noqa: BLE001
+        raise LLMError(f"request failed ({type(e).__name__})")
+
+
+def pick_flash(names):
+    """From a list of model names, choose the newest stable 'flash' text model (None if there is none)."""
+    skip = ("image", "tts", "live", "audio", "embedding", "robotics", "computer", "exp", "vision")
+    cands = [n for n in names if "flash" in n and not any(s in n for s in skip)]
+    pool = [n for n in cands if "preview" not in n] or cands
+
+    def version(n):
+        m = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
+        return float(m.group(1)) if m else 0.0
+    return sorted(pool, key=lambda n: (version(n), "lite" not in n), reverse=True)[0] if pool else None
+
+
+def gemini_models(key):
+    """Ask the API which models this key may call with generateContent."""
+    res = _get(f"{GEMINI_BASE}/models?pageSize=200", {"x-goog-api-key": key})
+    return [m["name"].split("/", 1)[1] for m in res.get("models", [])
+            if "generateContent" in m.get("supportedGenerationMethods", [])]
+
+
+def _gemini_call(prompt, model, key):
     body = {"contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}}
-    res = _post(url, body, {"x-goog-api-key": key})
+    res = _post(f"{GEMINI_BASE}/models/{model}:generateContent", body, {"x-goog-api-key": key})
     try:
         return res["candidates"][0]["content"]["parts"][0]["text"]
     except (KeyError, IndexError, TypeError):
         raise LLMError("unexpected Gemini response shape")
+
+
+def gemini(prompt, model, fallbacks=()):
+    """Call Gemini. If a model name is retired (HTTP 404), try fallbacks, then discover a current one."""
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise LLMError("GEMINI_API_KEY not set")
+    tried = []
+    for name in ([_GEMINI_CHOSEN["m"]] if "m" in _GEMINI_CHOSEN else []) + [model, *fallbacks]:
+        if name in tried:
+            continue
+        tried.append(name)
+        try:
+            out = _gemini_call(prompt, name, key)
+            _GEMINI_CHOSEN["m"] = name
+            return out
+        except LLMError as exc:
+            if "HTTP 404" not in str(exc):
+                raise
+    found = pick_flash([n for n in gemini_models(key) if n not in tried])
+    if not found:
+        raise LLMError("no usable Gemini model found for this key (tried: " + ", ".join(tried) + ")")
+    out = _gemini_call(prompt, found, key)
+    _GEMINI_CHOSEN["m"] = found
+    print(f"[llm] configured Gemini model unavailable; using '{found}'. Update llm.gemini_model in settings.json.", flush=True)
+    return out
 
 
 def groq(prompt, model):
@@ -66,7 +122,7 @@ def get_provider(cfg):
     if name == "none":
         return None
     if name == "gemini":
-        return lambda p: gemini(p, cfg["gemini_model"])
+        return lambda p: gemini(p, cfg["gemini_model"], cfg.get("gemini_fallback_models", []))
     if name == "groq":
         return lambda p: groq(p, cfg["groq_model"])
     raise LLMError(f"unknown provider: {name}")

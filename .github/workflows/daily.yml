@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: "30 0 * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Rebuild today's draft even if one already exists"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -29,7 +34,9 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: python -m pipeline.run
+          FORCE: ${{ inputs.force }}
+        run: |
+          if [ "$FORCE" = "true" ]; then python -m pipeline.run --force; else python -m pipeline.run; fi
       - name: Show the review notes in the run summary
         if: always()
         run: |
