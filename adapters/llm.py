@@ -11,8 +11,10 @@ import socket
 import time
 import urllib.error
 import urllib.request
+from pathlib import Path
 
 GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta"
+STATE_PATH = Path(__file__).resolve().parent.parent / "data" / "llm_state.json"  # remembers the last model that worked
 _GEMINI_CHOSEN = {}  # remembers the model that worked during this run
 _BUDGET = {"deadline": None}  # hard cap on total AI time per call, so a flaky provider can't stall the run
 
@@ -59,7 +61,25 @@ def _fail_text(e, started):
     return _redact(f"{type(e).__name__}: {reason}")[:100]
 
 
-def _post(url, body, headers, timeout=45, retries=1):
+def _load_state():
+    try:
+        return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _remember(name):
+    """Persist the model that just worked so the next run tries it first (models retire and overload often)."""
+    if _load_state().get("gemini_model") == name:
+        return
+    try:
+        STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        STATE_PATH.write_text(json.dumps({"gemini_model": name}, indent=1), encoding="utf-8")
+    except OSError:
+        pass
+
+
+def _post(url, body, headers, timeout=40, retries=1):
     data = json.dumps(body).encode("utf-8")
     last = None
     for attempt in range(retries + 1):
@@ -143,6 +163,7 @@ def gemini(prompt, model, fallbacks=()):
         try:
             out = _gemini_call(prompt, name, key)
             _GEMINI_CHOSEN["m"] = name
+            _remember(name)
             return out
         except LLMError as exc:
             if not any(code in str(exc) for code in TRY_NEXT):
@@ -151,7 +172,8 @@ def gemini(prompt, model, fallbacks=()):
             print(f"[llm] Gemini model '{name}' unavailable ({exc}); trying the next one", flush=True)
             return None
 
-    for name in ([_GEMINI_CHOSEN["m"]] if "m" in _GEMINI_CHOSEN else []) + [model, *fallbacks]:
+    remembered = _GEMINI_CHOSEN.get("m") or _load_state().get("gemini_model")
+    for name in ([remembered] if remembered else []) + [model, *fallbacks]:
         if name not in tried:
             out = attempt(name)
             if out is not None:

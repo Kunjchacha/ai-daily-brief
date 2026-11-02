@@ -1,6 +1,7 @@
 """Offline tests for the LLM adapter: no network, no real key."""
 import os
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -29,6 +30,26 @@ class PickFlashTests(unittest.TestCase):
 class GeminiFallbackTests(unittest.TestCase):
     def setUp(self):
         llm._GEMINI_CHOSEN.clear()
+        self._tmp = tempfile.TemporaryDirectory()
+        patcher = mock.patch.object(llm, "STATE_PATH", Path(self._tmp.name) / "llm_state.json")
+        patcher.start()
+        self.addCleanup(patcher.stop)
+        self.addCleanup(self._tmp.cleanup)
+
+    def test_last_working_model_is_remembered_and_tried_first(self):
+        calls = []
+
+        def post(url, body, headers, **kw):
+            calls.append(url.split("/models/")[1].split(":")[0])
+            return REPLY
+        with mock.patch.object(llm, "_post", side_effect=post):
+            llm.gemini("hi", "configured", [])
+            self.assertEqual(llm._load_state()["gemini_model"], "configured")
+            llm._GEMINI_CHOSEN.clear()  # simulate a brand-new run
+            llm.STATE_PATH.write_text('{"gemini_model": "remembered"}', encoding="utf-8")
+            calls.clear()
+            llm.gemini("hi", "configured", [])
+        self.assertEqual(calls[0], "remembered")
 
     def test_retired_model_falls_back_to_listed_alternative(self):
         def post(url, body, headers, **kw):
