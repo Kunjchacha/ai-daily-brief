@@ -1,0 +1,32 @@
+AI Daily Brief: Monday 2 November 2026
+
+5 AI developments worth your time today:
+
+1. AI agents consume far more tokens than simple chat prompts
+Developers' coding tasks for AI agents involve planning, code generation, testing and iteration, using ten to fifty times more tokens than a basic prompt.
+Why it matters: Higher token use impacts cost and efficiency of AI‑driven development.
+Source: https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/
+
+2. OpenAI to respect robots.txt signal for AI training preferences
+OpenAI announced it will honour a shared robots.txt signal, allowing sites to convey their AI training preferences to providers.
+Why it matters: It gives website owners control over how their content is used to train AI models.
+Source: https://openai.com/index/helping-websites-express-ai-training-preferences
+
+3. OpenAI adds stronger violence prevention safeguards to ChatGPT
+OpenAI announced expanded safeguards, earlier interventions, and a new public safety reporting commitment to improve violence prevention in ChatGPT.
+Why it matters: OpenAI is pairing the new safeguards with a public commitment to report on safety.
+Source: https://openai.com/index/community-safety-report-and-new-protections-for-teens
+
+4. Exploit found in ChatGPT's artifacts pattern allowing sandbox escape
+Parameter Labs identified a complex attack chain exploiting ChatGPT’s artifacts (HTML preview) pattern, allowing untrusted code to inject HTML into the parent page.
+Why it matters: It shows an HTML preview sandbox can be bypassed when untrusted code is able to inject HTML into the page around it.
+Source: https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/
+
+5. Apple to introduce Apple Intelligence in China via iOS 27.3
+Apple announced that Apple Intelligence will debut in China with the iOS 27.3 beta on 4 Nov, followed by a full release in December.
+Why it matters: Brings AI features to Chinese iPhone users, expanding Apple's market presence.
+Source: https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3
+
+AI-assisted, human-reviewed.
+
+#AI #ArtificialIntelligence #AINews
