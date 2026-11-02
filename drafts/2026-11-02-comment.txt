@@ -1,4 +1,0 @@
-Sources:
-1. OpenAI: https://openai.com/index/helping-websites-express-ai-training-preferences
-2. OpenAI: https://openai.com/index/community-safety-report-and-new-protections-for-teens
-3. Simon Willison: https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/

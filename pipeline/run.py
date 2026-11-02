@@ -21,7 +21,7 @@ from .approve import is_approved, render_issue_md
 from .collect import collect
 from .common import ROOT, UTC, load_env, load_json, log, settings, today_ist
 from .rank import rank
-from .render import first_comment, linkedin_post, preview_page, review_notes
+from .render import linkedin_post, preview_page, review_notes
 from .verify import verify
 from .write import write
 
@@ -131,7 +131,6 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
             li = s["linkedin"]
             post_text = linkedin_post(issue, s["brand"], li["hashtags"], li["max_chars"])
             (DRAFTS / f"{day}-linkedin.txt").write_text(post_text, encoding="utf-8")
-            (DRAFTS / f"{day}-comment.txt").write_text(first_comment(issue), encoding="utf-8")
             (DRAFTS / f"{day}-issue.md").write_text(render_issue_md(issue, s["brand"]), encoding="utf-8")  # the file you edit and approve
             (DRAFTS / f"{day}-preview.html").write_text(
                 preview_page(issue, s["brand"], s["tagline"], post_text, s["site"].get("contact", "")), encoding="utf-8")

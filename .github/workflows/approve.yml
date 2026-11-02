@@ -1,7 +1,7 @@
 name: Approve issue
 
 # Run this AFTER you have read and edited drafts/YYYY-MM-DD-issue.md and changed its line to "Status: APPROVED".
-# It checks that you really did, builds the final LinkedIn post and first comment from YOUR edited text, and marks the issue
+# It checks that you really did, builds the final LinkedIn post from YOUR edited text, and marks the issue
 # approved. It refuses (and says why) if the status is not APPROVED, a placeholder is left, or too few items remain.
 on:
   workflow_dispatch:

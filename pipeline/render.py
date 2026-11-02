@@ -1,4 +1,4 @@
-"""Stage 5: render the LinkedIn draft, its first comment, the reviewer notes, the web page and the RSS feed."""
+"""Stage 5: render the LinkedIn draft, the reviewer notes, the web page and the RSS feed."""
 import datetime as dt
 import email.utils
 import html
@@ -21,21 +21,13 @@ def linkedin_post(issue, brand, hashtags, max_chars):
             lines.append(it["summary"])
             why = it["why_it_matters"] or PLACEHOLDER
             lines.append(f"Why it matters: {why}")
+            lines.append(f"Source: {it['url']}")
             lines.append("")
-        lines += ["Sources are in the first comment.", "",
-                  "AI-assisted, human-reviewed.", "", " ".join(hashtags)]
+        lines += ["AI-assisted, human-reviewed.", "", " ".join(hashtags)]
         text = "\n".join(lines)
         if len(text) <= max_chars or len(items) <= 1:
             return text
         items.pop()
-
-
-def first_comment(issue):
-    lines = ["Sources:"]
-    for n, it in enumerate(issue["items"], 1):
-        extra = f" (also covered by {', '.join(it['also'])})" if it.get("also") else ""
-        lines.append(f"{n}. {it['source']}: {it['url']}{extra}")
-    return "\n".join(lines)
 
 
 def age_text(published, ref):
@@ -77,7 +69,7 @@ def review_notes(issue):
           "1. Open each source link and read it. Accuracy and judgement are your job, not the script's.",
           f"2. Open `drafts/{day}-issue.md`, edit anything you want, set `Include: no` on anything that is not a confirmed fact,",
           "   replace any `[ADD YOUR LINE]`, then change `Status: DRAFT` to `Status: APPROVED` and save.",
-          "3. Run Actions > **Approve issue** with this date. It produces the final post and first comment from YOUR text.",
+          "3. Run Actions > **Approve issue** with this date. It produces the final post (sources included) from YOUR text.",
           "4. Post the final text on LinkedIn (or queue it in Buffer), then run Actions > **Publish approved issue**.", ""]
     return "\n".join(L)
 

@@ -14,7 +14,7 @@ import re
 import sys
 
 from .common import ROOT, UTC, log, long_date, settings
-from .render import PLACEHOLDER, age_text, first_comment, linkedin_post
+from .render import PLACEHOLDER, age_text, linkedin_post
 
 DRAFTS = ROOT / "drafts"
 ISSUES = ROOT / "data" / "issues"
@@ -124,13 +124,12 @@ def approve(day, s=None):
     li = s["linkedin"]
     final = linkedin_post(issue, s["brand"], li["hashtags"], li["max_chars"])
     (DRAFTS / f"{day}-linkedin-final.txt").write_text(final, encoding="utf-8")
-    (DRAFTS / f"{day}-comment-final.txt").write_text(first_comment(issue), encoding="utf-8")
     log(f"APPROVED {day}: {len(kept)} item(s) kept, {len(excluded)} excluded")
     for e in excluded:
         log("  excluded: " + e)
     for w in warnings:
         log("  WARNING: " + w)
-    print("\n===== FINAL LINKEDIN POST =====\n" + final + "\n\n===== FIRST COMMENT =====\n" + first_comment(issue))
+    print("\n===== FINAL LINKEDIN POST =====\n" + final)
     return 0
 
 

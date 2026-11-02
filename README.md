@@ -19,7 +19,7 @@ With a free API key in `.env` (copy `.env.example`), drop `--no-ai` and the AI w
 ## Layout
 - `config/` sources and settings (JSON, so nothing needs installing)
 - `pipeline/` the stages; `adapters/llm.py` swappable AI provider
-- `drafts/` daily review notes, LinkedIn post, first comment
+- `drafts/` daily review notes, LinkedIn post (sources included)
 - `data/` issue records and logs (public news only; never subscriber data)
 - `site/` the public archive; `runbook/OPERATIONS.md` is the handover
 - `.github/workflows/` free daily scheduler and publish workflow
