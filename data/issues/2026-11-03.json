@@ -1,6 +1,6 @@
 {
  "date": "2026-11-03",
- "status": "ready_for_review",
+ "status": "approved",
  "mode": "llm",
  "brand": "AI Daily Brief",
  "items": [
@@ -18,7 +18,8 @@
    "source": "OpenAI",
    "also": [],
    "published": "2026-11-02T18:00:00+00:00",
-   "score": 11.69
+   "score": 11.69,
+   "approved_text": true
   },
   {
    "headline": "OpenAI increases rewards for security bug bounties",
@@ -34,39 +35,8 @@
    "source": "OpenAI",
    "also": [],
    "published": "2026-11-02T18:00:00+00:00",
-   "score": 11.69
-  },
-  {
-   "headline": "Trump signs executive order rebranding AI as Super Intelligence",
-   "summary": "President Trump has signed an executive order instructing government agencies to rebrand artificial intelligence as 'Super Intelligence'. The directive was contained within an order signed at the end of September.",
-   "why_it_matters": "US government agencies are directed to change their official terminology for artificial intelligence.",
-   "mode": "llm",
-   "needs_human_line": false,
-   "kind": "reported",
-   "evidence_quote": "President Trump signed an executive order that contained just one directive, ordering government agencies to rebrand what they had been calling artificial intelligence as “Super Intelligence.”",
-   "id": 3,
-   "url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
-   "canonical": "https://technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test",
-   "source": "MIT Technology Review",
-   "also": [],
-   "published": "2026-11-03T04:18:47+00:00",
-   "score": 10.55
-  },
-  {
-   "headline": "Apple begins beta testing Audio Intelligence features on Apple Watch",
-   "summary": "Apple has started beta testing new Audio Intelligence capabilities for the Apple Watch. The features are designed to help users take notes during conversations and recall what was said.",
-   "why_it_matters": "Apple Watch users in the beta program can now access AI tools for conversation recaps and note-taking.",
-   "mode": "llm",
-   "needs_human_line": false,
-   "kind": "announced",
-   "evidence_quote": "Now in beta: Apple's new Audio Intelligence features can help you remember what someone said or take notes on conversations.",
-   "id": 6,
-   "url": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/",
-   "canonical": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing",
-   "source": "TechCrunch",
-   "also": [],
-   "published": "2026-11-03T07:20:00+00:00",
-   "score": 8.81
+   "score": 11.69,
+   "approved_text": true
   },
   {
    "headline": "Cities implement Nvidia physical and agentic AI for public services",
@@ -82,7 +52,8 @@
    "source": "NVIDIA Blog",
    "also": [],
    "published": "2026-11-03T07:00:12+00:00",
-   "score": 8.78
+   "score": 8.78,
+   "approved_text": true
   },
   {
    "headline": "Anthropic restricts Claude Code from cloning existing video games",
@@ -98,7 +69,8 @@
    "source": "The Verge",
    "also": [],
    "published": "2026-11-02T18:56:02+00:00",
-   "score": 7.77
+   "score": 7.77,
+   "approved_text": true
   }
  ],
  "report": [
@@ -288,5 +260,6 @@
   "score": 72,
   "verdict": "review carefully"
  },
- "created": "2026-11-03T09:39:53.206806+00:00"
+ "created": "2026-11-03T09:39:53.206806+00:00",
+ "approved_at": "2026-11-03T09:45:51.578930+00:00"
 }

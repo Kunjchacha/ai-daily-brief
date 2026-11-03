@@ -1,0 +1,27 @@
+AI Daily Brief: Tuesday 3 November 2026
+
+4 AI developments worth your time today:
+
+1. OpenAI prepares next security sprint with Cathedral Systems
+OpenAI is preparing its next internal security sprint in partnership with Cathedral Systems. The initiative aims to test and strengthen the organisation's defences using AI.
+Why it matters: The security sprint aims to test and enhance OpenAI's internal defences.
+Source: https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai
+
+2. OpenAI increases rewards for security bug bounties
+OpenAI is increasing its Security Bug Bounty rewards for independent security researchers. The company is also introducing bonuses for report quality, loyalty, and priority campaigns.
+Why it matters: Independent researchers will receive higher rewards and bonuses for finding security vulnerabilities.
+Source: https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties
+
+3. Cities implement Nvidia physical and agentic AI for public services
+Local governments worldwide are using Nvidia physical and agentic AI to process municipal data from cameras and sensors. The technology powers infrastructure planning digital twins and service agents.
+Why it matters: Municipalities are adopting physical and agentic AI to manage urban infrastructure and operations.
+Source: https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/
+
+4. Anthropic restricts Claude Code from cloning existing video games
+Anthropic has modified Claude Code's system prompt to stop the AI tool from recreating existing video games. Users are still permitted to build original games with the software.
+Why it matters: Developers can no longer use Claude Code to re-create existing video games.
+Source: https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones
+
+AI-assisted, human-reviewed.
+
+#AI #ArtificialIntelligence #AINews
