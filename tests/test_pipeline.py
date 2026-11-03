@@ -10,7 +10,7 @@ from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from pipeline import collect, rank, render, verify, write  # noqa: E402
+from pipeline import approve as approve_mod, collect, rank, render, verify, write  # noqa: E402
 from pipeline.common import UTC, canonical_url  # noqa: E402
 
 NOW = dt.datetime(2026, 11, 3, 6, 0, tzinfo=UTC)
@@ -231,7 +231,8 @@ class RunCapTests(unittest.TestCase):
             + "</channel></rss>").encode()
         calls = []
         provider = None
-        with mock.patch.object(runmod, "DRAFTS", tmp / "drafts"), mock.patch.object(runmod, "ISSUES", tmp / "data" / "issues"), \
+        with mock.patch.object(runmod, "DRAFTS", tmp / "drafts"), mock.patch.object(approve_mod, "DRAFTS", tmp / "drafts"), \
+             mock.patch.object(runmod, "ISSUES", tmp / "data" / "issues"), \
              mock.patch.object(runmod, "LOGS", tmp / "data" / "logs"), mock.patch.object(runmod, "USAGE", tmp / "data" / "usage.json"), \
              mock.patch.object(runmod, "get_provider", side_effect=lambda *a, **k: calls.append("asked") or None), \
              mock.patch.object(runmod, "load_json", side_effect=lambda rel: {"sources": [dict(SRC, id="s", type="rss", url="http://s")]}

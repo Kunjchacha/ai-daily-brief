@@ -29,6 +29,41 @@ def audit(*verdicts, primary=True):
     return {"primary": primary, "claims": [{"claim": "c", "verdict": v} for v in verdicts]}
 
 
+class RealWorldLessons(unittest.TestCase):
+    """Cases from the live 3 Nov 2026 issue that the first version of the agent scored too kindly."""
+
+    def test_headline_as_evidence_cannot_reach_90(self):
+        q = "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and Agentic AI"
+        r = review.score_item(item(evidence_quote=q), "x " + q + " " * 400, audit("supported"), SOURCES, REF)
+        self.assertLess(r["score"], 90)
+        self.assertTrue(any("headline" in x for x in r["reasons"]))
+
+    def test_sentence_evidence_is_not_mistaken_for_a_headline(self):
+        self.assertFalse(review.looks_like_headline(QUOTE))
+
+    def test_old_event_month_caps_below_90(self):
+        r = review.score_item(item(summary="He signed an order at the end of September.",
+                                   published="2026-11-02T06:00:00+00:00"), ARTICLE, audit("supported"), SOURCES, REF)
+        self.assertLess(r["score"], 90)
+        self.assertTrue(any("September" in x for x in r["reasons"]))
+
+    def test_a_future_month_is_a_plan_not_an_old_event(self):
+        self.assertIsNone(review.earlier_month("full release in December", "2026-11-02T06:00:00+00:00"))
+        self.assertIsNone(review.earlier_month("announced this November", "2026-11-02T06:00:00+00:00"))
+
+    def test_hedged_wording_in_the_why_line_caps_at_70(self):
+        entries = [item(id=1, why_it_matters="This could change everything.")]
+        out = review.review(entries, None, REF, sources=SOURCES, fetcher=lambda u: ARTICLE * 3,
+                            hedge_patterns=[r"\bcould\b"])
+        self.assertLessEqual(out["items"][0]["score"], 70)
+
+    def test_why_line_is_sent_to_the_checker(self):
+        seen = []
+        review.review([item(id=1, why_it_matters="It makes tea.")], lambda p: seen.append(p) or '{"items":[]}', REF,
+                      sources=SOURCES, fetcher=lambda u: ARTICLE * 3)
+        self.assertIn("Why it matters: It makes tea.", seen[0])
+
+
 class ScoreTests(unittest.TestCase):
     def test_clean_primary_story_scores_100(self):
         r = review.score_item(item(), ARTICLE, audit("supported", "supported"), SOURCES, REF)

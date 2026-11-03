@@ -124,7 +124,8 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
         # Review agent: reads the real articles and scores how safe the issue is to approve. Advice only.
         agent = None
         if kept and not offline and s.get("review_agent", {}).get("enabled", True):
-            agent = review_agent(kept, checker if mode == "llm" and not no_ai else None, now, sources=sources)
+            agent = review_agent(kept, checker if mode == "llm" and not no_ai else None, now, sources=sources,
+                                 hedge_patterns=facts.get("hedge_patterns", []) if facts.get("enabled") else [])
             if checker and mode == "llm" and not no_ai:
                 _usage_add(day, 1)
             log(f"review agent: score {agent['score']} ({agent['verdict']})")
