@@ -1,0 +1,32 @@
+AI Daily Brief: Tuesday 3 November 2026
+
+5 AI developments worth your time today:
+
+1. OpenAI prepares next security sprint with Cathedral Systems
+OpenAI is preparing its next internal security sprint in partnership with Cathedral Systems. The initiative aims to test and strengthen the organisation's defences using AI.
+Why it matters: The security sprint aims to test and enhance OpenAI's internal defences.
+Source: https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai
+
+2. OpenAI increases rewards for security bug bounties
+OpenAI is increasing its Security Bug Bounty rewards for independent security researchers. The company is also introducing bonuses for report quality, loyalty, and priority campaigns.
+Why it matters: Independent researchers will receive higher rewards and bonuses for finding security vulnerabilities.
+Source: https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties
+
+3. Trump signs executive order rebranding AI as Super Intelligence
+President Trump has signed an executive order instructing government agencies to rebrand artificial intelligence as 'Super Intelligence'. The directive was contained within an order signed at the end of September.
+Why it matters: US government agencies are directed to change their official terminology for artificial intelligence.
+Source: https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/
+
+4. Apple begins beta testing Audio Intelligence features on Apple Watch
+Apple has started beta testing new Audio Intelligence capabilities for the Apple Watch. The features are designed to help users take notes during conversations and recall what was said.
+Why it matters: Apple Watch users in the beta program can now access AI tools for conversation recaps and note-taking.
+Source: https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/
+
+5. Cities implement Nvidia physical and agentic AI for public services
+Local governments worldwide are using Nvidia physical and agentic AI to process municipal data from cameras and sensors. The technology powers infrastructure planning digital twins and service agents.
+Why it matters: Municipalities are adopting physical and agentic AI to manage urban infrastructure and operations.
+Source: https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/
+
+AI-assisted, human-reviewed.
+
+#AI #ArtificialIntelligence #AINews

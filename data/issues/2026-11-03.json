@@ -1,0 +1,292 @@
+{
+ "date": "2026-11-03",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "OpenAI prepares next security sprint with Cathedral Systems",
+   "summary": "OpenAI is preparing its next internal security sprint in partnership with Cathedral Systems. The initiative aims to test and strengthen the organisation's defences using AI.",
+   "why_it_matters": "The security sprint aims to test and enhance OpenAI's internal defences.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+   "id": 1,
+   "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+   "canonical": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-02T18:00:00+00:00",
+   "score": 11.69
+  },
+  {
+   "headline": "OpenAI increases rewards for security bug bounties",
+   "summary": "OpenAI is increasing its Security Bug Bounty rewards for independent security researchers. The company is also introducing bonuses for report quality, loyalty, and priority campaigns.",
+   "why_it_matters": "Independent researchers will receive higher rewards and bonuses for finding security vulnerabilities.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
+   "id": 2,
+   "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+   "canonical": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-02T18:00:00+00:00",
+   "score": 11.69
+  },
+  {
+   "headline": "Trump signs executive order rebranding AI as Super Intelligence",
+   "summary": "President Trump has signed an executive order instructing government agencies to rebrand artificial intelligence as 'Super Intelligence'. The directive was contained within an order signed at the end of September.",
+   "why_it_matters": "US government agencies are directed to change their official terminology for artificial intelligence.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "President Trump signed an executive order that contained just one directive, ordering government agencies to rebrand what they had been calling artificial intelligence as “Super Intelligence.”",
+   "id": 3,
+   "url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
+   "canonical": "https://technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test",
+   "source": "MIT Technology Review",
+   "also": [],
+   "published": "2026-11-03T04:18:47+00:00",
+   "score": 10.55
+  },
+  {
+   "headline": "Apple begins beta testing Audio Intelligence features on Apple Watch",
+   "summary": "Apple has started beta testing new Audio Intelligence capabilities for the Apple Watch. The features are designed to help users take notes during conversations and recall what was said.",
+   "why_it_matters": "Apple Watch users in the beta program can now access AI tools for conversation recaps and note-taking.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Now in beta: Apple's new Audio Intelligence features can help you remember what someone said or take notes on conversations.",
+   "id": 6,
+   "url": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/",
+   "canonical": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-03T07:20:00+00:00",
+   "score": 8.81
+  },
+  {
+   "headline": "Cities implement Nvidia physical and agentic AI for public services",
+   "summary": "Local governments worldwide are using Nvidia physical and agentic AI to process municipal data from cameras and sensors. The technology powers infrastructure planning digital twins and service agents.",
+   "why_it_matters": "Municipalities are adopting physical and agentic AI to manage urban infrastructure and operations.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and Agentic AI",
+   "id": 7,
+   "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
+   "canonical": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications",
+   "source": "NVIDIA Blog",
+   "also": [],
+   "published": "2026-11-03T07:00:12+00:00",
+   "score": 8.78
+  },
+  {
+   "headline": "Anthropic restricts Claude Code from cloning existing video games",
+   "summary": "Anthropic has modified Claude Code's system prompt to stop the AI tool from recreating existing video games. Users are still permitted to build original games with the software.",
+   "why_it_matters": "Developers can no longer use Claude Code to re-create existing video games.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Anthropic has updated Claude Code's system prompt to prevent the AI tool from being used to re-create existing video games",
+   "id": 9,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+   "canonical": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-02T18:56:02+00:00",
+   "score": 7.77
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI prepares next security sprint with Cathedral Systems",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI increases rewards for security bug bounties",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Trump signs executive order rebranding AI as Super Intelligence",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Agentic analytics faces challenge over insight quality",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 5,
+   "headline": "US Census Bureau updates business AI adoption data",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 6,
+   "headline": "Apple begins beta testing Audio Intelligence features on Apple Watch",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Cities implement Nvidia physical and agentic AI for public services",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "Garry Tan spending up to $200k annually on AI agent tokens",
+   "problems": [
+    "number not in source: 200000"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Anthropic restricts Claude Code from cloning existing video games",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  }
+ ],
+ "errors": [],
+ "notes": [],
+ "agent": {
+  "items": [
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "OpenAI prepares next security sprint with Cathedral Systems",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 2,
+    "headline": "OpenAI increases rewards for security bug bounties",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 3,
+    "headline": "Trump signs executive order rebranding AI as Super Intelligence",
+    "article_note": "read",
+    "source": "MIT Technology Review"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 6,
+    "headline": "Apple begins beta testing Audio Intelligence features on Apple Watch",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 7,
+    "headline": "Cities implement Nvidia physical and agentic AI for public services",
+    "article_note": "read",
+    "source": "NVIDIA Blog"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 9,
+    "headline": "Anthropic restricts Claude Code from cloning existing video games",
+    "article_note": "read",
+    "source": "The Verge"
+   }
+  ],
+  "score": 72,
+  "verdict": "review carefully"
+ },
+ "created": "2026-11-03T09:39:53.206806+00:00"
+}
