@@ -1,0 +1,22 @@
+AI Daily Brief: Wednesday 4 November 2026
+
+3 AI developments worth your time today:
+
+1. OpenAI highlights ChatGPT and Codex for physical world engineering
+OpenAI has outlined how engineers are using ChatGPT and Codex to speed up physical world workflows. The applications cover computer-aided design, printed circuit board design, and simulations.
+Why it matters: Applying language and code models to engineering tools aids hardware and physical system design.
+Source: https://openai.com/index/accelerating-engineering-for-the-physical-world
+
+2. Cisco integrates OpenAI models to strengthen enterprise security
+Cisco is combining its network intelligence with OpenAI models to enhance enterprise security. The integration aims to build more adaptive defensive systems operating at machine speed.
+Why it matters: Pairing network telemetry with language models allows enterprise cyber defenses to respond faster to threats.
+Source: https://openai.com/index/cisco-cyber
+
+3. Nexus Mods introduces mandatory AI disclosure for new PC mod uploads
+PC gaming repository Nexus Mods is making disclosures mandatory for all newly uploaded mods. Authors must explicitly state whether artificial intelligence tools were used to create their submitted work.
+Why it matters: Enforcing declarations on AI tools creates transparency for players and creators across the PC modding community.
+Source: https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures
+
+AI-assisted, human-reviewed.
+
+#AI #ArtificialIntelligence #AINews

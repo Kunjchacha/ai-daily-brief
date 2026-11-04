@@ -1,25 +1,9 @@
 {
  "date": "2026-11-04",
- "status": "ready_for_review",
+ "status": "approved",
  "mode": "llm",
  "brand": "AI Daily Brief",
  "items": [
-  {
-   "headline": "Google DeepMind introduces Antigravity for agentic cheminformatics",
-   "summary": "Google DeepMind has detailed how its Antigravity platform and Cheminformatics Skills aim to speed up drug discovery workflows. The system assists with searching compounds and proposing novel rigidified macrocycles.",
-   "why_it_matters": "Automating compound search and macrocycle design helps accelerate complex drug discovery tasks.",
-   "mode": "llm",
-   "needs_human_line": false,
-   "kind": "announced",
-   "evidence_quote": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles.",
-   "id": 1,
-   "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
-   "canonical": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity",
-   "source": "Google DeepMind",
-   "also": [],
-   "published": "2026-11-03T17:01:49+00:00",
-   "score": 11.51
-  },
   {
    "headline": "OpenAI highlights ChatGPT and Codex for physical world engineering",
    "summary": "OpenAI has outlined how engineers are using ChatGPT and Codex to speed up physical world workflows. The applications cover computer-aided design, printed circuit board design, and simulations.",
@@ -34,7 +18,8 @@
    "source": "OpenAI",
    "also": [],
    "published": "2026-11-03T12:00:00+00:00",
-   "score": 11.1
+   "score": 11.1,
+   "approved_text": true
   },
   {
    "headline": "Cisco integrates OpenAI models to strengthen enterprise security",
@@ -50,23 +35,8 @@
    "source": "OpenAI",
    "also": [],
    "published": "2026-11-03T08:00:00+00:00",
-   "score": 10.76
-  },
-  {
-   "headline": "President Trump signs executive order rebranding AI as Super Intelligence",
-   "summary": "President Trump signed an executive order instructing federal agencies to rebrand artificial intelligence as 'Super Intelligence'. The order contained a single directive for government departments to update their terminology.",
-   "why_it_matters": "The directive alters the official language US federal agencies must use when referring to artificial intelligence technologies.",
-   "mode": "llm",
-   "needs_human_line": false,
-   "kind": "reported",
-   "evidence_quote": "At the end of September, President Trump signed an executive order that contained just one directive, ordering government agencies to rebrand what they had been calling artificial intelligence as “Super Intelligence.”",
-   "id": 5,
-   "url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
-   "canonical": "https://technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test",
-   "source": "MIT Technology Review",
-   "also": [],
-   "published": "2026-11-03T04:18:47+00:00",
-   "score": 8.45
+   "score": 10.76,
+   "approved_text": true
   },
   {
    "headline": "Nexus Mods introduces mandatory AI disclosure for new PC mod uploads",
@@ -82,23 +52,8 @@
    "source": "The Verge",
    "also": [],
    "published": "2026-11-04T00:42:10+00:00",
-   "score": 8.15
-  },
-  {
-   "headline": "Data centre operators deploy retired jet engines for backup power generation",
-   "summary": "Long waiting times for power grid access and traditional turbines are driving data centre builders to use discarded jet engines. Although operational, these engines offer lower efficiency and greater environmental impact.",
-   "why_it_matters": "Grid constraints are forcing AI infrastructure developers to rely on unconventional off-grid energy sources.",
-   "mode": "llm",
-   "needs_human_line": false,
-   "kind": "reported",
-   "evidence_quote": "The years-long wait for access to the grid and new turbines is causing data center builders to turn to an unusual, less-efficient and less environmentally friendly solution: once-discarded jet engines.",
-   "id": 9,
-   "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/",
-   "canonical": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows",
-   "source": "TechCrunch",
-   "also": [],
-   "published": "2026-11-03T22:19:53+00:00",
-   "score": 7.96
+   "score": 8.15,
+   "approved_text": true
   }
  ],
  "report": [
@@ -292,5 +247,6 @@
   "score": 72,
   "verdict": "review carefully"
  },
- "created": "2026-11-04T10:51:21.567986+00:00"
+ "created": "2026-11-04T10:51:21.567986+00:00",
+ "approved_at": "2026-11-04T11:03:05.111919+00:00"
 }
