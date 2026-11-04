@@ -1,0 +1,15 @@
+A new AI paper is getting attention: Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems
+
+The authors built a unified framework called Route Anything, created an omni‑modal trajectory matrix covering 25 benchmarks and 374,401 runs from 452 candidate configurations, and trained routers to select among specialized models and policies. They report that routing can improve performance, with per‑input oracle routing beating the best fixed candidate by 5.4 points, learned routers gaining up to 0.3 points on average, reducing policy time by 24%, and raising efficiency by 8.82x on average.
+
+The authors report: "More importantly, routing raises efficiency by 8.82x on average compared with the reference model."
+
+Takeaway: These are the authors' own claims, and a preprint may not have been peer reviewed yet.
+
+Does this match what you see in practice?
+
+Source: https://arxiv.org/abs/2611.05275
+
+AI Daily Brief · Research in plain English · AI-assisted, human-reviewed.
+
+#AI #Research #MachineLearning

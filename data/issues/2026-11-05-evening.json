@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-05",
+ "edition": "evening",
+ "key": "2026-11-05-evening",
+ "format": "model",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "hook": "221,621 downloads, and trending on Hugging Face right now: deepseek-ai/DeepSeek-V4.1-Flash-1017.",
+   "points": [
+    "An image-text-to-text model, published on Hugging Face under the MIT licence.",
+    "221,621 downloads and 5,250 likes so far."
+   ],
+   "takeaway": "Trending means popular, not proven. Read the model card and the licence first.",
+   "ask": "Would you try it? What would you test it on?",
+   "summary": "An image-text-to-text model, published on Hugging Face under the MIT licence. 221,621 downloads and 5,250 likes so far.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Hugging Face",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "evidence_quote": "deepseek-ai/DeepSeek-V4.1-Flash-1017 | image-text-to-text | license:MIT",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-10-17T02:40:38.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "licence stated (MIT)",
+    "221,621 downloads",
+    "on the site's own trending list",
+    "not featured before"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot evening, 20:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-04T18:46:48.237679+00:00"
+}

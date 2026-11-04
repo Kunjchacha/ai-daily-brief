@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-06",
+ "edition": "morning",
+ "key": "2026-11-06-morning",
+ "format": "paper",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
+   "hook": "A new AI paper is getting attention: Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
+   "points": [
+    "The authors built a unified framework called Route Anything, created an omni‑modal trajectory matrix covering 25 benchmarks and 374,401 runs from 452 candidate configurations, and trained routers to select among specialized models and policies. They report that routing can improve performance, with per‑input oracle routing beating the best fixed candidate by 5.4 points, learned routers gaining up to 0.3 points on average, reducing policy time by 24%, and raising efficiency by 8.82x on average.",
+    "The authors report: \"More importantly, routing raises efficiency by 8.82x on average compared with the reference model.\""
+   ],
+   "takeaway": "These are the authors' own claims, and a preprint may not have been peer reviewed yet.",
+   "ask": "Does this match what you see in practice?",
+   "summary": "The authors built a unified framework called Route Anything, created an omni‑modal trajectory matrix covering 25 benchmarks and 374,401 runs from 452 candidate configurations, and trained routers to select among specialized models and policies. They report that routing can improve performance, with per‑input oracle routing beating the best fixed candidate by 5.4 points, learned routers gaining up to 0.3 points on average, reducing policy time by 24%, and raising efficiency by 8.82x on average. The authors report: \"More importantly, routing raises efficiency by 8.82x on average compared with the reference model.\"",
+   "details": "",
+   "why_it_matters": "",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.05275",
+   "evidence_quote": "More importantly, routing raises efficiency by 8.82x on average compared with the reference model.",
+   "kind": "research",
+   "mode": "llm",
+   "published": "2026-11-03T00:00:00.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "summary checked against the abstract: the quote below is a word-for-word match",
+    "every number in the summary appears in the abstract",
+    "83 upvotes on Hugging Face Daily Papers",
+    "labelled as the authors' own claims, not independently verified"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-04T18:46:48.237679+00:00"
+}
