@@ -5,9 +5,11 @@ name: Daily draft
 on:
   schedule:
     - cron: "30 8 * * *"
-    # Backup at 15:00 IST: GitHub can delay or drop scheduled runs. If the 14:00 IST run already made today's draft,
+    # Backups at 15:00, 16:00 and 17:00 IST (the Mac job in ops/ also starts it): GitHub can delay or drop scheduled runs. If the 14:00 IST run already made today's draft,
     # this one finds it and does nothing (it also never overwrites an APPROVED issue).
     - cron: "30 9 * * *"
+    - cron: "30 10 * * *"   # 16:00 IST
+    - cron: "30 11 * * *"   # 17:00 IST
   workflow_dispatch:
     inputs:
       force:
