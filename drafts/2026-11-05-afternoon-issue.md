@@ -11,8 +11,10 @@ HOW TO APPROVE
 5. Run Actions > Approve issue. Only then is the final post text produced.
 
 ## 1. What is a context window?
-Summary: A context window is the amount of text, counted in tokens, that a language model can take into account at once. If a conversation or document is longer than the window, the model cannot use all of it in a single request.
-Details: 
+Hook: Why does an AI seem to forget the start of a long chat? The context window.
+Points: A context window is the amount of text, counted in tokens, that a model can take into account at once. || If a conversation or document is longer than the window, the model cannot use all of it in one request.
+Takeaway: For long documents, check the model's window, or split the job into parts.
+Ask: What is the longest document you have asked an AI to read?
 Source: Wikipedia: Large language model | https://en.wikipedia.org/wiki/Large_language_model
 Evidence from the source: (none: written without AI, so check the source yourself)
 Kind: evergreen

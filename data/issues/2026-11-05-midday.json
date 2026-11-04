@@ -9,22 +9,29 @@
  "items": [
   {
    "id": 1,
-   "headline": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
-   "summary": "An image text to text model published on Hugging Face under the mit licence.",
-   "details": "221,621 downloads | 5,220 likes | mit licence | task: image text to text",
+   "headline": "speridlabs/idol",
+   "hook": "14,613 downloads, and trending on Hugging Face right now: speridlabs/idol.",
+   "points": [
+    "An image-to-3d model, published on Hugging Face under the Apache-2.0 licence.",
+    "14,613 downloads and 553 likes so far."
+   ],
+   "takeaway": "Trending means popular, not proven. Read the model card and the licence first.",
+   "ask": "Would you try it? What would you test it on?",
+   "summary": "An image-to-3d model, published on Hugging Face under the Apache-2.0 licence. 14,613 downloads and 553 likes so far.",
+   "details": "",
    "why_it_matters": "",
    "source": "Hugging Face",
-   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-   "evidence_quote": "deepseek-ai/DeepSeek-V4.1-Flash-1017 | image-text-to-text | license:mit",
+   "url": "https://huggingface.co/speridlabs/idol",
+   "evidence_quote": "speridlabs/idol | image-to-3d | license:Apache-2.0",
    "kind": "listing",
    "mode": "data",
-   "published": "2026-10-17T02:40:38.000Z",
+   "published": "2026-10-28T15:55:17.000Z",
    "score": 0,
    "needs_human_line": false,
    "bank_id": null,
    "checks": [
-    "licence stated (mit)",
-    "221,621 downloads",
+    "licence stated (Apache-2.0)",
+    "14,613 downloads",
     "on the site's own trending list",
     "not featured before"
    ]
@@ -36,5 +43,5 @@
   "slot midday, 12:30 IST"
  ],
  "agent": null,
- "created": "2026-11-04T11:42:20.742227+00:00"
+ "created": "2026-11-04T11:49:36.822527+00:00"
 }

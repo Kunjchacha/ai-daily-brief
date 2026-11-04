@@ -4,90 +4,187 @@
   "title": "What is a token?",
   "body": "Language models do not read words; they read tokens, which are chunks of text such as a whole word, part of a word or a punctuation mark. Limits, speed and pricing for most AI services are measured in tokens, so the same sentence can use more or fewer tokens depending on the model.",
   "source": "Google Machine Learning glossary",
-  "url": "https://developers.google.com/machine-learning/glossary"
+  "url": "https://developers.google.com/machine-learning/glossary",
+  "hook": "Your AI bill is counted in something you never see: tokens.",
+  "points": [
+   "Models read tokens, not words: whole words, word fragments or punctuation marks.",
+   "Limits, speed and price for most AI services are measured in tokens.",
+   "The same sentence can use more or fewer tokens on different models."
+  ],
+  "takeaway": "When a tool quotes a limit or a price, check whether it is counting tokens or words.",
+  "ask": "Do you know how much text your most-used AI tool can take in at once?"
  },
  {
   "id": "context-window",
   "title": "What is a context window?",
   "body": "A context window is the amount of text, counted in tokens, that a language model can take into account at once. If a conversation or document is longer than the window, the model cannot use all of it in a single request.",
   "source": "Wikipedia: Large language model",
-  "url": "https://en.wikipedia.org/wiki/Large_language_model"
+  "url": "https://en.wikipedia.org/wiki/Large_language_model",
+  "hook": "Why does an AI seem to forget the start of a long chat? The context window.",
+  "points": [
+   "A context window is the amount of text, counted in tokens, that a model can take into account at once.",
+   "If a conversation or document is longer than the window, the model cannot use all of it in one request."
+  ],
+  "takeaway": "For long documents, check the model's window, or split the job into parts.",
+  "ask": "What is the longest document you have asked an AI to read?"
  },
  {
   "id": "hallucination",
   "title": "What is an AI hallucination?",
   "body": "In AI, a hallucination is a confident-sounding output that is false or not supported by the source material. It happens because language models generate likely text rather than look facts up, which is why important claims should be checked against a source.",
   "source": "Wikipedia: Hallucination (artificial intelligence)",
-  "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)"
+  "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+  "hook": "AI can be confidently wrong. It even has a name: hallucination.",
+  "points": [
+   "A hallucination is an output that sounds sure but is false or not supported by the source.",
+   "Language models generate likely text; they do not look facts up."
+  ],
+  "takeaway": "For anything important, ask for the source and check it yourself.",
+  "ask": "Has an AI ever told you something confidently wrong? What was it?"
  },
  {
   "id": "rag",
   "title": "What is retrieval-augmented generation (RAG)?",
   "body": "Retrieval-augmented generation lets a language model look up relevant documents first and then write its answer using them. It is a common way to ground answers in current or private information without retraining the model.",
   "source": "Wikipedia: Retrieval-augmented generation",
-  "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+  "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+  "hook": "How can an AI answer questions about documents it was never trained on?",
+  "points": [
+   "Retrieval-augmented generation (RAG) lets a model look up relevant documents first.",
+   "It then writes its answer using what it found.",
+   "It is a common way to use current or private information without retraining the model."
+  ],
+  "takeaway": "An answer built this way is only as good as the documents that were retrieved.",
+  "ask": "Does your AI tool show which documents it used for an answer?"
  },
  {
   "id": "fine-tuning",
   "title": "Prompting or fine-tuning?",
   "body": "Fine-tuning means training an already trained model further on extra data so it behaves differently or specialises in a task. Prompting leaves the model unchanged and only changes the instructions you give it, which is usually quicker and cheaper to try first.",
   "source": "Wikipedia: Fine-tuning (deep learning)",
-  "url": "https://en.wikipedia.org/wiki/Fine-tuning_(deep_learning)"
+  "url": "https://en.wikipedia.org/wiki/Fine-tuning_(deep_learning)",
+  "hook": "Two ways to change how an AI behaves: change the instructions, or change the model.",
+  "points": [
+   "Prompting leaves the model as it is and only changes the instructions you give it.",
+   "Fine-tuning trains an already trained model further on extra data."
+  ],
+  "takeaway": "Prompting is usually quicker and cheaper to try first.",
+  "ask": "Have you ever needed more than a better prompt?"
  },
  {
   "id": "transformer",
   "title": "What is a transformer?",
   "body": "The transformer is the neural network design behind most modern language models. Its key idea is attention, which lets the model weigh how relevant each part of the input is to every other part. It was introduced in 2017 in the paper 'Attention Is All You Need'.",
   "source": "Wikipedia: Transformer (deep learning architecture)",
-  "url": "https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)"
+  "url": "https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)",
+  "hook": "Most modern language models are built on one idea from 2017: attention.",
+  "points": [
+   "The transformer is the neural network design behind most modern language models.",
+   "Attention lets the model weigh how relevant each part of the input is to every other part.",
+   "It was introduced in the 2017 paper 'Attention Is All You Need'."
+  ],
+  "takeaway": "Many of the model names in the news are variations on this one design.",
+  "ask": "Which part of how AI works should we explain next?"
  },
  {
   "id": "ai-agent",
   "title": "What is an AI agent?",
   "body": "In AI, an agent is a system that observes its environment and takes actions to reach a goal. In current language-model products the word usually means a model that can use tools, such as search or code, over several steps instead of answering once.",
   "source": "Wikipedia: Intelligent agent",
-  "url": "https://en.wikipedia.org/wiki/Intelligent_agent"
+  "url": "https://en.wikipedia.org/wiki/Intelligent_agent",
+  "hook": "'AI agent' is everywhere. What does it actually mean?",
+  "points": [
+   "In AI, an agent observes its environment and takes actions to reach a goal.",
+   "In current language-model products the word usually means a model that uses tools, such as search or code, over several steps."
+  ],
+  "takeaway": "Ask what an 'agent' product can do on its own, and what it needs you to approve.",
+  "ask": "Would you let an AI agent act for you without checking each step?"
  },
  {
   "id": "prompt-injection",
   "title": "What is prompt injection?",
   "body": "Prompt injection is an attack where text given to a language model, for example inside a web page or document it reads, contains instructions that try to override the ones its developer intended. It is listed among the main security risks for applications built on language models.",
   "source": "OWASP Top 10 for LLM Applications",
-  "url": "https://genai.owasp.org/llm-top-10/"
+  "url": "https://genai.owasp.org/llm-top-10/",
+  "hook": "An AI that reads a web page can be tricked by that web page.",
+  "points": [
+   "Prompt injection hides instructions inside text a model is given, such as a page or a document.",
+   "The aim is to override what the developer intended.",
+   "It is listed among the main security risks for applications built on language models."
+  ],
+  "takeaway": "Treat anything an AI reads from outside as untrusted input.",
+  "ask": "Does your organisation have rules for AI tools that browse the web or read files?"
  },
  {
   "id": "distillation",
   "title": "What is model distillation?",
   "body": "Knowledge distillation trains a smaller 'student' model to imitate the outputs of a larger 'teacher' model. The aim is a model that is cheaper and faster to run while keeping much of the larger model's ability.",
   "source": "Wikipedia: Knowledge distillation",
-  "url": "https://en.wikipedia.org/wiki/Knowledge_distillation"
+  "url": "https://en.wikipedia.org/wiki/Knowledge_distillation",
+  "hook": "Small AI models can learn from big ones. It is called distillation.",
+  "points": [
+   "A smaller 'student' model is trained to imitate the outputs of a larger 'teacher' model.",
+   "The aim is a model that is cheaper and faster to run while keeping much of the larger model's ability."
+  ],
+  "takeaway": "Smaller does not have to mean much worse, but test it on your own task.",
+  "ask": "Would you pick a smaller, cheaper model if it did your task well enough?"
  },
  {
   "id": "embeddings",
   "title": "What is an embedding?",
   "body": "An embedding turns text, images or other data into a list of numbers so that items with similar meaning end up close together. Search, recommendations and retrieval systems use embeddings to find related content by meaning rather than by exact words.",
   "source": "Wikipedia: Word embedding",
-  "url": "https://en.wikipedia.org/wiki/Word_embedding"
+  "url": "https://en.wikipedia.org/wiki/Word_embedding",
+  "hook": "How does AI search by meaning instead of by keywords?",
+  "points": [
+   "An embedding turns text, images or other data into a list of numbers.",
+   "Items with similar meaning end up close together.",
+   "Search, recommendation and retrieval systems use this to find related content."
+  ],
+  "takeaway": "It is how a search for 'car' can find a page that only says 'automobile'.",
+  "ask": "Where have you noticed search that understood what you meant?"
  },
  {
   "id": "prompt-engineering",
   "title": "What is prompt engineering?",
   "body": "Prompt engineering is the practice of wording the instructions and examples given to an AI model to get better results. Common techniques include giving examples, stating the format you want and asking the model to work step by step.",
   "source": "Wikipedia: Prompt engineering",
-  "url": "https://en.wikipedia.org/wiki/Prompt_engineering"
+  "url": "https://en.wikipedia.org/wiki/Prompt_engineering",
+  "hook": "The words you type change what an AI gives back.",
+  "points": [
+   "Prompt engineering is wording the instructions and examples you give a model to get better results.",
+   "Common techniques include giving examples, stating the format you want and asking it to work step by step."
+  ],
+  "takeaway": "Be specific about the task, the audience and the format.",
+  "ask": "What is your best prompt tip?"
  },
  {
   "id": "rlhf",
   "title": "What is RLHF?",
   "body": "Reinforcement learning from human feedback trains a model using people's judgements of its answers. Humans rank or rate outputs, a reward model learns those preferences, and the language model is then adjusted to produce answers people rate more highly.",
   "source": "Wikipedia: Reinforcement learning from human feedback",
-  "url": "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback"
+  "url": "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback",
+  "hook": "People's ratings help shape how some chatbots answer. That is RLHF.",
+  "points": [
+   "Humans rank or rate a model's outputs.",
+   "A reward model learns those preferences.",
+   "The language model is then adjusted to produce answers people rate more highly."
+  ],
+  "takeaway": "Ratings reflect what people prefer, which is not always the same as what is true.",
+  "ask": "Do you rate AI answers when a tool asks you to?"
  },
  {
   "id": "multimodal",
   "title": "What does multimodal mean?",
   "body": "A multimodal model handles more than one kind of data, such as text, images, audio or video, in the same system. For example, it can answer a question about a photo or describe what is said in an audio clip.",
   "source": "Wikipedia: Multimodal learning",
-  "url": "https://en.wikipedia.org/wiki/Multimodal_learning"
+  "url": "https://en.wikipedia.org/wiki/Multimodal_learning",
+  "hook": "Text in, text out is no longer the whole story.",
+  "points": [
+   "A multimodal model handles more than one kind of data, such as text, images, audio or video.",
+   "For example, it can answer a question about a photo or describe what is said in an audio clip."
+  ],
+  "takeaway": "Check which kinds of input a tool really supports before you build a workflow on it.",
+  "ask": "What is the most useful thing you have asked an AI about a photo?"
  }
 ]

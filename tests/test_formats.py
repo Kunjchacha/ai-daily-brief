@@ -30,8 +30,8 @@ class RepoTests(unittest.TestCase):
     def test_picks_the_biggest_clean_repo_and_states_its_facts(self):
         it = formats.repo_spotlight(NOW, set(), fetch_repos(repo("a/small", 200), repo("a/big", 900)))
         self.assertEqual(it["headline"], "a/big")
-        self.assertIn("900 stars", it["details"])
-        self.assertIn("MIT licence", it["details"])
+        self.assertIn("900 GitHub stars", it["hook"])
+        self.assertIn("Licence: MIT", it["points"][1])
 
     def test_skips_no_licence_forks_spam_non_english_and_repeats(self):
         bad = [repo("a/nolic", 9000, lic=None), repo("a/fork", 8000, fork=True), repo("a/crypto-bot", 7000),
@@ -52,7 +52,8 @@ class ModelTests(unittest.TestCase):
                  "tags": ["license:apache-2.0"], "createdAt": "2026-11-01T00:00:00Z"}]
         it = formats.model_spotlight(NOW, set(), lambda u: json.dumps(data).encode())
         self.assertEqual(it["headline"], "x/good")
-        self.assertTrue(it["summary"].startswith("An automatic speech recognition model"))
+        self.assertTrue(it["points"][0].startswith("An automatic-speech-recognition model"))
+        self.assertIn("Apache-2.0 licence", it["points"][0])
 
 
 ABSTRACT = ("We study routing between language models. " * 3 + "We show that a small router improves accuracy by 12% on "
@@ -86,12 +87,12 @@ class PaperTests(unittest.TestCase):
 
 class BankTests(unittest.TestCase):
     def test_banks_rotate_and_every_explainer_has_a_https_source(self):
-        bank = [{"id": "a", "title": "A", "body": "b", "source": "S", "url": "https://x.org"}, {"id": "b", "title": "B", "body": "b",
-                                                                                              "source": "S", "url": "https://y.org"}]
+        bank = [dict(id=i, title=i.upper(), hook="h", points=["p"], takeaway="t", ask="a?", source="S", url=f"https://{i}.org") for i in "ab"]
         self.assertEqual(formats.explainer(set(), bank)["bank_id"], "a")
         self.assertEqual(formats.explainer({"a"}, bank)["bank_id"], "b")
         real = json.load(open(Path(__file__).resolve().parent.parent / "config" / "explainers.json"))
-        self.assertTrue(all(e["url"].startswith("https://") and len(e["body"]) < 600 for e in real))
+        self.assertTrue(all(e["url"].startswith("https://") and e["hook"] and e["points"] and e["ask"].endswith("?") for e in real))
+        self.assertTrue(all(len(e["hook"]) <= 100 and sum(map(len, e["points"])) < 500 for e in real), "keep posts short and scannable")
 
     def test_question_has_no_source_and_no_facts(self):
         q = formats.question(set(), [{"id": "q", "question": "Which tool?", "context": "Answer briefly."}])
@@ -145,7 +146,7 @@ class SingleFormatApprovalTests(unittest.TestCase):
         self.assertEqual(self.approve(s), 0)
 
     def test_excluding_the_only_item_is_refused(self):
-        s = self.make("explainer", formats.explainer(set(), [{"id": "a", "title": "A", "body": "text", "source": "S", "url": "https://x.org"}]))
+        s = self.make("explainer", formats.explainer(set(), [dict(id="a", title="A", hook="h", points=["p"], takeaway="t", ask="a?", source="S", url="https://x.org")]))
         f = self.tmp / "drafts" / "2026-11-05-midday-issue.md"
         f.write_text(f.read_text().replace("Status: DRAFT", "Status: APPROVED").replace("Include: yes", "Include: no"))
         self.assertEqual(self.approve(s), 1)
@@ -153,3 +154,22 @@ class SingleFormatApprovalTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CardTests(unittest.TestCase):
+    def test_card_repeats_the_hook_and_adds_no_facts(self):
+        from pipeline import cards
+        it = formats.explainer(set(), [dict(id="a", title="A", hook="Your AI bill is counted in tokens.", points=["p"], takeaway="t",
+                                            ask="a?", source="S", url="https://www.example.org/x")])
+        issue = {"date": "2026-11-05", "format": "explainer", "items": [it]}
+        page = cards.card_html(issue, "AI Daily Brief")
+        self.assertIn("Your AI bill is counted in tokens.", page)
+        self.assertIn("example.org", page)
+        self.assertIn("Explainer", page)
+
+    def test_news_card_lists_the_headlines(self):
+        from pipeline import cards
+        issue = {"date": "2026-11-05", "items": [{"headline": "One"}, {"headline": "Two <b>"}]}
+        page = cards.card_html(issue, "AI Daily Brief")
+        self.assertIn("One", page)
+        self.assertIn("Two &lt;b&gt;", page)

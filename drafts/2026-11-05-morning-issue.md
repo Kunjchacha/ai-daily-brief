@@ -11,8 +11,10 @@ HOW TO APPROVE
 5. Run Actions > Approve issue. Only then is the final post text produced.
 
 ## 1. What is a token?
-Summary: Language models do not read words; they read tokens, which are chunks of text such as a whole word, part of a word or a punctuation mark. Limits, speed and pricing for most AI services are measured in tokens, so the same sentence can use more or fewer tokens depending on the model.
-Details: 
+Hook: Your AI bill is counted in something you never see: tokens.
+Points: Models read tokens, not words: whole words, word fragments or punctuation marks. || Limits, speed and price for most AI services are measured in tokens. || The same sentence can use more or fewer tokens on different models.
+Takeaway: When a tool quotes a limit or a price, check whether it is counting tokens or words.
+Ask: Do you know how much text your most-used AI tool can take in at once?
 Source: Google Machine Learning glossary | https://developers.google.com/machine-learning/glossary
 Evidence from the source: (none: written without AI, so check the source yourself)
 Kind: evergreen

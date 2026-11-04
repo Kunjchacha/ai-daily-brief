@@ -14,11 +14,8 @@ def _date(issue):
 
 FORMAT_NAMES = {"repo": "Open-source spotlight", "model": "Model spotlight", "paper": "Research in plain English",
                 "explainer": "Explainer", "question": "Question"}
-FORMAT_TAGS = {"repo": "#OpenSource", "model": "#OpenSource", "paper": "#Research", "explainer": "#AIExplained", "question": ""}
-FORMAT_CAUTION = {"repo": "Check the licence and read the code before you rely on it. Stars show popularity, not quality.",
-                  "model": "Check the licence and the model card before you rely on it. Downloads show popularity, not quality.",
-                  "paper": "These are the authors' own claims; a preprint may not have been peer reviewed yet.",
-                  "explainer": "", "question": "Please do not share customer or company data in your answers."}
+FORMAT_TAGS = {"repo": "#AI #OpenSource #GitHub", "model": "#AI #OpenSource #HuggingFace", "paper": "#AI #Research #MachineLearning",
+               "explainer": "#AI #AIExplained #LearnAI", "question": "#AI #AICommunity #Discussion"}
 
 
 def heading(issue, brand):
@@ -31,21 +28,21 @@ def heading(issue, brand):
 
 
 def single_post(issue, brand, hashtags):
-    """One-item formats (spotlight, research, explainer, question)."""
+    """One-item formats, written to be read on a phone: a hook first, one short paragraph per idea, a line to remember, a
+    closing question, then the source. The hook is first because only the first few lines show before 'see more'."""
     fmt, it = issue["format"], issue["items"][0]
-    lines = [heading(issue, brand), "", it["headline"], it["summary"]]
-    if it.get("details"):
-        lines.append(it["details"])
-    if fmt == "paper" and it.get("evidence_quote") and it["evidence_quote"] not in it["summary"]:
-        lines += ["", f'The authors report: "{it["evidence_quote"]}"']
+    paras = [it.get("hook") or it["headline"]] + [p for p in it.get("points", []) if p]
+    if not it.get("hook") and it.get("summary"):  # an older draft without the new fields
+        paras.append(it["summary"])
+    if it.get("takeaway"):
+        paras.append(f"Takeaway: {it['takeaway']}")
+    if it.get("ask"):
+        paras.append(it["ask"])
     if it.get("url"):
-        lines += ["", f"Source: {it['url']}"]
-    if FORMAT_CAUTION[fmt]:
-        lines.append(FORMAT_CAUTION[fmt])
-    tags = " ".join(hashtags)
-    if FORMAT_TAGS[fmt]:
-        tags += " " + FORMAT_TAGS[fmt]
-    return "\n".join(lines + ["", "AI-assisted, human-reviewed.", "", tags])
+        paras.append(f"Source: {it['url']}")
+    paras.append(f"{brand} · {FORMAT_NAMES[fmt]} · AI-assisted, human-reviewed.")
+    paras.append(FORMAT_TAGS[fmt])
+    return "\n\n".join(paras)
 
 
 def linkedin_post(issue, brand, hashtags, max_chars):

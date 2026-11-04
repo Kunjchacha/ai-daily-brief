@@ -1,12 +1,15 @@
-AI Daily Brief: Model spotlight, Thursday 5 November 2026 (Midday)
+14,613 downloads, and trending on Hugging Face right now: speridlabs/idol.
 
-deepseek-ai/DeepSeek-V4.1-Flash-1017
-An image text to text model published on Hugging Face under the mit licence.
-221,621 downloads | 5,220 likes | mit licence | task: image text to text
+An image-to-3d model, published on Hugging Face under the Apache-2.0 licence.
 
-Source: https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017
-Check the licence and the model card before you rely on it. Downloads show popularity, not quality.
+14,613 downloads and 553 likes so far.
 
-AI-assisted, human-reviewed.
+Takeaway: Trending means popular, not proven. Read the model card and the licence first.
 
-#AI #ArtificialIntelligence #AINews #OpenSource
+Would you try it? What would you test it on?
+
+Source: https://huggingface.co/speridlabs/idol
+
+AI Daily Brief · Model spotlight · AI-assisted, human-reviewed.
+
+#AI #OpenSource #HuggingFace

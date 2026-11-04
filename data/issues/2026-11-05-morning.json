@@ -10,7 +10,15 @@
   {
    "id": 1,
    "headline": "What is a token?",
-   "summary": "Language models do not read words; they read tokens, which are chunks of text such as a whole word, part of a word or a punctuation mark. Limits, speed and pricing for most AI services are measured in tokens, so the same sentence can use more or fewer tokens depending on the model.",
+   "hook": "Your AI bill is counted in something you never see: tokens.",
+   "points": [
+    "Models read tokens, not words: whole words, word fragments or punctuation marks.",
+    "Limits, speed and price for most AI services are measured in tokens.",
+    "The same sentence can use more or fewer tokens on different models."
+   ],
+   "takeaway": "When a tool quotes a limit or a price, check whether it is counting tokens or words.",
+   "ask": "Do you know how much text your most-used AI tool can take in at once?",
+   "summary": "Models read tokens, not words: whole words, word fragments or punctuation marks. Limits, speed and price for most AI services are measured in tokens. The same sentence can use more or fewer tokens on different models.",
    "details": "",
    "why_it_matters": "",
    "source": "Google Machine Learning glossary",
@@ -34,5 +42,5 @@
   "slot morning, 08:00 IST"
  ],
  "agent": null,
- "created": "2026-11-04T11:42:20.742227+00:00"
+ "created": "2026-11-04T11:50:15.889102+00:00"
 }

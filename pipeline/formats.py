@@ -48,8 +48,16 @@ def _days_ago(iso, now):
         return None
 
 
-def _item(headline, summary, source, url, quote, kind, mode, published=None, details="", bank_id=None, checks=()):
-    return {"id": 1, "headline": headline, "summary": summary, "details": details, "why_it_matters": "", "source": source, "url": url,
+LICENCE_NAMES = {"mit": "MIT", "apache-2.0": "Apache-2.0", "bsd-3-clause": "BSD-3-Clause", "bsd-2-clause": "BSD-2-Clause",
+                 "gpl-3.0": "GPL-3.0", "agpl-3.0": "AGPL-3.0", "mpl-2.0": "MPL-2.0", "cc-by-4.0": "CC-BY-4.0", "cc-by-nc-4.0": "CC-BY-NC-4.0",
+                 "openrail": "OpenRAIL", "llama3": "Llama 3 community", "gemma": "Gemma"}
+
+
+def _item(headline, hook, points, takeaway, ask, source, url, quote, kind, mode, published=None, bank_id=None, checks=()):
+    """One post. hook = the first line(s) people see; points = short paragraphs; takeaway = one line to remember; ask = the
+    closing question that invites a reply."""
+    return {"id": 1, "headline": headline, "hook": hook, "points": list(points), "takeaway": takeaway, "ask": ask,
+            "summary": " ".join(points), "details": "", "why_it_matters": "", "source": source, "url": url,
             "evidence_quote": quote, "kind": kind, "mode": mode, "published": published, "score": 0, "needs_human_line": False,
             "bank_id": bank_id, "checks": list(checks)}
 
@@ -75,11 +83,13 @@ def repo_spotlight(now, seen_urls, fetcher=None):
                 or _ascii_ratio(r.get("description") or "") < ASCII_MIN or SPAM_RE.search(f'{r["full_name"]} {desc}')):
             continue
         age = _days_ago(r["created_at"], now)
-        details = (f'{r["stargazers_count"]:,} stars | {r.get("language") or "language not stated"} | {lic} licence | '
-                   f'created {age} day{"s" if age != 1 else ""} ago')
+        days = f'{age} day{"s" if age != 1 else ""}'
         checks = [f"licence stated ({lic})", f"created {age} days ago, {r['stargazers_count']:,} stars", "not featured before",
                   "description is the owner's own text, plain and not spam-listed"]
-        return _item(r["full_name"], desc, "GitHub", r["html_url"], desc, "listing", "data", r["created_at"], details,
+        hook = f'{r["stargazers_count"]:,} GitHub stars in {days}. What is {r["full_name"]}?'
+        points = [desc, f'Language: {r.get("language") or "not stated"}. Licence: {lic}. Created {days} ago.']
+        return _item(r["full_name"], hook, points, "Stars show popularity, not quality. Read the licence and the code before you rely on it.",
+                     "Would you run it? What would you check first?", "GitHub", r["html_url"], desc, "listing", "data", r["created_at"],
                      checks=checks)
     return None
 
@@ -98,13 +108,16 @@ def model_spotlight(now, seen_urls, fetcher=None):
         if (url in seen_urls or m.get("private") or lic in (None, "", "other", "unknown") or not task or m.get("downloads", 0) < 5000
                 or SPAM_RE.search(m["id"])):
             continue
-        task_text = task.replace("-", " ")
+        task_text = task
+        lic = LICENCE_NAMES.get(lic.lower(), lic)
         article = "an" if task_text[0] in "aeiou" else "a"
-        details = f'{m["downloads"]:,} downloads | {m.get("likes", 0):,} likes | {lic} licence | task: {task_text}'
-        summary = f"{article.capitalize()} {task_text} model published on Hugging Face under the {lic} licence."
+        points = [f"{article.capitalize()} {task_text} model, published on Hugging Face under the {lic} licence.",
+                  f'{m["downloads"]:,} downloads and {m.get("likes", 0):,} likes so far.']
+        hook = f'{m["downloads"]:,} downloads, and trending on Hugging Face right now: {m["id"]}.'
         checks = [f"licence stated ({lic})", f"{m['downloads']:,} downloads", "on the site's own trending list", "not featured before"]
-        return _item(m["id"], summary, "Hugging Face", url, f'{m["id"]} | {task} | license:{lic}', "listing", "data",
-                     m.get("createdAt"), details, checks=checks)
+        return _item(m["id"], hook, points, "Trending means popular, not proven. Read the model card and the licence first.",
+                     "Would you try it? What would you test it on?", "Hugging Face", url, f'{m["id"]} | {task} | license:{lic}',
+                     "listing", "data", m.get("createdAt"), checks=checks)
     return None
 
 
@@ -157,9 +170,13 @@ def paper_of_the_day(now, seen_urls, provider=None, fetcher=None):
                   else "no AI summary: the text is the abstract's own first sentences",
                   "every number in the summary appears in the abstract", f"{p.get('upvotes', 0)} upvotes on Hugging Face Daily Papers",
                   "labelled as the authors' own claims, not independently verified"]
-        n = len(p.get("authors") or [])
-        details = f"{p.get('upvotes', 0)} upvotes on Hugging Face Daily Papers | {n} author{'s' if n != 1 else ''}"
-        return _item(title, plain, "arXiv", url, quote, "research", mode, p.get("publishedAt"), details, checks=checks)
+        hook = (f"A new AI paper is getting attention: {title}" if len(title) <= 110
+                else "A new AI paper is getting attention on Hugging Face.")
+        points = [plain] if len(title) <= 110 else [title, plain]
+        if quote not in plain:
+            points.append(f'The authors report: "{quote}"')
+        return _item(title, hook, points, "These are the authors' own claims, and a preprint may not have been peer reviewed yet.",
+                     "Does this match what you see in practice?", "arXiv", url, quote, "research", mode, p.get("publishedAt"), checks=checks)
     return None
 
 
@@ -172,13 +189,14 @@ def explainer(seen_ids, bank=None):
     b = _pick(bank if bank is not None else load_json("config/explainers.json"), seen_ids)
     if not b:
         return None
-    return _item(b["title"], b["body"], b["source"], b["url"], "", "evergreen", "curated", None, "", b["id"],
-                 ["written and reviewed in this project, not by an AI at run time", f"source: {b['source']}"])
+    return _item(b["title"], b["hook"], b["points"], b["takeaway"], b["ask"], b["source"], b["url"], "", "evergreen", "curated",
+                 None, b["id"], ["written and reviewed in this project, not by an AI at run time", f"source: {b['source']}"])
 
 
 def question(seen_ids, bank=None):
     b = _pick(bank if bank is not None else load_json("config/questions.json"), seen_ids)
     if not b:
         return None
-    return _item(b["question"], b["context"], "", "", "", "question", "curated", None, "", b["id"],
+    return _item(b["question"], b["question"], [b["context"]], "", "Share your answer in the comments.", "", "", "", "question",
+                 "curated", None, b["id"],
                  ["an engagement question: it states no facts", "asks readers not to share customer or company data"])

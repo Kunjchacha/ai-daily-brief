@@ -1,7 +1,7 @@
 # AI Daily Brief: Model spotlight, Thursday 5 November 2026 (Midday)
 Status: DRAFT
 
-- Rule checks (no AI judgement of the facts): licence stated (mit); 221,621 downloads; on the site's own trending list; not featured before
+- Rule checks (no AI judgement of the facts): licence stated (Apache-2.0); 14,613 downloads; on the site's own trending list; not featured before
 
 HOW TO APPROVE
 1. Read every item. Edit any wording below (keep the 'Field:' labels as they are).
@@ -10,11 +10,13 @@ HOW TO APPROVE
 4. When you are happy, change 'Status: DRAFT' above to 'Status: APPROVED' and save.
 5. Run Actions > Approve issue. Only then is the final post text produced.
 
-## 1. deepseek-ai/DeepSeek-V4.1-Flash-1017
-Summary: An image text to text model published on Hugging Face under the mit licence.
-Details: 221,621 downloads | 5,220 likes | mit licence | task: image text to text
-Source: Hugging Face | https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017
-Evidence from the source: deepseek-ai/DeepSeek-V4.1-Flash-1017 | image-text-to-text | license:mit
+## 1. speridlabs/idol
+Hook: 14,613 downloads, and trending on Hugging Face right now: speridlabs/idol.
+Points: An image-to-3d model, published on Hugging Face under the Apache-2.0 licence. || 14,613 downloads and 553 likes so far.
+Takeaway: Trending means popular, not proven. Read the model card and the licence first.
+Ask: Would you try it? What would you test it on?
+Source: Hugging Face | https://huggingface.co/speridlabs/idol
+Evidence from the source: speridlabs/idol | image-to-3d | license:Apache-2.0
 Kind: listing
-Age: 18 days old
+Age: age unknown
 Include: yes

@@ -20,7 +20,7 @@ DRAFTS = ROOT / "drafts"
 ISSUES = ROOT / "data" / "issues"
 STATUS_RE = re.compile(r"^Status:\s*([A-Za-z]+)", re.M)
 HEADER_RE = re.compile(r"^## \d+\.\s*", re.M)
-FIELD_RE = re.compile(r"^(Summary|Details|Why it matters|Source|Evidence from the source|Kind|Age|Include):\s*(.*)$")
+FIELD_RE = re.compile(r"^(Hook|Points|Takeaway|Ask|Summary|Details|Why it matters|Source|Evidence from the source|Kind|Age|Include):\s*(.*)$")
 NOT_FACT_KINDS = ("rumour", "rumor", "opinion", "unconfirmed", "prediction")
 
 
@@ -38,9 +38,10 @@ def render_issue_md(issue, brand):
     news = (issue.get("format") or "news") == "news"
     for n, it in enumerate(issue["items"], 1):
         quote = it.get("evidence_quote") or "(none: written without AI, so check the source yourself)"
-        out += [f"## {n}. {it['headline']}",
-                f"Summary: {it['summary']}",
-                f"Why it matters: {it['why_it_matters'] or PLACEHOLDER}" if news else f"Details: {it.get('details', '')}",
+        body = ([f"Summary: {it['summary']}", f"Why it matters: {it['why_it_matters'] or PLACEHOLDER}"] if news else
+                [f"Hook: {it.get('hook') or it['headline']}", f"Points: {' || '.join(it.get('points', []) or [it['summary']])}",
+                 f"Takeaway: {it.get('takeaway', '')}", f"Ask: {it.get('ask', '')}"])
+        out += [f"## {n}. {it['headline']}", *body,
                 f"Source: {it['source']} | {it['url']}" if it.get("url") else "Source: none",
                 f"Evidence from the source: {quote}",
                 f"Kind: {it.get('kind') or 'unchecked'}",
@@ -101,8 +102,12 @@ def approve(day, s=None):
             dropped.append(drop)
             continue
         summary, why = p.get("Summary", ""), p.get("Why it matters", "")
-        if not summary or PLACEHOLDER in f"{head} {summary} {why}" or (news and not why):
-            problems.append(f"'{head}' still needs its summary or your 'Why it matters' line")
+        hook = p.get("Hook", "")
+        points = [x.strip() for x in p.get("Points", "").split("||") if x.strip()]
+        if not news:
+            summary = " ".join(points)
+        if (news and (not summary or not why)) or (not news and not hook) or PLACEHOLDER in f"{head} {hook} {summary} {why}":
+            problems.append(f"'{head}' still needs its {'summary or your Why it matters line' if news else 'hook'}")
         source, _, url = p.get("Source", "").rpartition(" | ")
         if p.get("Source", "").strip().lower() == "none":
             source, url = "", ""
@@ -114,7 +119,9 @@ def approve(day, s=None):
                 warnings.append(f"'{head}' contains hedged wording ('{hit.group(0)}'): is this really a confirmed fact?")
                 break
         item = dict(originals.get(url or head, {}))
-        item.update(headline=head, summary=summary, why_it_matters=why, details=p.get("Details", item.get("details", "")), source=source or item.get("source", ""),
+        item.update(headline=head, summary=summary, why_it_matters=why, details=p.get("Details", item.get("details", "")),
+                    hook=hook or item.get("hook", ""), points=points or item.get("points", []),
+                    takeaway=p.get("Takeaway", item.get("takeaway", "")), ask=p.get("Ask", item.get("ask", "")), source=source or item.get("source", ""),
                     url=url, kind=kind or item.get("kind", ""), needs_human_line=False, approved_text=True)
         kept.append(item)
     need = s["min_items"] if news else 1

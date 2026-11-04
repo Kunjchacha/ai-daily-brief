@@ -8,3 +8,4 @@ subscribers/
 *.subscribers.csv
 data/private/
 .DS_Store
+cards/
