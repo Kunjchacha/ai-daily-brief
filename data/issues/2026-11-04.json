@@ -1,0 +1,296 @@
+{
+ "date": "2026-11-04",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "Google DeepMind introduces Antigravity for agentic cheminformatics",
+   "summary": "Google DeepMind has detailed how its Antigravity platform and Cheminformatics Skills aim to speed up drug discovery workflows. The system assists with searching compounds and proposing novel rigidified macrocycles.",
+   "why_it_matters": "Automating compound search and macrocycle design helps accelerate complex drug discovery tasks.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles.",
+   "id": 1,
+   "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+   "canonical": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity",
+   "source": "Google DeepMind",
+   "also": [],
+   "published": "2026-11-03T17:01:49+00:00",
+   "score": 11.51
+  },
+  {
+   "headline": "OpenAI highlights ChatGPT and Codex for physical world engineering",
+   "summary": "OpenAI has outlined how engineers are using ChatGPT and Codex to speed up physical world workflows. The applications cover computer-aided design, printed circuit board design, and simulations.",
+   "why_it_matters": "Applying language and code models to engineering tools aids hardware and physical system design.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
+   "id": 2,
+   "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+   "canonical": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-03T12:00:00+00:00",
+   "score": 11.1
+  },
+  {
+   "headline": "Cisco integrates OpenAI models to strengthen enterprise security",
+   "summary": "Cisco is combining its network intelligence with OpenAI models to enhance enterprise security. The integration aims to build more adaptive defensive systems operating at machine speed.",
+   "why_it_matters": "Pairing network telemetry with language models allows enterprise cyber defenses to respond faster to threats.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security.",
+   "id": 3,
+   "url": "https://openai.com/index/cisco-cyber",
+   "canonical": "https://openai.com/index/cisco-cyber",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-03T08:00:00+00:00",
+   "score": 10.76
+  },
+  {
+   "headline": "President Trump signs executive order rebranding AI as Super Intelligence",
+   "summary": "President Trump signed an executive order instructing federal agencies to rebrand artificial intelligence as 'Super Intelligence'. The order contained a single directive for government departments to update their terminology.",
+   "why_it_matters": "The directive alters the official language US federal agencies must use when referring to artificial intelligence technologies.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "At the end of September, President Trump signed an executive order that contained just one directive, ordering government agencies to rebrand what they had been calling artificial intelligence as “Super Intelligence.”",
+   "id": 5,
+   "url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
+   "canonical": "https://technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test",
+   "source": "MIT Technology Review",
+   "also": [],
+   "published": "2026-11-03T04:18:47+00:00",
+   "score": 8.45
+  },
+  {
+   "headline": "Nexus Mods introduces mandatory AI disclosure for new PC mod uploads",
+   "summary": "PC gaming repository Nexus Mods is making disclosures mandatory for all newly uploaded mods. Authors must explicitly state whether artificial intelligence tools were used to create their submitted work.",
+   "why_it_matters": "Enforcing declarations on AI tools creates transparency for players and creators across the PC modding community.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "The PC gaming mods repository Nexus Mods is making disclosures about AI mandatory for uploads of new mods",
+   "id": 6,
+   "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
+   "canonical": "https://theverge.com/games/1026085/nexus-mods-ai-disclosures",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-04T00:42:10+00:00",
+   "score": 8.15
+  },
+  {
+   "headline": "Data centre operators deploy retired jet engines for backup power generation",
+   "summary": "Long waiting times for power grid access and traditional turbines are driving data centre builders to use discarded jet engines. Although operational, these engines offer lower efficiency and greater environmental impact.",
+   "why_it_matters": "Grid constraints are forcing AI infrastructure developers to rely on unconventional off-grid energy sources.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "The years-long wait for access to the grid and new turbines is causing data center builders to turn to an unusual, less-efficient and less environmentally friendly solution: once-discarded jet engines.",
+   "id": 9,
+   "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/",
+   "canonical": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-03T22:19:53+00:00",
+   "score": 7.96
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "Google DeepMind introduces Antigravity for agentic cheminformatics",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI highlights ChatGPT and Codex for physical world engineering",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Cisco integrates OpenAI models to strengthen enterprise security",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Qwen 3.8 27B model demonstrates weight-space programming capability",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "names not in source: APIs, Simon, Willison"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 5,
+   "headline": "President Trump signs executive order rebranding AI as Super Intelligence",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "Nexus Mods introduces mandatory AI disclosure for new PC mod uploads",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Media commentary addresses ongoing queries about the AI market bubble",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "hedged wording ('might'): not a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 8,
+   "headline": "Anthropic develops FlashProve system to verify model output origins",
+   "problems": [
+    "second pass: The system FlashProve is reported as something Anthropic 'is working on' (a future development/plan rather than an estab"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Data centre operators deploy retired jet engines for backup power generation",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  }
+ ],
+ "errors": [],
+ "notes": [],
+ "agent": {
+  "items": [
+   {
+    "score": 80,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 1,
+    "headline": "Google DeepMind introduces Antigravity for agentic cheminformatics",
+    "article_note": "read",
+    "source": "Google DeepMind"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 2,
+    "headline": "OpenAI highlights ChatGPT and Codex for physical world engineering",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 3,
+    "headline": "Cisco integrates OpenAI models to strengthen enterprise security",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 5,
+    "headline": "President Trump signs executive order rebranding AI as Super Intelligence",
+    "article_note": "read",
+    "source": "MIT Technology Review"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 6,
+    "headline": "Nexus Mods introduces mandatory AI disclosure for new PC mod uploads",
+    "article_note": "read",
+    "source": "The Verge"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 9,
+    "headline": "Data centre operators deploy retired jet engines for backup power generation",
+    "article_note": "read",
+    "source": "TechCrunch"
+   }
+  ],
+  "score": 72,
+  "verdict": "review carefully"
+ },
+ "created": "2026-11-04T10:51:21.567986+00:00"
+}
