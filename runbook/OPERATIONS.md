@@ -70,3 +70,11 @@ to each, with the provider's own error text and no keys shown. Typical findings:
 now finds a current one itself), `503` or a timeout = the provider is busy (it moves to the next model, then the other provider),
 `403` = a bad key or a blocked request, `429` = a free-tier rate limit. If both providers fail, the draft still builds with the
 extractive fallback, so a post is never blocked by the AI.
+
+
+## Two issues a day (from 5 Nov 2026)
+The 14:00 IST run now builds two issues: **this evening's** (key `YYYY-MM-DD-evening`, posted about 20:00 IST) and **tomorrow morning's** (key `YYYY-MM-DD-morning`, posted about 08:00 IST). The evening one is built first, so the morning one never repeats its stories. Stories you drop (`Include: no`) are remembered at approval and never come back.
+- Files: `drafts/KEY-issue.md`, `drafts/KEY-linkedin-final.txt`, `data/issues/KEY.json`. Headings end "(Evening edition)" or "(Morning edition)".
+- Approve and Publish take the key as their input, for example `2026-11-05-evening`. The plain date still works for older issues.
+- If a one-a-day issue already exists for a date, no edition is built on top of it (this covers 4 Nov).
+- Quiet news days: an edition with fewer than 3 stories is marked quiet_day and skipped, not padded.

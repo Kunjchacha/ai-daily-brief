@@ -1,6 +1,6 @@
 name: Daily draft
 
-# Builds the day's draft at 14:00 IST (08:30 UTC) so it is ready for you to review and post in the evening.
+# Builds two drafts at 14:00 IST (08:30 UTC): this evening's issue and tomorrow morning's issue.
 # It only ever writes DRAFTS. Nothing is posted anywhere. A failed run emails the repo owner (GitHub default).
 on:
   schedule:
@@ -41,7 +41,12 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           FORCE: ${{ inputs.force }}
         run: |
-          if [ "$FORCE" = "true" ]; then python -m pipeline.run --force; else python -m pipeline.run; fi
+          # Two issues a day: this evening's (posted about 20:00 IST) and tomorrow morning's (posted about 08:00 IST).
+          # The evening one is built first, so the morning one never repeats its stories.
+          F=""; [ "$FORCE" = "true" ] && F="--force"
+          TOMORROW=$(TZ=Asia/Kolkata date -d '+1 day' +%F)
+          python -m pipeline.run --edition evening $F
+          python -m pipeline.run --edition morning --date "$TOMORROW" $F
       - name: Show the review notes in the run summary
         if: always()
         run: |

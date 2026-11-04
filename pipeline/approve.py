@@ -13,7 +13,7 @@ import json
 import re
 import sys
 
-from .common import ROOT, UTC, log, long_date, settings
+from .common import ROOT, UTC, edition_label, log, long_date, settings
 from .render import PLACEHOLDER, age_text, agent_lines, linkedin_post
 
 DRAFTS = ROOT / "drafts"
@@ -28,7 +28,7 @@ def render_issue_md(issue, brand):
     """The one file the owner reads, edits and approves."""
     day = dt.date.fromisoformat(issue["date"])
     ref = dt.datetime.fromisoformat(issue["created"])
-    out = [f"# {brand}: {long_date(day)}", "Status: DRAFT", "", *agent_lines(issue), "",
+    out = [f"# {brand}: {long_date(day)}{edition_label(issue)}", "Status: DRAFT", "", *agent_lines(issue), "",
            "HOW TO APPROVE",
            "1. Read every item. Edit any wording below (keep the 'Field:' labels as they are).",
            "2. Not a confirmed fact (a rumour, prediction, plan or opinion)? Change 'Include: yes' to 'Include: no'.",
@@ -85,15 +85,18 @@ def approve(day, s=None):
     originals = {it["url"]: it for it in issue["items"]}
     facts = s.get("facts_only", {})
     hedges = facts.get("hedge_patterns", []) if facts.get("enabled") else []
-    kept, excluded, problems, warnings = [], [], [], []
+    kept, excluded, dropped, problems, warnings = [], [], [], [], []
     for p in parsed["items"]:
         head = p["headline"]
+        drop = {"headline": head, "url": p.get("Source", "").rpartition(" | ")[2]}  # remembered so a dropped story never returns
         if (p.get("Include") or "yes").lower() not in ("yes", "y", "true"):
             excluded.append(f"{head} (Include: {p.get('Include')})")
+            dropped.append(drop)
             continue
         kind = (p.get("Kind") or "").lower()
         if kind in NOT_FACT_KINDS:
             excluded.append(f"{head} (Kind: {kind}, so not a confirmed fact)")
+            dropped.append(drop)
             continue
         summary, why = p.get("Summary", ""), p.get("Why it matters", "")
         if not summary or PLACEHOLDER in f"{head} {summary} {why}" or not why:
@@ -118,6 +121,7 @@ def approve(day, s=None):
         return 1
 
     issue["items"] = kept
+    issue["excluded"] = dropped
     issue["status"] = "approved"
     issue["approved_at"] = dt.datetime.now(UTC).isoformat()
     ipath.write_text(json.dumps(issue, indent=1, ensure_ascii=False), encoding="utf-8")

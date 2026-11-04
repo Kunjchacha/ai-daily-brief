@@ -3,7 +3,7 @@ import datetime as dt
 import email.utils
 import html
 
-from .common import IST, long_date
+from .common import IST, edition_label, key_of, long_date
 
 PLACEHOLDER = "[ADD YOUR LINE]"
 
@@ -15,7 +15,7 @@ def _date(issue):
 def linkedin_post(issue, brand, hashtags, max_chars):
     items = list(issue["items"])
     while True:
-        lines = [f"{brand}: {long_date(_date(issue))}", "", f"{len(items)} AI developments worth your time today:", ""]
+        lines = [f"{brand}: {long_date(_date(issue))}{edition_label(issue)}", "", f"{len(items)} AI developments worth your time today:", ""]
         for n, it in enumerate(items, 1):
             lines.append(f"{n}. {it['headline']}")
             lines.append(it["summary"])
@@ -52,7 +52,7 @@ def agent_lines(issue):
 
 
 def review_notes(issue):
-    L = [f"# Review notes: {issue['date']}", "", f"- Status: **{issue['status']}** (nothing is posted until you approve it)",
+    L = [f"# Review notes: {key_of(issue)}", "", f"- Status: **{issue['status']}** (nothing is posted until you approve it)",
          *agent_lines(issue),
          f"- Writing mode: {issue['mode']}",
          f"- Items kept: {len(issue['items'])} | dropped: {sum(1 for r in issue['report'] if r['status'] == 'dropped')}", "",
@@ -77,7 +77,7 @@ def review_notes(issue):
         L += ["## Notes"] + [f"- {n}" for n in issue["notes"]] + [""]
     if issue.get("errors"):
         L += ["## Source errors"] + [f"- {e['source']}: {e['error']}" for e in issue["errors"]] + [""]
-    day = issue["date"]
+    day = key_of(issue)
     L += ["## Your approval step (nothing goes out without it)",
           "1. Open each source link and read it. Accuracy and judgement are your job, not the script's.",
           f"2. Open `drafts/{day}-issue.md`, edit anything you want, set `Include: no` on anything that is not a confirmed fact,",
@@ -100,7 +100,7 @@ def _page(title, body):
 
 
 def issue_page(issue, brand, tagline, contact=""):
-    d = long_date(_date(issue))
+    d = long_date(_date(issue)) + edition_label(issue)
     parts = [f"<h1>{html.escape(brand)}</h1><p class='meta'>{html.escape(d)}</p>"]
     for it in issue["items"]:
         why = f"<p class='why'>Why it matters: {html.escape(it['why_it_matters'])}</p>" if it["why_it_matters"] else ""
@@ -126,11 +126,11 @@ def preview_page(issue, brand, tagline, linkedin_text, contact=""):
             f"<div class='card'><div class='who'>Your profile &middot; just now &middot; {len(linkedin_text)} characters</div>"
             f"<pre>{html.escape(linkedin_text)}</pre></div>"
             f"<h1>2. Website archive page</h1><iframe srcdoc=\"{site}\" title='Website page preview'></iframe>")
-    return _page(f"Preview: {brand} {issue['date']}", body)
+    return _page(f"Preview: {brand} {key_of(issue)}", body)
 
 
 def index_page(issues, brand, tagline):
-    rows = "".join(f"<li><a href='issues/{i['date']}.html'>{html.escape(long_date(_date(i)))}</a> "
+    rows = "".join(f"<li><a href='issues/{key_of(i)}.html'>{html.escape(long_date(_date(i)) + edition_label(i))}</a> "
                    f"<span class='meta'>{len(i['items'])} stories</span></li>" for i in issues)
     return _page(brand, f"<h1>{html.escape(brand)}</h1><p>{html.escape(tagline)}</p><ul>{rows}</ul>")
 
@@ -139,10 +139,10 @@ def feed_xml(issues, brand, tagline, base_url):
     base = base_url.rstrip("/")
     items = []
     for i in issues[:30]:
-        when = dt.datetime.combine(_date(i), dt.time(7, 30), IST)
+        when = dt.datetime.combine(_date(i), dt.time(19, 30) if i.get("edition") == "evening" else dt.time(7, 30), IST)
         desc = " | ".join(it["headline"] for it in i["items"])
-        items.append(f"<item><title>{html.escape(brand)}: {html.escape(long_date(_date(i)))}</title>"
-                     f"<link>{base}/issues/{i['date']}.html</link><guid>{base}/issues/{i['date']}.html</guid>"
+        items.append(f"<item><title>{html.escape(brand)}: {html.escape(long_date(_date(i)) + edition_label(i))}</title>"
+                     f"<link>{base}/issues/{key_of(i)}.html</link><guid>{base}/issues/{key_of(i)}.html</guid>"
                      f"<pubDate>{email.utils.format_datetime(when)}</pubDate>"
                      f"<description>{html.escape(desc)}</description></item>")
     return ('<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>'

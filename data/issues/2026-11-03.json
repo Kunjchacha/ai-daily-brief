@@ -261,5 +261,15 @@
   "verdict": "review carefully"
  },
  "created": "2026-11-03T09:39:53.206806+00:00",
- "approved_at": "2026-11-03T09:45:51.578930+00:00"
+ "approved_at": "2026-11-03T09:45:51.578930+00:00",
+ "excluded": [
+  {
+   "headline": "Trump signs executive order rebranding AI as Super Intelligence",
+   "url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/"
+  },
+  {
+   "headline": "Apple begins beta testing Audio Intelligence features on Apple Watch",
+   "url": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/"
+  }
+ ]
 }

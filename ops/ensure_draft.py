@@ -58,7 +58,8 @@ def call(path, token=None, body=None):
 
 
 def draft_exists(day):
-    return call(f"/contents/drafts/{day}-issue.md?ref=main")[0] == 200
+    """Today's draft is there when GitHub has today's evening issue (two-a-day) or the original one-a-day issue."""
+    return any(call(f"/contents/drafts/{name}-issue.md?ref=main")[0] == 200 for name in (f"{day}-evening", day))
 
 
 def run_in_progress():

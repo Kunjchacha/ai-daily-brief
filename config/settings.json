@@ -13,7 +13,7 @@
   "candidates_to_write": 9,
   "items_in_issue": 6,
   "min_items": 3,
-  "history_days": 14,
+  "history_days": 28,
   "paused": false,
   "llm": {
     "provider": "groq",

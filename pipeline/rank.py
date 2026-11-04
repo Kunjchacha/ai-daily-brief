@@ -3,7 +3,7 @@ import datetime as dt
 import json
 import re
 
-from .common import ROOT, UTC, jaccard, tokens
+from .common import ROOT, UTC, canonical_url, jaccard, tokens
 
 AI_RE = re.compile(
     r"\b(ai|a\.i\.|llms?|gpt\S*|chatgpt|claude|anthropic|openai|gemini|deepmind|mistral|llama|copilot|"
@@ -23,10 +23,10 @@ def load_history(days, today):
             issue = json.loads(f.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             continue
-        if issue.get("date") == str(today):
+        if (issue.get("key") or issue.get("date")) == str(today):
             continue
-        for it in issue.get("items", []):
-            urls.add(it.get("canonical") or it.get("url", ""))
+        for it in list(issue.get("items", [])) + list(issue.get("excluded", [])):  # stories the owner dropped must not return either
+            urls.add(it.get("canonical") or canonical_url(it.get("url", "")))
             heads.append(tokens(it.get("headline", "")))
     return urls, heads
 

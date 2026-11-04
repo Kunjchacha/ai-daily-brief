@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: "Issue date, YYYY-MM-DD"
+        description: "Issue, YYYY-MM-DD or YYYY-MM-DD-morning / YYYY-MM-DD-evening"
         required: true
 
 permissions:
@@ -34,7 +34,7 @@ jobs:
           ISSUE_DATE: ${{ inputs.date }}
         run: |
           # Passed as an environment variable and format-checked, never pasted into the shell command.
-          [[ "$ISSUE_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "Date must look like 2026-11-03"; exit 1; }
+          [[ "$ISSUE_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}(-morning|-evening)?$ ]] || { echo "Issue must look like 2026-11-03 or 2026-11-05-evening"; exit 1; }
           python -m pipeline.publish --date "$ISSUE_DATE"
       - name: Commit the archive
         env:

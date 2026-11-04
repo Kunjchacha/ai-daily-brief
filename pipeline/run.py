@@ -19,7 +19,7 @@ from adapters.llm import LLMError, get_provider
 
 from .approve import is_approved, render_issue_md
 from .collect import collect
-from .common import ROOT, UTC, load_env, load_json, log, settings, today_ist
+from .common import EDITIONS, ROOT, UTC, issue_key, load_env, load_json, log, settings, today_ist
 from .rank import rank
 from .review import review as review_agent
 from .render import linkedin_post, preview_page, review_notes
@@ -48,7 +48,7 @@ def _usage_add(day, n):
     USAGE.write_text(json.dumps(dict(sorted(data.items())[-60:]), indent=1), encoding="utf-8")
 
 
-def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checker=None, provider=None):
+def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checker=None, provider=None, edition=None):
     s = settings()
     if s.get("paused") or (ROOT / "KILL_SWITCH").exists():
         log("paused (settings.paused or KILL_SWITCH file): nothing to do")
@@ -56,13 +56,17 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
     DRAFTS.mkdir(exist_ok=True)
     ISSUES.mkdir(parents=True, exist_ok=True)
     LOGS.mkdir(parents=True, exist_ok=True)
-    day = str(date)
-    if is_approved(day):
-        log(f"issue {day} is already APPROVED by a person: refusing to rebuild it and overwrite their text "
-            f"(delete drafts/{day}-issue.md first if you really want to start again)")
+    day = str(date)  # the calendar day: the daily AI-call cap is counted per day, across both editions
+    key = issue_key(date, edition)  # the issue: its files are drafts/<key>-*.* and data/issues/<key>.json
+    if edition and (DRAFTS / f"{day}-review.md").exists():
+        log(f"a one-a-day issue already exists for {day}: not building the {edition} edition on top of it")
         return 0
-    if (DRAFTS / f"{day}-review.md").exists() and not force:
-        log(f"draft for {day} already exists (use --force to rebuild)")
+    if is_approved(key):
+        log(f"issue {key} is already APPROVED by a person: refusing to rebuild it and overwrite their text "
+            f"(delete drafts/{key}-issue.md first if you really want to start again)")
+        return 0
+    if (DRAFTS / f"{key}-review.md").exists() and not force:
+        log(f"draft for {key} already exists (use --force to rebuild)")
         return 0
 
     now = dt.datetime.now(UTC)
@@ -76,7 +80,7 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
 
         def gather(hours):
             got, errs = collect(sources, hours, s["max_per_source"], now=now, **kwargs)
-            ranked = rank(got, now, hours, s["history_days"], s["candidates_to_write"], date,
+            ranked = rank(got, now, hours, s["history_days"], s["candidates_to_write"], key,
                           min_text=s.get("min_text_chars", 0), deny=title_deny,
                           per_source=s.get("max_per_source_in_issue", 0))
             log(f"rank: {len(ranked)} candidate stories from {len(got)} items ({hours}h window)")
@@ -131,38 +135,39 @@ def run(date, force=False, no_ai=False, offline=False, fetcher=None, link_checke
             log(f"review agent: score {agent['score']} ({agent['verdict']})")
         status = "ready_for_review" if len(kept) >= s["min_items"] else "quiet_day"
         public = [{k: v for k, v in it.items() if k != "source_text"} for it in kept]  # never store source text
-        issue = {"date": day, "status": status, "mode": mode, "brand": s["brand"], "items": public,
+        issue = {"date": day, "edition": edition, "key": key, "status": status, "mode": mode, "brand": s["brand"], "items": public,
                  "report": report, "errors": errors, "notes": notes, "agent": agent,
                  "created": now.isoformat()}
-        (ISSUES / f"{day}.json").write_text(json.dumps(issue, indent=1, ensure_ascii=False), encoding="utf-8")
-        (DRAFTS / f"{day}-review.md").write_text(review_notes(issue), encoding="utf-8")
+        (ISSUES / f"{key}.json").write_text(json.dumps(issue, indent=1, ensure_ascii=False), encoding="utf-8")
+        (DRAFTS / f"{key}-review.md").write_text(review_notes(issue), encoding="utf-8")
         if status == "ready_for_review":
             li = s["linkedin"]
             post_text = linkedin_post(issue, s["brand"], li["hashtags"], li["max_chars"])
-            (DRAFTS / f"{day}-linkedin.txt").write_text(post_text, encoding="utf-8")
-            (DRAFTS / f"{day}-issue.md").write_text(render_issue_md(issue, s["brand"]), encoding="utf-8")  # the file you edit and approve
-            (DRAFTS / f"{day}-preview.html").write_text(
+            (DRAFTS / f"{key}-linkedin.txt").write_text(post_text, encoding="utf-8")
+            (DRAFTS / f"{key}-issue.md").write_text(render_issue_md(issue, s["brand"]), encoding="utf-8")  # the file you edit and approve
+            (DRAFTS / f"{key}-preview.html").write_text(
                 preview_page(issue, s["brand"], s["tagline"], post_text, s["site"].get("contact", "")), encoding="utf-8")
         log(f"done: status={status}, items={len(public)}, mode={mode}")
-        (LOGS / f"{day}.json").write_text(json.dumps({"date": day, "status": status, "items": len(public), "mode": mode,
+        (LOGS / f"{key}.json").write_text(json.dumps({"date": day, "edition": edition, "status": status, "items": len(public), "mode": mode,
                                                       "source_errors": len(errors), "llm_calls": calls}, indent=1), encoding="utf-8")
         return 0
     except Exception:  # noqa: BLE001 - report loudly, leave no half-written issue
         traceback.print_exc()
-        (LOGS / f"{day}.json").write_text(json.dumps({"date": day, "status": "failed"}), encoding="utf-8")
+        (LOGS / f"{key}.json").write_text(json.dumps({"date": day, "edition": edition, "status": "failed"}), encoding="utf-8")
         return 1
 
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--date", help="issue date YYYY-MM-DD (default: today in IST)")
+    p.add_argument("--edition", choices=EDITIONS, help="two-a-day mode: build the morning or the evening issue for --date")
     p.add_argument("--force", action="store_true")
     p.add_argument("--no-ai", action="store_true")
     p.add_argument("--offline", action="store_true", help="skip link checks")
     a = p.parse_args(argv)
     load_env()
     date = dt.date.fromisoformat(a.date) if a.date else today_ist()
-    return run(date, force=a.force, no_ai=a.no_ai, offline=a.offline)
+    return run(date, force=a.force, no_ai=a.no_ai, offline=a.offline, edition=a.edition)
 
 
 if __name__ == "__main__":

@@ -73,6 +73,24 @@ def today_ist():
     return dt.datetime.now(IST).date()
 
 
+EDITIONS = ("morning", "evening")
+
+
+def issue_key(date, edition=None):
+    """File key of an issue: '2026-11-05' (one a day, the original form) or '2026-11-05-morning' / '2026-11-05-evening'."""
+    return f"{date}-{edition}" if edition else str(date)
+
+
+def key_of(issue):
+    return issue.get("key") or issue["date"]
+
+
+def edition_label(issue):
+    """' (Morning edition)' for two-a-day issues, '' for the original one-a-day ones, so every post heading is unique."""
+    e = issue.get("edition")
+    return f" ({e.capitalize()} edition)" if e else ""
+
+
 def long_date(d):
     return f"{d.strftime('%A')} {d.day} {d.strftime('%B %Y')}"
 

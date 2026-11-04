@@ -248,5 +248,19 @@
   "verdict": "review carefully"
  },
  "created": "2026-11-04T10:51:21.567986+00:00",
- "approved_at": "2026-11-04T11:03:05.111919+00:00"
+ "approved_at": "2026-11-04T11:03:05.111919+00:00",
+ "excluded": [
+  {
+   "headline": "Google DeepMind introduces Antigravity for agentic cheminformatics",
+   "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/"
+  },
+  {
+   "headline": "President Trump signs executive order rebranding AI as Super Intelligence",
+   "url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/"
+  },
+  {
+   "headline": "Data centre operators deploy retired jet engines for backup power generation",
+   "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/"
+  }
+ ]
 }

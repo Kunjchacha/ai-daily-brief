@@ -272,5 +272,11 @@
   "verdict": "skip today"
  },
  "created": "2026-11-02T14:57:08.081284+00:00",
- "approved_at": "2026-11-02T15:07:10.666436+00:00"
+ "approved_at": "2026-11-02T15:07:10.666436+00:00",
+ "excluded": [
+  {
+   "headline": "Privacy‑focused AI assistant Ollie to shut down within a week",
+   "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/"
+  }
+ ]
 }
