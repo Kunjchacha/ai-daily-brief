@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-05",
+ "edition": "afternoon",
+ "key": "2026-11-05-afternoon",
+ "format": "explainer",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "What is a context window?",
+   "summary": "A context window is the amount of text, counted in tokens, that a language model can take into account at once. If a conversation or document is longer than the window, the model cannot use all of it in a single request.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Wikipedia: Large language model",
+   "url": "https://en.wikipedia.org/wiki/Large_language_model",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "context-window",
+   "checks": [
+    "written and reviewed in this project, not by an AI at run time",
+    "source: Wikipedia: Large language model"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot afternoon, 17:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-04T11:42:20.742227+00:00"
+}

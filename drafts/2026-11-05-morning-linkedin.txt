@@ -1,0 +1,10 @@
+AI Daily Brief: Explainer, Thursday 5 November 2026 (Morning)
+
+What is a token?
+Language models do not read words; they read tokens, which are chunks of text such as a whole word, part of a word or a punctuation mark. Limits, speed and pricing for most AI services are measured in tokens, so the same sentence can use more or fewer tokens depending on the model.
+
+Source: https://developers.google.com/machine-learning/glossary
+
+AI-assisted, human-reviewed.
+
+#AI #ArtificialIntelligence #AINews #AIExplained

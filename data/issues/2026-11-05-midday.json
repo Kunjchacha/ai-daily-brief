@@ -1,0 +1,40 @@
+{
+ "date": "2026-11-05",
+ "edition": "midday",
+ "key": "2026-11-05-midday",
+ "format": "model",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "summary": "An image text to text model published on Hugging Face under the mit licence.",
+   "details": "221,621 downloads | 5,220 likes | mit licence | task: image text to text",
+   "why_it_matters": "",
+   "source": "Hugging Face",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "evidence_quote": "deepseek-ai/DeepSeek-V4.1-Flash-1017 | image-text-to-text | license:mit",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-10-17T02:40:38.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "checks": [
+    "licence stated (mit)",
+    "221,621 downloads",
+    "on the site's own trending list",
+    "not featured before"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot midday, 12:30 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-04T11:42:20.742227+00:00"
+}

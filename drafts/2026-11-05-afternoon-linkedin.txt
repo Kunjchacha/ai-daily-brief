@@ -1,0 +1,10 @@
+AI Daily Brief: Explainer, Thursday 5 November 2026 (Afternoon)
+
+What is a context window?
+A context window is the amount of text, counted in tokens, that a language model can take into account at once. If a conversation or document is longer than the window, the model cannot use all of it in a single request.
+
+Source: https://en.wikipedia.org/wiki/Large_language_model
+
+AI-assisted, human-reviewed.
+
+#AI #ArtificialIntelligence #AINews #AIExplained
