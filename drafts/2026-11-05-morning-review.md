@@ -1,14 +1,14 @@
 # Review notes: 2026-11-05-morning
 
 - Status: **ready_for_review** (nothing is posted until you approve it)
-- Rule checks (no AI judgement of the facts): written and reviewed in this project, not by an AI at run time; source: Google Machine Learning glossary
+- Rule checks (no AI judgement of the facts): written and reviewed in this project: a prompt template, no claims about any product; includes the reminder not to paste customer or company data
 - Writing mode: curated
 - Items kept: 1 | dropped: 0
 
 ## What each item rests on
 Check that each is a CONFIRMED FACT (something that has happened or been officially announced), not a rumour or opinion.
 
-1. **What is a token?**: evergreen; Google Machine Learning glossary, age unknown
+1. **Turn messy meeting notes into clear actions**: how-to; , age unknown
    Source says: "no exact quote (written without AI: check the source yourself)"
 
 ## Notes

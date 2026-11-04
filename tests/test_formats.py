@@ -173,3 +173,47 @@ class CardTests(unittest.TestCase):
         page = cards.card_html(issue, "AI Daily Brief")
         self.assertIn("One", page)
         self.assertIn("Two &lt;b&gt;", page)
+
+
+class CarouselFormatTests(unittest.TestCase):
+    def setUp(self):
+        self.wf = json.load(open(Path(__file__).resolve().parent.parent / "config" / "workflows.json"))
+        self.myths = json.load(open(Path(__file__).resolve().parent.parent / "config" / "myths.json"))
+
+    def test_every_workflow_is_complete_and_warns_about_private_data(self):
+        for w in self.wf:
+            self.assertTrue(w["hook"] and len(w["steps"]) >= 3 and "[" in w["prompt"] and w["checks"] and w["mistake"], w["id"])
+            self.assertIn("customer or company data", w["privacy"])
+            self.assertLess(len(w["prompt"]), 420, "a prompt must fit on one slide")
+
+    def test_every_myth_has_a_https_source(self):
+        for m in self.myths:
+            self.assertTrue(m["url"].startswith("https://") and m["myth"].startswith("Myth:") and m["reality"].startswith("Reality:"), m["id"])
+
+    def test_workflow_and_myth_slides_and_post_text(self):
+        from pipeline import carousel
+        for builder, fmt, n in ((formats.workflow, "workflow", 7), (formats.myth, "myth", 5)):
+            it = builder(set())
+            issue = {"date": "2026-11-05", "edition": "morning", "key": "2026-11-05-morning", "format": fmt, "items": [it]}
+            slides = carousel.slides_for(issue)
+            self.assertEqual(len(slides), n)
+            self.assertTrue(slides[0]["cover"])
+            self.assertIn("<div class='slide'>", carousel.deck_html(slides, "AI Daily Brief"))
+            post = render.linkedin_post(issue, "AI Daily Brief", ["#AI"], 2800)
+            self.assertIn("Swipe through", post)
+            self.assertLess(len(post), 900, "the caption stays short: the value is in the document")
+
+    def test_the_owners_own_take_appears_in_the_post(self):
+        it = formats.workflow(set())
+        it["take"] = "I tried this on last week's team call and it caught two actions I had missed."
+        post = render.linkedin_post({"date": "2026-11-05", "format": "workflow", "items": [it]}, "AI Daily Brief", ["#AI"], 2800)
+        self.assertIn("My take: I tried this", post)
+
+    def test_default_plan_posts_twice_a_day_only(self):
+        self.assertEqual(pack.ACTIVE_DEFAULT, ("morning", "evening"))
+
+    def test_myth_slides_start_with_a_capital(self):
+        from pipeline import carousel
+        it = formats.myth(set())
+        slides = carousel.slides_for({"date": "2026-11-05", "format": "myth", "items": [it]})
+        self.assertTrue(slides[0]["title"][0].isupper() and slides[1]["title"][0].isupper())

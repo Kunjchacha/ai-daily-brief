@@ -14,7 +14,7 @@ from .common import ROOT, load_json, log
 from .verify import _squash
 
 FORMATS = {"news": "News brief", "repo": "Open-source spotlight", "model": "Model spotlight", "paper": "Research in plain English",
-           "explainer": "Explainer", "question": "Question"}
+           "explainer": "Explainer", "question": "Question", "workflow": "AI at work", "myth": "Myth vs reality"}
 SPAM_RE = re.compile(r"\b(crypto|token|airdrop|casino|betting|nsfw|porn|crack|keygen|cheat|bypass|scraper|bot farm)\b", re.I)
 LICENCE_FREE = {None, "", "NOASSERTION", "other"}
 TOPICS = ("llm", "ai-agents", "generative-ai", "machine-learning", "rag", "mcp")
@@ -59,7 +59,7 @@ def _item(headline, hook, points, takeaway, ask, source, url, quote, kind, mode,
     return {"id": 1, "headline": headline, "hook": hook, "points": list(points), "takeaway": takeaway, "ask": ask,
             "summary": " ".join(points), "details": "", "why_it_matters": "", "source": source, "url": url,
             "evidence_quote": quote, "kind": kind, "mode": mode, "published": published, "score": 0, "needs_human_line": False,
-            "bank_id": bank_id, "checks": list(checks)}
+            "bank_id": bank_id, "take": "", "checks": list(checks)}
 
 
 def repo_spotlight(now, seen_urls, fetcher=None):
@@ -200,3 +200,28 @@ def question(seen_ids, bank=None):
     return _item(b["question"], b["question"], [b["context"]], "", "Share your answer in the comments.", "", "", "", "question",
                  "curated", None, b["id"],
                  ["an engagement question: it states no facts", "asks readers not to share customer or company data"])
+
+
+def workflow(seen_ids, bank=None):
+    """A practical, saveable 'AI at work' card: the steps, a copy-and-paste prompt and what to check. Written for this project."""
+    b = _pick(bank if bank is not None else load_json("config/workflows.json"), seen_ids)
+    if not b:
+        return None
+    it = _item(b["title"], b["hook"], [b["problem"], "Inside: the steps, a copy-and-paste prompt and what to check before you use the result."],
+               "", "What task would you like a prompt for next?", "", "", "", "how-to", "curated", None, b["id"],
+               ["written and reviewed in this project: a prompt template, no claims about any product",
+                "includes the reminder not to paste customer or company data"])
+    it["bank"] = b
+    return it
+
+
+def myth(seen_ids, bank=None):
+    """Myth versus reality, each tied to a source page."""
+    b = _pick(bank if bank is not None else load_json("config/myths.json"), seen_ids)
+    if not b:
+        return None
+    it = _item(b["myth"].removeprefix("Myth: "), b["myth"], [b["reality"], b["so_what"]], "", "Which AI myth did you believe the longest?",
+               b["source"], b["url"], "", "evergreen", "curated", None, b["id"],
+               ["written and reviewed in this project", f"every claim rests on the linked source: {b['source']}"])
+    it["bank"] = b
+    return it

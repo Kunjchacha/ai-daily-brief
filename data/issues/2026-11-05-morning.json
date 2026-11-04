@@ -2,38 +2,56 @@
  "date": "2026-11-05",
  "edition": "morning",
  "key": "2026-11-05-morning",
- "format": "explainer",
+ "format": "workflow",
  "status": "ready_for_review",
  "mode": "curated",
  "brand": "AI Daily Brief",
  "items": [
   {
    "id": 1,
-   "headline": "What is a token?",
-   "hook": "Your AI bill is counted in something you never see: tokens.",
+   "headline": "Turn messy meeting notes into clear actions",
+   "hook": "You have 40 minutes of notes and no idea what anyone agreed to.",
    "points": [
-    "Models read tokens, not words: whole words, word fragments or punctuation marks.",
-    "Limits, speed and price for most AI services are measured in tokens.",
-    "The same sentence can use more or fewer tokens on different models."
+    "Notes from a meeting are rarely written in an order that shows who must do what.",
+    "Inside: the steps, a copy-and-paste prompt and what to check before you use the result."
    ],
-   "takeaway": "When a tool quotes a limit or a price, check whether it is counting tokens or words.",
-   "ask": "Do you know how much text your most-used AI tool can take in at once?",
-   "summary": "Models read tokens, not words: whole words, word fragments or punctuation marks. Limits, speed and price for most AI services are measured in tokens. The same sentence can use more or fewer tokens on different models.",
+   "takeaway": "",
+   "ask": "What task would you like a prompt for next?",
+   "summary": "Notes from a meeting are rarely written in an order that shows who must do what. Inside: the steps, a copy-and-paste prompt and what to check before you use the result.",
    "details": "",
    "why_it_matters": "",
-   "source": "Google Machine Learning glossary",
-   "url": "https://developers.google.com/machine-learning/glossary",
+   "source": "",
+   "url": "",
    "evidence_quote": "",
-   "kind": "evergreen",
+   "kind": "how-to",
    "mode": "curated",
    "published": null,
    "score": 0,
    "needs_human_line": false,
-   "bank_id": "tokens",
+   "bank_id": "meeting-notes",
+   "take": "",
    "checks": [
-    "written and reviewed in this project, not by an AI at run time",
-    "source: Google Machine Learning glossary"
-   ]
+    "written and reviewed in this project: a prompt template, no claims about any product",
+    "includes the reminder not to paste customer or company data"
+   ],
+   "bank": {
+    "id": "meeting-notes",
+    "title": "Turn messy meeting notes into clear actions",
+    "hook": "You have 40 minutes of notes and no idea what anyone agreed to.",
+    "problem": "Notes from a meeting are rarely written in an order that shows who must do what.",
+    "steps": [
+     "Paste your own rough notes (remove names of customers and any company data).",
+     "Ask for decisions, actions with an owner, and open questions, in three separate lists.",
+     "Read it against your notes and fix anything it guessed."
+    ],
+    "prompt": "Here are my rough meeting notes: [paste notes]. List (1) decisions made, (2) actions with an owner and a due date if stated, (3) open questions. If something is not stated, write 'not stated' instead of guessing.",
+    "checks": [
+     "Every owner and date appears in your original notes.",
+     "Nothing is listed as decided that was only discussed."
+    ],
+    "mistake": "Letting the AI fill gaps with names or dates it made up.",
+    "privacy": "Do not paste customer or company data into an AI tool."
+   }
   }
  ],
  "report": [],
@@ -42,5 +60,5 @@
   "slot morning, 08:00 IST"
  ],
  "agent": null,
- "created": "2026-11-04T11:50:15.889102+00:00"
+ "created": "2026-11-04T11:59:59.845979+00:00"
 }

@@ -13,9 +13,10 @@ def _date(issue):
 
 
 FORMAT_NAMES = {"repo": "Open-source spotlight", "model": "Model spotlight", "paper": "Research in plain English",
-                "explainer": "Explainer", "question": "Question"}
+                "explainer": "Explainer", "question": "Question", "workflow": "AI at work", "myth": "Myth vs reality"}
 FORMAT_TAGS = {"repo": "#AI #OpenSource #GitHub", "model": "#AI #OpenSource #HuggingFace", "paper": "#AI #Research #MachineLearning",
-               "explainer": "#AI #AIExplained #LearnAI", "question": "#AI #AICommunity #Discussion"}
+               "explainer": "#AI #AIExplained #LearnAI", "question": "#AI #AICommunity #Discussion",
+               "workflow": "#AI #AIatWork #Productivity", "myth": "#AI #AIMyths #CriticalThinking"}
 
 
 def heading(issue, brand):
@@ -36,6 +37,10 @@ def single_post(issue, brand, hashtags):
         paras.append(it["summary"])
     if it.get("takeaway"):
         paras.append(f"Takeaway: {it['takeaway']}")
+    if it.get("take"):
+        paras.append(f"My take: {it['take']}")  # the owner's own line: the most effective way to stop a post reading as generic
+    if fmt in ("workflow", "myth"):
+        paras.append("Swipe through the document for the full card." if fmt == "workflow" else "Swipe through for what to do about it.")
     if it.get("ask"):
         paras.append(it["ask"])
     if it.get("url"):

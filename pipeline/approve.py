@@ -20,7 +20,7 @@ DRAFTS = ROOT / "drafts"
 ISSUES = ROOT / "data" / "issues"
 STATUS_RE = re.compile(r"^Status:\s*([A-Za-z]+)", re.M)
 HEADER_RE = re.compile(r"^## \d+\.\s*", re.M)
-FIELD_RE = re.compile(r"^(Hook|Points|Takeaway|Ask|Summary|Details|Why it matters|Source|Evidence from the source|Kind|Age|Include):\s*(.*)$")
+FIELD_RE = re.compile(r"^(Hook|Points|Takeaway|Take|Ask|Summary|Details|Why it matters|Source|Evidence from the source|Kind|Age|Include):\s*(.*)$")
 NOT_FACT_KINDS = ("rumour", "rumor", "opinion", "unconfirmed", "prediction")
 
 
@@ -34,13 +34,14 @@ def render_issue_md(issue, brand):
            "2. Not a confirmed fact (a rumour, prediction, plan or opinion)? Change 'Include: yes' to 'Include: no'.",
            f"3. Replace any {PLACEHOLDER} with your own line, and check each source link.",
            "4. When you are happy, change 'Status: DRAFT' above to 'Status: APPROVED' and save.",
-           "5. Run Actions > Approve issue. Only then is the final post text produced.", ""]
+           "5. Run Actions > Approve issue. Only then is the final post text produced.",
+           "OPTIONAL: on a 'Take:' line, add one sentence of your own experience or opinion. A real personal line is the best way to stop a post sounding generic.", ""]
     news = (issue.get("format") or "news") == "news"
     for n, it in enumerate(issue["items"], 1):
         quote = it.get("evidence_quote") or "(none: written without AI, so check the source yourself)"
         body = ([f"Summary: {it['summary']}", f"Why it matters: {it['why_it_matters'] or PLACEHOLDER}"] if news else
                 [f"Hook: {it.get('hook') or it['headline']}", f"Points: {' || '.join(it.get('points', []) or [it['summary']])}",
-                 f"Takeaway: {it.get('takeaway', '')}", f"Ask: {it.get('ask', '')}"])
+                 f"Takeaway: {it.get('takeaway', '')}", f"Take: {it.get('take', '')}", f"Ask: {it.get('ask', '')}"])
         out += [f"## {n}. {it['headline']}", *body,
                 f"Source: {it['source']} | {it['url']}" if it.get("url") else "Source: none",
                 f"Evidence from the source: {quote}",
@@ -111,7 +112,7 @@ def approve(day, s=None):
         source, _, url = p.get("Source", "").rpartition(" | ")
         if p.get("Source", "").strip().lower() == "none":
             source, url = "", ""
-        if (news or url or issue.get("format") != "question") and not url.startswith(("http://", "https://")):
+        if (news or url or issue.get("format") not in ("question", "workflow")) and not url.startswith(("http://", "https://")):
             problems.append(f"'{head}' has no valid http(s) source link")
         for pattern in hedges:
             hit = re.search(pattern, f"{head} {summary}", re.I)
@@ -121,7 +122,7 @@ def approve(day, s=None):
         item = dict(originals.get(url or head, {}))
         item.update(headline=head, summary=summary, why_it_matters=why, details=p.get("Details", item.get("details", "")),
                     hook=hook or item.get("hook", ""), points=points or item.get("points", []),
-                    takeaway=p.get("Takeaway", item.get("takeaway", "")), ask=p.get("Ask", item.get("ask", "")), source=source or item.get("source", ""),
+                    takeaway=p.get("Takeaway", item.get("takeaway", "")), take=p.get("Take", item.get("take", "")), ask=p.get("Ask", item.get("ask", "")), source=source or item.get("source", ""),
                     url=url, kind=kind or item.get("kind", ""), needs_human_line=False, approved_text=True)
         kept.append(item)
     need = s["min_items"] if news else 1

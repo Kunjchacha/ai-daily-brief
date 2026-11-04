@@ -1,17 +1,13 @@
-Your AI bill is counted in something you never see: tokens.
+You have 40 minutes of notes and no idea what anyone agreed to.
 
-Models read tokens, not words: whole words, word fragments or punctuation marks.
+Notes from a meeting are rarely written in an order that shows who must do what.
 
-Limits, speed and price for most AI services are measured in tokens.
+Inside: the steps, a copy-and-paste prompt and what to check before you use the result.
 
-The same sentence can use more or fewer tokens on different models.
+Swipe through the document for the full card.
 
-Takeaway: When a tool quotes a limit or a price, check whether it is counting tokens or words.
+What task would you like a prompt for next?
 
-Do you know how much text your most-used AI tool can take in at once?
+AI Daily Brief · AI at work · AI-assisted, human-reviewed.
 
-Source: https://developers.google.com/machine-learning/glossary
-
-AI Daily Brief · Explainer · AI-assisted, human-reviewed.
-
-#AI #AIExplained #LearnAI
+#AI #AIatWork #Productivity

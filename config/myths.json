@@ -1,0 +1,52 @@
+[
+ {
+  "id": "myth-lookup",
+  "myth": "Myth: an AI chatbot looks the answer up on the internet.",
+  "reality": "Reality: a language model writes likely text from patterns it learned in training. Some products add search or document lookup on top.",
+  "so_what": "So when a tool does not show sources, treat the answer as a draft to check.",
+  "do": "Ask: 'Did you search for this, or are you answering from training?'",
+  "source": "Wikipedia: Large language model",
+  "url": "https://en.wikipedia.org/wiki/Large_language_model",
+  "extra": "Retrieval-augmented generation: https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+ },
+ {
+  "id": "myth-confident",
+  "myth": "Myth: if an AI sounds confident, it is probably right.",
+  "reality": "Reality: models can produce confident-sounding statements that are false or unsupported. This is called a hallucination.",
+  "so_what": "Confidence of tone tells you nothing about accuracy.",
+  "do": "Check names, numbers and quotes against a source before you use them.",
+  "source": "Wikipedia: Hallucination (artificial intelligence)",
+  "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+  "extra": ""
+ },
+ {
+  "id": "myth-reading",
+  "myth": "Myth: an AI that only reads a web page cannot be tricked by it.",
+  "reality": "Reality: text on a page can contain instructions aimed at the model. This is called prompt injection, and it is listed among the main security risks for AI applications.",
+  "so_what": "Anything an AI reads from outside is untrusted input.",
+  "do": "Be careful when an AI tool can browse, read email or open files and then take actions.",
+  "source": "OWASP Top 10 for LLM Applications",
+  "url": "https://genai.owasp.org/llm-top-10/",
+  "extra": ""
+ },
+ {
+  "id": "myth-finetune",
+  "myth": "Myth: you have to retrain an AI to make it use your documents.",
+  "reality": "Reality: retrieval-augmented generation lets a model look up relevant documents at answer time, without retraining it.",
+  "so_what": "Retrieval is often the first thing to try for company documents.",
+  "do": "Ask what a product retrieves, and whether it shows you the passages it used.",
+  "source": "Wikipedia: Retrieval-augmented generation",
+  "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+  "extra": ""
+ },
+ {
+  "id": "myth-small",
+  "myth": "Myth: a smaller AI model is always much worse than a bigger one.",
+  "reality": "Reality: in knowledge distillation a smaller model is trained to imitate a larger one, aiming to keep much of its ability at lower cost.",
+  "so_what": "Size is one factor, not the whole story.",
+  "do": "Test a smaller model on your own task before you pay for a bigger one.",
+  "source": "Wikipedia: Knowledge distillation",
+  "url": "https://en.wikipedia.org/wiki/Knowledge_distillation",
+  "extra": ""
+ }
+]

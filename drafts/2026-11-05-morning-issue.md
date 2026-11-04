@@ -1,7 +1,7 @@
-# AI Daily Brief: Explainer, Thursday 5 November 2026 (Morning)
+# AI Daily Brief: AI at work, Thursday 5 November 2026 (Morning)
 Status: DRAFT
 
-- Rule checks (no AI judgement of the facts): written and reviewed in this project, not by an AI at run time; source: Google Machine Learning glossary
+- Rule checks (no AI judgement of the facts): written and reviewed in this project: a prompt template, no claims about any product; includes the reminder not to paste customer or company data
 
 HOW TO APPROVE
 1. Read every item. Edit any wording below (keep the 'Field:' labels as they are).
@@ -9,14 +9,16 @@ HOW TO APPROVE
 3. Replace any [ADD YOUR LINE] with your own line, and check each source link.
 4. When you are happy, change 'Status: DRAFT' above to 'Status: APPROVED' and save.
 5. Run Actions > Approve issue. Only then is the final post text produced.
+OPTIONAL: on a 'Take:' line, add one sentence of your own experience or opinion. A real personal line is the best way to stop a post sounding generic.
 
-## 1. What is a token?
-Hook: Your AI bill is counted in something you never see: tokens.
-Points: Models read tokens, not words: whole words, word fragments or punctuation marks. || Limits, speed and price for most AI services are measured in tokens. || The same sentence can use more or fewer tokens on different models.
-Takeaway: When a tool quotes a limit or a price, check whether it is counting tokens or words.
-Ask: Do you know how much text your most-used AI tool can take in at once?
-Source: Google Machine Learning glossary | https://developers.google.com/machine-learning/glossary
+## 1. Turn messy meeting notes into clear actions
+Hook: You have 40 minutes of notes and no idea what anyone agreed to.
+Points: Notes from a meeting are rarely written in an order that shows who must do what. || Inside: the steps, a copy-and-paste prompt and what to check before you use the result.
+Takeaway: 
+Take: 
+Ask: What task would you like a prompt for next?
+Source: none
 Evidence from the source: (none: written without AI, so check the source yourself)
-Kind: evergreen
+Kind: how-to
 Age: age unknown
 Include: yes

@@ -24,13 +24,19 @@ SLOTS = ("morning", "midday", "afternoon", "evening")
 SLOT_TIMES = {"morning": "08:00", "midday": "12:30", "afternoon": "17:00", "evening": "20:00"}
 
 
+ACTIVE_DEFAULT = ("morning", "evening")  # research: two posts in one day cut each post's reach; 12 hours apart is the safe minimum
+
+
 def plan(date):
-    """Preferred formats per slot, in order of preference, for this weekday (Mon = 0)."""
+    """Preferred formats per slot, in order of preference, for this weekday (Mon = 0). The morning post is the day's flagship:
+    a practical card, a myth-buster, news or research. The last choice in every list is a bank that cannot run dry."""
     wd = date.weekday()
-    return {"morning": ["news", "explainer"],
-            "midday": (["repo", "model"] if wd in (0, 2, 4, 6) else ["model", "repo"]) + ["explainer"],
+    flagship = ["workflow", "news", "myth", "workflow", "paper", "repo", "myth"][wd]
+    spot = ["repo", "model"] if wd % 2 == 0 else ["model", "repo"]
+    return {"morning": [flagship, "workflow", "myth", "explainer"],
+            "midday": spot + ["explainer"],
             "afternoon": (["paper", "explainer"] if wd in (0, 2, 4) else ["explainer", "paper"]) + ["question"],
-            "evening": ["news", "question"]}
+            "evening": ["news"] + spot + ["question"]}
 
 
 def history():
@@ -100,6 +106,10 @@ def build_slot(date, slot, s, now, force=False, fetcher=None, provider=None):
             item = formats.paper_of_the_day(now, urls, prov, fetcher)
             if prov is not None and item and item["mode"] == "llm" and provider is None:
                 runmod._usage_add(str(today_ist()), 1)
+        elif fmt == "workflow":
+            item = formats.workflow(ids)
+        elif fmt == "myth":
+            item = formats.myth(ids)
         elif fmt == "explainer":
             item = formats.explainer(ids)
         elif fmt == "question":
@@ -120,7 +130,9 @@ def build_pack(today, force=False, fetcher=None, provider=None):
     runmod.ISSUES.mkdir(parents=True, exist_ok=True)
     now = dt.datetime.now(UTC)
     tomorrow = today + dt.timedelta(days=1)
+    active = tuple(s.get("pack", {}).get("active_slots", ACTIVE_DEFAULT))
     targets = [(today, "evening")] + [(tomorrow, slot) for slot in ("morning", "midday", "afternoon")]
+    targets = [(d, slot) for d, slot in targets if slot in active]
     failed = 0
     for date, slot in targets:
         try:

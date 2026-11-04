@@ -1,0 +1,182 @@
+[
+ {
+  "id": "meeting-notes",
+  "title": "Turn messy meeting notes into clear actions",
+  "hook": "You have 40 minutes of notes and no idea what anyone agreed to.",
+  "problem": "Notes from a meeting are rarely written in an order that shows who must do what.",
+  "steps": [
+   "Paste your own rough notes (remove names of customers and any company data).",
+   "Ask for decisions, actions with an owner, and open questions, in three separate lists.",
+   "Read it against your notes and fix anything it guessed."
+  ],
+  "prompt": "Here are my rough meeting notes: [paste notes]. List (1) decisions made, (2) actions with an owner and a due date if stated, (3) open questions. If something is not stated, write 'not stated' instead of guessing.",
+  "checks": [
+   "Every owner and date appears in your original notes.",
+   "Nothing is listed as decided that was only discussed."
+  ],
+  "mistake": "Letting the AI fill gaps with names or dates it made up.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "email-reply",
+  "title": "Draft a reply in your own tone, then make it yours",
+  "hook": "A tricky email sits in your inbox because you cannot find the right tone.",
+  "problem": "A first draft in the right tone is quicker to edit than a blank page.",
+  "steps": [
+   "Paste the email you received (no customer data) and say what you want to happen.",
+   "Give two or three words for the tone, such as 'warm, brief, firm'.",
+   "Edit the draft until it sounds like you, then send it yourself."
+  ],
+  "prompt": "Here is an email I received: [paste]. Write a short reply that does this: [your aim]. Tone: [warm, brief, firm]. Do not promise anything I have not listed here: [list].",
+  "checks": [
+   "It promises nothing you did not agree to.",
+   "Names, dates and figures match the original email."
+  ],
+  "mistake": "Sending the draft unread.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "summarise-document",
+  "title": "Summarise a long document without losing the detail that matters",
+  "hook": "A 30-page report lands on your desk an hour before the meeting.",
+  "problem": "A summary is only useful if you can check it against the source.",
+  "steps": [
+   "Paste or upload the document if your organisation allows it for this tool.",
+   "Ask for a summary with the section or page each point came from.",
+   "Open the original at those points and confirm the three that matter most."
+  ],
+  "prompt": "Summarise this document in 8 bullet points for a busy manager: [paste text]. After each point, give the section heading or page it came from. Then list 3 questions the document does not answer.",
+  "checks": [
+   "Check the three most important points against the source.",
+   "Look for numbers: confirm each one in the document."
+  ],
+  "mistake": "Trusting a summary of a document you have not opened.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "excel-formula",
+  "title": "Get an Excel formula you can actually test",
+  "hook": "You know what you want the spreadsheet to do but not how to write the formula.",
+  "problem": "Describing the result you want beats guessing at function names.",
+  "steps": [
+   "Describe your columns and one example row (fake or anonymised values).",
+   "Say what the formula should return, in one sentence.",
+   "Test it on three rows where you already know the answer."
+  ],
+  "prompt": "My sheet has these columns: [letter: what it holds, for example A: date, B: type, C: amount]. In [cell] I want [the result, for example the total of C where B is 'Retail']. Give me an Excel formula for [cell] and explain it in one sentence.",
+  "checks": [
+   "It works on three rows whose answers you know.",
+   "It still works when a cell is blank."
+  ],
+  "mistake": "Pasting real customer rows to 'show' the data.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "messy-data",
+  "title": "Clean a messy list into a tidy table",
+  "hook": "A copied list has mixed formats, odd spacing and duplicates.",
+  "problem": "Cleaning by hand is slow and easy to get wrong; checking is quicker.",
+  "steps": [
+   "Use a small sample with no personal or customer data.",
+   "Say the columns you want and how to treat blanks and duplicates.",
+   "Count the rows before and after."
+  ],
+  "prompt": "Turn this list into a table with columns Name, Date (DD/MM/YYYY), Amount (GBP). Keep every row. If a value is missing write 'blank'. List any rows you were unsure about at the end: [paste sample]",
+  "checks": [
+   "The row count is the same, or you can explain the difference.",
+   "The 'unsure' rows were checked by you."
+  ],
+  "mistake": "Letting the AI quietly drop rows.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "meeting-prep",
+  "title": "Prepare better questions for a meeting",
+  "hook": "You walk into a meeting knowing the agenda but not what to ask.",
+  "problem": "Good questions come from the gaps in what you already know.",
+  "steps": [
+   "Write what you know and what you are trying to decide.",
+   "Ask for questions that would change the decision, not generic ones.",
+   "Pick the three you could not answer yourself."
+  ],
+  "prompt": "I am meeting [role] to decide [decision]. What I already know: [3 facts]. Suggest 8 questions that would change my decision if the answer were surprising, and say why each one matters.",
+  "checks": [
+   "Each question ties to the decision you actually face.",
+   "You can say what answer would change your mind."
+  ],
+  "mistake": "Using a long list of generic questions.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "three-levels",
+  "title": "Explain a hard idea at three levels",
+  "hook": "You need to explain something technical to a mixed audience.",
+  "problem": "One idea told three ways reaches more people.",
+  "steps": [
+   "Name the idea and the audience.",
+   "Ask for a one-line version, a paragraph, and a version with an example.",
+   "Keep the version that suits the room and check the facts."
+  ],
+  "prompt": "Explain [idea] three ways: (1) one sentence for a busy executive, (2) one paragraph for a new colleague, (3) a short version with a real-world example. Do not use jargon without explaining it.",
+  "checks": [
+   "The technical details are still correct.",
+   "The example matches your real situation."
+  ],
+  "mistake": "Using the simple version without checking what it left out.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "tighten-writing",
+  "title": "Tighten your writing without losing your voice",
+  "hook": "Your draft is too long and you can no longer see what to cut.",
+  "problem": "Cutting is easier when you can compare before and after.",
+  "steps": [
+   "Paste your own draft.",
+   "Ask for a version 20 percent shorter that keeps your phrasing.",
+   "Compare the two and keep only the cuts you like."
+  ],
+  "prompt": "Here is my draft: [paste]. Make it about 20 percent shorter. Keep my wording and tone where you can. Show what you removed in a separate list so I can put anything back.",
+  "checks": [
+   "Your key point is still there.",
+   "It still sounds like you."
+  ],
+  "mistake": "Accepting every change.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "compare-options",
+  "title": "Compare options with a table you can defend",
+  "hook": "You have three options and a gut feeling.",
+  "problem": "A table of criteria shows what you are really weighing.",
+  "steps": [
+   "List the options and what matters to you.",
+   "Ask for a table scored against your criteria, with assumptions stated.",
+   "Change the assumptions you disagree with and re-run it."
+  ],
+  "prompt": "Compare these options: [A, B, C]. My criteria, in order of importance: [list]. Make a table with a short reason for each score and list the assumptions you made.",
+  "checks": [
+   "You agree with each assumption listed.",
+   "The ranking changes if you change the order of your criteria."
+  ],
+  "mistake": "Treating the AI's scores as facts.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ },
+ {
+  "id": "project-plan",
+  "title": "Break a vague task into a plan with risks",
+  "hook": "'Improve the onboarding process' is not yet a plan.",
+  "problem": "A first plan gives you something to correct.",
+  "steps": [
+   "Describe the goal, the deadline and who is involved.",
+   "Ask for steps, who does each, and the three biggest risks.",
+   "Edit it with what you know about your team."
+  ],
+  "prompt": "Goal: [goal]. Deadline: [date]. People: [roles]. Break this into 6 to 10 steps with a suggested owner for each, and list the 3 biggest risks with one way to reduce each.",
+  "checks": [
+   "Every step is something your team can actually do.",
+   "The risks are real ones for your situation."
+  ],
+  "mistake": "Following the plan without adjusting it.",
+  "privacy": "Do not paste customer or company data into an AI tool."
+ }
+]
