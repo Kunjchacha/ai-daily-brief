@@ -12,10 +12,48 @@ def _date(issue):
     return dt.date.fromisoformat(issue["date"])
 
 
+FORMAT_NAMES = {"repo": "Open-source spotlight", "model": "Model spotlight", "paper": "Research in plain English",
+                "explainer": "Explainer", "question": "Question"}
+FORMAT_TAGS = {"repo": "#OpenSource", "model": "#OpenSource", "paper": "#Research", "explainer": "#AIExplained", "question": ""}
+FORMAT_CAUTION = {"repo": "Check the licence and read the code before you rely on it. Stars show popularity, not quality.",
+                  "model": "Check the licence and the model card before you rely on it. Downloads show popularity, not quality.",
+                  "paper": "These are the authors' own claims; a preprint may not have been peer reviewed yet.",
+                  "explainer": "", "question": "Please do not share customer or company data in your answers."}
+
+
+def heading(issue, brand):
+    """The first line of every post: unique per day and slot, so a duplicate is easy to spot."""
+    fmt = issue.get("format") or "news"
+    if fmt == "news":
+        return f"{brand}: {long_date(_date(issue))}{edition_label(issue)}"
+    slot = f" ({issue['edition'].capitalize()})" if issue.get("edition") else ""
+    return f"{brand}: {FORMAT_NAMES[fmt]}, {long_date(_date(issue))}{slot}"
+
+
+def single_post(issue, brand, hashtags):
+    """One-item formats (spotlight, research, explainer, question)."""
+    fmt, it = issue["format"], issue["items"][0]
+    lines = [heading(issue, brand), "", it["headline"], it["summary"]]
+    if it.get("details"):
+        lines.append(it["details"])
+    if fmt == "paper" and it.get("evidence_quote") and it["evidence_quote"] not in it["summary"]:
+        lines += ["", f'The authors report: "{it["evidence_quote"]}"']
+    if it.get("url"):
+        lines += ["", f"Source: {it['url']}"]
+    if FORMAT_CAUTION[fmt]:
+        lines.append(FORMAT_CAUTION[fmt])
+    tags = " ".join(hashtags)
+    if FORMAT_TAGS[fmt]:
+        tags += " " + FORMAT_TAGS[fmt]
+    return "\n".join(lines + ["", "AI-assisted, human-reviewed.", "", tags])
+
+
 def linkedin_post(issue, brand, hashtags, max_chars):
+    if (issue.get("format") or "news") != "news":
+        return single_post(issue, brand, hashtags)
     items = list(issue["items"])
     while True:
-        lines = [f"{brand}: {long_date(_date(issue))}{edition_label(issue)}", "", f"{len(items)} AI developments worth your time today:", ""]
+        lines = [heading(issue, brand), "", f"{len(items)} AI developments worth your time today:", ""]
         for n, it in enumerate(items, 1):
             lines.append(f"{n}. {it['headline']}")
             lines.append(it["summary"])
@@ -42,6 +80,9 @@ def age_text(published, ref):
 def agent_lines(issue):
     """The review agent's advice: the issue score, its verdict and a per-item scorecard (empty when the agent did not run)."""
     a = issue.get("agent")
+    if not a and (issue.get("format") or "news") != "news":
+        checks = [c for it in issue["items"] for c in it.get("checks", [])]
+        return ["- Rule checks (no AI judgement of the facts): " + "; ".join(checks)]
     if not a:
         return ["- Review agent: did not run (offline or disabled): check every source yourself"]
     out = [f"- Review agent score: **{a['score']}%, {a['verdict']}** (the weakest item sets the score; advice only)"]

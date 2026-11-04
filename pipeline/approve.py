@@ -14,13 +14,13 @@ import re
 import sys
 
 from .common import ROOT, UTC, edition_label, log, long_date, settings
-from .render import PLACEHOLDER, age_text, agent_lines, linkedin_post
+from .render import PLACEHOLDER, age_text, agent_lines, heading, linkedin_post
 
 DRAFTS = ROOT / "drafts"
 ISSUES = ROOT / "data" / "issues"
 STATUS_RE = re.compile(r"^Status:\s*([A-Za-z]+)", re.M)
 HEADER_RE = re.compile(r"^## \d+\.\s*", re.M)
-FIELD_RE = re.compile(r"^(Summary|Why it matters|Source|Evidence from the source|Kind|Age|Include):\s*(.*)$")
+FIELD_RE = re.compile(r"^(Summary|Details|Why it matters|Source|Evidence from the source|Kind|Age|Include):\s*(.*)$")
 NOT_FACT_KINDS = ("rumour", "rumor", "opinion", "unconfirmed", "prediction")
 
 
@@ -28,19 +28,20 @@ def render_issue_md(issue, brand):
     """The one file the owner reads, edits and approves."""
     day = dt.date.fromisoformat(issue["date"])
     ref = dt.datetime.fromisoformat(issue["created"])
-    out = [f"# {brand}: {long_date(day)}{edition_label(issue)}", "Status: DRAFT", "", *agent_lines(issue), "",
+    out = [f"# {heading(issue, brand)}", "Status: DRAFT", "", *agent_lines(issue), "",
            "HOW TO APPROVE",
            "1. Read every item. Edit any wording below (keep the 'Field:' labels as they are).",
            "2. Not a confirmed fact (a rumour, prediction, plan or opinion)? Change 'Include: yes' to 'Include: no'.",
            f"3. Replace any {PLACEHOLDER} with your own line, and check each source link.",
            "4. When you are happy, change 'Status: DRAFT' above to 'Status: APPROVED' and save.",
            "5. Run Actions > Approve issue. Only then is the final post text produced.", ""]
+    news = (issue.get("format") or "news") == "news"
     for n, it in enumerate(issue["items"], 1):
         quote = it.get("evidence_quote") or "(none: written without AI, so check the source yourself)"
         out += [f"## {n}. {it['headline']}",
                 f"Summary: {it['summary']}",
-                f"Why it matters: {it['why_it_matters'] or PLACEHOLDER}",
-                f"Source: {it['source']} | {it['url']}",
+                f"Why it matters: {it['why_it_matters'] or PLACEHOLDER}" if news else f"Details: {it.get('details', '')}",
+                f"Source: {it['source']} | {it['url']}" if it.get("url") else "Source: none",
                 f"Evidence from the source: {quote}",
                 f"Kind: {it.get('kind') or 'unchecked'}",
                 f"Age: {age_text(it.get('published'), ref)}",
@@ -82,7 +83,8 @@ def approve(day, s=None):
             "'Status: APPROVED', save, then run this again.")
         return 1
 
-    originals = {it["url"]: it for it in issue["items"]}
+    news = (issue.get("format") or "news") == "news"
+    originals = {(it.get("url") or it["headline"]): it for it in issue["items"]}
     facts = s.get("facts_only", {})
     hedges = facts.get("hedge_patterns", []) if facts.get("enabled") else []
     kept, excluded, dropped, problems, warnings = [], [], [], [], []
@@ -99,22 +101,25 @@ def approve(day, s=None):
             dropped.append(drop)
             continue
         summary, why = p.get("Summary", ""), p.get("Why it matters", "")
-        if not summary or PLACEHOLDER in f"{head} {summary} {why}" or not why:
+        if not summary or PLACEHOLDER in f"{head} {summary} {why}" or (news and not why):
             problems.append(f"'{head}' still needs its summary or your 'Why it matters' line")
         source, _, url = p.get("Source", "").rpartition(" | ")
-        if not url.startswith(("http://", "https://")):
+        if p.get("Source", "").strip().lower() == "none":
+            source, url = "", ""
+        if (news or url or issue.get("format") != "question") and not url.startswith(("http://", "https://")):
             problems.append(f"'{head}' has no valid http(s) source link")
         for pattern in hedges:
             hit = re.search(pattern, f"{head} {summary}", re.I)
             if hit:
                 warnings.append(f"'{head}' contains hedged wording ('{hit.group(0)}'): is this really a confirmed fact?")
                 break
-        item = dict(originals.get(url, {}))
-        item.update(headline=head, summary=summary, why_it_matters=why, source=source or item.get("source", ""),
+        item = dict(originals.get(url or head, {}))
+        item.update(headline=head, summary=summary, why_it_matters=why, details=p.get("Details", item.get("details", "")), source=source or item.get("source", ""),
                     url=url, kind=kind or item.get("kind", ""), needs_human_line=False, approved_text=True)
         kept.append(item)
-    if len(kept) < s["min_items"]:
-        problems.append(f"only {len(kept)} item(s) left; an issue needs at least {s['min_items']}")
+    need = s["min_items"] if news else 1
+    if len(kept) < need:
+        problems.append(f"only {len(kept)} item(s) left; this issue needs at least {need}")
     if problems:
         for pr in problems:
             log("CANNOT APPROVE: " + pr)

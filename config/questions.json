@@ -1,0 +1,52 @@
+[
+ {
+  "id": "q-task",
+  "question": "Which task did AI save you real time on this week?",
+  "context": "Answer with the task rather than the tool, and please do not share any customer or company data."
+ },
+ {
+  "id": "q-limit",
+  "question": "Where did an AI tool let you down recently?",
+  "context": "A specific example helps others more than a general complaint. Keep it free of customer or company details."
+ },
+ {
+  "id": "q-learn",
+  "question": "What is one AI concept you would like explained in plain English?",
+  "context": "The best suggestions may become a future explainer post."
+ },
+ {
+  "id": "q-habit",
+  "question": "Do you check an AI answer against a source before you rely on it?",
+  "context": "Tell us when you do, and when you do not."
+ },
+ {
+  "id": "q-skill",
+  "question": "Which skill matters most for working with AI: asking good questions, checking the output, or knowing the subject?",
+  "context": "Pick one and say why in a sentence."
+ },
+ {
+  "id": "q-tool",
+  "question": "Which AI tool do you use most days, and for what?",
+  "context": "Name the job it does for you, not just the product."
+ },
+ {
+  "id": "q-newbie",
+  "question": "What would you tell someone using AI at work for the first time?",
+  "context": "One piece of advice, in a sentence."
+ },
+ {
+  "id": "q-trust",
+  "question": "What would make you trust an AI-written summary more?",
+  "context": "Sources, a human check, a label, something else?"
+ },
+ {
+  "id": "q-local",
+  "question": "Have you tried running an AI model on your own computer?",
+  "context": "If so, which one, and was it worth the effort?"
+ },
+ {
+  "id": "q-rules",
+  "question": "Does your workplace have clear rules on using AI tools?",
+  "context": "You do not need to name your employer or share internal details."
+ }
+]

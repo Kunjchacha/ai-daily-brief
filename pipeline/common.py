@@ -73,7 +73,7 @@ def today_ist():
     return dt.datetime.now(IST).date()
 
 
-EDITIONS = ("morning", "evening")
+EDITIONS = ("morning", "midday", "afternoon", "evening")
 
 
 def issue_key(date, edition=None):
