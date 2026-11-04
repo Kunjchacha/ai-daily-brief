@@ -1,0 +1,179 @@
+{
+ "date": "2026-11-05",
+ "edition": "morning",
+ "key": "2026-11-05-morning",
+ "status": "quiet_day",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "Heimstaden adopts ChatGPT Enterprise and Codex for property management",
+   "summary": "Heimstaden is using OpenAI’s ChatGPT Enterprise and Codex to streamline residential real‑estate management and reduce costs across Europe.",
+   "why_it_matters": "AI tools can improve efficiency and cut expenses in the housing sector.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management",
+   "id": 1,
+   "url": "https://openai.com/index/heimstaden",
+   "canonical": "https://openai.com/index/heimstaden",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-03T08:00:00+00:00",
+   "score": 12.14
+  },
+  {
+   "headline": "Jill Hazelbaker appointed OpenAI’s Chief Corporate Affairs Officer",
+   "summary": "Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, overseeing global communications and corporate positioning.",
+   "why_it_matters": "The role will shape OpenAI’s public and policy engagement.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.",
+   "id": 2,
+   "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
+   "canonical": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-03T00:00:00+00:00",
+   "score": 11.89
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "Heimstaden adopts ChatGPT Enterprise and Codex for property management",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "Jill Hazelbaker appointed OpenAI’s Chief Corporate Affairs Officer",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Qwen 3.8 27B can read and edit model weights, author demonstrates",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 4,
+   "headline": "Agentic AI risks lowering insight quality in enterprise analytics",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "hedged wording ('may'): not a confirmed fact",
+    "names not in source: MIT, Review, Technology"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 5,
+   "headline": "U.S. Census Bureau data used to track corporate AI adoption trends",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 6,
+   "headline": "The agentic web concept traces back to Tim Berners‑Lee’s Semantic Web",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "names not in source: Review, Technology"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 7,
+   "headline": "Please stop asking me when the AI bubble will pop",
+   "problems": [
+    "hedged wording ('could'): not a confirmed fact",
+    "no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 8,
+   "headline": "Anthropic is working on a system to prove AI models’ identity",
+   "problems": [
+    "no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity bo",
+   "problems": [
+    "no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "quiet news period: widened the window to 96 hours",
+  "story 7: no usable AI output, used extractive text",
+  "story 8: no usable AI output, used extractive text",
+  "story 9: no usable AI output, used extractive text"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "Heimstaden adopts ChatGPT Enterprise and Codex for property management",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 60,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "1 claim(s) unsupported by the article"
+    ],
+    "id": 2,
+    "headline": "Jill Hazelbaker appointed OpenAI’s Chief Corporate Affairs Officer",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   }
+  ],
+  "score": 60,
+  "verdict": "skip today"
+ },
+ "created": "2026-11-04T11:26:18.005204+00:00"
+}
