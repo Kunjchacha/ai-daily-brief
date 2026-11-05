@@ -13,10 +13,16 @@ def _date(issue):
 
 
 FORMAT_NAMES = {"repo": "Open-source spotlight", "model": "Model spotlight", "paper": "Research in plain English",
-                "explainer": "Explainer", "question": "Question", "workflow": "AI at work", "myth": "Myth vs reality"}
+                "explainer": "Explainer", "question": "Question", "workflow": "AI at work", "myth": "Myth vs reality", "infographic": "Infographic",
+                "comparison": "Comparison", "quiz": "Quiz", "flowchart": "Flowchart", "checklist": "Checklist", "chart": "Chart"}
 FORMAT_TAGS = {"repo": "#AI #OpenSource #GitHub", "model": "#AI #OpenSource #HuggingFace", "paper": "#AI #Research #MachineLearning",
                "explainer": "#AI #AIExplained #LearnAI", "question": "#AI #AICommunity #Discussion",
-               "workflow": "#AI #AIatWork #Productivity", "myth": "#AI #AIMyths #CriticalThinking"}
+               "workflow": "#AI #AIatWork #Productivity", "myth": "#AI #AIMyths #CriticalThinking",
+               "infographic": "#AI #Infographic #LearnAI", "comparison": "#AI #AIExplained #Comparison", "quiz": "#AI #AIQuiz #LearnAI",
+               "flowchart": "#AI #AIExplained #LearnAI", "checklist": "#AI #Checklist #AIatWork", "chart": "#AI #DataViz #OpenData"}
+
+
+DECK_FORMATS = ("infographic", "comparison", "quiz", "flowchart", "checklist", "chart")
 
 
 def heading(issue, brand):
@@ -39,8 +45,9 @@ def single_post(issue, brand, hashtags):
         paras.append(f"Takeaway: {it['takeaway']}")
     if it.get("take"):
         paras.append(f"My take: {it['take']}")  # the owner's own line: the most effective way to stop a post reading as generic
-    if fmt in ("workflow", "myth"):
-        paras.append("Swipe through the document for the full card." if fmt == "workflow" else "Swipe through for what to do about it.")
+    if fmt in ("workflow", "myth") or fmt in DECK_FORMATS:
+        paras.append({"workflow": "Swipe through the document for the full card.", "myth": "Swipe through for what to do about it.",
+                      "quiz": "Swipe for the question and the answer.", "chart": "Swipe for the chart and how to read it."}.get(fmt, "Swipe through the document."))
     if it.get("ask"):
         paras.append(it["ask"])
     if it.get("url"):

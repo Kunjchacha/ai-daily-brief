@@ -16,6 +16,23 @@ from .common import ROOT, long_date
 from .render import FORMAT_NAMES
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+
+def run_chrome(args, timeout=90):
+    """Run headless Chrome with a throw-away profile (a shared profile can hang a second run), retrying once."""
+    import shutil
+    import tempfile
+    for attempt in (1, 2):
+        prof = tempfile.mkdtemp(prefix="chrome-")
+        try:
+            subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", f"--user-data-dir={prof}",
+                            "--no-first-run", "--no-default-browser-check", *args], check=True, timeout=timeout, capture_output=True)
+            return
+        except subprocess.TimeoutExpired:
+            if attempt == 2:
+                raise
+        finally:
+            shutil.rmtree(prof, ignore_errors=True)
 CSS = """
 *{box-sizing:border-box;margin:0}body{width:1080px;height:1350px;background:#0B1B2B;color:#F8FAFC;
 font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;padding:96px 90px;display:flex;flex-direction:column;justify-content:space-between}
@@ -62,8 +79,7 @@ def render(key, out="cards"):
     out_dir.mkdir(exist_ok=True)
     page, png = out_dir / f"{key}.html", out_dir / f"{key}.png"
     page.write_text(card_html(issue, issue.get("brand", "AI Daily Brief")), encoding="utf-8")
-    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", f"--screenshot={png}",
-                    "--window-size=1080,1350", f"file://{page}"], check=True, timeout=60, capture_output=True)
+    run_chrome([f"--screenshot={png}", "--window-size=1080,1350", f"file://{page}"], 60)
     return png
 
 

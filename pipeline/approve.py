@@ -112,7 +112,7 @@ def approve(day, s=None):
         source, _, url = p.get("Source", "").rpartition(" | ")
         if p.get("Source", "").strip().lower() == "none":
             source, url = "", ""
-        if (news or url or issue.get("format") not in ("question", "workflow")) and not url.startswith(("http://", "https://")):
+        if (news or url or issue.get("format") not in ("question", "workflow", "infographic", "comparison", "quiz", "flowchart", "checklist")) and not url.startswith(("http://", "https://")):
             problems.append(f"'{head}' has no valid http(s) source link")
         for pattern in hedges:
             hit = re.search(pattern, f"{head} {summary}", re.I)

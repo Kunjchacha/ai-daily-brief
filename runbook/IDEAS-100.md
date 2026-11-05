@@ -229,3 +229,16 @@ At this pace the flagship slot uses about one idea a day, so 100 ideas is more t
 2. Start with week 1 (infographics, comparisons and quizzes through carousels, plus the chart engine)?
 3. Are animations worth the build cost now, or after two weeks of data?
 4. Should 'Manual' items wait until you can provide sources?
+
+## 10. Week one: built (5 Nov 2026)
+Built and tested, in the reviewed bank `config/decks.json` (25 decks) and the live chart engine `pipeline/charts.py` (5 charts):
+- **Infographics (7):** anatomy of a prompt, AI terms on one page, before-you-paste traffic lights, the AI stack, prompt patterns, three kinds of machine learning, tasks not jobs.
+- **Flowcharts (3):** how a model writes an answer, which tool for which job, prompting vs fine-tuning vs RAG.
+- **Comparisons (7):** local vs cloud, small vs big models, open weights vs open source, chatbot vs agent, search vs assistant, CPU/GPU/TPU, safety vs security vs ethics.
+- **Checklists (3):** hallucination spotter, model card checklist, questions for an AI vendor.
+- **Quizzes (5):** spot the false statement, which prompt is better, safe or risky to paste, fix this prompt, name that term.
+- **Live charts (5):** downloads of trending models, newest AI repos by stars, licences of trending models, what trending models do, AI papers per week on arXiv. The kind rotates weekly; every number comes straight from the API.
+
+Weekday flagship now: Mon workflow card, Tue chart, Wed myth vs reality, Thu infographic, Fri research, Sat comparison, Sun quiz. If a format cannot be built, it falls back through workflow card, myth, infographic, comparison, quiz, explainer.
+
+Still to do: week two data series (Epoch AI, after checking its licence), animation engine, and the Manual items.

@@ -31,9 +31,9 @@ def plan(date):
     """Preferred formats per slot, in order of preference, for this weekday (Mon = 0). The morning post is the day's flagship:
     a practical card, a myth-buster, news or research. The last choice in every list is a bank that cannot run dry."""
     wd = date.weekday()
-    flagship = ["workflow", "news", "myth", "workflow", "paper", "repo", "myth"][wd]
+    flagship = ["workflow", "chart", "myth", "infographic", "paper", "comparison", "quiz"][wd]
     spot = ["repo", "model"] if wd % 2 == 0 else ["model", "repo"]
-    return {"morning": [flagship, "workflow", "myth", "explainer"],
+    return {"morning": [flagship, "workflow", "myth", "infographic", "comparison", "quiz", "explainer"],
             "midday": spot + ["explainer"],
             "afternoon": (["paper", "explainer"] if wd in (0, 2, 4) else ["explainer", "paper"]) + ["question"],
             "evening": ["news"] + spot + ["question"]}
@@ -106,6 +106,10 @@ def build_slot(date, slot, s, now, force=False, fetcher=None, provider=None):
             item = formats.paper_of_the_day(now, urls, prov, fetcher)
             if prov is not None and item and item["mode"] == "llm" and provider is None:
                 runmod._usage_add(str(today_ist()), 1)
+        elif fmt == "chart":
+            item = formats.chart(now, fetcher)
+        elif fmt in formats.DECK_KINDS:
+            item = formats.deck(ids, fmt)
         elif fmt == "workflow":
             item = formats.workflow(ids)
         elif fmt == "myth":

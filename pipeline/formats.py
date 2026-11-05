@@ -225,3 +225,43 @@ def myth(seen_ids, bank=None):
                ["written and reviewed in this project", f"every claim rests on the linked source: {b['source']}"])
     it["bank"] = b
     return it
+
+
+DECK_KINDS = ("infographic", "comparison", "quiz", "flowchart", "checklist")
+
+
+def deck(seen_ids, kind, bank=None):
+    """An infographic, comparison, quiz, flowchart or checklist from the reviewed bank (config/decks.json). Written for this project."""
+    pool = [d for d in (bank if bank is not None else load_json("config/decks.json")) if d["kind"] == kind]
+    b = _pick(pool, seen_ids)
+    if not b:
+        return None
+    it = _item(b["title"], b["hook"], b["points"], "", b["ask"], b["source"], b["url"], "", "evergreen", "curated", None, b["id"],
+               ["written and reviewed in this project", f"source: {b['source']}" if b["source"] else "own writing: no claims about any product",
+                "includes the reminder not to paste customer or company data where data is involved"])
+    it["slides"], it["source_note"] = b["slides"], b["source_note"]
+    return it
+
+
+def chart(now, fetcher=None):
+    """A chart drawn from live free data. The kind rotates weekly; if one source is down the next kind is tried."""
+    from . import charts
+    kinds = list(charts.KINDS)
+    start = (now.toordinal() // 7) % len(kinds)
+    for i in range(len(kinds)):
+        k = kinds[(start + i) % len(kinds)]
+        try:
+            c = charts.KINDS[k](now, fetcher)
+        except Exception as exc:  # noqa: BLE001 - a source being down must not stop the post
+            log(f"chart: {k} failed ({type(exc).__name__}); trying the next one")
+            continue
+        if not c:
+            continue
+        it = _item(c["slides"][0]["title"], c["hook"], c["points"],
+                   "", "What would you like us to chart next?", c["source"], c["url"], "", "data", "data", None, f"chart-{k}",
+                   [f"every number comes straight from the {c['source']} API: {c['source_note']}",
+                    "the headline is a template filled with those numbers, not written by an AI",
+                    "the chart says what it does not show"])
+        it["slides"], it["source_note"] = c["slides"], c["source_note"]
+        return it
+    return None

@@ -1,0 +1,969 @@
+[
+ {
+  "id": "anatomy-of-a-prompt",
+  "kind": "infographic",
+  "title": "Anatomy of a good prompt",
+  "hook": "Most weak AI answers start with a weak question. Here is what a good one contains.",
+  "points": [
+   "Five parts, each one short.",
+   "Swipe for each part and a worked example."
+  ],
+  "ask": "Which of the five do you usually leave out?",
+  "slides": [
+   {
+    "kicker": "Part 1",
+    "title": "Role: who the AI should act as",
+    "body": "For example: 'You are a careful editor.' It sets the tone and the level."
+   },
+   {
+    "kicker": "Part 2",
+    "title": "Task: what you want done, in one sentence",
+    "body": "One clear verb: summarise, compare, draft, list, check."
+   },
+   {
+    "kicker": "Part 3",
+    "title": "Context: what it needs to know",
+    "body": "Audience, purpose, background. Do not paste customer or company data into an AI tool."
+   },
+   {
+    "kicker": "Part 4",
+    "title": "Format: how the answer should look",
+    "body": "A table, five bullets, under 100 words, plain English."
+   },
+   {
+    "kicker": "Part 5",
+    "title": "Limits: what to avoid",
+    "body": "Say what to leave out, and ask it to write 'not stated' instead of guessing."
+   },
+   {
+    "kicker": "Put together",
+    "title": "A worked example",
+    "code": "You are a careful editor. Summarise the text below for a busy manager. Use five bullets, under 100 words, plain English. If something is not stated, write 'not stated'. Text: [paste text]"
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "how-an-llm-answers",
+  "kind": "flowchart",
+  "title": "How a language model writes an answer",
+  "hook": "Where does an AI answer actually come from? Five steps, none of them a lookup.",
+  "points": [
+   "It predicts text one piece at a time.",
+   "Swipe through the five steps."
+  ],
+  "ask": "Did you know it works one token at a time?",
+  "slides": [
+   {
+    "kicker": "Step by step",
+    "title": "From your question to its answer",
+    "flow": [
+     "Your text is split into tokens",
+     "The model scores which token is likely to come next",
+     "One token is chosen and added to the text",
+     "The steps repeat until the answer is finished",
+     "The tokens are turned back into words"
+    ]
+   },
+   {
+    "kicker": "Why it matters",
+    "title": "Likely is not the same as true",
+    "body": "The model produces probable text. That is why a fluent answer can still be wrong, and why important facts need checking."
+   }
+  ],
+  "source": "Google Machine Learning glossary and Wikipedia: Large language model",
+  "url": "https://developers.google.com/machine-learning/glossary",
+  "source_note": "Source: Google Machine Learning glossary and Wikipedia: Large language model, https://developers.google.com/machine-learning/glossary"
+ },
+ {
+  "id": "ai-terms-one-page",
+  "kind": "infographic",
+  "title": "AI terms on one page",
+  "hook": "Twelve AI words you keep hearing, each in one line.",
+  "points": [
+   "No jargon about the jargon.",
+   "Swipe for all twelve, four to a page."
+  ],
+  "ask": "Which term should we explain in more depth?",
+  "slides": [
+   {
+    "kicker": "Terms 1 to 4",
+    "title": "The basics",
+    "head": [
+     "Term",
+     "In one line"
+    ],
+    "rows": [
+     [
+      "Token",
+      "A chunk of text a model reads: a word, part of one, or punctuation"
+     ],
+     [
+      "Prompt",
+      "The instructions and text you give a model"
+     ],
+     [
+      "Training",
+      "Adjusting a model using data so it gets better at a task"
+     ],
+     [
+      "Inference",
+      "Using a trained model to produce an answer"
+     ]
+    ]
+   },
+   {
+    "kicker": "Terms 5 to 8",
+    "title": "How models are used",
+    "head": [
+     "Term",
+     "In one line"
+    ],
+    "rows": [
+     [
+      "Context window",
+      "How much text a model can consider at once"
+     ],
+     [
+      "Fine-tuning",
+      "Training a model further on extra data"
+     ],
+     [
+      "RAG",
+      "Looking up documents first, then answering from them"
+     ],
+     [
+      "Embedding",
+      "Text turned into numbers so similar meanings sit close together"
+     ]
+    ]
+   },
+   {
+    "kicker": "Terms 9 to 12",
+    "title": "What to watch for",
+    "head": [
+     "Term",
+     "In one line"
+    ],
+    "rows": [
+     [
+      "Hallucination",
+      "A confident answer that is false or unsupported"
+     ],
+     [
+      "Agent",
+      "A model that uses tools over several steps to reach a goal"
+     ],
+     [
+      "Multimodal",
+      "Handles more than one kind of input, such as text and images"
+     ],
+     [
+      "Parameter",
+      "A value a model learns during training"
+     ]
+    ]
+   }
+  ],
+  "source": "Google Machine Learning glossary and Wikipedia",
+  "url": "https://developers.google.com/machine-learning/glossary",
+  "source_note": "Source: Google Machine Learning glossary and Wikipedia, https://developers.google.com/machine-learning/glossary"
+ },
+ {
+  "id": "which-tool-for-which-job",
+  "kind": "flowchart",
+  "title": "Which tool for which job",
+  "hook": "Not every job needs an AI assistant. A quick guide to when to use what.",
+  "points": [
+   "Pick the tool, then the prompt.",
+   "Swipe for five common situations."
+  ],
+  "ask": "What job do you still do by hand that a tool could do?",
+  "slides": [
+   {
+    "kicker": "Choose the right tool",
+    "title": "Situation, then where to start",
+    "head": [
+     "Situation",
+     "Start with"
+    ],
+    "rows": [
+     [
+      "You need an exact figure",
+      "A calculator or spreadsheet. Check any maths an AI gives you"
+     ],
+     [
+      "You need a source",
+      "A search engine or the original document"
+     ],
+     [
+      "You need a first draft",
+      "An AI assistant, then edit it yourself"
+     ],
+     [
+      "You need ideas to react to",
+      "An AI assistant"
+     ],
+     [
+      "The text contains private data",
+      "Stop and check your policy first"
+     ]
+    ]
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "hallucination-checklist",
+  "kind": "checklist",
+  "title": "Hallucination spotter",
+  "hook": "AI can be confidently wrong. Six quick checks catch most of it.",
+  "points": [
+   "Run these before you rely on an answer.",
+   "Save it for next time."
+  ],
+  "ask": "Which of these do you skip when you are in a hurry?",
+  "slides": [
+   {
+    "kicker": "Before you use it",
+    "title": "Check each of these",
+    "items": [
+     "Names: do these people and organisations exist?",
+     "Numbers: can you find each one in a source?",
+     "Quotes: search the exact words",
+     "Links: open every one",
+     "Dates: confirm each one",
+     "Too neat? Be most careful when the answer fits perfectly"
+    ],
+    "tick": true
+   }
+  ],
+  "source": "Wikipedia: Hallucination (artificial intelligence)",
+  "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+  "source_note": "Source: Wikipedia: Hallucination (artificial intelligence), https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)"
+ },
+ {
+  "id": "before-you-paste",
+  "kind": "infographic",
+  "title": "Before you paste: a traffic-light guide",
+  "hook": "Before you paste anything into an AI tool, ask which colour it is.",
+  "points": [
+   "Three colours, one habit.",
+   "Your organisation's policy always comes first."
+  ],
+  "ask": "Does your workplace have a rule like this?",
+  "slides": [
+   {
+    "kicker": "Green",
+    "title": "Public information",
+    "body": "Something you could say in a public room: a published article, a press release, your own general question."
+   },
+   {
+    "kicker": "Amber",
+    "title": "Internal work information",
+    "body": "Check your organisation's policy before you paste it, and remove names and figures you do not need."
+   },
+   {
+    "kicker": "Red",
+    "title": "Never paste",
+    "body": "Customer or personal data, passwords, anything confidential. Do not paste customer or company data into an AI tool."
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "local-vs-cloud",
+  "kind": "comparison",
+  "title": "Local AI or cloud AI?",
+  "hook": "Where does your AI run? It changes who sees your text.",
+  "points": [
+   "Two ways to run a model, with different trade-offs.",
+   "Swipe for the comparison."
+  ],
+  "ask": "Have you tried running a model on your own computer?",
+  "slides": [
+   {
+    "kicker": "Side by side",
+    "title": "Local or cloud",
+    "compare": true,
+    "left": {
+     "head": "Local",
+     "items": [
+      "Runs on your own computer",
+      "Your text stays on your machine",
+      "Needs capable hardware",
+      "You manage updates and models"
+     ]
+    },
+    "right": {
+     "head": "Cloud",
+     "items": [
+      "Runs on the provider's servers",
+      "Easy to start",
+      "Larger models are available",
+      "Your text is sent to the provider, so read the terms"
+     ]
+    }
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "the-ai-stack",
+  "kind": "infographic",
+  "title": "The AI stack",
+  "hook": "Every AI app sits on a stack. Here are the layers, from chips to you.",
+  "points": [
+   "Five layers, one idea.",
+   "Swipe from the bottom up."
+  ],
+  "ask": "Which layer do you think about least?",
+  "slides": [
+   {
+    "kicker": "The stack",
+    "title": "Bottom to top",
+    "flow": [
+     "Chips and hardware: GPUs and other accelerators",
+     "Cloud and data centres: where the chips live",
+     "Models: the trained systems",
+     "Tools and applications: what you actually use",
+     "You: the question and the judgement"
+    ]
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "prompt-patterns",
+  "kind": "infographic",
+  "title": "Prompt patterns cheat sheet",
+  "hook": "Five ways to word a prompt that reliably help.",
+  "points": [
+   "Pick one and try it today.",
+   "Swipe for the table."
+  ],
+  "ask": "Which pattern do you use most?",
+  "slides": [
+   {
+    "kicker": "Patterns",
+    "title": "Pattern and example",
+    "head": [
+     "Pattern",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Role",
+      "'You are a careful editor.'"
+     ],
+     [
+      "Examples",
+      "Show one good answer and ask for more like it"
+     ],
+     [
+      "Format",
+      "'Answer in a table with three columns.'"
+     ],
+     [
+      "Step by step",
+      "'Think through it step by step before answering.'"
+     ],
+     [
+      "Limits",
+      "'Use only the text below. Say not stated if unsure.'"
+     ]
+    ]
+   }
+  ],
+  "source": "Wikipedia: Prompt engineering",
+  "url": "https://en.wikipedia.org/wiki/Prompt_engineering",
+  "source_note": "Source: Wikipedia: Prompt engineering, https://en.wikipedia.org/wiki/Prompt_engineering"
+ },
+ {
+  "id": "three-kinds-of-ml",
+  "kind": "infographic",
+  "title": "Three kinds of machine learning",
+  "hook": "Three ways a machine learns, each with an everyday picture.",
+  "points": [
+   "Answer key, no answer key, or trial and reward.",
+   "Swipe for each one."
+  ],
+  "ask": "Which kind have you seen in a product you use?",
+  "slides": [
+   {
+    "kicker": "Supervised",
+    "title": "Learning with an answer key",
+    "body": "The data comes with the right answers, such as emails already marked spam or not spam."
+   },
+   {
+    "kicker": "Unsupervised",
+    "title": "Finding patterns without answers",
+    "body": "No labels are given. The system looks for groups, such as photos that look alike."
+   },
+   {
+    "kicker": "Reinforcement",
+    "title": "Learning by trial and reward",
+    "body": "The system tries actions and is rewarded for good outcomes, such as a higher score in a game."
+   }
+  ],
+  "source": "Wikipedia: Machine learning",
+  "url": "https://en.wikipedia.org/wiki/Machine_learning",
+  "source_note": "Source: Wikipedia: Machine learning, https://en.wikipedia.org/wiki/Machine_learning"
+ },
+ {
+  "id": "ai-for-sectors-skills",
+  "kind": "infographic",
+  "title": "What changes first: tasks, not jobs",
+  "hook": "AI rarely replaces a whole job. It changes the tasks inside it.",
+  "points": [
+   "Look at your tasks, not your title.",
+   "Swipe for a simple way to sort them."
+  ],
+  "ask": "Which of your tasks would you hand to a tool first?",
+  "slides": [
+   {
+    "kicker": "Sort your tasks",
+    "title": "Four buckets",
+    "head": [
+     "Bucket",
+     "What to do"
+    ],
+    "rows": [
+     [
+      "Routine and low risk",
+      "Good to try with AI, then check"
+     ],
+     [
+      "Routine but high stakes",
+      "Use AI for a draft only, and check every line"
+     ],
+     [
+      "Judgement and relationships",
+      "Keep it yours; use AI to prepare"
+     ],
+     [
+      "Private or confidential",
+      "Do not use public AI tools"
+     ]
+    ]
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "small-vs-big-models",
+  "kind": "comparison",
+  "title": "Small model or big model?",
+  "hook": "Bigger is not always better. It depends on the job.",
+  "points": [
+   "Two kinds of model, two sets of trade-offs.",
+   "Swipe for the comparison."
+  ],
+  "ask": "Would you pick a smaller, cheaper model if it did the job?",
+  "slides": [
+   {
+    "kicker": "Side by side",
+    "title": "Small or big",
+    "compare": true,
+    "left": {
+     "head": "Smaller model",
+     "items": [
+      "Usually cheaper and faster to run",
+      "Can sometimes run on a laptop",
+      "May be weaker on hard tasks",
+      "Can be trained to imitate a larger one (distillation)"
+     ]
+    },
+    "right": {
+     "head": "Bigger model",
+     "items": [
+      "Often more capable on hard tasks",
+      "Costs more and is slower",
+      "Usually needs cloud hardware",
+      "Not always necessary for simple work"
+     ]
+    }
+   }
+  ],
+  "source": "Wikipedia: Knowledge distillation",
+  "url": "https://en.wikipedia.org/wiki/Knowledge_distillation",
+  "source_note": "Source: Wikipedia: Knowledge distillation, https://en.wikipedia.org/wiki/Knowledge_distillation"
+ },
+ {
+  "id": "open-weights-vs-open-source",
+  "kind": "comparison",
+  "title": "Open weights or open source?",
+  "hook": "'Open' means different things for AI models.",
+  "points": [
+   "Two phrases that are often mixed up.",
+   "Swipe for the difference."
+  ],
+  "ask": "Do you check a model's licence before using it?",
+  "slides": [
+   {
+    "kicker": "Side by side",
+    "title": "What each usually means",
+    "compare": true,
+    "left": {
+     "head": "Open weights",
+     "items": [
+      "The trained parameters are published",
+      "You can usually run the model yourself",
+      "The training data and code may not be shared",
+      "The licence may limit how you use it"
+     ]
+    },
+    "right": {
+     "head": "Open source",
+     "items": [
+      "The licence lets you use, study, change and share it",
+      "Usually implies more than the weights",
+      "Check which licence it really is",
+      "Definitions for AI are still debated"
+     ]
+    }
+   },
+   {
+    "kicker": "The habit",
+    "title": "Read the licence",
+    "body": "Do not assume. The words on the label matter less than the licence text."
+   }
+  ],
+  "source": "Wikipedia: Open-source artificial intelligence",
+  "url": "https://en.wikipedia.org/wiki/Open-source_artificial_intelligence",
+  "source_note": "Source: Wikipedia: Open-source artificial intelligence, https://en.wikipedia.org/wiki/Open-source_artificial_intelligence"
+ },
+ {
+  "id": "chatbot-vs-agent",
+  "kind": "comparison",
+  "title": "Chatbot or agent?",
+  "hook": "A chatbot answers. An agent acts. The difference is who is in control.",
+  "points": [
+   "Two things people call 'AI'.",
+   "Swipe for the comparison."
+  ],
+  "ask": "Would you let an agent act without checking each step?",
+  "slides": [
+   {
+    "kicker": "Side by side",
+    "title": "Chatbot and agent",
+    "compare": true,
+    "left": {
+     "head": "Chatbot",
+     "items": [
+      "Answers within a conversation",
+      "You drive every step",
+      "Low risk of side effects",
+      "Good for drafts and questions"
+     ]
+    },
+    "right": {
+     "head": "Agent",
+     "items": [
+      "Uses tools such as search or code",
+      "Works over several steps toward a goal",
+      "Needs permissions, so mistakes can have effects",
+      "Check what it may do on its own"
+     ]
+    }
+   }
+  ],
+  "source": "Wikipedia: Intelligent agent",
+  "url": "https://en.wikipedia.org/wiki/Intelligent_agent",
+  "source_note": "Source: Wikipedia: Intelligent agent, https://en.wikipedia.org/wiki/Intelligent_agent"
+ },
+ {
+  "id": "search-vs-assistant",
+  "kind": "comparison",
+  "title": "Search engine or AI assistant?",
+  "hook": "Both answer questions. They fail in different ways.",
+  "points": [
+   "Know which to trust for what.",
+   "Swipe for the comparison."
+  ],
+  "ask": "Which do you reach for first?",
+  "slides": [
+   {
+    "kicker": "Side by side",
+    "title": "Two ways to ask",
+    "compare": true,
+    "left": {
+     "head": "Search engine",
+     "items": [
+      "Finds pages written by people",
+      "You read and judge the source",
+      "Good for facts you need to verify",
+      "Can be slow for synthesis"
+     ]
+    },
+    "right": {
+     "head": "AI assistant",
+     "items": [
+      "Writes new text from patterns",
+      "Fast for drafts and summaries",
+      "Can sound sure and be wrong",
+      "Check anything important against a source"
+     ]
+    }
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "prompt-vs-finetune-vs-rag",
+  "kind": "flowchart",
+  "title": "Prompting, fine-tuning or RAG?",
+  "hook": "Three ways to make AI fit your job. Which one first?",
+  "points": [
+   "Start simple and move up only if you must.",
+   "Swipe for a decision guide."
+  ],
+  "ask": "Have you ever needed more than a better prompt?",
+  "slides": [
+   {
+    "kicker": "Decision guide",
+    "title": "Goal, then approach",
+    "head": [
+     "Your goal",
+     "Try first"
+    ],
+    "rows": [
+     [
+      "Change tone or format",
+      "Prompting"
+     ],
+     [
+      "Answer from your own documents",
+      "RAG: look the documents up at answer time"
+     ],
+     [
+      "Teach a lasting style or skill at scale",
+      "Fine-tuning"
+     ]
+    ]
+   },
+   {
+    "kicker": "A rule of thumb",
+    "title": "Cheapest first",
+    "body": "Prompting is usually quickest and cheapest to try. Move to retrieval or fine-tuning only when it falls short."
+   }
+  ],
+  "source": "Wikipedia: Retrieval-augmented generation and Fine-tuning",
+  "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+  "source_note": "Source: Wikipedia: Retrieval-augmented generation and Fine-tuning, https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+ },
+ {
+  "id": "model-card-checklist",
+  "kind": "checklist",
+  "title": "Model card checklist",
+  "hook": "Before you use an open model, read its model card. Seven questions to ask.",
+  "points": [
+   "A model card is the model's own documentation.",
+   "Save this list."
+  ],
+  "ask": "What is the first thing you look for on a model page?",
+  "slides": [
+   {
+    "kicker": "Check",
+    "title": "On the model card",
+    "items": [
+     "What is it for, and what is it not for?",
+     "Which licence applies?",
+     "Who made it?",
+     "Is the training data described?",
+     "Are limits and risks listed?",
+     "Are evaluation results given?",
+     "When was it last updated?"
+    ],
+    "tick": true
+   }
+  ],
+  "source": "Hugging Face: Model cards",
+  "url": "https://huggingface.co/docs/hub/model-cards",
+  "source_note": "Source: Hugging Face: Model cards, https://huggingface.co/docs/hub/model-cards"
+ },
+ {
+  "id": "cpu-gpu-tpu",
+  "kind": "comparison",
+  "title": "CPU, GPU or TPU?",
+  "hook": "Why does AI need special chips? Three kinds of processor, three jobs.",
+  "points": [
+   "Same idea, different strengths.",
+   "Swipe for the table."
+  ],
+  "ask": "Which have you used?",
+  "slides": [
+   {
+    "kicker": "Chips",
+    "title": "What each is good at",
+    "head": [
+     "Chip",
+     "Good at"
+    ],
+    "rows": [
+     [
+      "CPU",
+      "General tasks, with a few powerful cores"
+     ],
+     [
+      "GPU",
+      "Many simple calculations at once, useful for training and running models"
+     ],
+     [
+      "TPU",
+      "Google's chip designed for machine-learning workloads"
+     ]
+    ]
+   }
+  ],
+  "source": "Wikipedia: Graphics processing unit",
+  "url": "https://en.wikipedia.org/wiki/Graphics_processing_unit",
+  "source_note": "Source: Wikipedia: Graphics processing unit, https://en.wikipedia.org/wiki/Graphics_processing_unit"
+ },
+ {
+  "id": "safety-security-ethics",
+  "kind": "comparison",
+  "title": "AI safety, security and ethics",
+  "hook": "Three words people mix up. They are different jobs.",
+  "points": [
+   "Safety, security and ethics each ask a different question.",
+   "Swipe for each."
+  ],
+  "ask": "Which of these gets the most attention where you work?",
+  "slides": [
+   {
+    "kicker": "Safety",
+    "title": "Does it behave as intended?",
+    "body": "Making AI systems do what people intend and avoiding harm."
+   },
+   {
+    "kicker": "Security",
+    "title": "Can it be attacked or misused?",
+    "body": "Protecting AI systems and their users from attacks such as prompt injection."
+   },
+   {
+    "kicker": "Ethics",
+    "title": "Is it fair and accountable?",
+    "body": "Questions of fairness, accountability, transparency and rights."
+   }
+  ],
+  "source": "Wikipedia: AI safety",
+  "url": "https://en.wikipedia.org/wiki/AI_safety",
+  "source_note": "Source: Wikipedia: AI safety, https://en.wikipedia.org/wiki/AI_safety"
+ },
+ {
+  "id": "questions-for-an-ai-vendor",
+  "kind": "checklist",
+  "title": "Questions to ask an AI vendor",
+  "hook": "Someone is selling you an AI tool. Seven questions to ask first.",
+  "points": [
+   "Good vendors can answer these plainly.",
+   "Save this list."
+  ],
+  "ask": "What would you add?",
+  "slides": [
+   {
+    "kicker": "Ask",
+    "title": "Before you buy",
+    "items": [
+     "What data does it send to you, and where is it stored?",
+     "Is our data used to train your models?",
+     "How do you test accuracy?",
+     "What happens when it is wrong?",
+     "Who is accountable for mistakes?",
+     "Can we export or delete our data?",
+     "What does it cost at our scale?"
+    ],
+    "tick": true
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "quiz-spot-the-hallucination",
+  "kind": "quiz",
+  "title": "Quiz: spot the false statement",
+  "hook": "One of these three statements is wrong. Which?",
+  "points": [
+   "Three statements about how AI works.",
+   "Answer on the last slides."
+  ],
+  "ask": "Which one did you pick?",
+  "slides": [
+   {
+    "kicker": "Question",
+    "title": "Which one is wrong?",
+    "options": [
+     "The transformer design was introduced in 2017 in the paper 'Attention Is All You Need'.",
+     "Retrieval-augmented generation requires retraining the whole model on your documents.",
+     "Prompt injection is listed by OWASP among the main security risks for applications built on language models."
+    ]
+   },
+   {
+    "kicker": "Answer",
+    "title": "B is wrong",
+    "body": "RAG looks documents up when you ask, so it does not need the model to be retrained."
+   },
+   {
+    "kicker": "Why it matters",
+    "title": "Check the confident ones",
+    "body": "Wrong statements often sound as sure as right ones. Check a source."
+   }
+  ],
+  "source": "Wikipedia: Retrieval-augmented generation; OWASP Top 10 for LLM Applications",
+  "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+  "source_note": "Source: Wikipedia: Retrieval-augmented generation; OWASP Top 10 for LLM Applications, https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+ },
+ {
+  "id": "quiz-which-prompt",
+  "kind": "quiz",
+  "title": "Quiz: which prompt is better?",
+  "hook": "Same task, two prompts. Which gets the better answer?",
+  "points": [
+   "Pick A or B.",
+   "Answer on the next slide."
+  ],
+  "ask": "Which would you have written?",
+  "slides": [
+   {
+    "kicker": "Question",
+    "title": "Which is better?",
+    "options": [
+     "Write something about our new report.",
+     "Write three bullet points for a busy manager on the main findings of the report below. Plain English, under 60 words. If something is not stated, say so: [paste text]"
+    ]
+   },
+   {
+    "kicker": "Answer",
+    "title": "B",
+    "body": "It names the audience, the format, the length and what to do when unsure. A leaves the AI to guess all four."
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "quiz-safe-or-risky",
+  "kind": "quiz",
+  "title": "Quiz: safe or risky to paste?",
+  "hook": "Five things you might paste into an AI tool. Which are risky?",
+  "points": [
+   "Think about each one.",
+   "Answers on the next slide."
+  ],
+  "ask": "Would you have got all five?",
+  "slides": [
+   {
+    "kicker": "Question",
+    "title": "Safe or risky?",
+    "items": [
+     "A published press release",
+     "An email with a customer's name and account",
+     "Your own rough ideas for a talk",
+     "A spreadsheet of staff salaries",
+     "A document marked confidential"
+    ],
+    "ordered": true
+   },
+   {
+    "kicker": "Answers",
+    "title": "One and three are usually fine",
+    "items": [
+     "1: Usually fine: it is already public",
+     "2: Risky: customer data",
+     "3: Usually fine, if it holds nothing private",
+     "4: Risky: personal data",
+     "5: Risky: check your policy first"
+    ]
+   },
+   {
+    "kicker": "The rule",
+    "title": "When unsure, check first",
+    "body": "Your organisation's policy comes first. Do not paste customer or company data into an AI tool."
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "quiz-fix-this-prompt",
+  "kind": "quiz",
+  "title": "Quiz: fix this prompt",
+  "hook": "A vague prompt gives a vague answer. Can you spot what is missing?",
+  "points": [
+   "Try rewriting it before you swipe.",
+   "The fix is on the next slide."
+  ],
+  "ask": "How would you rewrite it?",
+  "slides": [
+   {
+    "kicker": "The prompt",
+    "title": "Summarise this.",
+    "body": "What is missing? Think: audience, length, format, and what to do when unsure."
+   },
+   {
+    "kicker": "A better version",
+    "title": "Fill the gaps",
+    "code": "Summarise this two-page report for a busy manager in five bullets. Quote the page for each point. If something is not stated, write 'not stated'. Text: [paste text]"
+   }
+  ],
+  "source": "",
+  "url": "",
+  "source_note": "Written for AI Daily Brief. No claims about any product."
+ },
+ {
+  "id": "quiz-name-that-term",
+  "kind": "quiz",
+  "title": "Quiz: name that term",
+  "hook": "Four one-line descriptions. Can you name the AI term?",
+  "points": [
+   "Match each description to the term.",
+   "Answers on the next slide."
+  ],
+  "ask": "How many did you get?",
+  "slides": [
+   {
+    "kicker": "Question",
+    "title": "Name the term",
+    "items": [
+     "A model that reads both text and images",
+     "Looking documents up before answering",
+     "A confident answer that is false",
+     "A model using search and code over several steps"
+    ],
+    "ordered": true
+   },
+   {
+    "kicker": "Answers",
+    "title": "Check yourself",
+    "items": [
+     "1: Multimodal",
+     "2: Retrieval-augmented generation (RAG)",
+     "3: Hallucination",
+     "4: An agent"
+    ]
+   }
+  ],
+  "source": "Google Machine Learning glossary",
+  "url": "https://developers.google.com/machine-learning/glossary",
+  "source_note": "Source: Google Machine Learning glossary, https://developers.google.com/machine-learning/glossary"
+ }
+]
