@@ -1,0 +1,298 @@
+{
+ "date": "2026-11-06",
+ "edition": "evening",
+ "key": "2026-11-06-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "OpenAI introduces GPT-6 Cyber model for cybersecurity",
+   "summary": "OpenAI has announced GPT-6 Cyber, a cybersecurity model designed to discover exploitable vulnerabilities and generate fixes while remaining within authorized limits.",
+   "why_it_matters": "The model aims to help identify and repair security flaws while staying strictly within its permitted scope.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+   "id": 1,
+   "url": "https://openai.com/index/introducing-gpt-6-cyber",
+   "canonical": "https://openai.com/index/introducing-gpt-6-cyber",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-05T09:00:00+00:00",
+   "score": 12.17
+  },
+  {
+   "headline": "OpenAI unveils guidelines for responsible AI infrastructure",
+   "summary": "OpenAI has introduced its National Community Compact and Compute Campus Policy Blueprint to guide the development of AI infrastructure, protect local resources and support job creation.",
+   "why_it_matters": "The new frameworks establish guidelines intended to safeguard local resources and support employment in infrastructure projects.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
+   "id": 2,
+   "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+   "canonical": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-05T02:00:00+00:00",
+   "score": 11.59
+  },
+  {
+   "headline": "Claude adds Personal Finance tool via Plaid integration",
+   "summary": "Anthropic's Claude now features a Personal Finance tool allowing users to link bank and card accounts using Plaid to query their financial information.",
+   "why_it_matters": "Users can directly connect financial accounts to ask questions about their personal spending.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "With Personal Finance in Claude, users can connect their bank and card accounts through Plaid and ask questions about their finances.",
+   "id": 3,
+   "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
+   "canonical": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-05T18:00:00+00:00",
+   "score": 8.92
+  },
+  {
+   "headline": "Developers combine AI agents with NVIDIA Omniverse for simulations",
+   "summary": "Software developers are integrating frontier AI models with NVIDIA Omniverse libraries to assist in creating physics and rendering simulations, exploring scenarios and refining designs.",
+   "why_it_matters": "Combining AI agents with simulation libraries helps streamline the assembly and testing of complex digital environments.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work",
+   "id": 4,
+   "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+   "canonical": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents",
+   "source": "NVIDIA Blog",
+   "also": [],
+   "published": "2026-11-05T17:00:35+00:00",
+   "score": 8.84
+  },
+  {
+   "headline": "Grimes to feature in AI-generated theatrical film",
+   "summary": "Pop musician Grimes is set to appear in Gods Don't Give Gifts, an AI-generated science-fiction movie scheduled for theatrical release.",
+   "why_it_matters": "The project serves as a high-profile test case for the commercial viability of AI-generated films in cinemas.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Pop star Grimes is going to appear in the movie.",
+   "id": 5,
+   "url": "https://www.theverge.com/entertainment/1026282/grimes-ai-movie",
+   "canonical": "https://theverge.com/entertainment/1026282/grimes-ai-movie",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-05T17:00:00+00:00",
+   "score": 8.84
+  },
+  {
+   "headline": "Axiom Math verifies Stacks Project using AI agents",
+   "summary": "Startup Axiom Math has used AI agents to formally verify the Stacks Project, a prominent mathematics library, to improve proof reliability.",
+   "why_it_matters": "Formal verification tools offer a automated method to check mathematical proofs and maintain accuracy.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "The startup’s AI agents just formally verified the Stacks Project, one of the field’s biggest libraries.",
+   "id": 7,
+   "url": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/",
+   "canonical": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-05T16:16:45+00:00",
+   "score": 8.78
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI introduces GPT-6 Cyber model for cybersecurity",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI unveils guidelines for responsible AI infrastructure",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Claude adds Personal Finance tool via Plaid integration",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Developers combine AI agents with NVIDIA Omniverse for simulations",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 5,
+   "headline": "Grimes to feature in AI-generated theatrical film",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "OpenAI reports lower out-of-bounds rates for GPT-6 Cyber",
+   "problems": [
+    "second pass: The draft claims the model demonstrated improved compliance limits 'compared to previous versions', but the source text "
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 7,
+   "headline": "Axiom Math verifies Stacks Project using AI agents",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "Chris Alexiuk advocates for practical open-source AI models",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Enterprise AI agents present automated data exchange risks",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [],
+ "agent": {
+  "items": [
+   {
+    "score": 89,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 29,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "1 claim(s) only partly supported"
+    ],
+    "id": 1,
+    "headline": "OpenAI introduces GPT-6 Cyber model for cybersecurity",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 2,
+    "headline": "OpenAI unveils guidelines for responsible AI infrastructure",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 3,
+    "headline": "Claude adds Personal Finance tool via Plaid integration",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 4,
+    "headline": "Developers combine AI agents with NVIDIA Omniverse for simulations",
+    "article_note": "read",
+    "source": "NVIDIA Blog"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 5,
+    "headline": "Grimes to feature in AI-generated theatrical film",
+    "article_note": "read",
+    "source": "The Verge"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 7,
+    "headline": "Axiom Math verifies Stacks Project using AI agents",
+    "article_note": "read",
+    "source": "TechCrunch"
+   }
+  ],
+  "score": 72,
+  "verdict": "review carefully"
+ },
+ "created": "2026-11-05T18:54:24.457136+00:00"
+}

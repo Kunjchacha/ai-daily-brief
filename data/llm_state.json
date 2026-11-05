@@ -1,4 +1,4 @@
 {
- "gemini_model": "gemini-3.6-flash",
+ "gemini_model": "gemini-3.5-flash",
  "groq_model": "openai/gpt-oss-120b"
 }

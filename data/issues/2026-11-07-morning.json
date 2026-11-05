@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-07",
+ "edition": "morning",
+ "key": "2026-11-07-morning",
+ "format": "comparison",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Local AI or cloud AI?",
+   "hook": "Where does your AI run? It changes who sees your text.",
+   "points": [
+    "Two ways to run a model, with different trade-offs.",
+    "Swipe for the comparison."
+   ],
+   "takeaway": "",
+   "ask": "Have you tried running a model on your own computer?",
+   "summary": "Two ways to run a model, with different trade-offs. Swipe for the comparison.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "local-vs-cloud",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "own writing: no claims about any product",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Side by side",
+     "title": "Local or cloud",
+     "compare": true,
+     "left": {
+      "head": "Local",
+      "items": [
+       "Runs on your own computer",
+       "Your text stays on your machine",
+       "Needs capable hardware",
+       "You manage updates and models"
+      ]
+     },
+     "right": {
+      "head": "Cloud",
+      "items": [
+       "Runs on the provider's servers",
+       "Easy to start",
+       "Larger models are available",
+       "Your text is sent to the provider, so read the terms"
+      ]
+     }
+    }
+   ],
+   "source_note": "Written for AI Daily Brief. No claims about any product."
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-05T18:54:24.456409+00:00"
+}
