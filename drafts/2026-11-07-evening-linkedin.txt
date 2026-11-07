@@ -1,0 +1,15 @@
+20,689 downloads, and trending on Hugging Face right now: speridlabs/idol.
+
+An image-to-3d model, published on Hugging Face under the Apache-2.0 licence.
+
+20,689 downloads and 1,030 likes so far.
+
+Takeaway: Trending means popular, not proven. Read the model card and the licence first.
+
+Would you try it? What would you test it on?
+
+Source: https://huggingface.co/speridlabs/idol
+
+AI Daily Brief · Model spotlight · AI-assisted, human-reviewed.
+
+#AI #OpenSource #HuggingFace

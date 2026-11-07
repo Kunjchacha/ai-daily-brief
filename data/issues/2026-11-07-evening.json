@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-07",
+ "edition": "evening",
+ "key": "2026-11-07-evening",
+ "format": "model",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "speridlabs/idol",
+   "hook": "20,689 downloads, and trending on Hugging Face right now: speridlabs/idol.",
+   "points": [
+    "An image-to-3d model, published on Hugging Face under the Apache-2.0 licence.",
+    "20,689 downloads and 1,030 likes so far."
+   ],
+   "takeaway": "Trending means popular, not proven. Read the model card and the licence first.",
+   "ask": "Would you try it? What would you test it on?",
+   "summary": "An image-to-3d model, published on Hugging Face under the Apache-2.0 licence. 20,689 downloads and 1,030 likes so far.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Hugging Face",
+   "url": "https://huggingface.co/speridlabs/idol",
+   "evidence_quote": "speridlabs/idol | image-to-3d | license:Apache-2.0",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-10-28T15:55:17.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "licence stated (Apache-2.0)",
+    "20,689 downloads",
+    "on the site's own trending list",
+    "not featured before"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot evening, 20:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-07T14:57:52.407902+00:00"
+}

@@ -1,0 +1,69 @@
+{
+ "date": "2026-11-08",
+ "edition": "morning",
+ "key": "2026-11-08-morning",
+ "format": "quiz",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Quiz: spot the false statement",
+   "hook": "One of these three statements is wrong. Which?",
+   "points": [
+    "Three statements about how AI works.",
+    "Answer on the last slides."
+   ],
+   "takeaway": "",
+   "ask": "Which one did you pick?",
+   "summary": "Three statements about how AI works. Answer on the last slides.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Wikipedia: Retrieval-augmented generation; OWASP Top 10 for LLM Applications",
+   "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "quiz-spot-the-hallucination",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "source: Wikipedia: Retrieval-augmented generation; OWASP Top 10 for LLM Applications",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Question",
+     "title": "Which one is wrong?",
+     "options": [
+      "The transformer design was introduced in 2017 in the paper 'Attention Is All You Need'.",
+      "Retrieval-augmented generation requires retraining the whole model on your documents.",
+      "Prompt injection is listed by OWASP among the main security risks for applications built on language models."
+     ]
+    },
+    {
+     "kicker": "Answer",
+     "title": "B is wrong",
+     "body": "RAG looks documents up when you ask, so it does not need the model to be retrained."
+    },
+    {
+     "kicker": "Why it matters",
+     "title": "Check the confident ones",
+     "body": "Wrong statements often sound as sure as right ones. Check a source."
+    }
+   ],
+   "source_note": "Source: Wikipedia: Retrieval-augmented generation; OWASP Top 10 for LLM Applications, https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-07T14:57:52.407902+00:00"
+}
