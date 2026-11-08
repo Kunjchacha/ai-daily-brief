@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-09",
+ "edition": "morning",
+ "key": "2026-11-09-morning",
+ "format": "workflow",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Draft a reply in your own tone, then make it yours",
+   "hook": "A tricky email sits in your inbox because you cannot find the right tone.",
+   "points": [
+    "A first draft in the right tone is quicker to edit than a blank page.",
+    "Inside: the steps, a copy-and-paste prompt and what to check before you use the result."
+   ],
+   "takeaway": "",
+   "ask": "What task would you like a prompt for next?",
+   "summary": "A first draft in the right tone is quicker to edit than a blank page. Inside: the steps, a copy-and-paste prompt and what to check before you use the result.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "how-to",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "email-reply",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project: a prompt template, no claims about any product",
+    "includes the reminder not to paste customer or company data"
+   ],
+   "bank": {
+    "id": "email-reply",
+    "title": "Draft a reply in your own tone, then make it yours",
+    "hook": "A tricky email sits in your inbox because you cannot find the right tone.",
+    "problem": "A first draft in the right tone is quicker to edit than a blank page.",
+    "steps": [
+     "Paste the email you received (no customer data) and say what you want to happen.",
+     "Give two or three words for the tone, such as 'warm, brief, firm'.",
+     "Edit the draft until it sounds like you, then send it yourself."
+    ],
+    "prompt": "Here is an email I received: [paste]. Write a short reply that does this: [your aim]. Tone: [warm, brief, firm]. Do not promise anything I have not listed here: [list].",
+    "checks": [
+     "It promises nothing you did not agree to.",
+     "Names, dates and figures match the original email."
+    ],
+    "mistake": "Sending the draft unread.",
+    "privacy": "Do not paste customer or company data into an AI tool."
+   }
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-08T15:24:37.567549+00:00"
+}
