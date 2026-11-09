@@ -1,0 +1,15 @@
+11,755 downloads, and trending on Hugging Face right now: xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic.
+
+A text-generation model, published on Hugging Face under the Apache-2.0 licence.
+
+11,755 downloads and 1,016 likes so far.
+
+Takeaway: Trending means popular, not proven. Read the model card and the licence first.
+
+Would you try it? What would you test it on?
+
+Source: https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic
+
+AI Daily Brief · Model spotlight · AI-assisted, human-reviewed.
+
+#AI #OpenSource #HuggingFace

@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-10",
+ "edition": "evening",
+ "key": "2026-11-10-evening",
+ "format": "model",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+   "hook": "11,755 downloads, and trending on Hugging Face right now: xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic.",
+   "points": [
+    "A text-generation model, published on Hugging Face under the Apache-2.0 licence.",
+    "11,755 downloads and 1,016 likes so far."
+   ],
+   "takeaway": "Trending means popular, not proven. Read the model card and the licence first.",
+   "ask": "Would you try it? What would you test it on?",
+   "summary": "A text-generation model, published on Hugging Face under the Apache-2.0 licence. 11,755 downloads and 1,016 likes so far.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Hugging Face",
+   "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+   "evidence_quote": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic | text-generation | license:Apache-2.0",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-10-30T10:21:29.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "licence stated (Apache-2.0)",
+    "11,755 downloads",
+    "on the site's own trending list",
+    "not featured before"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot evening, 20:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-09T18:57:07.058329+00:00"
+}

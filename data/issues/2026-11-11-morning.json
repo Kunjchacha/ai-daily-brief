@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-11",
+ "edition": "morning",
+ "key": "2026-11-11-morning",
+ "format": "myth",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "an AI chatbot looks the answer up on the internet.",
+   "hook": "Myth: an AI chatbot looks the answer up on the internet.",
+   "points": [
+    "Reality: a language model writes likely text from patterns it learned in training. Some products add search or document lookup on top.",
+    "So when a tool does not show sources, treat the answer as a draft to check."
+   ],
+   "takeaway": "",
+   "ask": "Which AI myth did you believe the longest?",
+   "summary": "Reality: a language model writes likely text from patterns it learned in training. Some products add search or document lookup on top. So when a tool does not show sources, treat the answer as a draft to check.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Wikipedia: Large language model",
+   "url": "https://en.wikipedia.org/wiki/Large_language_model",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "myth-lookup",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "every claim rests on the linked source: Wikipedia: Large language model"
+   ],
+   "bank": {
+    "id": "myth-lookup",
+    "myth": "Myth: an AI chatbot looks the answer up on the internet.",
+    "reality": "Reality: a language model writes likely text from patterns it learned in training. Some products add search or document lookup on top.",
+    "so_what": "So when a tool does not show sources, treat the answer as a draft to check.",
+    "do": "Ask: 'Did you search for this, or are you answering from training?'",
+    "source": "Wikipedia: Large language model",
+    "url": "https://en.wikipedia.org/wiki/Large_language_model",
+    "extra": "Retrieval-augmented generation: https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+   }
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-09T18:57:07.058329+00:00"
+}

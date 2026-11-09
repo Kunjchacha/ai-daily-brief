@@ -1,0 +1,15 @@
+Myth: an AI chatbot looks the answer up on the internet.
+
+Reality: a language model writes likely text from patterns it learned in training. Some products add search or document lookup on top.
+
+So when a tool does not show sources, treat the answer as a draft to check.
+
+Swipe through for what to do about it.
+
+Which AI myth did you believe the longest?
+
+Source: https://en.wikipedia.org/wiki/Large_language_model
+
+AI Daily Brief · Myth vs reality · AI-assisted, human-reviewed.
+
+#AI #AIMyths #CriticalThinking
