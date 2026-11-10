@@ -1,0 +1,32 @@
+AI Daily Brief: Wednesday 11 November 2026 (Evening edition)
+
+5 AI developments worth your time today:
+
+1. OpenAI Academy launches free ChatGPT workshops for caregivers
+OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers across five US cities. The initiative aims to help participants learn practical AI skills for everyday life.
+Why it matters: It expands practical AI access and training directly to caregivers managing daily responsibilities.
+Source: https://openai.com/index/helping-caregivers-use-ai-in-everyday-life
+
+2. OpenAI unveils business tools within ChatGPT
+OpenAI has introduced Businesses in ChatGPT to help companies manage their information inside the platform. The tools allow businesses to review how they appear and convert interest into action.
+Why it matters: It gives companies direct tools to oversee and utilise their presence within ChatGPT.
+Source: https://openai.com/index/introducing-businesses-chatgpt
+
+3. Meta AI launches Muse Ember model for agentic tasks
+Meta AI has released Muse Ember, a small model targeted at complex reasoning execution and repetitive agent workflows like coding subtasks and document parsing. It matches the base pricing of rival small models for shorter prompts.
+Why it matters: It offers a low-cost, efficient option specifically designed for high-volume automated developer and agent tasks.
+Source: https://simonwillison.net/2026/Nov/10/muse-ember/
+
+4. OpenAI launches beta verified Business Agents for ChatGPT
+OpenAI is introducing verified Business Agents in ChatGPT to allow users to interact directly with brand representatives for tasks like comparison shopping. The feature is launching in beta for eligible US e-commerce and online service companies.
+Why it matters: It enables direct brand interaction and shopping assistance inside the AI chat interface.
+Source: https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub
+
+5. Anthropic introduces Claude Meetings to assist workplace discussions
+Anthropic has launched Claude Meetings, a tool designed to convert real-time meeting discussions into actionable plans and tasks. The system can draft timelines, answer chat questions, and fetch data from connected workplace apps.
+Why it matters: It integrates live meeting collaboration directly with workplace data and task planning.
+Source: https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/
+
+AI-assisted, human-reviewed.
+
+#AI #ArtificialIntelligence #AINews

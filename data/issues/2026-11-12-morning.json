@@ -1,0 +1,80 @@
+{
+ "date": "2026-11-12",
+ "edition": "morning",
+ "key": "2026-11-12-morning",
+ "format": "infographic",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Anatomy of a good prompt",
+   "hook": "Most weak AI answers start with a weak question. Here is what a good one contains.",
+   "points": [
+    "Five parts, each one short.",
+    "Swipe for each part and a worked example."
+   ],
+   "takeaway": "",
+   "ask": "Which of the five do you usually leave out?",
+   "summary": "Five parts, each one short. Swipe for each part and a worked example.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "anatomy-of-a-prompt",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "own writing: no claims about any product",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Part 1",
+     "title": "Role: who the AI should act as",
+     "body": "For example: 'You are a careful editor.' It sets the tone and the level."
+    },
+    {
+     "kicker": "Part 2",
+     "title": "Task: what you want done, in one sentence",
+     "body": "One clear verb: summarise, compare, draft, list, check."
+    },
+    {
+     "kicker": "Part 3",
+     "title": "Context: what it needs to know",
+     "body": "Audience, purpose, background. Do not paste customer or company data into an AI tool."
+    },
+    {
+     "kicker": "Part 4",
+     "title": "Format: how the answer should look",
+     "body": "A table, five bullets, under 100 words, plain English."
+    },
+    {
+     "kicker": "Part 5",
+     "title": "Limits: what to avoid",
+     "body": "Say what to leave out, and ask it to write 'not stated' instead of guessing."
+    },
+    {
+     "kicker": "Put together",
+     "title": "A worked example",
+     "code": "You are a careful editor. Summarise the text below for a busy manager. Use five bullets, under 100 words, plain English. If something is not stated, write 'not stated'. Text: [paste text]"
+    }
+   ],
+   "source_note": "Written for AI Daily Brief. No claims about any product."
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-10T18:45:29.750767+00:00"
+}

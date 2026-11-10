@@ -1,0 +1,9 @@
+{
+ "date": "2026-11-11",
+ "edition": "evening",
+ "status": "ready_for_review",
+ "items": 6,
+ "mode": "llm",
+ "source_errors": 0,
+ "llm_calls": 2
+}

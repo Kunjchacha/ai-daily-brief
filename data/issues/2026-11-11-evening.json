@@ -1,0 +1,292 @@
+{
+ "date": "2026-11-11",
+ "edition": "evening",
+ "key": "2026-11-11-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "OpenAI Academy launches free ChatGPT workshops for caregivers",
+   "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers across five US cities. The initiative aims to help participants learn practical AI skills for everyday life.",
+   "why_it_matters": "It expands practical AI access and training directly to caregivers managing daily responsibilities.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities",
+   "id": 1,
+   "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+   "canonical": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-10T12:00:00+00:00",
+   "score": 12.44
+  },
+  {
+   "headline": "OpenAI unveils business tools within ChatGPT",
+   "summary": "OpenAI has introduced Businesses in ChatGPT to help companies manage their information inside the platform. The tools allow businesses to review how they appear and convert interest into action.",
+   "why_it_matters": "It gives companies direct tools to oversee and utilise their presence within ChatGPT.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT.",
+   "id": 2,
+   "url": "https://openai.com/index/introducing-businesses-chatgpt",
+   "canonical": "https://openai.com/index/introducing-businesses-chatgpt",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-10T10:00:00+00:00",
+   "score": 12.27
+  },
+  {
+   "headline": "Meta AI launches Muse Ember model for agentic tasks",
+   "summary": "Meta AI has released Muse Ember, a small model targeted at complex reasoning execution and repetitive agent workflows like coding subtasks and document parsing. It matches the base pricing of rival small models for shorter prompts.",
+   "why_it_matters": "It offers a low-cost, efficient option specifically designed for high-volume automated developer and agent tasks.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Meta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember",
+   "id": 3,
+   "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+   "canonical": "https://simonwillison.net/2026/Nov/10/muse-ember",
+   "source": "Simon Willison",
+   "also": [],
+   "published": "2026-11-10T07:28:21+00:00",
+   "score": 10.06
+  },
+  {
+   "headline": "OpenAI launches beta verified Business Agents for ChatGPT",
+   "summary": "OpenAI is introducing verified Business Agents in ChatGPT to allow users to interact directly with brand representatives for tasks like comparison shopping. The feature is launching in beta for eligible US e-commerce and online service companies.",
+   "why_it_matters": "It enables direct brand interaction and shopping assistance inside the AI chat interface.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "ChatGPT is going to let you chat with verified \"Business Agents\" that represent a brand to help you with things like comparison shopping.",
+   "id": 5,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
+   "canonical": "https://theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-10T18:00:00+00:00",
+   "score": 8.94
+  },
+  {
+   "headline": "Anthropic introduces Claude Meetings to assist workplace discussions",
+   "summary": "Anthropic has launched Claude Meetings, a tool designed to convert real-time meeting discussions into actionable plans and tasks. The system can draft timelines, answer chat questions, and fetch data from connected workplace apps.",
+   "why_it_matters": "It integrates live meeting collaboration directly with workplace data and task planning.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks",
+   "id": 6,
+   "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+   "canonical": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-10T17:30:00+00:00",
+   "score": 8.9
+  },
+  {
+   "headline": "IGF jurors and Big Walk developer clash over generative AI use",
+   "summary": "Independent Games Festival jurors issued a statement refusing to vote for games using generative AI. Subsequently, the developer of Big Walk disclosed it used AI sparingly late in development to address difficult work.",
+   "why_it_matters": "It highlights growing friction regarding generative AI usage standards within the independent video game industry.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Some Independent Games Festival (IGF) jurors published a statement yesterday saying they would not vote for games that use generative AI in \"any capacity.\"",
+   "id": 7,
+   "url": "https://www.theverge.com/games/1030994/big-walk-independent-games-festival-igf-ai",
+   "canonical": "https://theverge.com/games/1030994/big-walk-independent-games-festival-igf-ai",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-10T17:32:47+00:00",
+   "score": 8.9
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI Academy launches free ChatGPT workshops for caregivers",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI unveils business tools within ChatGPT",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Meta AI launches Muse Ember model for agentic tasks",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Personal experiment tests Claude Fable 5.2 3D animation skills",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 5,
+   "headline": "OpenAI launches beta verified Business Agents for ChatGPT",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "Anthropic introduces Claude Meetings to assist workplace discussions",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "IGF jurors and Big Walk developer clash over generative AI use",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "Representative-elect Scott Wiener poised to influence federal AI policy",
+   "problems": [
+    "hedged wording ('could'): not a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Nvidia CEO Jensen Huang reported to have had relationship with alleged Chinese spy",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'rumour')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [],
+ "agent": {
+  "items": [
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "OpenAI Academy launches free ChatGPT workshops for caregivers",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 2,
+    "headline": "OpenAI unveils business tools within ChatGPT",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 3,
+    "headline": "Meta AI launches Muse Ember model for agentic tasks",
+    "article_note": "read",
+    "source": "Simon Willison"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 5,
+    "headline": "OpenAI launches beta verified Business Agents for ChatGPT",
+    "article_note": "read",
+    "source": "The Verge"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 6,
+    "headline": "Anthropic introduces Claude Meetings to assist workplace discussions",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 7,
+    "headline": "IGF jurors and Big Walk developer clash over generative AI use",
+    "article_note": "read",
+    "source": "The Verge"
+   }
+  ],
+  "score": 92,
+  "verdict": "recommend approve"
+ },
+ "created": "2026-11-10T18:45:29.751866+00:00"
+}
