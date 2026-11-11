@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-12",
+ "edition": "evening",
+ "key": "2026-11-12-evening",
+ "format": "model",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "hook": "1,532,273 downloads, and trending on Hugging Face right now: DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF.",
+   "points": [
+    "An image-text-to-text model, published on Hugging Face under the Apache-2.0 licence.",
+    "1,532,273 downloads and 2,893 likes so far."
+   ],
+   "takeaway": "Trending means popular, not proven. Read the model card and the licence first.",
+   "ask": "Would you try it? What would you test it on?",
+   "summary": "An image-text-to-text model, published on Hugging Face under the Apache-2.0 licence. 1,532,273 downloads and 2,893 likes so far.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Hugging Face",
+   "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "evidence_quote": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF | image-text-to-text | license:Apache-2.0",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-09-01T07:01:09.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "licence stated (Apache-2.0)",
+    "1,532,273 downloads",
+    "on the site's own trending list",
+    "not featured before"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot evening, 20:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-11T18:49:53.471856+00:00"
+}

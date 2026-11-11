@@ -1,0 +1,15 @@
+A new AI paper is getting attention: Tree-Ising: Repairing Language Models with Bit-Level Ising Edits
+
+The authors introduce Tree-Ising, a method that casts repairing a language model’s BF16 weights as a sparse discrete optimization problem solved via independent QUBO (Ising) formulations on a GPU. They report that Tree-Ising improves math benchmark performance, achieving 54.6% on MATH-500 (and 55.1% with simulated bifurcation), modifies fewer weights, requires only four forward-pass requests, and costs about $0.90 in GPU time.
+
+The authors report: "On the agent's two layers, Tree-Ising achieves 54.6% on MATH-500, outperforming the agent's edit (51.7%) under the same evaluation protocol, while the base model scores 7.9% as reported."
+
+Takeaway: These are the authors' own claims, and a preprint may not have been peer reviewed yet.
+
+Does this match what you see in practice?
+
+Source: https://arxiv.org/abs/2611.14210
+
+AI Daily Brief · Research in plain English · AI-assisted, human-reviewed.
+
+#AI #Research #MachineLearning
