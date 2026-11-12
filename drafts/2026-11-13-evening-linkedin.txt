@@ -1,0 +1,27 @@
+AI Daily Brief: Friday 13 November 2026 (Evening edition)
+
+4 AI developments worth your time today:
+
+1. Holiday Extras uses OpenAI Codex to develop customer applications
+Holiday Extras is using OpenAI Codex to build applications, improve booking conversions, and create growth opportunities based on its customer expertise.
+Why it matters: The company is leveraging Codex to convert customer knowledge into improved software applications.
+Source: https://openai.com/business/customer-stories/holidays-extras-codex
+
+2. OpenAI pledges $2 million for research into AI and child safety
+OpenAI has committed $2 million to fund research focusing on AI and children's safety. The funds will help develop shared tools to assess potential risks and benefits for young users.
+Why it matters: The investment funds research to build shared tools for evaluating how AI impacts children.
+Source: https://openai.com/index/children-first-declaration
+
+3. Phota Labs launches AI-powered photo editing platform
+Phota Labs is utilising artificial intelligence to automate the image editing process, aiming to convert everyday pictures into professional-quality photographs.
+Why it matters: The technology automates photo editing tasks to simplify image enhancement for consumers.
+Source: https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/
+
+4. Nvidia expands GeForce NOW cloud service and DLSS 5 support
+Nvidia has announced that Warhammer 40,000: Dawn of War IV is coming to its GeForce NOW cloud gaming platform. Additionally, NVIDIA DLSS 5 technology will be integrated into War Thunder and Where Winds Meet.
+Why it matters: Nvidia is introducing DLSS 5 technology to select titles alongside expanding its cloud gaming library.
+Source: https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-iv-coming/
+
+AI-assisted, human-reviewed.
+
+#AI #ArtificialIntelligence #AINews

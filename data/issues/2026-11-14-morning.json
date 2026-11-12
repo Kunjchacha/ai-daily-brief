@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-14",
+ "edition": "morning",
+ "key": "2026-11-14-morning",
+ "format": "comparison",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Small model or big model?",
+   "hook": "Bigger is not always better. It depends on the job.",
+   "points": [
+    "Two kinds of model, two sets of trade-offs.",
+    "Swipe for the comparison."
+   ],
+   "takeaway": "",
+   "ask": "Would you pick a smaller, cheaper model if it did the job?",
+   "summary": "Two kinds of model, two sets of trade-offs. Swipe for the comparison.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Wikipedia: Knowledge distillation",
+   "url": "https://en.wikipedia.org/wiki/Knowledge_distillation",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "small-vs-big-models",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "source: Wikipedia: Knowledge distillation",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Side by side",
+     "title": "Small or big",
+     "compare": true,
+     "left": {
+      "head": "Smaller model",
+      "items": [
+       "Usually cheaper and faster to run",
+       "Can sometimes run on a laptop",
+       "May be weaker on hard tasks",
+       "Can be trained to imitate a larger one (distillation)"
+      ]
+     },
+     "right": {
+      "head": "Bigger model",
+      "items": [
+       "Often more capable on hard tasks",
+       "Costs more and is slower",
+       "Usually needs cloud hardware",
+       "Not always necessary for simple work"
+      ]
+     }
+    }
+   ],
+   "source_note": "Source: Wikipedia: Knowledge distillation, https://en.wikipedia.org/wiki/Knowledge_distillation"
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-12T18:32:21.408447+00:00"
+}

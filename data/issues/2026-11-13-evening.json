@@ -1,0 +1,217 @@
+{
+ "date": "2026-11-13",
+ "edition": "evening",
+ "key": "2026-11-13-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "Holiday Extras uses OpenAI Codex to develop customer applications",
+   "summary": "Holiday Extras is using OpenAI Codex to build applications, improve booking conversions, and create growth opportunities based on its customer expertise.",
+   "why_it_matters": "The company is leveraging Codex to convert customer knowledge into improved software applications.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+   "id": 1,
+   "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+   "canonical": "https://openai.com/business/customer-stories/holidays-extras-codex",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-12T09:30:00+00:00",
+   "score": 12.25
+  },
+  {
+   "headline": "OpenAI pledges $2 million for research into AI and child safety",
+   "summary": "OpenAI has committed $2 million to fund research focusing on AI and children's safety. The funds will help develop shared tools to assess potential risks and benefits for young users.",
+   "why_it_matters": "The investment funds research to build shared tools for evaluating how AI impacts children.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "OpenAI commits $2 million to research on AI and children’s safety.",
+   "id": 2,
+   "url": "https://openai.com/index/children-first-declaration",
+   "canonical": "https://openai.com/index/children-first-declaration",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-12T00:00:00+00:00",
+   "score": 11.46
+  },
+  {
+   "headline": "Phota Labs launches AI-powered photo editing platform",
+   "summary": "Phota Labs is utilising artificial intelligence to automate the image editing process, aiming to convert everyday pictures into professional-quality photographs.",
+   "why_it_matters": "The technology automates photo editing tasks to simplify image enhancement for consumers.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Phota Labs aims to use advances in AI to automate the editing process so it’s easier for anyone to turn everyday moments into better photos.",
+   "id": 8,
+   "url": "https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/",
+   "canonical": "https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-12T17:00:00+00:00",
+   "score": 8.87
+  },
+  {
+   "headline": "Nvidia expands GeForce NOW cloud service and DLSS 5 support",
+   "summary": "Nvidia has announced that Warhammer 40,000: Dawn of War IV is coming to its GeForce NOW cloud gaming platform. Additionally, NVIDIA DLSS 5 technology will be integrated into War Thunder and Where Winds Meet.",
+   "why_it_matters": "Nvidia is introducing DLSS 5 technology to select titles alongside expanding its cloud gaming library.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Warhammer 40,000: Dawn of War IV is coming to GeForce NOW, allowing players to experience the battle for Kronus through cloud gaming.",
+   "id": 9,
+   "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-iv-coming/",
+   "canonical": "https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-iv-coming",
+   "source": "NVIDIA Blog",
+   "also": [],
+   "published": "2026-11-12T14:00:59+00:00",
+   "score": 8.62
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "Holiday Extras uses OpenAI Codex to develop customer applications",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI pledges $2 million for research into AI and child safety",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Google launches Gemini Decision 1 API",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 4,
+   "headline": "AWS releases official emulator written in Rust",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 7,
+   "headline": "Hugging Face CEO commits to open-source AI following Nvidia executive changes",
+   "problems": [
+    "second pass: The source speculates ('raising questions') about an acquisition rather than confirming Nvidia acquired Hugging Face for"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 8,
+   "headline": "Phota Labs launches AI-powered photo editing platform",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 9,
+   "headline": "Nvidia expands GeForce NOW cloud service and DLSS 5 support",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "story 5 skipped by the writer: source text too thin",
+  "story 6 skipped by the writer: source text too thin"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "Holiday Extras uses OpenAI Codex to develop customer applications",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 2,
+    "headline": "OpenAI pledges $2 million for research into AI and child safety",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 8,
+    "headline": "Phota Labs launches AI-powered photo editing platform",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 9,
+    "headline": "Nvidia expands GeForce NOW cloud service and DLSS 5 support",
+    "article_note": "read",
+    "source": "NVIDIA Blog"
+   }
+  ],
+  "score": 72,
+  "verdict": "review carefully"
+ },
+ "created": "2026-11-12T18:32:21.409737+00:00"
+}
