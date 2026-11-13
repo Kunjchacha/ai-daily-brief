@@ -1,0 +1,25 @@
+OpenAI has committed $2 million to research on AI and children's safety.
+
+For a company of OpenAI's size, that is not a big number. What caught my attention is where the money is meant to go.
+
+It isn't another set of guidelines. It is aimed at shared tools to measure the risks and the opportunities AI brings for young people.
+
+That matters more than it sounds. Most of today's debate about children and AI runs on individual stories: a worrying chatbot conversation here, a promising tutoring trial there. Without a common way to measure what is actually happening, parents, schools and regulators end up arguing from different evidence.
+
+Shared measurement could change that. If researchers use the same yardsticks, results can be compared, repeated and challenged. That is how a topic moves from opinion to evidence.
+
+The commitment sits alongside a wider €8 million joint pledge from AI developers and safety organisations, made at the child safety summit in Paris.
+
+Two things I'll be watching:
+• whether independent researchers, not only the AI companies, get to use and shape these tools
+• whether the findings are published, including the uncomfortable ones
+
+$2 million won't settle the question. But measuring the problem properly is the right place to start.
+
+If you work with young people, what is the one thing you would most want measured?
+
+Source: https://openai.com/index/children-first-declaration
+
+AI-assisted, source-checked.
+
+#AI #ChildSafety #ResponsibleAI
