@@ -1,0 +1,17 @@
+Bigger is not always better with AI models. It depends on the job.
+
+It is tempting to reach for the most powerful model every time. But for a lot of everyday work, such as summarising notes, tidying a draft or sorting a list, a smaller model can do the job well, and usually faster and more cheaply.
+
+There is also a neat trick behind many small models. They can be trained to imitate a larger one, a technique called knowledge distillation. You keep much of the skill and lose much of the cost.
+
+Bigger models still earn their place on hard, multi-step problems.
+
+Swipe for the side-by-side comparison.
+
+Would you pick a smaller, cheaper model if it did the job just as well?
+
+Source: https://en.wikipedia.org/wiki/Knowledge_distillation
+
+AI-assisted, source-checked.
+
+#AI #AIExplained #GenerativeAI
