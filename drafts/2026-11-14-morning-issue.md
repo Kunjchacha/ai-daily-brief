@@ -1,5 +1,5 @@
 # AI Daily Brief: Comparison, Saturday 14 November 2026 (Morning)
-Status: DRAFT
+Status: APPROVED
 
 - Rule checks (no AI judgement of the facts): written and reviewed in this project; source: Wikipedia: Knowledge distillation; includes the reminder not to paste customer or company data where data is involved
 

@@ -1,0 +1,22 @@
+AI Daily Brief: Friday 13 November 2026 (Evening edition)
+
+3 AI developments worth your time today:
+
+1. OpenAI commits $2 million to research on AI and children's safety
+OpenAI has committed $2 million to research on AI and children's safety. The work supports shared tools to measure the risks and opportunities AI brings for young people.
+Why it matters: Shared measurement tools give researchers, parents and policymakers a common way to judge how AI affects children.
+Source: https://openai.com/index/children-first-declaration
+
+2. Phota Labs launches a free AI photo assistant app for iOS
+Phota Labs has launched a free iOS app that works as a personal AI photo assistant, turning everyday snapshots into images that look professionally taken. An Android version is planned.
+Why it matters: Consumer AI photo tools are moving from manual editing towards one-step results on the phone.
+Source: https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/
+
+3. Dawn of War IV is coming to Nvidia GeForce NOW, and DLSS 5 reaches two more games
+Nvidia says Warhammer 40,000: Dawn of War IV, launching on Steam on 3 December, is coming to its GeForce NOW cloud gaming service. Separately, DLSS 5 is coming to War Thunder in mid-November and to Where Winds Meet on 23 November.
+Why it matters: DLSS 5 uses AI neural rendering to generate graphics detail, and GeForce NOW Ultimate members can use it by streaming from cloud RTX 5080 machines.
+Source: https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-iv-coming/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews

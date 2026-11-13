@@ -201,7 +201,7 @@ class RenderTests(unittest.TestCase):
     def test_linkedin_post_respects_limit_and_has_disclosure(self):
         text = render.linkedin_post(self.issue(), "AI Daily Brief", ["#AI"], 1500)
         self.assertLessEqual(len(text), 1500)
-        self.assertIn("AI-assisted, human-reviewed", text)
+        self.assertIn("AI-assisted, source-checked", text)
 
     def test_placeholder_shown_when_line_missing(self):
         iss = self.issue(1)

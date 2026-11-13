@@ -2,30 +2,14 @@
  "date": "2026-11-13",
  "edition": "evening",
  "key": "2026-11-13-evening",
- "status": "ready_for_review",
+ "status": "approved",
  "mode": "llm",
  "brand": "AI Daily Brief",
  "items": [
   {
-   "headline": "Holiday Extras uses OpenAI Codex to develop customer applications",
-   "summary": "Holiday Extras is using OpenAI Codex to build applications, improve booking conversions, and create growth opportunities based on its customer expertise.",
-   "why_it_matters": "The company is leveraging Codex to convert customer knowledge into improved software applications.",
-   "mode": "llm",
-   "needs_human_line": false,
-   "kind": "announced",
-   "evidence_quote": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
-   "id": 1,
-   "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
-   "canonical": "https://openai.com/business/customer-stories/holidays-extras-codex",
-   "source": "OpenAI",
-   "also": [],
-   "published": "2026-11-12T09:30:00+00:00",
-   "score": 12.25
-  },
-  {
-   "headline": "OpenAI pledges $2 million for research into AI and child safety",
-   "summary": "OpenAI has committed $2 million to fund research focusing on AI and children's safety. The funds will help develop shared tools to assess potential risks and benefits for young users.",
-   "why_it_matters": "The investment funds research to build shared tools for evaluating how AI impacts children.",
+   "headline": "OpenAI commits $2 million to research on AI and children's safety",
+   "summary": "OpenAI has committed $2 million to research on AI and children's safety. The work supports shared tools to measure the risks and opportunities AI brings for young people.",
+   "why_it_matters": "Shared measurement tools give researchers, parents and policymakers a common way to judge how AI affects children.",
    "mode": "llm",
    "needs_human_line": false,
    "kind": "announced",
@@ -36,12 +20,19 @@
    "source": "OpenAI",
    "also": [],
    "published": "2026-11-12T00:00:00+00:00",
-   "score": 11.46
+   "score": 11.46,
+   "details": "",
+   "hook": "",
+   "points": [],
+   "takeaway": "",
+   "take": "",
+   "ask": "",
+   "approved_text": true
   },
   {
-   "headline": "Phota Labs launches AI-powered photo editing platform",
-   "summary": "Phota Labs is utilising artificial intelligence to automate the image editing process, aiming to convert everyday pictures into professional-quality photographs.",
-   "why_it_matters": "The technology automates photo editing tasks to simplify image enhancement for consumers.",
+   "headline": "Phota Labs launches a free AI photo assistant app for iOS",
+   "summary": "Phota Labs has launched a free iOS app that works as a personal AI photo assistant, turning everyday snapshots into images that look professionally taken. An Android version is planned.",
+   "why_it_matters": "Consumer AI photo tools are moving from manual editing towards one-step results on the phone.",
    "mode": "llm",
    "needs_human_line": false,
    "kind": "reported",
@@ -52,12 +43,19 @@
    "source": "TechCrunch",
    "also": [],
    "published": "2026-11-12T17:00:00+00:00",
-   "score": 8.87
+   "score": 8.87,
+   "details": "",
+   "hook": "",
+   "points": [],
+   "takeaway": "",
+   "take": "",
+   "ask": "",
+   "approved_text": true
   },
   {
-   "headline": "Nvidia expands GeForce NOW cloud service and DLSS 5 support",
-   "summary": "Nvidia has announced that Warhammer 40,000: Dawn of War IV is coming to its GeForce NOW cloud gaming platform. Additionally, NVIDIA DLSS 5 technology will be integrated into War Thunder and Where Winds Meet.",
-   "why_it_matters": "Nvidia is introducing DLSS 5 technology to select titles alongside expanding its cloud gaming library.",
+   "headline": "Dawn of War IV is coming to Nvidia GeForce NOW, and DLSS 5 reaches two more games",
+   "summary": "Nvidia says Warhammer 40,000: Dawn of War IV, launching on Steam on 3 December, is coming to its GeForce NOW cloud gaming service. Separately, DLSS 5 is coming to War Thunder in mid-November and to Where Winds Meet on 23 November.",
+   "why_it_matters": "DLSS 5 uses AI neural rendering to generate graphics detail, and GeForce NOW Ultimate members can use it by streaming from cloud RTX 5080 machines.",
    "mode": "llm",
    "needs_human_line": false,
    "kind": "announced",
@@ -68,7 +66,14 @@
    "source": "NVIDIA Blog",
    "also": [],
    "published": "2026-11-12T14:00:59+00:00",
-   "score": 8.62
+   "score": 8.62,
+   "details": "",
+   "hook": "",
+   "points": [],
+   "takeaway": "",
+   "take": "",
+   "ask": "",
+   "approved_text": true
   }
  ],
  "report": [
@@ -213,5 +218,12 @@
   "score": 72,
   "verdict": "review carefully"
  },
- "created": "2026-11-12T18:32:21.409737+00:00"
+ "created": "2026-11-12T18:32:21.409737+00:00",
+ "excluded": [
+  {
+   "headline": "Holiday Extras uses OpenAI Codex to develop customer applications",
+   "url": "https://openai.com/business/customer-stories/holidays-extras-codex"
+  }
+ ],
+ "approved_at": "2026-11-13T11:03:04.313315+00:00"
 }

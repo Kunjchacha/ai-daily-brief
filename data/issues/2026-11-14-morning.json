@@ -3,7 +3,7 @@
  "edition": "morning",
  "key": "2026-11-14-morning",
  "format": "comparison",
- "status": "ready_for_review",
+ "status": "approved",
  "mode": "curated",
  "brand": "AI Daily Brief",
  "items": [
@@ -60,7 +60,8 @@
      }
     }
    ],
-   "source_note": "Source: Wikipedia: Knowledge distillation, https://en.wikipedia.org/wiki/Knowledge_distillation"
+   "source_note": "Source: Wikipedia: Knowledge distillation, https://en.wikipedia.org/wiki/Knowledge_distillation",
+   "approved_text": true
   }
  ],
  "report": [],
@@ -69,5 +70,7 @@
   "slot morning, 08:00 IST"
  ],
  "agent": null,
- "created": "2026-11-12T18:32:21.408447+00:00"
+ "created": "2026-11-12T18:32:21.408447+00:00",
+ "excluded": [],
+ "approved_at": "2026-11-13T11:54:30.904938+00:00"
 }

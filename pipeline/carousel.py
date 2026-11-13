@@ -22,7 +22,7 @@ padding:90px;display:flex;flex-direction:column;justify-content:space-between;pa
 .kicker{color:#FBBF24;font-size:32px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
 .bar{width:110px;height:10px;background:#FBBF24;margin:0 0 26px}
 .t{font-weight:800;line-height:1.14;margin-top:38px}
-.b{color:#CBD5E1;font-size:44px;line-height:1.36;margin-top:34px}
+.b{color:#CBD5E1;font-size:44px;line-height:1.36;margin-top:34px;overflow-wrap:anywhere}
 ol,ul{padding:0;margin-top:40px}li{list-style:none;position:relative;padding-left:78px;font-size:44px;line-height:1.3;margin:0 0 34px 0;color:#F1F5F9}
 ol{counter-reset:n}ol li:before{counter-increment:n;content:counter(n);position:absolute;left:0;top:-2px;width:54px;height:54px;border-radius:50%;
 background:#FBBF24;color:#0B1B2B;font-weight:800;font-size:34px;text-align:center;line-height:54px}

@@ -45,14 +45,14 @@ def single_post(issue, brand, hashtags):
         paras.append(f"Takeaway: {it['takeaway']}")
     if it.get("take"):
         paras.append(f"My take: {it['take']}")  # the owner's own line: the most effective way to stop a post reading as generic
-    if fmt in ("workflow", "myth") or fmt in DECK_FORMATS:
+    if (fmt in ("workflow", "myth") or fmt in DECK_FORMATS) and not any(str(p).lstrip().startswith("Swipe") for p in paras):
         paras.append({"workflow": "Swipe through the document for the full card.", "myth": "Swipe through for what to do about it.",
                       "quiz": "Swipe for the question and the answer.", "chart": "Swipe for the chart and how to read it."}.get(fmt, "Swipe through the document."))
     if it.get("ask"):
         paras.append(it["ask"])
     if it.get("url"):
         paras.append(f"Source: {it['url']}")
-    paras.append(f"{brand} · {FORMAT_NAMES[fmt]} · AI-assisted, human-reviewed.")
+    paras.append(f"{brand} · {FORMAT_NAMES[fmt]} · AI-assisted, source-checked.")
     paras.append(FORMAT_TAGS[fmt])
     return "\n\n".join(paras)
 
@@ -70,7 +70,7 @@ def linkedin_post(issue, brand, hashtags, max_chars):
             lines.append(f"Why it matters: {why}")
             lines.append(f"Source: {it['url']}")
             lines.append("")
-        lines += ["AI-assisted, human-reviewed.", "", " ".join(hashtags)]
+        lines += ["AI-assisted, source-checked.", "", " ".join(hashtags)]
         text = "\n".join(lines)
         if len(text) <= max_chars or len(items) <= 1:
             return text
@@ -158,7 +158,7 @@ def issue_page(issue, brand, tagline, contact=""):
                      f"<p class='meta'>Source: <a href='{html.escape(it['url'], quote=True)}' rel='noopener'>"
                      f"{html.escape(it['source'])}</a></p>")
     fix = f" Spotted a mistake? {html.escape(contact)}" if contact else ""
-    parts.append(f"<footer>AI-assisted, human-reviewed. We summarise and link; the original authors own their work.{fix}"
+    parts.append(f"<footer>AI-assisted, source-checked. We summarise and link; the original authors own their work.{fix}"
                  f"</footer>")
     return _page(f"{brand}: {d}", "".join(parts))
 

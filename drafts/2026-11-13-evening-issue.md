@@ -1,5 +1,5 @@
 # AI Daily Brief: Friday 13 November 2026 (Evening edition)
-Status: DRAFT
+Status: APPROVED
 
 - Review agent score: **72%, review carefully** (the weakest item sets the score; advice only)
   - 92% grade B: Holiday Extras uses OpenAI Codex to develop customer applications (all checks passed)
@@ -22,29 +22,29 @@ Source: OpenAI | https://openai.com/business/customer-stories/holidays-extras-co
 Evidence from the source: With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.
 Kind: announced
 Age: 9 hours old
-Include: yes
+Include: no
 
-## 2. OpenAI pledges $2 million for research into AI and child safety
-Summary: OpenAI has committed $2 million to fund research focusing on AI and children's safety. The funds will help develop shared tools to assess potential risks and benefits for young users.
-Why it matters: The investment funds research to build shared tools for evaluating how AI impacts children.
+## 2. OpenAI commits $2 million to research on AI and children's safety
+Summary: OpenAI has committed $2 million to research on AI and children's safety. The work supports shared tools to measure the risks and opportunities AI brings for young people.
+Why it matters: Shared measurement tools give researchers, parents and policymakers a common way to judge how AI affects children.
 Source: OpenAI | https://openai.com/index/children-first-declaration
 Evidence from the source: OpenAI commits $2 million to research on AI and children’s safety.
 Kind: announced
 Age: 19 hours old
 Include: yes
 
-## 3. Phota Labs launches AI-powered photo editing platform
-Summary: Phota Labs is utilising artificial intelligence to automate the image editing process, aiming to convert everyday pictures into professional-quality photographs.
-Why it matters: The technology automates photo editing tasks to simplify image enhancement for consumers.
+## 3. Phota Labs launches a free AI photo assistant app for iOS
+Summary: Phota Labs has launched a free iOS app that works as a personal AI photo assistant, turning everyday snapshots into images that look professionally taken. An Android version is planned.
+Why it matters: Consumer AI photo tools are moving from manual editing towards one-step results on the phone.
 Source: TechCrunch | https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/
 Evidence from the source: Phota Labs aims to use advances in AI to automate the editing process so it’s easier for anyone to turn everyday moments into better photos.
 Kind: reported
 Age: 2 hours old
 Include: yes
 
-## 4. Nvidia expands GeForce NOW cloud service and DLSS 5 support
-Summary: Nvidia has announced that Warhammer 40,000: Dawn of War IV is coming to its GeForce NOW cloud gaming platform. Additionally, NVIDIA DLSS 5 technology will be integrated into War Thunder and Where Winds Meet.
-Why it matters: Nvidia is introducing DLSS 5 technology to select titles alongside expanding its cloud gaming library.
+## 4. Dawn of War IV is coming to Nvidia GeForce NOW, and DLSS 5 reaches two more games
+Summary: Nvidia says Warhammer 40,000: Dawn of War IV, launching on Steam on 3 December, is coming to its GeForce NOW cloud gaming service. Separately, DLSS 5 is coming to War Thunder in mid-November and to Where Winds Meet on 23 November.
+Why it matters: DLSS 5 uses AI neural rendering to generate graphics detail, and GeForce NOW Ultimate members can use it by streaming from cloud RTX 5080 machines.
 Source: NVIDIA Blog | https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-iv-coming/
 Evidence from the source: Warhammer 40,000: Dawn of War IV is coming to GeForce NOW, allowing players to experience the battle for Kronus through cloud gaming.
 Kind: announced
