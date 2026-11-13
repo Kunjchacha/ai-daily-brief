@@ -1,0 +1,63 @@
+{
+ "date": "2026-11-15",
+ "edition": "morning",
+ "key": "2026-11-15-morning",
+ "format": "quiz",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Quiz: which prompt is better?",
+   "hook": "Same task, two prompts. Which gets the better answer?",
+   "points": [
+    "Pick A or B.",
+    "Answer on the next slide."
+   ],
+   "takeaway": "",
+   "ask": "Which would you have written?",
+   "summary": "Pick A or B. Answer on the next slide.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "quiz-which-prompt",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "own writing: no claims about any product",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Question",
+     "title": "Which is better?",
+     "options": [
+      "Write something about our new report.",
+      "Write three bullet points for a busy manager on the main findings of the report below. Plain English, under 60 words. If something is not stated, say so: [paste text]"
+     ]
+    },
+    {
+     "kicker": "Answer",
+     "title": "B",
+     "body": "It names the audience, the format, the length and what to do when unsure. A leaves the AI to guess all four."
+    }
+   ],
+   "source_note": "Written for AI Daily Brief. No claims about any product."
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-13T12:31:34.224066+00:00"
+}

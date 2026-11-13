@@ -1,0 +1,323 @@
+{
+ "date": "2026-11-15",
+ "edition": "evening",
+ "key": "2026-11-15-evening",
+ "status": "ready_for_review",
+ "mode": "extractive",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "ChatGPT Plus for veterans and servicemembers",
+   "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
+   "kind": "unchecked",
+   "evidence_quote": "",
+   "id": 1,
+   "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+   "canonical": "https://openai.com/index/chatgpt-plus-for-veterans",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-11T08:00:00+00:00",
+   "score": 11.36
+  },
+  {
+   "headline": "JioStar’s chief architect on AI discovery at 500M-user scale",
+   "summary": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
+   "kind": "unchecked",
+   "evidence_quote": "",
+   "id": 2,
+   "url": "https://openai.com/index/jiostar-vijay-seshadri",
+   "canonical": "https://openai.com/index/jiostar-vijay-seshadri",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-11T00:00:00+00:00",
+   "score": 11.11
+  },
+  {
+   "headline": "Anthropic's IPO roadshow video",
+   "summary": "Anthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works. The section on \"Approach to compute\" with co-founder Tom Brown is particularly interesting, describing how Anthropic train and...",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
+   "kind": "unchecked",
+   "evidence_quote": "",
+   "id": 3,
+   "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+   "canonical": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+   "source": "Simon Willison",
+   "also": [],
+   "published": "2026-11-11T15:11:59+00:00",
+   "score": 9.58
+  },
+  {
+   "headline": "Google’s new Gemini model is better at understanding complicated questions",
+   "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses....",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
+   "kind": "unchecked",
+   "evidence_quote": "",
+   "id": 4,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+   "canonical": "https://theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-12T21:55:32+00:00",
+   "score": 8.54
+  },
+  {
+   "headline": "Nebius tests the neocloud playbook with $40 billion in planned spending",
+   "summary": "Nebius plans to fund its $40 billion AI infrastructure expansion through customer prepayments and loans, even as delays at a Microsoft data center raise questions about its financing model.",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
+   "kind": "unchecked",
+   "evidence_quote": "",
+   "id": 6,
+   "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
+   "canonical": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-12T21:27:10+00:00",
+   "score": 8.53
+  },
+  {
+   "headline": "Yonkers Rises",
+   "summary": "Tool: Yonkers Rises I realized I didn't know where Yonkers was, so I looked it up on Google Maps and then, to help embed its location and shape in my head (and to try out Claude Fable 5.2's 3D modeling and animation skills), I prompted Fable 5.2 Medium to: Make a three js...",
+   "why_it_matters": "",
+   "mode": "extractive",
+   "needs_human_line": true,
+   "kind": "unchecked",
+   "evidence_quote": "",
+   "id": 7,
+   "url": "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+   "canonical": "https://simonwillison.net/2026/Nov/10/yonkers-rises",
+   "source": "Simon Willison",
+   "also": [],
+   "published": "2026-11-10T03:53:04+00:00",
+   "score": 8.48
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "ChatGPT Plus for veterans and servicemembers",
+   "problems": [],
+   "warnings": [
+    "written without AI: nothing here confirms this is a fact and not a rumour, so check the source yourself",
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "JioStar’s chief architect on AI discovery at 500M-user scale",
+   "problems": [],
+   "warnings": [
+    "written without AI: nothing here confirms this is a fact and not a rumour, so check the source yourself",
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Anthropic's IPO roadshow video",
+   "problems": [],
+   "warnings": [
+    "written without AI: nothing here confirms this is a fact and not a rumour, so check the source yourself"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Google’s new Gemini model is better at understanding complicated questions",
+   "problems": [],
+   "warnings": [
+    "written without AI: nothing here confirms this is a fact and not a rumour, so check the source yourself"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 5,
+   "headline": "The unfolding Jensen Huang scandal: a timeline",
+   "problems": [
+    "hedged wording ('could'): not a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 6,
+   "headline": "Nebius tests the neocloud playbook with $40 billion in planned spending",
+   "problems": [],
+   "warnings": [
+    "written without AI: nothing here confirms this is a fact and not a rumour, so check the source yourself"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Yonkers Rises",
+   "problems": [],
+   "warnings": [
+    "written without AI: nothing here confirms this is a fact and not a rumour, so check the source yourself"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "No, AI agents did not discover a previously unknown Maya site",
+   "problems": [],
+   "warnings": [
+    "written without AI: nothing here confirms this is a fact and not a rumour, so check the source yourself"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 9,
+   "headline": "Nancy Pelosi’s replacement is ready to regulate AI",
+   "problems": [
+    "hedged wording ('could'): not a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "quiet news period: widened the window to 96 hours",
+  "AI writing failed (groq: GROQ_API_KEY not set; gemini: GEMINI_API_KEY not set); used the extractive fallback"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 32,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 0,
+     "source": 12,
+     "fresh": 5,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article",
+     "no claim-by-claim audit available"
+    ],
+    "id": 1,
+    "headline": "ChatGPT Plus for veterans and servicemembers",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 32,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 0,
+     "source": 12,
+     "fresh": 5,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article",
+     "no claim-by-claim audit available"
+    ],
+    "id": 2,
+    "headline": "JioStar’s chief architect on AI discovery at 500M-user scale",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 37,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article",
+     "no claim-by-claim audit available"
+    ],
+    "id": 3,
+    "headline": "Anthropic's IPO roadshow video",
+    "article_note": "read",
+    "source": "Simon Willison"
+   },
+   {
+    "score": 37,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article",
+     "no claim-by-claim audit available"
+    ],
+    "id": 4,
+    "headline": "Google’s new Gemini model is better at understanding complicated questions",
+    "article_note": "read",
+    "source": "The Verge"
+   },
+   {
+    "score": 37,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article",
+     "no claim-by-claim audit available"
+    ],
+    "id": 6,
+    "headline": "Nebius tests the neocloud playbook with $40 billion in planned spending",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 32,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 0,
+     "source": 12,
+     "fresh": 5,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article",
+     "no claim-by-claim audit available"
+    ],
+    "id": 7,
+    "headline": "Yonkers Rises",
+    "article_note": "read",
+    "source": "Simon Willison"
+   }
+  ],
+  "score": 32,
+  "verdict": "skip today"
+ },
+ "created": "2026-11-13T12:32:45.766992+00:00"
+}

@@ -1,0 +1,23 @@
+A new photo app wants to fix the shot itself, not just edit it afterwards.
+
+Phota Labs, founded by two people who met at Adobe and worked on Lightroom and Photoshop, has launched a free iOS app it calls a personal AI photo assistant. TechCrunch reports it can turn a wide-angle group photo into a tighter portrait, or a selfie into what looks like a regular shot, while keeping people looking like themselves.
+
+What caught my attention is not the editing. It is the two promises underneath it.
+
+The first is personalisation. The founders say the app learns people's identity so that faces stay true. That is what makes the results believable, and it is also a model of what you and your family look like. The article doesn't say how that data is stored or whether processing happens on the phone or in the cloud.
+
+The second is honesty. Shared images will carry invisible watermarks identifying them as altered by AI. That is a sensible default, and more consumer tools should do the same.
+
+Two things I'd want to know before using it:
+• where the identity model lives, and whether I can delete it
+• whether the watermark survives screenshots and re-uploads
+
+Better photos of the same moment is an appealing idea. Trust will decide whether people hand over their camera rolls to get them.
+
+Would you let an app learn your face to get better photos?
+
+Source: https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/
+
+AI-assisted, source-checked.
+
+#AI #Privacy #ConsumerTech

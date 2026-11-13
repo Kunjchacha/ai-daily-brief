@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-16",
+ "edition": "morning",
+ "key": "2026-11-16-morning",
+ "format": "workflow",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Summarise a long document without losing the detail that matters",
+   "hook": "A 30-page report lands on your desk an hour before the meeting.",
+   "points": [
+    "A summary is only useful if you can check it against the source.",
+    "Inside: the steps, a copy-and-paste prompt and what to check before you use the result."
+   ],
+   "takeaway": "",
+   "ask": "What task would you like a prompt for next?",
+   "summary": "A summary is only useful if you can check it against the source. Inside: the steps, a copy-and-paste prompt and what to check before you use the result.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "how-to",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "summarise-document",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project: a prompt template, no claims about any product",
+    "includes the reminder not to paste customer or company data"
+   ],
+   "bank": {
+    "id": "summarise-document",
+    "title": "Summarise a long document without losing the detail that matters",
+    "hook": "A 30-page report lands on your desk an hour before the meeting.",
+    "problem": "A summary is only useful if you can check it against the source.",
+    "steps": [
+     "Paste or upload the document if your organisation allows it for this tool.",
+     "Ask for a summary with the section or page each point came from.",
+     "Open the original at those points and confirm the three that matter most."
+    ],
+    "prompt": "Summarise this document in 8 bullet points for a busy manager: [paste text]. After each point, give the section heading or page it came from. Then list 3 questions the document does not answer.",
+    "checks": [
+     "Check the three most important points against the source.",
+     "Look for numbers: confirm each one in the document."
+    ],
+    "mistake": "Trusting a summary of a document you have not opened.",
+    "privacy": "Do not paste customer or company data into an AI tool."
+   }
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-13T12:32:45.765243+00:00"
+}

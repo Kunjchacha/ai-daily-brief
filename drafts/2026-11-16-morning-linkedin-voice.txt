@@ -1,0 +1,15 @@
+A 30-page report lands on your desk an hour before the meeting.
+
+AI can summarise it in seconds. The risk is walking into the room quoting a point the report never made.
+
+The fix is simple. Ask the AI to say where each point came from, then open the original at those places and check the three that matter most. Numbers get the same check, every time.
+
+One rule before any of that: only use a tool your organisation has approved for the document, and never paste customer or company data into a public one.
+
+Swipe for the steps and a copy-and-paste prompt.
+
+What task would you like a prompt for next?
+
+AI-assisted, source-checked.
+
+#AI #Productivity #FutureOfWork

@@ -1,0 +1,24 @@
+Why does AI sometimes state things that are simply not true?
+
+It is called hallucination, and it surprises people because the wrong answer usually sounds just as confident as the right one.
+
+The reason is in how these tools work. A large language model writes by predicting likely next words, based on patterns in the text it was trained on. Unless it is connected to search or to your documents, it is not looking anything up. It is producing what a good answer would plausibly sound like.
+
+Most of the time, plausible and correct overlap. When they don't, you get an invented statistic, a quote nobody said, or a reference to a report that does not exist.
+
+That changes how I think it should be used. AI is excellent for drafting, structuring and explaining. It is weaker as a source of facts you have not checked.
+
+Three habits help:
+• ask it to show where each claim came from, then open the source
+• treat specific numbers, names and dates as unverified until you have checked them
+• when it matters, ask it what it is unsure about
+
+The confidence of the answer tells you nothing about its accuracy. Your check does.
+
+What is the most convincing wrong answer an AI tool has given you?
+
+Source: https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)
+
+AI-assisted, source-checked.
+
+#AI #GenerativeAI #CriticalThinking

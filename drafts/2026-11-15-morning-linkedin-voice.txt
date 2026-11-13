@@ -1,0 +1,13 @@
+Same task, two prompts. Which one gets the better answer?
+
+Most disappointing AI answers start with a vague request. Ask for "something about our new report" and the tool has to guess four things: who it is for, what shape it should take, how long it should be and what to do when the report is unclear.
+
+The better prompt answers all four before the AI has to guess. It takes ten extra seconds to write and usually saves a round of rewrites.
+
+Swipe for the two prompts and the answer.
+
+Be honest: which one would you have written?
+
+AI-assisted, source-checked.
+
+#AI #PromptEngineering #FutureOfWork

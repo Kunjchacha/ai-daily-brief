@@ -1,0 +1,37 @@
+AI Daily Brief: Sunday 15 November 2026 (Evening edition)
+
+6 AI developments worth your time today:
+
+1. ChatGPT Plus for veterans and servicemembers
+More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.
+Why it matters: [ADD YOUR LINE]
+Source: https://openai.com/index/chatgpt-plus-for-veterans
+
+2. JioStar’s chief architect on AI discovery at 500M-user scale
+JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.
+Why it matters: [ADD YOUR LINE]
+Source: https://openai.com/index/jiostar-vijay-seshadri
+
+3. Anthropic's IPO roadshow video
+Anthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works. The section on "Approach to compute" with co-founder Tom Brown is particularly interesting, describing how Anthropic train and...
+Why it matters: [ADD YOUR LINE]
+Source: https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/
+
+4. Google’s new Gemini model is better at understanding complicated questions
+Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including "questions with multiple parts, hard-to-understand typos, or highly specific requests." The new model can break down your questions and address each part in its responses....
+Why it matters: [ADD YOUR LINE]
+Source: https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen
+
+5. Nebius tests the neocloud playbook with $40 billion in planned spending
+Nebius plans to fund its $40 billion AI infrastructure expansion through customer prepayments and loans, even as delays at a Microsoft data center raise questions about its financing model.
+Why it matters: [ADD YOUR LINE]
+Source: https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/
+
+6. Yonkers Rises
+Tool: Yonkers Rises I realized I didn't know where Yonkers was, so I looked it up on Google Maps and then, to help embed its location and shape in my head (and to try out Claude Fable 5.2's 3D modeling and animation skills), I prompted Fable 5.2 Medium to: Make a three js...
+Why it matters: [ADD YOUR LINE]
+Source: https://simonwillison.net/2026/Nov/10/yonkers-rises/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews
