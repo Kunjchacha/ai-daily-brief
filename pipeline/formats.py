@@ -112,9 +112,9 @@ def model_spotlight(now, seen_urls, fetcher=None):
         lic = LICENCE_NAMES.get(lic.lower(), lic)
         article = "an" if task_text[0] in "aeiou" else "a"
         points = [f"{article.capitalize()} {task_text} model, published on Hugging Face under the {lic} licence.",
-                  f'{m["downloads"]:,} downloads and {m.get("likes", 0):,} likes so far.']
-        hook = f'{m["downloads"]:,} downloads, and trending on Hugging Face right now: {m["id"]}.'
-        checks = [f"licence stated ({lic})", f"{m['downloads']:,} downloads", "on the site's own trending list", "not featured before"]
+                  f'{m["downloads"]:,} downloads in the last 30 days and {m.get("likes", 0):,} likes.']
+        hook = f'{m["downloads"]:,} downloads in the last 30 days, and trending on Hugging Face right now: {m["id"]}.'
+        checks = [f"licence stated ({lic})", f"{m['downloads']:,} downloads (last 30 days)", "on the site's own trending list", "not featured before"]
         return _item(m["id"], hook, points, "Trending means popular, not proven. Read the model card and the licence first.",
                      "Would you try it? What would you test it on?", "Hugging Face", url, f'{m["id"]} | {task} | license:{lic}',
                      "listing", "data", m.get("createdAt"), checks=checks)
