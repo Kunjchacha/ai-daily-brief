@@ -1,0 +1,15 @@
+Myth: if an AI sounds confident, it is probably right.
+
+Reality: models can produce confident-sounding statements that are false or unsupported. This is called a hallucination.
+
+Confidence of tone tells you nothing about accuracy.
+
+Swipe through for what to do about it.
+
+Which AI myth did you believe the longest?
+
+Source: https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)
+
+AI Daily Brief · Myth vs reality · AI-assisted, source-checked.
+
+#AI #AIMyths #CriticalThinking

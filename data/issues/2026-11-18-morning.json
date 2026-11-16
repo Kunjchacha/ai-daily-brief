@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-18",
+ "edition": "morning",
+ "key": "2026-11-18-morning",
+ "format": "myth",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "if an AI sounds confident, it is probably right.",
+   "hook": "Myth: if an AI sounds confident, it is probably right.",
+   "points": [
+    "Reality: models can produce confident-sounding statements that are false or unsupported. This is called a hallucination.",
+    "Confidence of tone tells you nothing about accuracy."
+   ],
+   "takeaway": "",
+   "ask": "Which AI myth did you believe the longest?",
+   "summary": "Reality: models can produce confident-sounding statements that are false or unsupported. This is called a hallucination. Confidence of tone tells you nothing about accuracy.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Wikipedia: Hallucination (artificial intelligence)",
+   "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "myth-confident",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "every claim rests on the linked source: Wikipedia: Hallucination (artificial intelligence)"
+   ],
+   "bank": {
+    "id": "myth-confident",
+    "myth": "Myth: if an AI sounds confident, it is probably right.",
+    "reality": "Reality: models can produce confident-sounding statements that are false or unsupported. This is called a hallucination.",
+    "so_what": "Confidence of tone tells you nothing about accuracy.",
+    "do": "Check names, numbers and quotes against a source before you use them.",
+    "source": "Wikipedia: Hallucination (artificial intelligence)",
+    "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+    "extra": ""
+   }
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-16T18:42:18.498771+00:00"
+}

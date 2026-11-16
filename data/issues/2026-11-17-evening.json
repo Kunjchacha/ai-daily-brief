@@ -1,0 +1,274 @@
+{
+ "date": "2026-11-17",
+ "edition": "evening",
+ "key": "2026-11-17-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "OpenAI expands free ChatGPT access for 200,000 academic researchers",
+   "summary": "OpenAI is extending its ChatGPT for Academic Researchers programme, giving 200,000 researchers worldwide free access to its latest models.",
+   "why_it_matters": "Broader free access could accelerate AI research in academia.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+   "id": 1,
+   "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+   "canonical": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-16T17:00:00+00:00",
+   "score": 12.86
+  },
+  {
+   "headline": "OpenAI announces new tools to combat online child sexual abuse",
+   "summary": "OpenAI says it is providing new tools, guidance and partnerships aimed at preventing, detecting and responding to online child sexual exploitation and abuse.",
+   "why_it_matters": "Improved safeguards could protect vulnerable children online.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploitation and abuse.",
+   "id": 2,
+   "url": "https://openai.com/index/strengthening-online-child-safety",
+   "canonical": "https://openai.com/index/strengthening-online-child-safety",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-16T17:00:00+00:00",
+   "score": 12.86
+  },
+  {
+   "headline": "Sam Altman says AI industry would be fine without Jensen Huang",
+   "summary": "OpenAI chief Sam Altman recognised Jensen Huang’s influence on the AI boom but expressed confidence that the sector would continue to thrive without his leadership.",
+   "why_it_matters": "Highlights perceived resilience of AI ecosystem beyond individual leaders.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "OpenAI CEO Sam Altman acknowledged the special role Nvidia CEO Jensen Huang has played in the AI boom, but ultimately thinks the industry will be “fine” without him at the helm.",
+   "id": 4,
+   "url": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/",
+   "canonical": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-16T18:11:10+00:00",
+   "score": 8.96
+  },
+  {
+   "headline": "FBI links open-source hacking tool to attacks on US IT firm and South Korean finance",
+   "summary": "The FBI reported that an open‑source hacking tool was employed in cyber‑attacks against a major U.S. information‑technology company and the South Korean financial sector.",
+   "why_it_matters": "Shows risks of publicly available hacking tools being weaponised.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "The FBI says that the open-source hacking tool was used in cyberattacks targeting a U.S. IT giant and the South Korean financial industry.",
+   "id": 5,
+   "url": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/",
+   "canonical": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-16T17:36:43+00:00",
+   "score": 8.91
+  },
+  {
+   "headline": "Lambda adopts NVIDIA Photonics switches to link over 10,000 GPUs",
+   "summary": "Lambda is using NVIDIA Photonics co‑packaged optics switches to connect NVIDIA GB300 NVL72 racks containing more than 10,000 GPUs, improving network speed and resilience for AI model training.",
+   "why_it_matters": "Enhanced networking can accelerate large‑scale AI training workloads.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Lambda is tackling the network piece of the puzzle with NVIDIA Photonics co-packaged optics (CPO) switches.",
+   "id": 6,
+   "url": "https://blogs.nvidia.com/blog/lambda-photonics/",
+   "canonical": "https://blogs.nvidia.com/blog/lambda-photonics",
+   "source": "NVIDIA Blog",
+   "also": [],
+   "published": "2026-11-16T16:00:51+00:00",
+   "score": 8.78
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI expands free ChatGPT access for 200,000 academic researchers",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI announces new tools to combat online child sexual abuse",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Enterprises must rethink AI beyond isolated pilots",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "names not in source: Review, Technology"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 4,
+   "headline": "Sam Altman says AI industry would be fine without Jensen Huang",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 5,
+   "headline": "FBI links open-source hacking tool to attacks on US IT firm and South Korean finance",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "Lambda adopts NVIDIA Photonics switches to link over 10,000 GPUs",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing",
+   "problems": [
+    "no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 8,
+   "headline": "Audible is trying to make it easier to find audiobooks you’ll actually like",
+   "problems": [
+    "no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Google Maps can now create trip itineraries for you",
+   "problems": [
+    "no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "story 7: no usable AI output, used extractive text",
+  "story 8: no usable AI output, used extractive text",
+  "story 9: no usable AI output, used extractive text"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 70,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 0
+    },
+    "reasons": [
+     "hedged wording"
+    ],
+    "id": 1,
+    "headline": "OpenAI expands free ChatGPT access for 200,000 academic researchers",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 70,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 0
+    },
+    "reasons": [
+     "hedged wording"
+    ],
+    "id": 2,
+    "headline": "OpenAI announces new tools to combat online child sexual abuse",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 4,
+    "headline": "Sam Altman says AI industry would be fine without Jensen Huang",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 5,
+    "headline": "FBI links open-source hacking tool to attacks on US IT firm and South Korean finance",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 6,
+    "headline": "Lambda adopts NVIDIA Photonics switches to link over 10,000 GPUs",
+    "article_note": "read",
+    "source": "NVIDIA Blog"
+   }
+  ],
+  "score": 70,
+  "verdict": "review carefully"
+ },
+ "created": "2026-11-16T18:42:18.501011+00:00"
+}

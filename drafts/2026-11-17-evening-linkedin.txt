@@ -1,0 +1,32 @@
+AI Daily Brief: Tuesday 17 November 2026 (Evening edition)
+
+5 AI developments worth your time today:
+
+1. OpenAI expands free ChatGPT access for 200,000 academic researchers
+OpenAI is extending its ChatGPT for Academic Researchers programme, giving 200,000 researchers worldwide free access to its latest models.
+Why it matters: Broader free access could accelerate AI research in academia.
+Source: https://openai.com/index/expanding-chatgpt-for-academic-researchers
+
+2. OpenAI announces new tools to combat online child sexual abuse
+OpenAI says it is providing new tools, guidance and partnerships aimed at preventing, detecting and responding to online child sexual exploitation and abuse.
+Why it matters: Improved safeguards could protect vulnerable children online.
+Source: https://openai.com/index/strengthening-online-child-safety
+
+3. Sam Altman says AI industry would be fine without Jensen Huang
+OpenAI chief Sam Altman recognised Jensen Huang’s influence on the AI boom but expressed confidence that the sector would continue to thrive without his leadership.
+Why it matters: Highlights perceived resilience of AI ecosystem beyond individual leaders.
+Source: https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/
+
+4. FBI links open-source hacking tool to attacks on US IT firm and South Korean finance
+The FBI reported that an open‑source hacking tool was employed in cyber‑attacks against a major U.S. information‑technology company and the South Korean financial sector.
+Why it matters: Shows risks of publicly available hacking tools being weaponised.
+Source: https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/
+
+5. Lambda adopts NVIDIA Photonics switches to link over 10,000 GPUs
+Lambda is using NVIDIA Photonics co‑packaged optics switches to connect NVIDIA GB300 NVL72 racks containing more than 10,000 GPUs, improving network speed and resilience for AI model training.
+Why it matters: Enhanced networking can accelerate large‑scale AI training workloads.
+Source: https://blogs.nvidia.com/blog/lambda-photonics/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews
