@@ -1,0 +1,32 @@
+AI Daily Brief: Monday 16 November 2026 (Evening edition)
+
+5 AI developments worth your time today:
+
+1. GPT-6 Astra used to assist with Standard Model lattice definition proof
+OpenAI has published a paper exploring a candidate nonperturbative lattice definition of the Standard Model. The research utilised GPT-6 Astra to help turn the concept into a detailed proof.
+Why it matters: AI models are being directly applied to assist researchers with complex proofs in theoretical physics.
+Source: https://openai.com/index/step-toward-defining-the-standard-model
+
+2. OpenAI launches dedicated science blog for AI research findings
+OpenAI has introduced a new science blog. The platform will share research findings, practical methods, and accounts from scientists using AI to further scientific discovery.
+Why it matters: It creates a dedicated space for OpenAI to share insights on how AI tools are used in scientific fields.
+Source: https://openai.com/index/our-new-blog-for-science
+
+3. Apple launches study to evaluate conversational AI health tools
+Apple has announced the Apple Health AI Usage Study in collaboration with OpenEvidence. The research aims to evaluate how people interact with conversational AI health tools and assess the usefulness of their responses.
+Why it matters: The study aims to better understand user interaction and the practical effectiveness of AI-generated health responses.
+Source: https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools
+
+4. Nvidia AI Day Seoul convenes industry leaders on physical AI and agents
+More than 2,000 attendees gathered at COEX for Nvidia's AI Day Seoul. The two-day event brought together Korean industry leaders, startups, and developer communities focusing on physical AI and AI agents.
+Why it matters: The event highlights growing developer and industry engagement with physical AI and autonomous agents in Korea.
+Source: https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/
+
+5. Bharat Semi raises $24 million seed funding for AI sensor technology
+Indian chip startup Bharat Semi has raised a $24 million seed round. The company stated it has secured design wins for its AI-enabled sensor technology with clients including General Atomics.
+Why it matters: The capital will support Bharat Semi's expansion into the global market for AI-enabled sensor hardware.
+Source: https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews

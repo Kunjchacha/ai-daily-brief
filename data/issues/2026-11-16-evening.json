@@ -1,0 +1,279 @@
+{
+ "date": "2026-11-16",
+ "edition": "evening",
+ "key": "2026-11-16-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "GPT-6 Astra used to assist with Standard Model lattice definition proof",
+   "summary": "OpenAI has published a paper exploring a candidate nonperturbative lattice definition of the Standard Model. The research utilised GPT-6 Astra to help turn the concept into a detailed proof.",
+   "why_it_matters": "AI models are being directly applied to assist researchers with complex proofs in theoretical physics.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
+   "id": 1,
+   "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+   "canonical": "https://openai.com/index/step-toward-defining-the-standard-model",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-15T22:00:01+00:00",
+   "score": 12.67
+  },
+  {
+   "headline": "OpenAI launches dedicated science blog for AI research findings",
+   "summary": "OpenAI has introduced a new science blog. The platform will share research findings, practical methods, and accounts from scientists using AI to further scientific discovery.",
+   "why_it_matters": "It creates a dedicated space for OpenAI to share insights on how AI tools are used in scientific fields.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+   "id": 2,
+   "url": "https://openai.com/index/our-new-blog-for-science",
+   "canonical": "https://openai.com/index/our-new-blog-for-science",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-15T22:00:00+00:00",
+   "score": 12.67
+  },
+  {
+   "headline": "Apple launches study to evaluate conversational AI health tools",
+   "summary": "Apple has announced the Apple Health AI Usage Study in collaboration with OpenEvidence. The research aims to evaluate how people interact with conversational AI health tools and assess the usefulness of their responses.",
+   "why_it_matters": "The study aims to better understand user interaction and the practical effectiveness of AI-generated health responses.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Apple announced a new study today with the goal of better understanding how people interact with conversational AI health tools",
+   "id": 3,
+   "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+   "canonical": "https://theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-16T01:26:56+00:00",
+   "score": 8.78
+  },
+  {
+   "headline": "Nvidia AI Day Seoul convenes industry leaders on physical AI and agents",
+   "summary": "More than 2,000 attendees gathered at COEX for Nvidia's AI Day Seoul. The two-day event brought together Korean industry leaders, startups, and developer communities focusing on physical AI and AI agents.",
+   "why_it_matters": "The event highlights growing developer and industry engagement with physical AI and autonomous agents in Korea.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Over two days at COEX, more than 2,000 attendees converged for AI Day Seoul, bringing together Korea’s industry leaders, startups and developer communities",
+   "id": 4,
+   "url": "https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/",
+   "canonical": "https://blogs.nvidia.com/blog/ai-day-seoul-wrapup",
+   "source": "NVIDIA Blog",
+   "also": [],
+   "published": "2026-11-16T00:00:28+00:00",
+   "score": 8.73
+  },
+  {
+   "headline": "Bharat Semi raises $24 million seed funding for AI sensor technology",
+   "summary": "Indian chip startup Bharat Semi has raised a $24 million seed round. The company stated it has secured design wins for its AI-enabled sensor technology with clients including General Atomics.",
+   "why_it_matters": "The capital will support Bharat Semi's expansion into the global market for AI-enabled sensor hardware.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics.",
+   "id": 5,
+   "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+   "canonical": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-15T23:30:00+00:00",
+   "score": 8.72
+  },
+  {
+   "headline": "US lawmakers seek stricter AI chip export rules following Nvidia scandal",
+   "summary": "Members of the US Congress are proposing tighter export restrictions on AI chips. Both Democrats and Republicans support new legislation and have requested that Nvidia leadership testify before Congress.",
+   "why_it_matters": "Bipartisan support could lead to stricter regulations governing the export of advanced AI hardware.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Congress is looking to further restrict exports of AI chips.",
+   "id": 7,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+   "canonical": "https://theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-15T19:15:43+00:00",
+   "score": 8.58
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "GPT-6 Astra used to assist with Standard Model lattice definition proof",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI launches dedicated science blog for AI research findings",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Apple launches study to evaluate conversational AI health tools",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Nvidia AI Day Seoul convenes industry leaders on physical AI and agents",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 5,
+   "headline": "Bharat Semi raises $24 million seed funding for AI sensor technology",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "US lawmakers seek stricter AI chip export rules following Nvidia scandal",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "Health systems deploy AI tools to assist clinical care teams",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "quiet news period: widened the window to 96 hours",
+  "story 6 skipped by the writer: source text too thin"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "GPT-6 Astra used to assist with Standard Model lattice definition proof",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 2,
+    "headline": "OpenAI launches dedicated science blog for AI research findings",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 3,
+    "headline": "Apple launches study to evaluate conversational AI health tools",
+    "article_note": "read",
+    "source": "The Verge"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 4,
+    "headline": "Nvidia AI Day Seoul convenes industry leaders on physical AI and agents",
+    "article_note": "read",
+    "source": "NVIDIA Blog"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 5,
+    "headline": "Bharat Semi raises $24 million seed funding for AI sensor technology",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 70,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 0
+    },
+    "reasons": [
+     "hedged wording"
+    ],
+    "id": 7,
+    "headline": "US lawmakers seek stricter AI chip export rules following Nvidia scandal",
+    "article_note": "read",
+    "source": "The Verge"
+   }
+  ],
+  "score": 70,
+  "verdict": "review carefully"
+ },
+ "created": "2026-11-16T08:35:17.893677+00:00"
+}

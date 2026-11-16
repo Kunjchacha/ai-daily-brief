@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-17",
+ "edition": "morning",
+ "key": "2026-11-17-morning",
+ "format": "chart",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Downloads of the 8 models trending on Hugging Face",
+   "hook": "Qwen/Qwen3.8-27B has the most downloads, 6,547,772, of the 8 models trending on Hugging Face right now.",
+   "points": [
+    "Trending is not the same as best. The chart compares the 8 models on today's trending list."
+   ],
+   "takeaway": "",
+   "ask": "What would you like us to chart next?",
+   "summary": "Trending is not the same as best. The chart compares the 8 models on today's trending list.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Hugging Face",
+   "url": "https://huggingface.co/models?sort=trending",
+   "evidence_quote": "",
+   "kind": "data",
+   "mode": "data",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "chart-models",
+   "take": "",
+   "checks": [
+    "every number comes straight from the Hugging Face API: Source: Hugging Face API, fetched 16 Nov 2026, 14:05 IST. Numbers change daily.",
+    "the headline is a template filled with those numbers, not written by an AI",
+    "the chart says what it does not show"
+   ],
+   "slides": [
+    {
+     "kicker": "Chart",
+     "title": "Downloads of the 8 models trending on Hugging Face",
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 756\" width=\"900\" height=\"756\" font-family=\"Helvetica Neue,Helvetica,Arial,sans-serif\"><text x=\"0\" y=\"38\" font-size=\"28\" fill=\"#E2E8F0\">xtools-at/DeepSeek-V4-Pro-Qwen3.5…</text><rect x=\"0\" y=\"50\" width=\"6\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"20\" y=\"75\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">27,037</text><text x=\"0\" y=\"130\" font-size=\"28\" fill=\"#E2E8F0\">MiniMaxAI/MiniMax-H3-Image</text><rect x=\"0\" y=\"142\" width=\"61\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"75\" y=\"167\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">571,067</text><text x=\"0\" y=\"222\" font-size=\"28\" fill=\"#E2E8F0\">Qwen/Qwen3.8-27B</text><rect x=\"0\" y=\"234\" width=\"710\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"724\" y=\"259\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">6,547,772</text><text x=\"0\" y=\"314\" font-size=\"28\" fill=\"#E2E8F0\">Lightricks/LTX-2.5</text><rect x=\"0\" y=\"326\" width=\"298\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"312\" y=\"351\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">2,754,355</text><text x=\"0\" y=\"406\" font-size=\"28\" fill=\"#E2E8F0\">Comfy-Org/MiniMax-H3-Image</text><rect x=\"0\" y=\"418\" width=\"213\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"227\" y=\"443\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">1,973,388</text><text x=\"0\" y=\"498\" font-size=\"28\" fill=\"#E2E8F0\">Zyphra/ZONOS3-Mini</text><rect x=\"0\" y=\"510\" width=\"6\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"20\" y=\"535\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">39,862</text><text x=\"0\" y=\"590\" font-size=\"28\" fill=\"#E2E8F0\">DavidAU/Qwen3.8-27B-TURBO-Fable-C…</text><rect x=\"0\" y=\"602\" width=\"185\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"199\" y=\"627\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">1,708,637</text><text x=\"0\" y=\"682\" font-size=\"28\" fill=\"#E2E8F0\">thinkingmachines/Inkling-2-Small</text><rect x=\"0\" y=\"694\" width=\"6\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"20\" y=\"719\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">7,329</text></svg>"
+    },
+    {
+     "kicker": "How to read it",
+     "title": "What it shows, and what it does not",
+     "compare": true,
+     "left": {
+      "head": "Shows",
+      "items": [
+       "The 8 models on Hugging Face's own trending list right now",
+       "Each model's download count, as Hugging Face reports it"
+      ]
+     },
+     "right": {
+      "head": "Does not show",
+      "items": [
+       "Quality: a download is not a review",
+       "Whether people kept using the model after downloading it"
+      ]
+     }
+    }
+   ],
+   "source_note": "Source: Hugging Face API, fetched 16 Nov 2026, 14:05 IST. Numbers change daily."
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-16T08:35:17.892064+00:00"
+}

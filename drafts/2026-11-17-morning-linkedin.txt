@@ -1,0 +1,13 @@
+Qwen/Qwen3.8-27B has the most downloads, 6,547,772, of the 8 models trending on Hugging Face right now.
+
+Trending is not the same as best. The chart compares the 8 models on today's trending list.
+
+Swipe for the chart and how to read it.
+
+What would you like us to chart next?
+
+Source: https://huggingface.co/models?sort=trending
+
+AI Daily Brief · Chart · AI-assisted, source-checked.
+
+#AI #DataViz #OpenData
