@@ -95,11 +95,11 @@ def models_downloads(now, fetcher=None):
     if len(rows) < 5:
         return None
     top = max(rows, key=lambda r: r[1])
-    out = _frame("Downloads of the 8 models trending on Hugging Face", bar_svg([r[0] for r in rows], [r[1] for r in rows]),
-                 ["The 8 models on Hugging Face's own trending list right now", "Each model's download count, as Hugging Face reports it"],
+    out = _frame("Downloads in the last 30 days: the 8 models trending on Hugging Face", bar_svg([r[0] for r in rows], [r[1] for r in rows]),
+                 ["The 8 models on Hugging Face's own trending list right now", "Each model's downloads in the last 30 days, as Hugging Face counts them"],
                  ["Quality: a download is not a review", "Whether people kept using the model after downloading it"],
                  f"Source: Hugging Face API, fetched {_stamp(now)}. Numbers change daily.",
-                 f"{top[0]} has the most downloads, {top[1]:,}, of the 8 models trending on Hugging Face right now.")
+                 f"{top[0]} has the most downloads in the last 30 days, {top[1]:,}, of the 8 models trending on Hugging Face.")
     out.update(url="https://huggingface.co/models?sort=trending", source="Hugging Face",
                points=["Trending is not the same as best. The chart compares the 8 models on today's trending list."])
     return out
