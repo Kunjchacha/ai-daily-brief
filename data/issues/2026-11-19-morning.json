@@ -1,0 +1,128 @@
+{
+ "date": "2026-11-19",
+ "edition": "morning",
+ "key": "2026-11-19-morning",
+ "format": "infographic",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "AI terms on one page",
+   "hook": "Twelve AI words you keep hearing, each in one line.",
+   "points": [
+    "No jargon about the jargon.",
+    "Swipe for all twelve, four to a page."
+   ],
+   "takeaway": "",
+   "ask": "Which term should we explain in more depth?",
+   "summary": "No jargon about the jargon. Swipe for all twelve, four to a page.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Google Machine Learning glossary and Wikipedia",
+   "url": "https://developers.google.com/machine-learning/glossary",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "ai-terms-one-page",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "source: Google Machine Learning glossary and Wikipedia",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Terms 1 to 4",
+     "title": "The basics",
+     "head": [
+      "Term",
+      "In one line"
+     ],
+     "rows": [
+      [
+       "Token",
+       "A chunk of text a model reads: a word, part of one, or punctuation"
+      ],
+      [
+       "Prompt",
+       "The instructions and text you give a model"
+      ],
+      [
+       "Training",
+       "Adjusting a model using data so it gets better at a task"
+      ],
+      [
+       "Inference",
+       "Using a trained model to produce an answer"
+      ]
+     ]
+    },
+    {
+     "kicker": "Terms 5 to 8",
+     "title": "How models are used",
+     "head": [
+      "Term",
+      "In one line"
+     ],
+     "rows": [
+      [
+       "Context window",
+       "How much text a model can consider at once"
+      ],
+      [
+       "Fine-tuning",
+       "Training a model further on extra data"
+      ],
+      [
+       "RAG",
+       "Looking up documents first, then answering from them"
+      ],
+      [
+       "Embedding",
+       "Text turned into numbers so similar meanings sit close together"
+      ]
+     ]
+    },
+    {
+     "kicker": "Terms 9 to 12",
+     "title": "What to watch for",
+     "head": [
+      "Term",
+      "In one line"
+     ],
+     "rows": [
+      [
+       "Hallucination",
+       "A confident answer that is false or unsupported"
+      ],
+      [
+       "Agent",
+       "A model that uses tools over several steps to reach a goal"
+      ],
+      [
+       "Multimodal",
+       "Handles more than one kind of input, such as text and images"
+      ],
+      [
+       "Parameter",
+       "A value a model learns during training"
+      ]
+     ]
+    }
+   ],
+   "source_note": "Source: Google Machine Learning glossary and Wikipedia, https://developers.google.com/machine-learning/glossary"
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-17T18:43:12.452058+00:00"
+}

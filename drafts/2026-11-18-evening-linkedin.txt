@@ -1,0 +1,32 @@
+AI Daily Brief: Wednesday 18 November 2026 (Evening edition)
+
+5 AI developments worth your time today:
+
+1. OpenAI introduces GPT-6.2 Astra and Sol
+OpenAI has announced GPT-6.2 Astra and Sol, designed with improved professional outputs, coding, computer use, and efficiency at lower cost. The models are available across ChatGPT Work, Codex, and the API.
+Why it matters: The update provides tools intended to improve professional tasks and coding efficiency at a reduced cost.
+Source: https://openai.com/index/introducing-gpt-6-2-astra-sol
+
+2. OpenAI works with NATO on cyber defences
+OpenAI is collaborating with NATO and allied cyber agencies to support trusted defenders. The partnership focuses on finding vulnerabilities, testing fixes, and safeguarding essential systems.
+Why it matters: The collaboration aims to use AI tools to assist security agencies in protecting critical infrastructure.
+Source: https://openai.com/index/strengthening-nato-allied-cyber-defences-ai
+
+3. Jensen Huang signals willingness to return as Nvidia CEO
+In his first public statement following his resignation, Nvidia founder Jensen Huang indicated that he is willing to return to his former role as chief executive.
+Why it matters: Huang's statement marks his first public reaction regarding a potential return to Nvidia following his resignation.
+Source: https://techcrunch.com/2026/11/17/jensen-huang-says-he-would-be-honored-if-allowed-to-return-as-nvidia-ceo/
+
+4. Petition circulates to reinstate Jensen Huang at Nvidia
+A petition seeking to reinstate Jensen Huang as Nvidia CEO has gathered support on social media, attracting prominent signatories such as Elon Musk.
+Why it matters: The petition reflects public calls by industry figures to bring Huang back to Nvidia.
+Source: https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/
+
+5. Proton launches Lumo desktop application
+Proton has released its Lumo Desktop app across Windows, Mac, and Linux. The privacy-oriented tool allows users to automate tasks across files and linked applications with specific access controls.
+Why it matters: The application offers a desktop alternative for task automation with granular data access settings.
+Source: https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews

@@ -1,0 +1,294 @@
+{
+ "date": "2026-11-18",
+ "edition": "evening",
+ "key": "2026-11-18-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "OpenAI introduces GPT-6.2 Astra and Sol",
+   "summary": "OpenAI has announced GPT-6.2 Astra and Sol, designed with improved professional outputs, coding, computer use, and efficiency at lower cost. The models are available across ChatGPT Work, Codex, and the API.",
+   "why_it_matters": "The update provides tools intended to improve professional tasks and coding efficiency at a reduced cost.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost",
+   "id": 1,
+   "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+   "canonical": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-17T17:45:00+00:00",
+   "score": 12.92
+  },
+  {
+   "headline": "OpenAI works with NATO on cyber defences",
+   "summary": "OpenAI is collaborating with NATO and allied cyber agencies to support trusted defenders. The partnership focuses on finding vulnerabilities, testing fixes, and safeguarding essential systems.",
+   "why_it_matters": "The collaboration aims to use AI tools to assist security agencies in protecting critical infrastructure.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+   "id": 2,
+   "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+   "canonical": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-17T00:00:00+00:00",
+   "score": 11.44
+  },
+  {
+   "headline": "Jensen Huang signals willingness to return as Nvidia CEO",
+   "summary": "In his first public statement following his resignation, Nvidia founder Jensen Huang indicated that he is willing to return to his former role as chief executive.",
+   "why_it_matters": "Huang's statement marks his first public reaction regarding a potential return to Nvidia following his resignation.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "In the first public statement since his resignation, Nvidia founder Jensen Huang signaled his willingness to return as CEO.",
+   "id": 3,
+   "url": "https://techcrunch.com/2026/11/17/jensen-huang-says-he-would-be-honored-if-allowed-to-return-as-nvidia-ceo/",
+   "canonical": "https://techcrunch.com/2026/11/17/jensen-huang-says-he-would-be-honored-if-allowed-to-return-as-nvidia-ceo",
+   "source": "TechCrunch",
+   "also": [
+    "The Verge"
+   ],
+   "published": "2026-11-17T16:44:15+00:00",
+   "score": 10.33
+  },
+  {
+   "headline": "Petition circulates to reinstate Jensen Huang at Nvidia",
+   "summary": "A petition seeking to reinstate Jensen Huang as Nvidia CEO has gathered support on social media, attracting prominent signatories such as Elon Musk.",
+   "why_it_matters": "The petition reflects public calls by industry figures to bring Huang back to Nvidia.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "On Friday, a petition to reinstate Jensen Huang as CEO of Nvidia began circulating on social media",
+   "id": 4,
+   "url": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/",
+   "canonical": "https://technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back",
+   "source": "MIT Technology Review",
+   "also": [],
+   "published": "2026-11-16T18:38:47+00:00",
+   "score": 8.99
+  },
+  {
+   "headline": "Proton launches Lumo desktop application",
+   "summary": "Proton has released its Lumo Desktop app across Windows, Mac, and Linux. The privacy-oriented tool allows users to automate tasks across files and linked applications with specific access controls.",
+   "why_it_matters": "The application offers a desktop alternative for task automation with granular data access settings.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Proton's new Lumo Desktop app for Windows, Mac, and Linux lets users automate tasks across files and connected apps",
+   "id": 5,
+   "url": "https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/",
+   "canonical": "https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-17T17:32:25+00:00",
+   "score": 8.9
+  },
+  {
+   "headline": "DOJ and Commerce Department investigate Megaspeed",
+   "summary": "The US Justice and Commerce Departments have confirmed they are investigating Singapore-based data centre company Megaspeed. The company is connected to the resignation of Nvidia CEO Jensen Huang.",
+   "why_it_matters": "The joint investigation examines a firm linked to the recent leadership departure at Nvidia.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "The Justice and Commerce Departments said that they are investigating Megaspeed, the Singapore-based data center company",
+   "id": 6,
+   "url": "https://www.theverge.com/policy/1035410/doj-megaspeed-nvidia-investigation-update",
+   "canonical": "https://theverge.com/policy/1035410/doj-megaspeed-nvidia-investigation-update",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-17T16:19:03+00:00",
+   "score": 8.8
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI introduces GPT-6.2 Astra and Sol",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI works with NATO on cyber defences",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Jensen Huang signals willingness to return as Nvidia CEO",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Petition circulates to reinstate Jensen Huang at Nvidia",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 5,
+   "headline": "Proton launches Lumo desktop application",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "DOJ and Commerce Department investigate Megaspeed",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Nvidia announces new AI agent tools and hardware at SC26",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "Enterprises reconsider infrastructure for autonomous AI workflows",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Tech figures claim plot behind Jensen Huang's resignation",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'rumour')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [],
+ "agent": {
+  "items": [
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "OpenAI introduces GPT-6.2 Astra and Sol",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 2,
+    "headline": "OpenAI works with NATO on cyber defences",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 3,
+    "headline": "Jensen Huang signals willingness to return as Nvidia CEO",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 4,
+    "headline": "Petition circulates to reinstate Jensen Huang at Nvidia",
+    "article_note": "read",
+    "source": "MIT Technology Review"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 5,
+    "headline": "Proton launches Lumo desktop application",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 6,
+    "headline": "DOJ and Commerce Department investigate Megaspeed",
+    "article_note": "read",
+    "source": "The Verge"
+   }
+  ],
+  "score": 72,
+  "verdict": "review carefully"
+ },
+ "created": "2026-11-17T18:43:12.453419+00:00"
+}
