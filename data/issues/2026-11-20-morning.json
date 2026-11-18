@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-20",
+ "edition": "morning",
+ "key": "2026-11-20-morning",
+ "format": "paper",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks",
+   "hook": "A new AI paper is getting attention: TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks",
+   "points": [
+    "The authors designed and built the Xing 4 series of large language models, describing architecture selection, large‑scale pretraining, and a unified agent execution platform called TeleGym. They report that their infrastructure enables pretraining of a 285B‑parameter model on 8,192 Ascend 910C cards and supports advanced reasoning and agentic workloads.",
+    "The authors report: \"Together, these mechanisms support the pretraining of a 285B-parameter model on 8,192 Ascend 910C cards, providing a concrete setting for the architectural and systems studies.\""
+   ],
+   "takeaway": "These are the authors' own claims, and a preprint may not have been peer reviewed yet.",
+   "ask": "Does this match what you see in practice?",
+   "summary": "The authors designed and built the Xing 4 series of large language models, describing architecture selection, large‑scale pretraining, and a unified agent execution platform called TeleGym. They report that their infrastructure enables pretraining of a 285B‑parameter model on 8,192 Ascend 910C cards and supports advanced reasoning and agentic workloads. The authors report: \"Together, these mechanisms support the pretraining of a 285B-parameter model on 8,192 Ascend 910C cards, providing a concrete setting for the architectural and systems studies.\"",
+   "details": "",
+   "why_it_matters": "",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.22115",
+   "evidence_quote": "Together, these mechanisms support the pretraining of a 285B-parameter model on 8,192 Ascend 910C cards, providing a concrete setting for the architectural and systems studies.",
+   "kind": "research",
+   "mode": "llm",
+   "published": "2026-11-17T00:00:00.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "summary checked against the abstract: the quote below is a word-for-word match",
+    "every number in the summary appears in the abstract",
+    "149 upvotes on Hugging Face Daily Papers",
+    "labelled as the authors' own claims, not independently verified"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-18T18:59:10.549677+00:00"
+}

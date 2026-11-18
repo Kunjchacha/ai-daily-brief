@@ -1,0 +1,27 @@
+AI Daily Brief: Thursday 19 November 2026 (Evening edition)
+
+4 AI developments worth your time today:
+
+1. OpenAI details Codex sandbox controls for macOS, Linux and Windows
+OpenAI has published details on how its Codex sandbox executes commands on user machines. The system enforces user-controlled filesystem and network limits across macOS, Linux, and Windows.
+Why it matters: It outlines how users can maintain security and access limits when running Codex commands locally.
+Source: https://openai.com/index/inside-the-codex-sandbox
+
+2. Startup Osmo builds dataset to train AI on smell classification
+AI startup Osmo is using a team of human sniffers to cross-reference scents with chemical analyses near Newark Airport. The data is being gathered to train what the company calls a foundation model for smell.
+Why it matters: The project aims to standardise scent data for digital analysis and model training.
+Source: https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/
+
+3. Google introduces temporary incognito threads to Search AI Mode
+Google has added temporary threads to its AI feature in Search. Conversations held in this mode are not saved to search history and will not influence future recommendations.
+Why it matters: Users can now query Search's AI feature without affecting their personalized profiles or stored history.
+Source: https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode/
+
+4. NVIDIA launches RTX Spark compact desktops for local AI tasks
+NVIDIA has announced the immediate availability of RTX Spark compact desktops manufactured by ASUS, Dell, and MSI. The systems feature up to 128GB of unified memory to support local AI agents and creative workflows.
+Why it matters: The new hardware allows developers and creators to run and fine-tune larger AI models locally on a PC.
+Source: https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews

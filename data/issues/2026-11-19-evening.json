@@ -1,0 +1,232 @@
+{
+ "date": "2026-11-19",
+ "edition": "evening",
+ "key": "2026-11-19-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "OpenAI details Codex sandbox controls for macOS, Linux and Windows",
+   "summary": "OpenAI has published details on how its Codex sandbox executes commands on user machines. The system enforces user-controlled filesystem and network limits across macOS, Linux, and Windows.",
+   "why_it_matters": "It outlines how users can maintain security and access limits when running Codex commands locally.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "See how Codex runs commands on your machine while enforcing the filesystem and network limits you control across macOS, Linux, and Windows.",
+   "id": 1,
+   "url": "https://openai.com/index/inside-the-codex-sandbox",
+   "canonical": "https://openai.com/index/inside-the-codex-sandbox",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-18T08:00:00+00:00",
+   "score": 12.08
+  },
+  {
+   "headline": "Startup Osmo builds dataset to train AI on smell classification",
+   "summary": "AI startup Osmo is using a team of human sniffers to cross-reference scents with chemical analyses near Newark Airport. The data is being gathered to train what the company calls a foundation model for smell.",
+   "why_it_matters": "The project aims to standardise scent data for digital analysis and model training.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Their careful notes—“nutty,” “peachy,” “marine”—are cross-referenced with a chemical analysis to create a rich set of training data for what AI startup Osmo calls the world’s first foundation",
+   "id": 4,
+   "url": "https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/",
+   "canonical": "https://technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans",
+   "source": "MIT Technology Review",
+   "also": [],
+   "published": "2026-11-18T10:20:30+00:00",
+   "score": 10.28
+  },
+  {
+   "headline": "Google introduces temporary incognito threads to Search AI Mode",
+   "summary": "Google has added temporary threads to its AI feature in Search. Conversations held in this mode are not saved to search history and will not influence future recommendations.",
+   "why_it_matters": "Users can now query Search's AI feature without affecting their personalized profiles or stored history.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Google's new temporary threads let users have conversations in AI Mode without adding them to their search history or influencing future recommendations.",
+   "id": 6,
+   "url": "https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode/",
+   "canonical": "https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-18T18:04:05+00:00",
+   "score": 8.92
+  },
+  {
+   "headline": "NVIDIA launches RTX Spark compact desktops for local AI tasks",
+   "summary": "NVIDIA has announced the immediate availability of RTX Spark compact desktops manufactured by ASUS, Dell, and MSI. The systems feature up to 128GB of unified memory to support local AI agents and creative workflows.",
+   "why_it_matters": "The new hardware allows developers and creators to run and fine-tune larger AI models locally on a PC.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "New NVIDIA RTX Spark compact desktops from ASUS, Dell and MSI are available today, bringing local AI agents, image and video generation, and model fine-tuning to a dedicated Windows PC.",
+   "id": 9,
+   "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/",
+   "canonical": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now",
+   "source": "NVIDIA Blog",
+   "also": [],
+   "published": "2026-11-18T14:00:31+00:00",
+   "score": 8.59
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI details Codex sandbox controls for macOS, Linux and Windows",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI executive publishes paper on societal impact of capable AI",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "hedged wording ('might'): not a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 3,
+   "headline": "MIT Technology Review publishes commentary on AI proliferation",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "names not in source: MIT, Review, Technology"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 4,
+   "headline": "Startup Osmo builds dataset to train AI on smell classification",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 5,
+   "headline": "Simon Willison and Prime Radiant release external sandboxes for coding agents",
+   "problems": [
+    "names not in source: Simon, Willison"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 6,
+   "headline": "Google introduces temporary incognito threads to Search AI Mode",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "OpenAI leaders discuss human control over advanced models",
+   "problems": [
+    "second pass: The draft claims Sam Altman 'warns against a future where AI calls the shots' (from headline) and they 'pushed back agai"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 8,
+   "headline": "Media report highlights past safety pauses by frontier AI developers",
+   "problems": [
+    "second pass: The source mentions Anthropic CEO Dario Amodei 'called for slowing advances', not that Anthropic actually executed a sel"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "NVIDIA launches RTX Spark compact desktops for local AI tasks",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  }
+ ],
+ "errors": [],
+ "notes": [],
+ "agent": {
+  "items": [
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "OpenAI details Codex sandbox controls for macOS, Linux and Windows",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 4,
+    "headline": "Startup Osmo builds dataset to train AI on smell classification",
+    "article_note": "read",
+    "source": "MIT Technology Review"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 6,
+    "headline": "Google introduces temporary incognito threads to Search AI Mode",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 9,
+    "headline": "NVIDIA launches RTX Spark compact desktops for local AI tasks",
+    "article_note": "read",
+    "source": "NVIDIA Blog"
+   }
+  ],
+  "score": 72,
+  "verdict": "review carefully"
+ },
+ "created": "2026-11-18T18:59:10.552270+00:00"
+}

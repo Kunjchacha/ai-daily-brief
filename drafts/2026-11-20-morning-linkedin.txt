@@ -1,0 +1,15 @@
+A new AI paper is getting attention: TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks
+
+The authors designed and built the Xing 4 series of large language models, describing architecture selection, large‑scale pretraining, and a unified agent execution platform called TeleGym. They report that their infrastructure enables pretraining of a 285B‑parameter model on 8,192 Ascend 910C cards and supports advanced reasoning and agentic workloads.
+
+The authors report: "Together, these mechanisms support the pretraining of a 285B-parameter model on 8,192 Ascend 910C cards, providing a concrete setting for the architectural and systems studies."
+
+Takeaway: These are the authors' own claims, and a preprint may not have been peer reviewed yet.
+
+Does this match what you see in practice?
+
+Source: https://arxiv.org/abs/2611.22115
+
+AI Daily Brief · Research in plain English · AI-assisted, source-checked.
+
+#AI #Research #MachineLearning
