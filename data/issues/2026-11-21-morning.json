@@ -1,0 +1,78 @@
+{
+ "date": "2026-11-21",
+ "edition": "morning",
+ "key": "2026-11-21-morning",
+ "format": "comparison",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Open weights or open source?",
+   "hook": "'Open' means different things for AI models.",
+   "points": [
+    "Two phrases that are often mixed up.",
+    "Swipe for the difference."
+   ],
+   "takeaway": "",
+   "ask": "Do you check a model's licence before using it?",
+   "summary": "Two phrases that are often mixed up. Swipe for the difference.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Wikipedia: Open-source artificial intelligence",
+   "url": "https://en.wikipedia.org/wiki/Open-source_artificial_intelligence",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "open-weights-vs-open-source",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "source: Wikipedia: Open-source artificial intelligence",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Side by side",
+     "title": "What each usually means",
+     "compare": true,
+     "left": {
+      "head": "Open weights",
+      "items": [
+       "The trained parameters are published",
+       "You can usually run the model yourself",
+       "The training data and code may not be shared",
+       "The licence may limit how you use it"
+      ]
+     },
+     "right": {
+      "head": "Open source",
+      "items": [
+       "The licence lets you use, study, change and share it",
+       "Usually implies more than the weights",
+       "Check which licence it really is",
+       "Definitions for AI are still debated"
+      ]
+     }
+    },
+    {
+     "kicker": "The habit",
+     "title": "Read the licence",
+     "body": "Do not assume. The words on the label matter less than the licence text."
+    }
+   ],
+   "source_note": "Source: Wikipedia: Open-source artificial intelligence, https://en.wikipedia.org/wiki/Open-source_artificial_intelligence"
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-19T18:33:08.625000+00:00"
+}

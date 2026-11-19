@@ -1,0 +1,215 @@
+{
+ "date": "2026-11-20",
+ "edition": "evening",
+ "key": "2026-11-20-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "OpenAI details Performance Factory system for ChatGPT",
+   "summary": "OpenAI has shared details on how it built the Performance Factory. The system uses Codex-powered workflows to find and fix performance issues to keep ChatGPT fast.",
+   "why_it_matters": "The system helps maintain performance speeds for ChatGPT by automating fixes.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+   "id": 1,
+   "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+   "canonical": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-19T08:00:00+00:00",
+   "score": 12.67
+  },
+  {
+   "headline": "Simon Willison introduces external sandboxes for coding agents",
+   "summary": "Simon Willison, in collaboration with Prime Radiant, has introduced the external sandbox pattern for AI coding agents. Three sandbox server implementations were released to run agent-executed code inside a dedicated environment.",
+   "why_it_matters": "Sandboxing aims to mitigate risks from mistakes or prompt injection attacks on host machines.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "To demonstrate this pattern we've released three sandbox server implementations",
+   "id": 4,
+   "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+   "canonical": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents",
+   "source": "Simon Willison",
+   "also": [],
+   "published": "2026-11-17T22:52:29+00:00",
+   "score": 9.64
+  },
+  {
+   "headline": "Google Gemini app for macOS adds computer use feature",
+   "summary": "Google has added a computer use feature to its Gemini app for macOS. The tool aids users in completing multi-step tasks across local files, desktop applications, and the web.",
+   "why_it_matters": "The tool expands Gemini's desktop utility to automate actions directly on macOS.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Google's Gemini app for macOS now has computer use, meaning it can help you \"get multi-step tasks done across your local files",
+   "id": 6,
+   "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+   "canonical": "https://theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-19T18:21:13+00:00",
+   "score": 8.99
+  },
+  {
+   "headline": "Anthropic begins trading on Nasdaq following initial public offering",
+   "summary": "Anthropic has officially gone public, listing on the Nasdaq under the ticker symbol ANT. The stock opened trading at $111.50 per share, above its initial price of $83 per share, which had valued the firm at approximately $1.5 trillion.",
+   "why_it_matters": "The debut marks a major public market listing for an artificial intelligence developer.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Anthropic has officially gone public. It began trading on the Nasdaq under the ticker symbol \"ANT\" at $111.50 per share",
+   "id": 8,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+   "canonical": "https://theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-19T16:52:01+00:00",
+   "score": 8.95
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI details Performance Factory system for ChatGPT",
+   "problems": [],
+   "warnings": [
+    "link HTTP 403 (not verifiable, kept)"
+   ],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI essay examines societal impact of capable AI",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "hedged wording ('could'): not a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 4,
+   "headline": "Simon Willison introduces external sandboxes for coding agents",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 5,
+   "headline": "Google updates Gemini on Mac to carry out computer tasks",
+   "problems": [
+    "second pass: The source does not state that it operates 'across desktop apps and the web' or that it operates 'locally'."
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 6,
+   "headline": "Google Gemini app for macOS adds computer use feature",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Meta's Muse AI agent reportedly exposes private employee data",
+   "problems": [
+    "hedged wording ('reportedly'): not a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 8,
+   "headline": "Anthropic begins trading on Nasdaq following initial public offering",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "quiet news period: widened the window to 96 hours",
+  "story 3 skipped by the writer: source text too thin",
+  "story 9 skipped by the writer: source text too thin"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "OpenAI details Performance Factory system for ChatGPT",
+    "article_note": "page blocked (could not read (HTTPError: HTTP Error 403: Forbidden)); audited against the publisher's own feed text",
+    "source": "OpenAI"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 4,
+    "headline": "Simon Willison introduces external sandboxes for coding agents",
+    "article_note": "read",
+    "source": "Simon Willison"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 6,
+    "headline": "Google Gemini app for macOS adds computer use feature",
+    "article_note": "read",
+    "source": "The Verge"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 8,
+    "headline": "Anthropic begins trading on Nasdaq following initial public offering",
+    "article_note": "read",
+    "source": "The Verge"
+   }
+  ],
+  "score": 92,
+  "verdict": "recommend approve"
+ },
+ "created": "2026-11-19T18:33:08.627720+00:00"
+}

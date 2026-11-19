@@ -1,0 +1,27 @@
+AI Daily Brief: Friday 20 November 2026 (Evening edition)
+
+4 AI developments worth your time today:
+
+1. OpenAI details Performance Factory system for ChatGPT
+OpenAI has shared details on how it built the Performance Factory. The system uses Codex-powered workflows to find and fix performance issues to keep ChatGPT fast.
+Why it matters: The system helps maintain performance speeds for ChatGPT by automating fixes.
+Source: https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast
+
+2. Simon Willison introduces external sandboxes for coding agents
+Simon Willison, in collaboration with Prime Radiant, has introduced the external sandbox pattern for AI coding agents. Three sandbox server implementations were released to run agent-executed code inside a dedicated environment.
+Why it matters: Sandboxing aims to mitigate risks from mistakes or prompt injection attacks on host machines.
+Source: https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/
+
+3. Google Gemini app for macOS adds computer use feature
+Google has added a computer use feature to its Gemini app for macOS. The tool aids users in completing multi-step tasks across local files, desktop applications, and the web.
+Why it matters: The tool expands Gemini's desktop utility to automate actions directly on macOS.
+Source: https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use
+
+4. Anthropic begins trading on Nasdaq following initial public offering
+Anthropic has officially gone public, listing on the Nasdaq under the ticker symbol ANT. The stock opened trading at $111.50 per share, above its initial price of $83 per share, which had valued the firm at approximately $1.5 trillion.
+Why it matters: The debut marks a major public market listing for an artificial intelligence developer.
+Source: https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews
