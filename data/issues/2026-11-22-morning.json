@@ -1,0 +1,78 @@
+{
+ "date": "2026-11-22",
+ "edition": "morning",
+ "key": "2026-11-22-morning",
+ "format": "quiz",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Quiz: safe or risky to paste?",
+   "hook": "Five things you might paste into an AI tool. Which are risky?",
+   "points": [
+    "Think about each one.",
+    "Answers on the next slide."
+   ],
+   "takeaway": "",
+   "ask": "Would you have got all five?",
+   "summary": "Think about each one. Answers on the next slide.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "quiz-safe-or-risky",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "own writing: no claims about any product",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Question",
+     "title": "Safe or risky?",
+     "items": [
+      "A published press release",
+      "An email with a customer's name and account",
+      "Your own rough ideas for a talk",
+      "A spreadsheet of staff salaries",
+      "A document marked confidential"
+     ],
+     "ordered": true
+    },
+    {
+     "kicker": "Answers",
+     "title": "One and three are usually fine",
+     "items": [
+      "1: Usually fine: it is already public",
+      "2: Risky: customer data",
+      "3: Usually fine, if it holds nothing private",
+      "4: Risky: personal data",
+      "5: Risky: check your policy first"
+     ]
+    },
+    {
+     "kicker": "The rule",
+     "title": "When unsure, check first",
+     "body": "Your organisation's policy comes first. Do not paste customer or company data into an AI tool."
+    }
+   ],
+   "source_note": "Written for AI Daily Brief. No claims about any product."
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-20T18:45:17.892924+00:00"
+}

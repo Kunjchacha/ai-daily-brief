@@ -1,0 +1,32 @@
+AI Daily Brief: Saturday 21 November 2026 (Evening edition)
+
+5 AI developments worth your time today:
+
+1. METR report shows exponential AI capability growth but weaker judgement performance
+The METR nonprofit reports that some AI capabilities continue to improve exponentially, while models lag behind on tasks requiring judgement compared with coding.
+Why it matters: It highlights differing progress rates across AI skill areas.
+Source: https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/
+
+2. PostgreSQL 19 adds read‑your‑writes consistency via WAIT FOR LSN
+The new PostgreSQL 19 release introduces a WAIT FOR LSN command that lets standby sessions ensure they have replayed recent writes before querying.
+Why it matters: Improves data consistency for applications using read replicas.
+Source: https://simonwillison.net/2026/Nov/19/postgresql-19/
+
+3. Nvidia to cease H200 chip sales in China
+Nvidia announced it will stop selling its H200 chips in China.
+Why it matters: The move affects Chinese customers relying on Nvidia’s high‑performance hardware.
+Source: https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/
+
+4. Widespread tech outages reported this week
+Outages affected Outlook, a nationwide ground stop, banks and iCloud, leading to a perception of a major tech collapse.
+Why it matters: Highlights vulnerability of critical digital services.
+Source: https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast
+
+5. Anthropic founders each receive $280 million from IPO
+At an $83 share price, each of Anthropic’s seven founders pocketed $280 million in the IPO.
+Why it matters: Shows the scale of financial returns from AI company listings.
+Source: https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews

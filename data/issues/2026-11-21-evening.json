@@ -1,0 +1,267 @@
+{
+ "date": "2026-11-21",
+ "edition": "evening",
+ "key": "2026-11-21-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "METR report shows exponential AI capability growth but weaker judgement performance",
+   "summary": "The METR nonprofit reports that some AI capabilities continue to improve exponentially, while models lag behind on tasks requiring judgement compared with coding.",
+   "why_it_matters": "It highlights differing progress rates across AI skill areas.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory",
+   "id": 1,
+   "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+   "canonical": "https://technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update",
+   "source": "MIT Technology Review",
+   "also": [],
+   "published": "2026-11-20T18:15:15+00:00",
+   "score": 10.96
+  },
+  {
+   "headline": "PostgreSQL 19 adds read‑your‑writes consistency via WAIT FOR LSN",
+   "summary": "The new PostgreSQL 19 release introduces a WAIT FOR LSN command that lets standby sessions ensure they have replayed recent writes before querying.",
+   "why_it_matters": "Improves data consistency for applications using read replicas.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "PostgreSQL 19 adds \"read-your-writes\" consistency with the new WAIT FOR LSN command",
+   "id": 3,
+   "url": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+   "canonical": "https://simonwillison.net/2026/Nov/19/postgresql-19",
+   "source": "Simon Willison",
+   "also": [],
+   "published": "2026-11-19T20:43:57+00:00",
+   "score": 9.16
+  },
+  {
+   "headline": "Nvidia to cease H200 chip sales in China",
+   "summary": "Nvidia announced it will stop selling its H200 chips in China.",
+   "why_it_matters": "The move affects Chinese customers relying on Nvidia’s high‑performance hardware.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "the chipmaker said it will stop selling its H200 chips in China",
+   "id": 5,
+   "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
+   "canonical": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-20T14:55:44+00:00",
+   "score": 8.68
+  },
+  {
+   "headline": "Widespread tech outages reported this week",
+   "summary": "Outages affected Outlook, a nationwide ground stop, banks and iCloud, leading to a perception of a major tech collapse.",
+   "why_it_matters": "Highlights vulnerability of critical digital services.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "There was a dayslong Outlook outage",
+   "id": 6,
+   "url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
+   "canonical": "https://theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-20T14:06:59+00:00",
+   "score": 8.61
+  },
+  {
+   "headline": "Anthropic founders each receive $280 million from IPO",
+   "summary": "At an $83 share price, each of Anthropic’s seven founders pocketed $280 million in the IPO.",
+   "why_it_matters": "Shows the scale of financial returns from AI company listings.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion",
+   "id": 7,
+   "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+   "canonical": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-20T00:43:50+00:00",
+   "score": 7.5
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "METR report shows exponential AI capability growth but weaker judgement performance",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "ChatPRD creator ends free trials amid token fraud surge",
+   "problems": [
+    "second pass: The source mentions token fraud exploiting free trials, but it does not state that Claire Vo has ended or discontinued t"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 3,
+   "headline": "PostgreSQL 19 adds read‑your‑writes consistency via WAIT FOR LSN",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Anthropic researcher claims Claude helped prove Riemann hypothesis",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'rumour')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 5,
+   "headline": "Nvidia to cease H200 chip sales in China",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "Widespread tech outages reported this week",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Anthropic founders each receive $280 million from IPO",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs",
+   "problems": [
+    "no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+   "problems": [
+    "no AI fact check for this story (the AI could not handle it): not shown as a confirmed fact"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "story 8: no usable AI output, used extractive text",
+  "story 9: no usable AI output, used extractive text"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 1,
+    "headline": "METR report shows exponential AI capability growth but weaker judgement performance",
+    "article_note": "read",
+    "source": "MIT Technology Review"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 3,
+    "headline": "PostgreSQL 19 adds read‑your‑writes consistency via WAIT FOR LSN",
+    "article_note": "read",
+    "source": "Simon Willison"
+   },
+   {
+    "score": 57,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "1 claim(s) unsupported by the article"
+    ],
+    "id": 5,
+    "headline": "Nvidia to cease H200 chip sales in China",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 57,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "1 claim(s) unsupported by the article"
+    ],
+    "id": 6,
+    "headline": "Widespread tech outages reported this week",
+    "article_note": "read",
+    "source": "The Verge"
+   },
+   {
+    "score": 37,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article",
+     "1 claim(s) unsupported by the article"
+    ],
+    "id": 7,
+    "headline": "Anthropic founders each receive $280 million from IPO",
+    "article_note": "read",
+    "source": "TechCrunch"
+   }
+  ],
+  "score": 37,
+  "verdict": "skip today"
+ },
+ "created": "2026-11-20T18:45:17.895109+00:00"
+}
