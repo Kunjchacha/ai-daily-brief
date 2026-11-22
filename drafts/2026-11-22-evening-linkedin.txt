@@ -1,0 +1,32 @@
+AI Daily Brief: Sunday 22 November 2026 (Evening edition)
+
+5 AI developments worth your time today:
+
+1. OpenAI Details Layered Approach to Combat Adversarial Distillation
+OpenAI has outlined a layered approach designed to protect its models against capability extraction. The strategy combines model training, safeguards, detection, and enforcement measures.
+Why it matters: The measures aim to prevent unauthorised parties from extracting proprietary capabilities from OpenAI's models.
+Source: https://openai.com/index/combatting-adversarial-distillation
+
+2. Hebbia Evaluates GPT-6 Astra for Financial Research
+Hebbia has tested GPT-6 Astra for use in financial research. Prerelease evaluations demonstrated improvements in citation relevance, source coverage, and presentation quality.
+Why it matters: The testing indicates performance gains for GPT-6 Astra in specialized financial research tasks.
+Source: https://openai.com/business/customer-stories/hebbia
+
+3. Nvidia Earnings Report Highlights Contrasting Perspectives
+Nvidia's latest earnings report presents a contrasting picture alongside public calls from tech executives regarding Jensen Huang's return.
+Why it matters: The company faces varying external expectations despite its public financial reporting.
+Source: https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/
+
+4. Text-Based AI Agents Compiled Across Consumer Categories
+A collection of notable AI agents operating via text messaging has been published, featuring tools built for general assistance, families, work, and travel.
+Why it matters: Text messaging platforms are increasingly acting as interface layers for specialized AI assistants.
+Source: https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/
+
+5. Anthropic Completes Public Listing on Nasdaq
+Anthropic, the artificial intelligence lab behind the Claude model, went public on the Nasdaq stock exchange last Thursday.
+Why it matters: The move marks a major financial milestone for one of the primary AI development companies.
+Source: https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews

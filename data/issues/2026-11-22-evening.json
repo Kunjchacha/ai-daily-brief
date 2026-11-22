@@ -1,0 +1,268 @@
+{
+ "date": "2026-11-22",
+ "edition": "evening",
+ "key": "2026-11-22-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "OpenAI Details Layered Approach to Combat Adversarial Distillation",
+   "summary": "OpenAI has outlined a layered approach designed to protect its models against capability extraction. The strategy combines model training, safeguards, detection, and enforcement measures.",
+   "why_it_matters": "The measures aim to prevent unauthorised parties from extracting proprietary capabilities from OpenAI's models.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.",
+   "id": 1,
+   "url": "https://openai.com/index/combatting-adversarial-distillation",
+   "canonical": "https://openai.com/index/combatting-adversarial-distillation",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-20T10:00:00+00:00",
+   "score": 11.54
+  },
+  {
+   "headline": "Hebbia Evaluates GPT-6 Astra for Financial Research",
+   "summary": "Hebbia has tested GPT-6 Astra for use in financial research. Prerelease evaluations demonstrated improvements in citation relevance, source coverage, and presentation quality.",
+   "why_it_matters": "The testing indicates performance gains for GPT-6 Astra in specialized financial research tasks.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
+   "id": 2,
+   "url": "https://openai.com/business/customer-stories/hebbia",
+   "canonical": "https://openai.com/business/customer-stories/hebbia",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-20T00:00:00+00:00",
+   "score": 11.23
+  },
+  {
+   "headline": "Nvidia Earnings Report Highlights Contrasting Perspectives",
+   "summary": "Nvidia's latest earnings report presents a contrasting picture alongside public calls from tech executives regarding Jensen Huang's return.",
+   "why_it_matters": "The company faces varying external expectations despite its public financial reporting.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "We got two very different pictures of Nvidia — the company’s latest earnings report vs. the tech executives loudly calling for Jensen Huang’s return.",
+   "id": 5,
+   "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
+   "canonical": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-21T21:07:42+00:00",
+   "score": 8.64
+  },
+  {
+   "headline": "Text-Based AI Agents Compiled Across Consumer Categories",
+   "summary": "A collection of notable AI agents operating via text messaging has been published, featuring tools built for general assistance, families, work, and travel.",
+   "why_it_matters": "Text messaging platforms are increasingly acting as interface layers for specialized AI assistants.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+   "id": 7,
+   "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+   "canonical": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-21T17:00:00+00:00",
+   "score": 8.51
+  },
+  {
+   "headline": "Anthropic Completes Public Listing on Nasdaq",
+   "summary": "Anthropic, the artificial intelligence lab behind the Claude model, went public on the Nasdaq stock exchange last Thursday.",
+   "why_it_matters": "The move marks a major financial milestone for one of the primary AI development companies.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "The AI lab behind Claude went public on the Nasdaq last Thursday.",
+   "id": 8,
+   "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+   "canonical": "https://theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-21T15:00:00+00:00",
+   "score": 8.45
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI Details Layered Approach to Combat Adversarial Distillation",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 2,
+   "headline": "Hebbia Evaluates GPT-6 Astra for Financial Research",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Graham Dumpleton Develops Muru Rust Web Server",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 4,
+   "headline": "ChatPRD Ends Free Trials Following Widespread Token Fraud",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 5,
+   "headline": "Nvidia Earnings Report Highlights Contrasting Perspectives",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "UN Talks on Autonomous Weapon Regulations Conclude Without Agreement",
+   "problems": [
+    "names not in source: Nations, United"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 7,
+   "headline": "Text-Based AI Agents Compiled Across Consumer Categories",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "Anthropic Completes Public Listing on Nasdaq",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 9,
+   "headline": "AI Hype Index",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "quiet news period: widened the window to 96 hours"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 74,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 29,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article",
+     "1 claim(s) only partly supported"
+    ],
+    "id": 1,
+    "headline": "OpenAI Details Layered Approach to Combat Adversarial Distillation",
+    "article_note": "read",
+    "source": "OpenAI"
+   },
+   {
+    "score": 67,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 5,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 2,
+    "headline": "Hebbia Evaluates GPT-6 Astra for Financial Research",
+    "article_note": "read",
+    "source": "OpenAI"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 5,
+    "headline": "Nvidia Earnings Report Highlights Contrasting Perspectives",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 72,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 7,
+    "headline": "Text-Based AI Agents Compiled Across Consumer Categories",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 92,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 8,
+    "headline": "Anthropic Completes Public Listing on Nasdaq",
+    "article_note": "read",
+    "source": "The Verge"
+   }
+  ],
+  "score": 67,
+  "verdict": "skip today"
+ },
+ "created": "2026-11-22T08:35:20.027511+00:00"
+}

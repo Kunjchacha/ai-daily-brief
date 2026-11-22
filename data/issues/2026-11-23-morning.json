@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-23",
+ "edition": "morning",
+ "key": "2026-11-23-morning",
+ "format": "workflow",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Get an Excel formula you can actually test",
+   "hook": "You know what you want the spreadsheet to do but not how to write the formula.",
+   "points": [
+    "Describing the result you want beats guessing at function names.",
+    "Inside: the steps, a copy-and-paste prompt and what to check before you use the result."
+   ],
+   "takeaway": "",
+   "ask": "What task would you like a prompt for next?",
+   "summary": "Describing the result you want beats guessing at function names. Inside: the steps, a copy-and-paste prompt and what to check before you use the result.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "how-to",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "excel-formula",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project: a prompt template, no claims about any product",
+    "includes the reminder not to paste customer or company data"
+   ],
+   "bank": {
+    "id": "excel-formula",
+    "title": "Get an Excel formula you can actually test",
+    "hook": "You know what you want the spreadsheet to do but not how to write the formula.",
+    "problem": "Describing the result you want beats guessing at function names.",
+    "steps": [
+     "Describe your columns and one example row (fake or anonymised values).",
+     "Say what the formula should return, in one sentence.",
+     "Test it on three rows where you already know the answer."
+    ],
+    "prompt": "My sheet has these columns: [letter: what it holds, for example A: date, B: type, C: amount]. In [cell] I want [the result, for example the total of C where B is 'Retail']. Give me an Excel formula for [cell] and explain it in one sentence.",
+    "checks": [
+     "It works on three rows whose answers you know.",
+     "It still works when a cell is blank."
+    ],
+    "mistake": "Pasting real customer rows to 'show' the data.",
+    "privacy": "Do not paste customer or company data into an AI tool."
+   }
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-22T08:35:20.024609+00:00"
+}
