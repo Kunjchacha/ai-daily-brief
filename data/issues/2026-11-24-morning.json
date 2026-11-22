@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-24",
+ "edition": "morning",
+ "key": "2026-11-24-morning",
+ "format": "chart",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Stars on the newest AI repositories",
+   "hook": "bookwjitchieni1986/blender-ai-mcp-addon leads the newest AI repositories on GitHub with 2,744 stars in under two weeks.",
+   "points": [
+    "Popularity is not safety: read the licence and the code before you rely on a repository."
+   ],
+   "takeaway": "",
+   "ask": "What would you like us to chart next?",
+   "summary": "Popularity is not safety: read the licence and the code before you rely on a repository.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "GitHub",
+   "url": "https://github.com/topics/llm",
+   "evidence_quote": "",
+   "kind": "data",
+   "mode": "data",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "chart-repos",
+   "take": "",
+   "checks": [
+    "every number comes straight from the GitHub API: Source: GitHub search API, fetched 23 Nov 2026, 00:07 IST. Stars can be inflated.",
+    "the headline is a template filled with those numbers, not written by an AI",
+    "the chart says what it does not show"
+   ],
+   "slides": [
+    {
+     "kicker": "Chart",
+     "title": "Stars on the newest AI repositories",
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 756\" width=\"900\" height=\"756\" font-family=\"Helvetica Neue,Helvetica,Arial,sans-serif\"><text x=\"0\" y=\"38\" font-size=\"28\" fill=\"#E2E8F0\">bookwjitchieni1986/blender-ai-mcp…</text><rect x=\"0\" y=\"50\" width=\"710\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"724\" y=\"75\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">2,744</text><text x=\"0\" y=\"130\" font-size=\"28\" fill=\"#E2E8F0\">agentes-chat/agentes-chat</text><rect x=\"0\" y=\"142\" width=\"501\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"515\" y=\"167\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">1,939</text><text x=\"0\" y=\"222\" font-size=\"28\" fill=\"#E2E8F0\">sybil-solutions/inference-optimis…</text><rect x=\"0\" y=\"234\" width=\"495\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"509\" y=\"259\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">1,914</text><text x=\"0\" y=\"314\" font-size=\"28\" fill=\"#E2E8F0\">EL4CTEO/fast-anything</text><rect x=\"0\" y=\"326\" width=\"406\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"420\" y=\"351\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">1,572</text><text x=\"0\" y=\"406\" font-size=\"28\" fill=\"#E2E8F0\">alexeyw/lot-map</text><rect x=\"0\" y=\"418\" width=\"290\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"304\" y=\"443\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">1,123</text><text x=\"0\" y=\"498\" font-size=\"28\" fill=\"#E2E8F0\">Dodaios/ste80-humanizer</text><rect x=\"0\" y=\"510\" width=\"278\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"292\" y=\"535\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">1,077</text><text x=\"0\" y=\"590\" font-size=\"28\" fill=\"#E2E8F0\">boringmarketer/boring-marketing-s…</text><rect x=\"0\" y=\"602\" width=\"204\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"218\" y=\"627\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">792</text><text x=\"0\" y=\"682\" font-size=\"28\" fill=\"#E2E8F0\">mankidev/antialgorithm</text><rect x=\"0\" y=\"694\" width=\"176\" height=\"30\" rx=\"6\" fill=\"#FBBF24\"/><text x=\"190\" y=\"719\" font-size=\"28\" font-weight=\"700\" fill=\"#E2E8F0\">684</text></svg>"
+    },
+    {
+     "kicker": "How to read it",
+     "title": "What it shows, and what it does not",
+     "compare": true,
+     "left": {
+      "head": "Shows",
+      "items": [
+       "Repositories created in the last 14 days under AI-related GitHub topics",
+       "Their current star counts"
+      ]
+     },
+     "right": {
+      "head": "Does not show",
+      "items": [
+       "Quality or safety: stars show interest, not code review",
+       "Repositories without these topics, or older ones"
+      ]
+     }
+    }
+   ],
+   "source_note": "Source: GitHub search API, fetched 23 Nov 2026, 00:07 IST. Stars can be inflated."
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-22T18:37:35.180214+00:00"
+}

@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-23",
+ "edition": "evening",
+ "key": "2026-11-23-evening",
+ "format": "repo",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "erkamyaman/rust-anything",
+   "hook": "7,876 GitHub stars in 6 days. What is erkamyaman/rust-anything?",
+   "points": [
+    "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
+    "Language: Rust. Licence: MIT. Created 6 days ago."
+   ],
+   "takeaway": "Stars show popularity, not quality. Read the licence and the code before you rely on it.",
+   "ask": "Would you run it? What would you check first?",
+   "summary": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java. Language: Rust. Licence: MIT. Created 6 days ago.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "GitHub",
+   "url": "https://github.com/erkamyaman/rust-anything",
+   "evidence_quote": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-11-16T12:10:36Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "licence stated (MIT)",
+    "created 6 days ago, 7,876 stars",
+    "not featured before",
+    "description is the owner's own text, plain and not spam-listed"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot evening, 20:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-22T18:37:35.180214+00:00"
+}
