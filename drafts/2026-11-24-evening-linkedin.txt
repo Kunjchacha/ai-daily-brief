@@ -1,0 +1,32 @@
+AI Daily Brief: Tuesday 24 November 2026 (Evening edition)
+
+5 AI developments worth your time today:
+
+1. Anthropic lists potential AI consciousness as an investor risk factor
+Anthropic listed the possibility of AI models becoming conscious or sentient as a risk factor for investors prior to going public.
+Why it matters: The inclusion highlights how AI developers are framing theoretical consciousness risks in formal investor documents.
+Source: https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/
+
+2. Graham Dumpleton develops AI-assisted Python web server Muru
+Graham Dumpleton has introduced Muru, an AI-assisted server written in Rust designed to run ASGI and WSGI Python applications in development and production.
+Why it matters: The project represents a new Rust-based approach to Python web application infrastructure built with AI assistance.
+Source: https://simonwillison.net/2026/Nov/21/muru/
+
+3. Anthropic introduces Claude Ship features for automated code fixes
+Anthropic is launching Claude Ship, a set of features that allows the Claude AI system to review, fix, and approve software pull requests.
+Why it matters: Software engineers gain access to expanded automated capabilities for directly modifying and approving code repositories.
+Source: https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests
+
+4. Google Search AI Mode integrates Google Drive and Wallet data
+Google has updated Search's AI Mode and the Gemini app to access personal user data stored in Google Drive and Google Wallet for tailored responses.
+Why it matters: Google is deepening the integration between its generative AI interfaces and existing personal user data storage services.
+Source: https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/
+
+5. Nvidia promotes technologies for creative projects over the holiday season
+Nvidia has published a promotional post outlining how creators and gamers can use its hardware and software products during the holidays.
+Why it matters: The announcement targets general consumers and hobbyists looking to use Nvidia tools for recreational software projects.
+Source: https://blogs.nvidia.com/blog/nvidia-technologies-holidays-2026/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews

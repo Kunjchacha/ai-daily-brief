@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-25",
+ "edition": "morning",
+ "key": "2026-11-25-morning",
+ "format": "myth",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "an AI that only reads a web page cannot be tricked by it.",
+   "hook": "Myth: an AI that only reads a web page cannot be tricked by it.",
+   "points": [
+    "Reality: text on a page can contain instructions aimed at the model. This is called prompt injection, and it is listed among the main security risks for AI applications.",
+    "Anything an AI reads from outside is untrusted input."
+   ],
+   "takeaway": "",
+   "ask": "Which AI myth did you believe the longest?",
+   "summary": "Reality: text on a page can contain instructions aimed at the model. This is called prompt injection, and it is listed among the main security risks for AI applications. Anything an AI reads from outside is untrusted input.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "OWASP Top 10 for LLM Applications",
+   "url": "https://genai.owasp.org/llm-top-10/",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "myth-reading",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "every claim rests on the linked source: OWASP Top 10 for LLM Applications"
+   ],
+   "bank": {
+    "id": "myth-reading",
+    "myth": "Myth: an AI that only reads a web page cannot be tricked by it.",
+    "reality": "Reality: text on a page can contain instructions aimed at the model. This is called prompt injection, and it is listed among the main security risks for AI applications.",
+    "so_what": "Anything an AI reads from outside is untrusted input.",
+    "do": "Be careful when an AI tool can browse, read email or open files and then take actions.",
+    "source": "OWASP Top 10 for LLM Applications",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "extra": ""
+   }
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-23T20:24:29.268268+00:00"
+}

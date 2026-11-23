@@ -1,0 +1,270 @@
+{
+ "date": "2026-11-24",
+ "edition": "evening",
+ "key": "2026-11-24-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "Anthropic lists potential AI consciousness as an investor risk factor",
+   "summary": "Anthropic listed the possibility of AI models becoming conscious or sentient as a risk factor for investors prior to going public.",
+   "why_it_matters": "The inclusion highlights how AI developers are framing theoretical consciousness risks in formal investor documents.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing.",
+   "id": 3,
+   "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+   "canonical": "https://technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument",
+   "source": "MIT Technology Review",
+   "also": [],
+   "published": "2026-11-23T17:36:08+00:00",
+   "score": 10.91
+  },
+  {
+   "headline": "Graham Dumpleton develops AI-assisted Python web server Muru",
+   "summary": "Graham Dumpleton has introduced Muru, an AI-assisted server written in Rust designed to run ASGI and WSGI Python applications in development and production.",
+   "why_it_matters": "The project represents a new Rust-based approach to Python web application infrastructure built with AI assistance.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Muru is his new, AI-assisted Rust server that aims to provide the best possible tools for running ASGI and WSGI Python apps",
+   "id": 5,
+   "url": "https://simonwillison.net/2026/Nov/21/muru/",
+   "canonical": "https://simonwillison.net/2026/Nov/21/muru",
+   "source": "Simon Willison",
+   "also": [],
+   "published": "2026-11-21T23:56:28+00:00",
+   "score": 9.61
+  },
+  {
+   "headline": "Anthropic introduces Claude Ship features for automated code fixes",
+   "summary": "Anthropic is launching Claude Ship, a set of features that allows the Claude AI system to review, fix, and approve software pull requests.",
+   "why_it_matters": "Software engineers gain access to expanded automated capabilities for directly modifying and approving code repositories.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "As part of a new Claude Ship product being announced today, Claude now can review, fix, and approve pull requests.",
+   "id": 6,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+   "canonical": "https://theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+   "source": "The Verge",
+   "also": [],
+   "published": "2026-11-23T20:00:00+00:00",
+   "score": 8.99
+  },
+  {
+   "headline": "Google Search AI Mode integrates Google Drive and Wallet data",
+   "summary": "Google has updated Search's AI Mode and the Gemini app to access personal user data stored in Google Drive and Google Wallet for tailored responses.",
+   "why_it_matters": "Google is deepening the integration between its generative AI interfaces and existing personal user data storage services.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "By bringing Personal Intelligence in AI Mode to Drive, Wallet, and the Gemini app, Google is leveraging the wealth of user data",
+   "id": 8,
+   "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+   "canonical": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses",
+   "source": "TechCrunch",
+   "also": [],
+   "published": "2026-11-23T19:14:46+00:00",
+   "score": 8.96
+  },
+  {
+   "headline": "Nvidia promotes technologies for creative projects over the holiday season",
+   "summary": "Nvidia has published a promotional post outlining how creators and gamers can use its hardware and software products during the holidays.",
+   "why_it_matters": "The announcement targets general consumers and hobbyists looking to use Nvidia tools for recreational software projects.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "With the lights twinkling and the gift wrap out, it’s the perfect time to give someone — or yourself — a spark to take a hobby to the next level.",
+   "id": 9,
+   "url": "https://blogs.nvidia.com/blog/nvidia-technologies-holidays-2026/",
+   "canonical": "https://blogs.nvidia.com/blog/nvidia-technologies-holidays-2026",
+   "source": "NVIDIA Blog",
+   "also": [],
+   "published": "2026-11-23T17:00:08+00:00",
+   "score": 8.89
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "OpenAI hosts discussion on AI for in-house legal teams",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 2,
+   "headline": "OpenAI outlines role of perplexity in evaluating AI models",
+   "problems": [
+    "second pass: The draft states that OpenAI published the article, but the source text does not mention OpenAI as the publisher/author."
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 3,
+   "headline": "Anthropic lists potential AI consciousness as an investor risk factor",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Simon Willison uses Claude Fable to build HTML select box styling tool",
+   "problems": [
+    "not a confirmed fact (writer classed it as 'opinion')",
+    "names not in source: Simon, Willison"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 5,
+   "headline": "Graham Dumpleton develops AI-assisted Python web server Muru",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "Anthropic introduces Claude Ship features for automated code fixes",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Jensen Huang resigns as Nvidia CEO following personal disclosures",
+   "problems": [
+    "second pass: The draft states he resigned, but the headline in the source indicates he ended up as CEO again ('How Jensen Huang ended"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 8,
+   "headline": "Google Search AI Mode integrates Google Drive and Wallet data",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 9,
+   "headline": "Nvidia promotes technologies for creative projects over the holiday season",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  }
+ ],
+ "errors": [],
+ "notes": [
+  "quiet news period: widened the window to 96 hours"
+ ],
+ "agent": {
+  "items": [
+   {
+    "score": 57,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "no claim-by-claim audit available"
+    ],
+    "id": 3,
+    "headline": "Anthropic lists potential AI consciousness as an investor risk factor",
+    "article_note": "read",
+    "source": "MIT Technology Review"
+   },
+   {
+    "score": 57,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "no claim-by-claim audit available"
+    ],
+    "id": 5,
+    "headline": "Graham Dumpleton develops AI-assisted Python web server Muru",
+    "article_note": "read",
+    "source": "Simon Willison"
+   },
+   {
+    "score": 57,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "no claim-by-claim audit available"
+    ],
+    "id": 6,
+    "headline": "Anthropic introduces Claude Ship features for automated code fixes",
+    "article_note": "read",
+    "source": "The Verge"
+   },
+   {
+    "score": 57,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "no claim-by-claim audit available"
+    ],
+    "id": 8,
+    "headline": "Google Search AI Mode integrates Google Drive and Wallet data",
+    "article_note": "read",
+    "source": "TechCrunch"
+   },
+   {
+    "score": 57,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "no claim-by-claim audit available"
+    ],
+    "id": 9,
+    "headline": "Nvidia promotes technologies for creative projects over the holiday season",
+    "article_note": "read",
+    "source": "NVIDIA Blog"
+   }
+  ],
+  "score": 57,
+  "verdict": "skip today"
+ },
+ "created": "2026-11-23T20:24:29.270642+00:00"
+}

@@ -1,0 +1,15 @@
+Myth: an AI that only reads a web page cannot be tricked by it.
+
+Reality: text on a page can contain instructions aimed at the model. This is called prompt injection, and it is listed among the main security risks for AI applications.
+
+Anything an AI reads from outside is untrusted input.
+
+Swipe through for what to do about it.
+
+Which AI myth did you believe the longest?
+
+Source: https://genai.owasp.org/llm-top-10/
+
+AI Daily Brief · Myth vs reality · AI-assisted, source-checked.
+
+#AI #AIMyths #CriticalThinking
