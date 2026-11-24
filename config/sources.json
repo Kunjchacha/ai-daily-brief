@@ -1,5 +1,5 @@
 {
-  "notes": "authority 1-5 (5 = primary source). filter=true means keep only items that mention AI topics. Add or remove sources freely; a failing source never stops a run. Microsoft's AI feed returned HTTP 410 (gone) on 2 Nov 2026 so it is left out. Anthropic and Meta AI do not publish an official RSS feed, so add them here if that changes. Import AI was removed on 2 Nov 2026: its Substack feed returns HTTP 403 to GitHub's servers every run.",
+  "notes": "authority 1-5 (5 = primary source). filter=true means keep only items that mention AI topics. Add or remove sources freely; a failing source never stops a run. Microsoft's AI feed returned HTTP 410 (gone) on 2 Nov 2026 so it is left out. Anthropic and Meta AI do not publish an official RSS feed, so add them here if that changes. Import AI was removed on 2 Nov 2026: its Substack feed returns HTTP 403 to GitHub's servers every run. Added 24 Nov 2026: Google Workspace Updates, Google AI Blog, AWS ML Blog, GitHub Blog AI and ML, Ars Technica (all returned 200 with items from a home connection; GitHub's servers may still block some, as with Import AI, and a failing source never stops a run).",
   "sources": [
     {
       "id": "openai",
@@ -79,6 +79,46 @@
       "type": "hn",
       "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&query=LLM&numericFilters=points%3E40,created_at_i%3E{since}&hitsPerPage=30",
       "authority": 2,
+      "filter": true
+    },
+    {
+      "name": "Google Workspace Updates",
+      "type": "atom",
+      "url": "https://workspaceupdates.googleblog.com/atom.xml",
+      "id": "google-workspace",
+      "authority": 4,
+      "filter": true
+    },
+    {
+      "name": "Google AI Blog",
+      "type": "rss",
+      "url": "https://blog.google/technology/ai/rss/",
+      "id": "google-ai",
+      "authority": 4,
+      "filter": false
+    },
+    {
+      "name": "AWS Machine Learning Blog",
+      "type": "rss",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "id": "aws-ml",
+      "authority": 3,
+      "filter": true
+    },
+    {
+      "name": "GitHub Blog AI and ML",
+      "type": "rss",
+      "url": "https://github.blog/ai-and-ml/feed/",
+      "id": "github-ai",
+      "authority": 3,
+      "filter": false
+    },
+    {
+      "name": "Ars Technica",
+      "type": "rss",
+      "url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "id": "ars",
+      "authority": 3,
       "filter": true
     }
   ]
