@@ -1,0 +1,37 @@
+AI Daily Brief: Wednesday 25 November 2026 (Evening edition)
+
+6 AI developments worth your time today:
+
+1. Amateur astronomers use Codex and Astra to identify exoplanet candidates
+Two amateur astronomers applied Codex and Astra to public Kepler and TESS data, finding potential exoplanets.
+Why it matters: Demonstrates how accessible AI tools can aid scientific discovery.
+Source: https://openai.com/index/searching-for-distant-planets-with-astra
+
+2. Dot Aria assists research and proposal building while flagging messages
+Marina Petrova’s dot Aria helps research websites, build proposals, and proactively flags messages and resolves issues.
+Why it matters: Offers automated support for information gathering and workflow management.
+Source: https://openai.com/business/customer-stories/intentful-dots
+
+3. Google makes Workspace MCP servers and CLI generally available
+Google Workspace introduces generally available MCP servers and a Workspace CLI, enabling developers to connect AI agents to Google apps without custom code.
+Why it matters: Simplifies building and scaling AI‑driven workflows while keeping organisational data under control.
+Source: http://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html
+
+4. GPT‑6.2 Astra identifies creator of 1808 sketchbook in Yale library
+GPT‑6.2 Astra autonomously identified the creator of an anonymous 1808 sketchbook at Yale’s Beinecke Library, locating a supporting diary reference.
+Why it matters: Shows AI’s potential to accelerate historical research using public sources.
+Source: https://simonwillison.net/2026/Nov/24/astra-historical-mystery/
+
+5. Gemini Notebook adds image‑rich flashcards, stopwatch and study reminders
+Gemini Notebook now offers flashcards with automatic images, a built‑in stopwatch for timed review, and mobile reminders to support consistent study routines.
+Why it matters: Enhances active learning tools for students and corporate training.
+Source: http://workspaceupdates.googleblog.com/2026/11/new-study-enhancements-for-flashcards-in-Gemini-Notebook.html
+
+6. Google Gemini partners with Golden State Warriors for fan and business AI
+Google Gemini will power fan experiences and business operations for the Warriors, Valkyries and Chase Center.
+Why it matters: Brings AI‑driven interaction to sports venues, improving engagement and operations.
+Source: https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/
+
+AI-assisted, source-checked.
+
+#AI #ArtificialIntelligence #AINews

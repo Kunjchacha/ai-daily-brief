@@ -1,0 +1,65 @@
+{
+ "date": "2026-11-26",
+ "edition": "morning",
+ "key": "2026-11-26-morning",
+ "format": "infographic",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Before you paste: a traffic-light guide",
+   "hook": "Before you paste anything into an AI tool, ask which colour it is.",
+   "points": [
+    "Three colours, one habit.",
+    "Your organisation's policy always comes first."
+   ],
+   "takeaway": "",
+   "ask": "Does your workplace have a rule like this?",
+   "summary": "Three colours, one habit. Your organisation's policy always comes first.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "before-you-paste",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "own writing: no claims about any product",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Green",
+     "title": "Public information",
+     "body": "Something you could say in a public room: a published article, a press release, your own general question."
+    },
+    {
+     "kicker": "Amber",
+     "title": "Internal work information",
+     "body": "Check your organisation's policy before you paste it, and remove names and figures you do not need."
+    },
+    {
+     "kicker": "Red",
+     "title": "Never paste",
+     "body": "Customer or personal data, passwords, anything confidential. Do not paste customer or company data into an AI tool."
+    }
+   ],
+   "source_note": "Written for AI Daily Brief. No claims about any product."
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-24T19:35:36.505853+00:00"
+}

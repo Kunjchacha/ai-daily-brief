@@ -1,0 +1,296 @@
+{
+ "date": "2026-11-25",
+ "edition": "evening",
+ "key": "2026-11-25-evening",
+ "status": "ready_for_review",
+ "mode": "llm",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "headline": "Amateur astronomers use Codex and Astra to identify exoplanet candidates",
+   "summary": "Two amateur astronomers applied Codex and Astra to public Kepler and TESS data, finding potential exoplanets.",
+   "why_it_matters": "Demonstrates how accessible AI tools can aid scientific discovery.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "reported",
+   "evidence_quote": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
+   "id": 2,
+   "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+   "canonical": "https://openai.com/index/searching-for-distant-planets-with-astra",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-24T11:00:00+00:00",
+   "score": 12.28
+  },
+  {
+   "headline": "Dot Aria assists research and proposal building while flagging messages",
+   "summary": "Marina Petrova’s dot Aria helps research websites, build proposals, and proactively flags messages and resolves issues.",
+   "why_it_matters": "Offers automated support for information gathering and workflow management.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
+   "id": 3,
+   "url": "https://openai.com/business/customer-stories/intentful-dots",
+   "canonical": "https://openai.com/business/customer-stories/intentful-dots",
+   "source": "OpenAI",
+   "also": [],
+   "published": "2026-11-24T00:00:00+00:00",
+   "score": 11.37
+  },
+  {
+   "headline": "Google makes Workspace MCP servers and CLI generally available",
+   "summary": "Google Workspace introduces generally available MCP servers and a Workspace CLI, enabling developers to connect AI agents to Google apps without custom code.",
+   "why_it_matters": "Simplifies building and scaling AI‑driven workflows while keeping organisational data under control.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "We are making Workspace Model Context Protocol (MCP) servers and the official Workspace CLI generally available.",
+   "id": 4,
+   "url": "http://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+   "canonical": "http://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+   "source": "Google Workspace Updates",
+   "also": [],
+   "published": "2026-11-24T17:02:59.959000+00:00",
+   "score": 10.79
+  },
+  {
+   "headline": "GPT‑6.2 Astra identifies creator of 1808 sketchbook in Yale library",
+   "summary": "GPT‑6.2 Astra autonomously identified the creator of an anonymous 1808 sketchbook at Yale’s Beinecke Library, locating a supporting diary reference.",
+   "why_it_matters": "Shows AI’s potential to accelerate historical research using public sources.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "GPT 6.2 Astra was able to autonomously identify the creator of an anonymous 1808 sketchbook held at Yale’s Beinecke Library.",
+   "id": 5,
+   "url": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
+   "canonical": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery",
+   "source": "Simon Willison",
+   "also": [],
+   "published": "2026-11-24T16:53:59+00:00",
+   "score": 10.78
+  },
+  {
+   "headline": "Gemini Notebook adds image‑rich flashcards, stopwatch and study reminders",
+   "summary": "Gemini Notebook now offers flashcards with automatic images, a built‑in stopwatch for timed review, and mobile reminders to support consistent study routines.",
+   "why_it_matters": "Enhances active learning tools for students and corporate training.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "We introduced three updates to flashcards in Gemini Notebook to help users better retain information.",
+   "id": 6,
+   "url": "http://workspaceupdates.googleblog.com/2026/11/new-study-enhancements-for-flashcards-in-Gemini-Notebook.html",
+   "canonical": "http://workspaceupdates.googleblog.com/2026/11/new-study-enhancements-for-flashcards-in-Gemini-Notebook.html",
+   "source": "Google Workspace Updates",
+   "also": [],
+   "published": "2026-11-24T16:37:41.444000+00:00",
+   "score": 10.75
+  },
+  {
+   "headline": "Google Gemini partners with Golden State Warriors for fan and business AI",
+   "summary": "Google Gemini will power fan experiences and business operations for the Warriors, Valkyries and Chase Center.",
+   "why_it_matters": "Brings AI‑driven interaction to sports venues, improving engagement and operations.",
+   "mode": "llm",
+   "needs_human_line": false,
+   "kind": "announced",
+   "evidence_quote": "Google Gemini partners with Golden State to power fan experiences and business operations for the Warriors, Valkyries, and Chase Center.",
+   "id": 7,
+   "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+   "canonical": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state",
+   "source": "Google AI Blog",
+   "also": [],
+   "published": "2026-11-24T16:00:00+00:00",
+   "score": 10.7
+  }
+ ],
+ "report": [
+  {
+   "id": 1,
+   "headline": "Z.ai releases GLM‑5.4, a loop transformer model for coding",
+   "problems": [
+    "second pass: The claim in the draft that the architecture could improve coding assistance while keeping model size modest is not pres"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 2,
+   "headline": "Amateur astronomers use Codex and Astra to identify exoplanet candidates",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 3,
+   "headline": "Dot Aria assists research and proposal building while flagging messages",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 4,
+   "headline": "Google makes Workspace MCP servers and CLI generally available",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 5,
+   "headline": "GPT‑6.2 Astra identifies creator of 1808 sketchbook in Yale library",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 6,
+   "headline": "Gemini Notebook adds image‑rich flashcards, stopwatch and study reminders",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 7,
+   "headline": "Google Gemini partners with Golden State Warriors for fan and business AI",
+   "problems": [],
+   "warnings": [],
+   "status": "kept"
+  },
+  {
+   "id": 8,
+   "headline": "AI agents cause up to 450% more network traffic than human tasks",
+   "problems": [
+    "second pass: The draft states AI agents cause 'up to 450% more network traffic', whereas the source states an 'estimated 450% more' ("
+   ],
+   "warnings": [],
+   "status": "dropped"
+  },
+  {
+   "id": 9,
+   "headline": "Fincher’s sequel faces accusations of extensive AI‑generated visuals",
+   "problems": [
+    "second pass: not a confirmed fact: The draft is supported by the source text, but the story is based on unconfirmed allegations, rumours, and suspicions ('"
+   ],
+   "warnings": [],
+   "status": "dropped"
+  }
+ ],
+ "errors": [],
+ "notes": [],
+ "agent": {
+  "items": [
+   {
+    "score": 80,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 2,
+    "headline": "Amateur astronomers use Codex and Astra to identify exoplanet candidates",
+    "article_note": "read",
+    "source": "OpenAI"
+   },
+   {
+    "score": 80,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 3,
+    "headline": "Dot Aria assists research and proposal building while flagging messages",
+    "article_note": "read",
+    "source": "OpenAI"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 4,
+    "headline": "Google makes Workspace MCP servers and CLI generally available",
+    "article_note": "read",
+    "source": "Google Workspace Updates"
+   },
+   {
+    "score": 57,
+    "grade": "B",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 0,
+     "source": 12,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "1 claim(s) unsupported by the article"
+    ],
+    "id": 5,
+    "headline": "GPT‑6.2 Astra identifies creator of 1808 sketchbook in Yale library",
+    "article_note": "read",
+    "source": "Simon Willison"
+   },
+   {
+    "score": 100,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 20,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [],
+    "id": 6,
+    "headline": "Gemini Notebook adds image‑rich flashcards, stopwatch and study reminders",
+    "article_note": "read",
+    "source": "Google Workspace Updates"
+   },
+   {
+    "score": 80,
+    "grade": "A",
+    "checks": {
+     "readable": 10,
+     "quote": 0,
+     "claims": 35,
+     "source": 20,
+     "fresh": 10,
+     "hedge_free": 5
+    },
+    "reasons": [
+     "evidence quote not found in the full article"
+    ],
+    "id": 7,
+    "headline": "Google Gemini partners with Golden State Warriors for fan and business AI",
+    "article_note": "read",
+    "source": "Google AI Blog"
+   }
+  ],
+  "score": 57,
+  "verdict": "skip today"
+ },
+ "created": "2026-11-24T19:35:36.509245+00:00"
+}
