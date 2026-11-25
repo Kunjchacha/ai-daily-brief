@@ -1,0 +1,15 @@
+96,527 downloads in the last 30 days, and trending on Hugging Face right now: thinkingmachines/Inkling-2-Mini.
+
+An image-text-to-text model, published on Hugging Face under the Apache-2.0 licence.
+
+96,527 downloads in the last 30 days and 5,949 likes.
+
+Takeaway: Trending means popular, not proven. Read the model card and the licence first.
+
+Would you try it? What would you test it on?
+
+Source: https://huggingface.co/thinkingmachines/Inkling-2-Mini
+
+AI Daily Brief · Model spotlight · AI-assisted, source-checked.
+
+#AI #OpenSource #HuggingFace

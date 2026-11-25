@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-26",
+ "edition": "evening",
+ "key": "2026-11-26-evening",
+ "format": "model",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "thinkingmachines/Inkling-2-Mini",
+   "hook": "96,527 downloads in the last 30 days, and trending on Hugging Face right now: thinkingmachines/Inkling-2-Mini.",
+   "points": [
+    "An image-text-to-text model, published on Hugging Face under the Apache-2.0 licence.",
+    "96,527 downloads in the last 30 days and 5,949 likes."
+   ],
+   "takeaway": "Trending means popular, not proven. Read the model card and the licence first.",
+   "ask": "Would you try it? What would you test it on?",
+   "summary": "An image-text-to-text model, published on Hugging Face under the Apache-2.0 licence. 96,527 downloads in the last 30 days and 5,949 likes.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Hugging Face",
+   "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+   "evidence_quote": "thinkingmachines/Inkling-2-Mini | image-text-to-text | license:Apache-2.0",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-11-17T00:26:57.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "licence stated (Apache-2.0)",
+    "96,527 downloads (last 30 days)",
+    "on the site's own trending list",
+    "not featured before"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot evening, 20:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-25T18:43:05.459197+00:00"
+}
