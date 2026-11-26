@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-27",
+ "edition": "evening",
+ "key": "2026-11-27-evening",
+ "format": "repo",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "EL4CTEO/fast-anything",
+   "hook": "4,194 GitHub stars in 5 days. What is EL4CTEO/fast-anything?",
+   "points": [
+    "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
+    "Language: Rust. Licence: MIT. Created 5 days ago."
+   ],
+   "takeaway": "Stars show popularity, not quality. Read the licence and the code before you rely on it.",
+   "ask": "Would you run it? What would you check first?",
+   "summary": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same. Language: Rust. Licence: MIT. Created 5 days ago.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "GitHub",
+   "url": "https://github.com/EL4CTEO/fast-anything",
+   "evidence_quote": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-11-21T14:40:27Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "licence stated (MIT)",
+    "created 5 days ago, 4,194 stars",
+    "not featured before",
+    "description is the owner's own text, plain and not spam-listed"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot evening, 20:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-26T18:31:23.155536+00:00"
+}

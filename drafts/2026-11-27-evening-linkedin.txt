@@ -1,0 +1,15 @@
+4,194 GitHub stars in 5 days. What is EL4CTEO/fast-anything?
+
+Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.
+
+Language: Rust. Licence: MIT. Created 5 days ago.
+
+Takeaway: Stars show popularity, not quality. Read the licence and the code before you rely on it.
+
+Would you run it? What would you check first?
+
+Source: https://github.com/EL4CTEO/fast-anything
+
+AI Daily Brief · Open-source spotlight · AI-assisted, source-checked.
+
+#AI #OpenSource #GitHub

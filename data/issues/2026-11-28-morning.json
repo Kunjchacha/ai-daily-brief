@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-28",
+ "edition": "morning",
+ "key": "2026-11-28-morning",
+ "format": "comparison",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Chatbot or agent?",
+   "hook": "A chatbot answers. An agent acts. The difference is who is in control.",
+   "points": [
+    "Two things people call 'AI'.",
+    "Swipe for the comparison."
+   ],
+   "takeaway": "",
+   "ask": "Would you let an agent act without checking each step?",
+   "summary": "Two things people call 'AI'. Swipe for the comparison.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Wikipedia: Intelligent agent",
+   "url": "https://en.wikipedia.org/wiki/Intelligent_agent",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "chatbot-vs-agent",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "source: Wikipedia: Intelligent agent",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "Side by side",
+     "title": "Chatbot and agent",
+     "compare": true,
+     "left": {
+      "head": "Chatbot",
+      "items": [
+       "Answers within a conversation",
+       "You drive every step",
+       "Low risk of side effects",
+       "Good for drafts and questions"
+      ]
+     },
+     "right": {
+      "head": "Agent",
+      "items": [
+       "Uses tools such as search or code",
+       "Works over several steps toward a goal",
+       "Needs permissions, so mistakes can have effects",
+       "Check what it may do on its own"
+      ]
+     }
+    }
+   ],
+   "source_note": "Source: Wikipedia: Intelligent agent, https://en.wikipedia.org/wiki/Intelligent_agent"
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-26T18:31:23.155536+00:00"
+}
