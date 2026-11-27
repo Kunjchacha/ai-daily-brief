@@ -1,0 +1,60 @@
+{
+ "date": "2026-11-29",
+ "edition": "morning",
+ "key": "2026-11-29-morning",
+ "format": "quiz",
+ "status": "ready_for_review",
+ "mode": "curated",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "Quiz: fix this prompt",
+   "hook": "A vague prompt gives a vague answer. Can you spot what is missing?",
+   "points": [
+    "Try rewriting it before you swipe.",
+    "The fix is on the next slide."
+   ],
+   "takeaway": "",
+   "ask": "How would you rewrite it?",
+   "summary": "Try rewriting it before you swipe. The fix is on the next slide.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "",
+   "url": "",
+   "evidence_quote": "",
+   "kind": "evergreen",
+   "mode": "curated",
+   "published": null,
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": "quiz-fix-this-prompt",
+   "take": "",
+   "checks": [
+    "written and reviewed in this project",
+    "own writing: no claims about any product",
+    "includes the reminder not to paste customer or company data where data is involved"
+   ],
+   "slides": [
+    {
+     "kicker": "The prompt",
+     "title": "Summarise this.",
+     "body": "What is missing? Think: audience, length, format, and what to do when unsure."
+    },
+    {
+     "kicker": "A better version",
+     "title": "Fill the gaps",
+     "code": "Summarise this two-page report for a busy manager in five bullets. Quote the page for each point. If something is not stated, write 'not stated'. Text: [paste text]"
+    }
+   ],
+   "source_note": "Written for AI Daily Brief. No claims about any product."
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot morning, 08:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-27T19:08:20.905044+00:00"
+}

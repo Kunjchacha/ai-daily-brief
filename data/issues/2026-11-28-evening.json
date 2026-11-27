@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-28",
+ "edition": "evening",
+ "key": "2026-11-28-evening",
+ "format": "model",
+ "status": "ready_for_review",
+ "mode": "data",
+ "brand": "AI Daily Brief",
+ "items": [
+  {
+   "id": 1,
+   "headline": "unsloth/Inkling-2-Mini-GGUF",
+   "hook": "3,302,340 downloads in the last 30 days, and trending on Hugging Face right now: unsloth/Inkling-2-Mini-GGUF.",
+   "points": [
+    "An image-text-to-text model, published on Hugging Face under the Apache-2.0 licence.",
+    "3,302,340 downloads in the last 30 days and 1,563 likes."
+   ],
+   "takeaway": "Trending means popular, not proven. Read the model card and the licence first.",
+   "ask": "Would you try it? What would you test it on?",
+   "summary": "An image-text-to-text model, published on Hugging Face under the Apache-2.0 licence. 3,302,340 downloads in the last 30 days and 1,563 likes.",
+   "details": "",
+   "why_it_matters": "",
+   "source": "Hugging Face",
+   "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+   "evidence_quote": "unsloth/Inkling-2-Mini-GGUF | image-text-to-text | license:Apache-2.0",
+   "kind": "listing",
+   "mode": "data",
+   "published": "2026-11-20T13:09:48.000Z",
+   "score": 0,
+   "needs_human_line": false,
+   "bank_id": null,
+   "take": "",
+   "checks": [
+    "licence stated (Apache-2.0)",
+    "3,302,340 downloads (last 30 days)",
+    "on the site's own trending list",
+    "not featured before"
+   ]
+  }
+ ],
+ "report": [],
+ "errors": [],
+ "notes": [
+  "slot evening, 20:00 IST"
+ ],
+ "agent": null,
+ "created": "2026-11-27T19:08:20.905044+00:00"
+}
